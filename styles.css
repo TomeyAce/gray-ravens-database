@@ -52,6 +52,11 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
 .app-shell {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
@@ -84,6 +89,42 @@ button {
   border: 1px solid var(--line);
   background: linear-gradient(135deg, #f0f3f6, #6c737d 45%, #17191d 46%);
   color: #090a0c;
+  font-weight: 900;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-mark.image-brand {
+  padding: 6px;
+}
+
+.keyword-icon {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.35em;
+  height: 1.35em;
+  margin-right: 6px;
+  padding: 0 4px;
+  color: #101114;
+  background: var(--keyword, var(--cyan));
+  border-radius: 4px;
+  font-size: 0.72em;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.keyword-icon img {
+  width: 1.2em;
+  height: 1.2em;
+  object-fit: contain;
+}
+
+.rich-text a {
+  color: var(--cyan);
   font-weight: 900;
 }
 
@@ -687,14 +728,23 @@ h3 {
   outline: 1px solid var(--cyan);
 }
 
-.memory-image,
-.ability-icon {
+.memory-image {
   display: grid;
   place-items: center;
   overflow: hidden;
   background: var(--panel-2);
   border: 1px solid var(--line);
   color: var(--cyan);
+  font-weight: 900;
+}
+
+.ability-icon {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  color: var(--text);
   font-weight: 900;
 }
 
@@ -1315,6 +1365,27 @@ textarea {
   font-size: 0.78rem;
 }
 
+.file-drop-zone {
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+  background: color-mix(in srgb, var(--cyan) 6%, var(--panel));
+  border: 1px dashed color-mix(in srgb, var(--cyan) 45%, var(--line));
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.file-drop-zone.drag-over {
+  background: color-mix(in srgb, var(--cyan) 16%, var(--panel));
+  border-color: var(--cyan);
+}
+
+.drop-zone-hint {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: none;
+}
+
 .manager-form textarea,
 .stack-row textarea {
   min-height: 132px;
@@ -1540,8 +1611,39 @@ textarea {
   display: grid;
 }
 
+.settings-panel {
+  display: none;
+  gap: 14px;
+}
+
+.settings-panel.active {
+  display: grid;
+}
+
+.compact-tabs {
+  align-self: start;
+}
+
 .systems-manager {
   margin-top: 4px;
+}
+
+#keywordIconEditor .stack-row,
+#dropdownOptionEditor .stack-row,
+#patchEditor .stack-row {
+  grid-template-columns: repeat(2, minmax(220px, 1fr)) 44px;
+}
+
+#keywordIconEditor label,
+#dropdownOptionEditor label,
+#patchEditor label:has(select[multiple]) {
+  grid-column: span 2;
+}
+
+.manager-form select[multiple],
+.stack-row select[multiple] {
+  min-height: 180px;
+  padding: 8px;
 }
 
 .memory-upload-grid label {

@@ -1,0 +1,9 @@
+{
+  "name": "gray-ravens-database",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static guide database for Punishing: Gray Raven with a tiny local image upload server.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

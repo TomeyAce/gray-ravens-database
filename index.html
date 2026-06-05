@@ -10,7 +10,7 @@
     <div class="app-shell">
       <aside class="sidebar" aria-label="Primary">
         <a class="brand" href="#overview" data-route="overview" aria-label="Gray Ravens Database home">
-          <span class="brand-mark">GR</span>
+          <span class="brand-mark" id="brandMark">GR</span>
           <span>
             <strong>Gray Ravens</strong>
             <small>Database</small>
@@ -25,6 +25,7 @@
           <a href="#weapons" data-route="weapons" class="nav-link"><span class="ico">W</span>Weapons</a>
           <a href="#cubs" data-route="cubs" class="nav-link"><span class="ico">C</span>CUBs</a>
           <a href="#guides" data-route="guides" class="nav-link"><span class="ico">G</span>Guides</a>
+          <a href="#patches" data-route="patches" class="nav-link"><span class="ico">P</span>Patches</a>
           <a href="#roadmap" data-route="roadmap" class="nav-link"><span class="ico">R</span>Roadmap</a>
           <a href="#rotations" data-route="rotations" class="nav-link"><span class="ico">⟲</span>Rotations</a>
           <a href="#manage" data-route="manage" class="nav-link"><span class="ico">✎</span>Manage</a>
@@ -48,7 +49,6 @@
             <input id="globalSearch" type="search" placeholder="Search constructs, teams, memories, weapons, guides..." />
           </div>
           <div class="topbar-actions">
-            <button class="icon-button" id="themeToggle" type="button" title="Toggle contrast" aria-label="Toggle contrast">◐</button>
             <button class="primary-button" id="quickRotation" type="button"><span>⟲</span>Open rotation lab</button>
           </div>
         </header>
@@ -70,22 +70,6 @@
           <div class="signal-board" aria-label="Featured database signals">
             <div class="signal-grid" id="signalGrid"></div>
           </div>
-        </section>
-
-        <section class="dashboard-band">
-          <div class="section-head">
-            <div>
-              <p class="kicker">Today in the archive</p>
-              <h2>Fast Guide Access</h2>
-            </div>
-            <div class="segmented" role="tablist" aria-label="Content focus">
-              <button class="segment active" data-focus="all" type="button">All</button>
-              <button class="segment" data-focus="dps" type="button">DPS</button>
-              <button class="segment" data-focus="support" type="button">Support</button>
-              <button class="segment" data-focus="tank" type="button">Tank</button>
-            </div>
-          </div>
-          <div class="stat-grid" id="statGrid"></div>
         </section>
 
         <section class="content-band view active" data-view="characters">
@@ -190,6 +174,16 @@
           <div class="roadmap-grid" id="roadmapGrid"></div>
         </section>
 
+        <section class="content-band view" data-view="patches">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Release archive</p>
+              <h2>Game Patches</h2>
+            </div>
+          </div>
+          <div class="archive-grid" id="patchGrid"></div>
+        </section>
+
         <section class="content-band view" data-view="rotations">
           <div class="section-head">
             <div>
@@ -269,7 +263,7 @@
                       <input class="image-import-control" data-form-image="image" type="file" accept="image/*" />
                     </label>
                     <label>Sigil<input name="sigil" maxlength="4" required /></label>
-                    <label>Role<input name="role" required /></label>
+                    <label>Role<select name="role" id="managerRoleSelect" required></select></label>
                     <label>Frame<input name="frame" placeholder="Crimson Weave, Pyroath..." /></label>
                     <label>Faction<input name="faction" /></label>
                     <label>Class
@@ -286,10 +280,22 @@
                     </label>
                     <label>Rank<input name="rank" placeholder="S+, S, A..." /></label>
                     <label>Preferred gift<input name="gift" /></label>
+                    <label>Release patch<select name="releasePatch" id="releasePatchSelect"></select></label>
+                    <label>Release patch number<input name="releasePatchNumber" type="number" step="0.01" placeholder="Internal ordering only" /></label>
                   </div>
                   <label>Short bio / introduction<textarea name="bio" rows="3"></textarea></label>
                   <label>Effect / mechanic summary<textarea name="effect" rows="3" placeholder="Darkflow, Plasma Beam, etc."></textarea></label>
                   <label>Guide summary<textarea name="notes" rows="4"></textarea></label>
+                  <div class="editor-block">
+                    <div class="subhead">
+                      <div>
+                        <p class="kicker">Mechanics</p>
+                        <h3>Effects</h3>
+                      </div>
+                      <button class="ghost-button" id="addEffectEntry" type="button"><span>+</span>Add effect</button>
+                    </div>
+                    <div id="effectEntryEditor" class="stack-editor"></div>
+                  </div>
                   <div class="editor-block">
                     <div class="subhead">
                       <div>
@@ -460,8 +466,10 @@
                   <button class="manager-tab" data-system-tab="cubs" type="button">CUBs</button>
                   <button class="manager-tab" data-system-tab="guides" type="button">Guides</button>
                   <button class="manager-tab" data-system-tab="modes" type="button">Modes</button>
+                  <button class="manager-tab" data-system-tab="patches" type="button">Patches</button>
                   <button class="manager-tab" data-system-tab="enemies" type="button">Enemies</button>
                   <button class="manager-tab" data-system-tab="roadmap" type="button">Roadmap</button>
+                  <button class="manager-tab" data-system-tab="settings" type="button">Settings</button>
                 </div>
                 <section class="system-panel active" data-system-panel="weapons">
                   <div class="subhead"><h3>Weapons</h3><button class="ghost-button" id="addWeapon" type="button"><span>+</span>Add weapon</button></div>
@@ -479,6 +487,10 @@
                   <div class="subhead"><h3>Game Modes</h3><button class="ghost-button" id="addMode" type="button"><span>+</span>Add mode</button></div>
                   <div id="modeEditor" class="stack-editor"></div>
                 </section>
+                <section class="system-panel" data-system-panel="patches">
+                  <div class="subhead"><h3>Game Patches</h3><button class="ghost-button" id="addPatch" type="button"><span>+</span>Add patch</button></div>
+                  <div id="patchEditor" class="stack-editor"></div>
+                </section>
                 <section class="system-panel" data-system-panel="enemies">
                   <div class="subhead"><h3>Enemies</h3><button class="ghost-button" id="addEnemy" type="button"><span>+</span>Add enemy</button></div>
                   <div id="enemyEditor" class="stack-editor"></div>
@@ -486,6 +498,24 @@
                 <section class="system-panel" data-system-panel="roadmap">
                   <div class="subhead"><h3>Roadmap</h3><button class="ghost-button" id="addRoadmap" type="button"><span>+</span>Add roadmap item</button></div>
                   <div id="roadmapEditor" class="stack-editor"></div>
+                </section>
+                <section class="system-panel" data-system-panel="settings">
+                  <div class="subhead"><h3>Global Settings</h3></div>
+                  <div class="manager-tabs compact-tabs" role="tablist" aria-label="Settings editor sections">
+                    <button class="manager-tab active" data-settings-tab="icons" type="button">Icons</button>
+                    <button class="manager-tab" data-settings-tab="dropdowns" type="button">Dropdowns</button>
+                  </div>
+                  <section class="settings-panel active" data-settings-panel="icons">
+                    <div class="subhead"><h3>Keyword Icons</h3><button class="ghost-button" id="addKeywordIcon" type="button"><span>+</span>Add keyword icon</button></div>
+                    <div class="form-grid">
+                      <label>Top-left icon text or image URL<input id="brandIconSetting" placeholder="GR, image URL, or /uploads/icon.png" /></label>
+                    </div>
+                    <div id="keywordIconEditor" class="stack-editor"></div>
+                  </section>
+                  <section class="settings-panel" data-settings-panel="dropdowns">
+                    <div class="subhead"><h3>Dropdown Options</h3><button class="ghost-button" id="addDropdownOption" type="button"><span>+</span>Add option</button></div>
+                    <div id="dropdownOptionEditor" class="stack-editor"></div>
+                  </section>
                 </section>
               </section>
             </div>
