@@ -1,13 +1,14 @@
 const db = {
   elements: [
-    { id: "all", label: "All", color: "#f4f7fb" },
-    { id: "physical", label: "Physical", color: "#d7dde5" },
-    { id: "lightning", label: "Lightning", color: "#e5ba4a" },
-    { id: "fire", label: "Fire", color: "#e75656" },
-    { id: "ice", label: "Ice", color: "#5b9df6" },
-    { id: "dark", label: "Dark", color: "#a889f0" },
-    { id: "nihil", label: "Nihil", color: "#cfd4da" }
+    { id: "all", label: "All", color: "#f4f7fb", icon: "A", image: "" },
+    { id: "physical", label: "Physical", color: "#d7dde5", icon: "P", image: "" },
+    { id: "lightning", label: "Lightning", color: "#e5ba4a", icon: "L", image: "" },
+    { id: "fire", label: "Fire", color: "#e75656", icon: "F", image: "" },
+    { id: "ice", label: "Ice", color: "#5b9df6", icon: "I", image: "" },
+    { id: "dark", label: "Dark", color: "#a889f0", icon: "D", image: "" },
+    { id: "nihil", label: "Nihil", color: "#cfd4da", icon: "N", image: "" }
   ],
+  items: window.GRAY_RAVENS_ITEMS || [],
   characters: [
       {
           "id": "2b",
@@ -15657,9 +15658,13 @@ const db = {
       { keyword: "observer", label: "Observer", icon: "O", color: "#5b9df6" },
       { keyword: "breaker", label: "Breaker", icon: "B", color: "#f08b5f" }
     ],
+    rankColors: [
+      { rank: "S", color: "#e5ba4a", icon: "" },
+      { rank: "A", color: "#a889f0", icon: "" },
+      { rank: "B", color: "#5b9df6", icon: "" }
+    ],
     dropdowns: {
       roles: ["Attacker", "Tank", "Support", "Amplifier", "Vanguard", "Annihilator", "Observer", "Breaker"],
-      classes: ["DPS", "Tank", "Support", "Amplifier", "Vanguard", "Annihilator", "Observer", "Breaker"],
       ranks: ["S+", "S", "A", "B"],
       memoryFamilies: ["Omniframe", "Uniframe", "Event", "Collab", "Story"],
       weaponRarities: ["6★", "5★", "4★"],
@@ -15689,17 +15694,22 @@ const state = {
   tierMode: "warzone",
   selectedTeam: "thunder-vanguard",
   selectedMemory: "condelina",
+  selectedPatch: "patch-tbd",
+  itemTab: "all",
+  itemSubtab: "all",
   rotation: "crimson-standard",
   activeStep: 0,
   timer: null,
   custom: [],
+  manageArea: "characters",
   manageTab: "bio",
   managerCharacter: "lucia-crimson-weave",
   managerMemory: "condelina",
   systemTab: "weapons",
   pendingUploads: 0,
   draft: null,
-  memoryDraft: null
+  memoryDraft: null,
+  characterDrafts: {}
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -15708,6 +15718,7 @@ const characterById = (id) => db.characters.find((character) => character.id ===
 const memoryById = (id) => (db.memories || []).find((memory) => memory.id === id);
 const weaponById = (id) => (db.weapons || []).find((weapon) => weapon.id === id);
 const cubById = (id) => (db.cubs || []).find((cub) => cub.id === id);
+const patchById = (id) => (db.gamePatches || []).find((patch) => patch.id === id);
 const elementById = (id) => db.elements.find((element) => element.id === id) || db.elements[0];
 const slugify = (value) => value.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const constructTabs = ["kit", "review", "build", "teams", "rotations", "calculations", "coatings"];
@@ -15723,6 +15734,7 @@ function init() {
   renderTiers();
   renderTeams();
   renderMemories();
+  renderItems();
   renderWeapons();
   renderCubs();
   renderGuides();
@@ -15751,6 +15763,9 @@ function bindEvents() {
   $("#managerSearch").addEventListener("input", renderManagerList);
   $("#memoryFamilyFilter").addEventListener("change", renderMemories);
   $("#memoryRarityFilter").addEventListener("change", renderMemories);
+  $("#itemSearch").addEventListener("input", renderItems);
+  $("#itemTabFilter").addEventListener("click", handleItemTabClick);
+  $("#itemSubtabFilter").addEventListener("click", handleItemSubtabClick);
   $("#quickRotation").addEventListener("click", () => navigate("rotations"));
   $$("[data-route-button]").forEach((button) => button.addEventListener("click", () => navigate(button.dataset.routeButton)));
   $$(".segment[data-focus]").forEach((button) => button.addEventListener("click", () => {
@@ -15794,14 +15809,14 @@ function bindEvents() {
   $("#addCoating").addEventListener("click", () => addStackItem("coatings"));
   $("#addManagedRotation").addEventListener("click", () => addStackItem("commonRotations"));
   $("#addElementMix").addEventListener("click", () => addStackItem("elements"));
-  $("#addSpecialty").addEventListener("click", () => addStackItem("specialties"));
-  $("#addEffectEntry").addEventListener("click", () => addStackItem("effects"));
   $("#addFact").addEventListener("click", () => addStackItem("facts"));
   $("#exportDatabase").addEventListener("click", exportDatabase);
   $("#importDatabase").addEventListener("change", importDatabase);
   $("#resetDatabase").addEventListener("click", resetDatabase);
   $("#newMemory").addEventListener("click", startNewMemory);
   $("#saveMemory").addEventListener("click", saveMemoryFromForm);
+  $("#addItem").addEventListener("click", addItem);
+  $("#saveItems").addEventListener("click", saveItems);
   $("#saveSystems").addEventListener("click", saveSystems);
   $("#addWeapon").addEventListener("click", () => addSystemItem("weapons"));
   $("#addCub").addEventListener("click", () => addSystemItem("cubs"));
@@ -15810,8 +15825,14 @@ function bindEvents() {
   $("#addPatch").addEventListener("click", () => addSystemItem("gamePatches"));
   $("#addEnemy").addEventListener("click", () => addSystemItem("enemies"));
   $("#addRoadmap").addEventListener("click", () => addSystemItem("roadmap"));
+  $("#addElementSetting").addEventListener("click", addElementSetting);
+  $("#addSharedSpecialty").addEventListener("click", () => addSystemItem("specialties"));
+  $("#addSharedEffect").addEventListener("click", () => addSystemItem("effects"));
   $("#addKeywordIcon").addEventListener("click", addKeywordIcon);
+  $("#addRankColor").addEventListener("click", addRankColor);
   $("#addDropdownOption").addEventListener("click", addDropdownOption);
+  $("#signatureWeaponSelect").addEventListener("change", handleSignatureWeaponChange);
+  $$("[data-manage-area-tab]").forEach((button) => button.addEventListener("click", () => switchManageArea(button.dataset.manageAreaTab)));
   $$("[data-settings-tab]").forEach((button) => button.addEventListener("click", () => switchSettingsTab(button.dataset.settingsTab)));
   $$("[data-system-tab]").forEach((button) => button.addEventListener("click", () => switchSystemTab(button.dataset.systemTab)));
   $("#addMemoryEffect").addEventListener("click", addMemoryEffect);
@@ -15830,18 +15851,23 @@ function bindEvents() {
 
 function navigate(route) {
   const parts = route.split("/");
-  let normalized = ["characters", "tiers", "teams", "memories", "weapons", "cubs", "guides", "patches", "roadmap", "rotations", "manage", "overview", "construct"].includes(parts[0]) ? parts[0] : "characters";
+  let normalized = ["characters", "tiers", "teams", "memories", "items", "weapons", "cubs", "guides", "patches", "patch", "roadmap", "rotations", "manage", "overview", "construct"].includes(parts[0]) ? parts[0] : "characters";
   if (normalized === "construct") {
     const character = characterById(parts[1]) || characterById(state.selectedCharacter) || db.characters[0];
     state.selectedCharacter = character.id;
     state.constructTab = constructTabs.includes(parts[2]) ? parts[2] : state.constructTab;
   }
+  if (normalized === "patch") {
+    const patch = patchById(parts[1]) || (db.gamePatches || [])[0];
+    state.selectedPatch = patch?.id || "patch-tbd";
+  }
   state.route = normalized === "overview" ? "characters" : normalized;
-  const targetHash = normalized === "construct" ? `construct/${state.selectedCharacter}/${state.constructTab}` : normalized;
+  const targetHash = normalized === "construct" ? `construct/${state.selectedCharacter}/${state.constructTab}` : normalized === "patch" ? `patch/${state.selectedPatch}` : normalized;
   if (location.hash.replace("#", "") !== targetHash) location.hash = targetHash;
   $$(".nav-link").forEach((link) => link.classList.toggle("active", link.dataset.route === normalized));
   $$(".view").forEach((view) => view.classList.toggle("active", view.dataset.view === state.route));
   if (normalized === "construct") renderConstructPage();
+  if (normalized === "patch") renderPatchPage();
   if (normalized !== "overview") {
     document.querySelector(`[data-view="${state.route}"]`).scrollIntoView({ block: "start" });
   } else {
@@ -15855,7 +15881,7 @@ function renderSignals() {
     ["", "◆", "Build sheets", "Weapons, memories, priorities.", "#e75656"],
     ["", "▲", "Mode tiers", "War Zone, Pain Cage, general.", "#e5ba4a"],
     ["", "◎", "Team cores", "Composition gameplans.", "#6ed092"],
-    ["", "⌕", "Fast filters", "Search by role or element.", "#a889f0"],
+    ["", "⌕", "Fast filters", "Search by class or element.", "#a889f0"],
     ["", "⇪", "Guide export", "Share custom rotation strings.", "#5b9df6"]
   ];
   $("#signalGrid").innerHTML = signals.map(([featured, icon, title, body, color]) => `
@@ -15872,6 +15898,7 @@ function renderStats() {
     ["Constructs", chars.length],
     ["Elements", new Set(chars.map((item) => item.element)).size],
     ["Memories", db.memories?.length || 0],
+    ["Items", db.items?.length || 0],
     ["Weapons", db.weapons?.length || 0],
     ["CUBs", db.cubs?.length || 0],
     ["Guides", db.guides?.length || 0],
@@ -15883,13 +15910,15 @@ function renderStats() {
       <article class="stat-card"><strong>${value}</strong><span class="muted">${label}</span></article>
     `).join("");
   }
-  $("#databaseSummary").textContent = `${db.characters.length} constructs, ${db.memories?.length || 0} memories, ${db.weapons?.length || 0} weapons, ${db.cubs?.length || 0} CUBs`;
+  $("#databaseSummary").textContent = `${db.characters.length} constructs, ${db.memories?.length || 0} memories, ${db.items?.length || 0} items, ${db.weapons?.length || 0} weapons`;
 }
 
 function renderFilters() {
   $("#elementFilters").innerHTML = db.elements.map((element) => `
     <button class="filter-chip ${element.id === state.filter ? "active" : ""}" style="--accent:${element.color}" data-filter="${element.id}" type="button">${keywordIconMarkup(element.id)}${element.label}</button>
   `).join("");
+  if ($("#elementFilters").dataset.bound === "true") return;
+  $("#elementFilters").dataset.bound = "true";
   $("#elementFilters").addEventListener("click", (event) => {
     const button = event.target.closest("button[data-filter]");
     if (!button) return;
@@ -15902,16 +15931,17 @@ function renderFilters() {
 function filteredCharacters(includeSearch = true) {
   const search = includeSearch ? $("#globalSearch").value.trim().toLowerCase() : "";
   return db.characters.filter((character) => {
-    const roleMatch = state.focus === "all" || character.class.toLowerCase() === state.focus;
+    const roleMatch = state.focus === "all" || character.role.toLowerCase() === state.focus;
     const characterElements = (character.elements || [{ name: character.element }]).map((item) => item.name);
     const elementMatch = state.filter === "all" || characterElements.includes(state.filter) || character.element === state.filter;
     const abilityText = (character.abilities || []).map((ability) => `${ability.name} ${ability.description}`).join(" ");
-    const specialtyText = (character.specialties || []).map((specialty) => `${specialty.name} ${specialty.description}`).join(" ");
+    const specialtyText = sharedTraitsForCharacter(character, "specialties").map((specialty) => `${specialty.name} ${specialty.description}`).join(" ");
+    const effectText = sharedTraitsForCharacter(character, "effects").map((effect) => `${effect.name} ${effect.description}`).join(" ");
     const elementText = (character.elements || []).map((item) => `${item.name} ${item.percent}`).join(" ");
     const factText = (character.facts || []).map((fact) => `${fact.label} ${fact.value}`).join(" ");
     const buildText = (character.builds || []).map((build) => `${build.name} ${build.weapon} ${build.memories} ${build.cub} ${build.priority}`).join(" ");
     const rotationText = (character.commonRotations || []).map((rotation) => `${rotation.name} ${rotation.steps}`).join(" ");
-    const text = `${character.name} ${character.role} ${character.class} ${character.element} ${character.weapon} ${character.weaponType} ${character.memory} ${character.bio} ${character.faction} ${character.effect} ${character.cub?.name} ${abilityText} ${specialtyText} ${elementText} ${factText} ${buildText} ${rotationText}`.toLowerCase();
+    const text = `${character.name} ${character.role} ${character.element} ${character.weapon} ${character.weaponType} ${character.memory} ${character.bio} ${character.faction} ${character.effect} ${character.cub?.name} ${abilityText} ${specialtyText} ${effectText} ${elementText} ${factText} ${buildText} ${rotationText}`.toLowerCase();
     return roleMatch && elementMatch && (!search || text.includes(search));
   }).sort((a, b) => {
     const aNumber = patchNumber(a);
@@ -15929,17 +15959,8 @@ function renderCharacters() {
   $("#characterGrid").innerHTML = characters.map((character) => {
     const element = elementById(character.element);
     return `
-      <button class="character-card ${character.id === state.selectedCharacter ? "active" : ""}" data-character="${character.id}" style="--accent:${element.color}" type="button">
-        ${portraitMarkup(character)}
-        <span>
-          <strong>${character.name}</strong>
-          <span class="card-meta">
-            <span class="rank-badge">${character.rank}</span>
-            <span class="pill">${keywordIconMarkup(character.element)}${elementSummary(character)}</span>
-            <span class="pill">${keywordIconMarkup(character.role)}${character.role}</span>
-          </span>
-          <span class="muted">${character.notes}</span>
-        </span>
+      <button class="character-card" data-character="${character.id}" style="--accent:${element.color}" type="button">
+        ${renderCharacterBoxContent(character)}
       </button>
     `;
   }).join("") || `<p class="muted">No constructs match the current filters.</p>`;
@@ -15962,7 +15983,7 @@ function renderCharacterDetail() {
     <h3>${character.name}</h3>
     <p class="muted">${character.bio || character.notes}</p>
     <div class="build-list">
-      <div class="build-item"><strong>Specialties</strong><span>${(character.specialties || []).map((specialty) => specialty.name).join(" / ") || "Not set"}</span></div>
+      <div class="build-item"><strong>Specialties</strong><span>${sharedTraitsForCharacter(character, "specialties").map((specialty) => specialty.name).join(" / ") || "Not set"}</span></div>
       <div class="build-item"><strong>CUB</strong><span>${character.cub?.name || "Not set"}</span><small class="muted">${character.cub?.notes || ""}</small></div>
       ${builds.map((build) => `
         <div class="build-item">
@@ -15988,9 +16009,8 @@ function renderCharacterDetail() {
     renderTeams();
   }));
   $$("[data-manage-character]").forEach((button) => button.addEventListener("click", () => {
-    state.managerCharacter = button.dataset.manageCharacter;
     navigate("manage");
-    loadCharacterIntoForm(state.managerCharacter);
+    loadCharacterIntoForm(button.dataset.manageCharacter);
   }));
 }
 
@@ -16011,7 +16031,7 @@ function renderTiers() {
           const character = characterById(id);
           if (!character) return "";
           const element = elementById(character.element);
-          return `<button class="tier-entry" data-tier-character="${id}" style="--accent:${element.color}" type="button"><span class="role-token">${character.sigil}</span><span><strong>${character.name}</strong><br><small class="muted">${element.label} ${character.role}</small></span></button>`;
+          return `<button class="tier-entry" data-tier-character="${id}" style="--accent:${element.color}" type="button">${renderCharacterBoxContent(character)}</button>`;
         }).join("") || `<span class="muted">No entries yet.</span>`}
       </div>
     </article>
@@ -16025,17 +16045,17 @@ function renderTeams() {
   $("#teamGrid").innerHTML = db.teams.map((team) => {
     const element = elementById(team.element);
     return `
-      <article class="team-card ${team.id === state.selectedTeam ? "selected" : ""}" style="--accent:${element.color}">
+      <article class="team-card" style="--accent:${element.color}">
         <div>
           <p class="kicker">${element.label} core</p>
           <h3>${team.name}</h3>
           <p class="muted">${team.gameplan}</p>
         </div>
         <div class="team-members">
-          ${team.members.map((id) => {
+          ${team.members.map((id, index) => {
             const character = characterById(id);
             if (!character) return "";
-            return `<button class="team-member action-chip" data-character-jump="${id}" type="button"><span class="role-token">${character.sigil}</span><span>${character.name}<br><small>${character.role}</small></span></button>`;
+            return renderTeamMemberButton(character, "character-jump", id, index);
           }).join("")}
         </div>
         <button class="primary-button" data-team-select="${team.id}" type="button"><span>⟲</span>Load rotation</button>
@@ -16054,6 +16074,30 @@ function renderTeams() {
   $$("[data-character-jump]").forEach((button) => button.addEventListener("click", () => {
     openConstruct(button.dataset.characterJump, "teams");
   }));
+}
+
+function renderTeamMemberButton(character, dataName, dataValue, index = 0) {
+  const slotClass = ["left", "middle", "right"][index] || "extra";
+  return `
+    <button class="team-member action-chip slot-${slotClass}" data-${dataName}="${escapeAttribute(dataValue)}" type="button">
+      ${renderCharacterBoxContent(character)}
+    </button>
+  `;
+}
+
+function renderCharacterBoxContent(character) {
+  const element = elementById(majorityElement(character));
+  return `
+    ${portraitMarkup(character)}
+    <span class="character-box-copy">
+      <strong>${escapeHtml(character.name || "Unnamed Construct")}</strong>
+      <span class="card-meta">
+        <span class="rank-badge" style="${rankStyle(character.rank)}">${escapeHtml(character.rank || "A")}</span>
+        <span class="pill">${keywordIconMarkup(character.role)}${escapeHtml(character.role || "Class not set")}</span>
+        <span class="pill">${keywordIconMarkup(element.id)}${escapeHtml(elementLabel(character))}</span>
+      </span>
+    </span>
+  `;
 }
 
 function populateMemoryFilters() {
@@ -16097,7 +16141,7 @@ function renderMemories() {
     state.selectedMemory = memories[0].id;
   }
   $("#memoryGrid").innerHTML = memories.map((memory) => `
-    <button class="memory-card ${memory.id === state.selectedMemory ? "active" : ""}" data-memory="${memory.id}" type="button">
+    <button class="memory-card" data-memory="${memory.id}" type="button">
       ${memoryImageMarkup(memory, "thumb")}
       <span>
         <strong>${escapeHtml(displayText(memory.name))}</strong>
@@ -16157,6 +16201,96 @@ function renderMemoryDetail(filtered = filteredMemories()) {
     ` : ""}
     <a class="ghost-button source-link" href="${escapeHtml(memory.sourceUrl || "#")}" target="_blank" rel="noreferrer">Open Gray Ravens source</a>
   `;
+}
+
+function populateItemFilters() {
+  const tabs = uniqueOptions((db.items || []).map((item) => item.tab || "Items")).sort();
+  if (state.itemTab !== "all" && !tabs.includes(state.itemTab)) state.itemTab = "all";
+  const tabButtons = [
+    itemFilterButton("all", "All", db.items?.length || 0, state.itemTab === "all", "item-tab"),
+    ...tabs.map((tab) => itemFilterButton(tab, tab, itemCountForTab(tab), state.itemTab === tab, "item-tab"))
+  ];
+  $("#itemTabFilter").innerHTML = tabButtons.join("");
+
+  const subtabs = uniqueOptions((db.items || [])
+    .filter((item) => state.itemTab === "all" || item.tab === state.itemTab)
+    .map((item) => item.subtab || "")
+    .filter(Boolean)).sort();
+  if (state.itemSubtab !== "all" && !subtabs.includes(state.itemSubtab)) state.itemSubtab = "all";
+  $("#itemSubtabFilter").innerHTML = subtabs.length ? [
+    itemFilterButton("all", "All", itemCountForSubtab("all"), state.itemSubtab === "all", "item-subtab"),
+    ...subtabs.map((subtab) => itemFilterButton(subtab, subtab, itemCountForSubtab(subtab), state.itemSubtab === subtab, "item-subtab"))
+  ].join("") : "";
+}
+
+function itemFilterButton(value, label, count, active, dataName) {
+  return `<button class="item-tab-button ${active ? "active" : ""}" data-${dataName}="${escapeAttribute(value)}" role="tab" aria-selected="${active}" type="button">${escapeHtml(label)}<span>${count}</span></button>`;
+}
+
+function itemCountForTab(tab) {
+  return (db.items || []).filter((item) => (item.tab || "Items") === tab).length;
+}
+
+function itemCountForSubtab(subtab) {
+  return (db.items || []).filter((item) => {
+    const tabMatch = state.itemTab === "all" || item.tab === state.itemTab;
+    const subtabMatch = subtab === "all" || item.subtab === subtab;
+    return tabMatch && subtabMatch;
+  }).length;
+}
+
+function handleItemTabClick(event) {
+  const button = event.target.closest("[data-item-tab]");
+  if (!button) return;
+  state.itemTab = button.dataset.itemTab || "all";
+  state.itemSubtab = "all";
+  renderItems();
+}
+
+function handleItemSubtabClick(event) {
+  const button = event.target.closest("[data-item-subtab]");
+  if (!button) return;
+  state.itemSubtab = button.dataset.itemSubtab || "all";
+  renderItems();
+}
+
+function filteredItems() {
+  const search = $("#itemSearch")?.value.trim().toLowerCase() || "";
+  const tab = state.itemTab || "all";
+  const subtab = state.itemSubtab || "all";
+  return (db.items || []).filter((item) => {
+    const tabMatch = tab === "all" || item.tab === tab;
+    const subtabMatch = subtab === "all" || item.subtab === subtab;
+    const text = `${item.name} ${item.rarity} ${item.tab} ${item.subtab} ${item.description} ${item.flavorText}`.toLowerCase();
+    return tabMatch && subtabMatch && (!search || text.includes(search));
+  }).sort((a, b) => String(a.tab || "").localeCompare(String(b.tab || "")) || String(a.subtab || "").localeCompare(String(b.subtab || "")) || String(a.name || "").localeCompare(String(b.name || "")));
+}
+
+function renderItems() {
+  if (!$("#itemGrid")) return;
+  populateItemFilters();
+  const items = filteredItems();
+  $("#itemGrid").innerHTML = items.map((item) => `
+    <article class="archive-card item-card">
+      <div class="item-card-head">
+        ${itemIconMarkup(item)}
+        <div>
+          <p class="kicker">${escapeHtml(item.tab || "Items")}${item.subtab ? ` / ${escapeHtml(item.subtab)}` : ""}</p>
+          <h3>${escapeHtml(item.name || "Unnamed Item")}</h3>
+          <span class="rank-badge item-rarity">${escapeHtml(item.rarity || "?")}</span>
+        </div>
+      </div>
+      <p class="muted rich-text">${richText(item.description || "No description added.")}</p>
+      ${item.flavorText ? `<p class="item-flavor rich-text">${richText(item.flavorText)}</p>` : ""}
+    </article>
+  `).join("") || `<p class="muted">No items match the current filters.</p>`;
+}
+
+function itemIconMarkup(item) {
+  if (item.icon) {
+    return `<span class="item-icon image-system"><img src="${escapeAttribute(item.icon)}" alt="${escapeAttribute(item.name || "Item")} icon" loading="lazy" onerror="this.parentElement.classList.add('image-failed')" /><span>${escapeHtml((item.name || "?").slice(0, 2).toUpperCase())}</span></span>`;
+  }
+  return `<span class="item-icon">${escapeHtml((item.name || "?").slice(0, 2).toUpperCase())}</span>`;
 }
 
 function renderWeapons() {
@@ -16232,7 +16366,7 @@ function renderPatches() {
   $("#patchGrid").innerHTML = patches.map((patch) => {
     const released = releasedCharactersForPatch(patch);
     return `
-      <article class="archive-card small">
+      <article class="archive-card small patch-card-button" data-patch-open="${escapeAttribute(patch.id)}" role="button" tabindex="0">
         <div>
           <p class="kicker">Patch ${escapeHtml(displayText(patch.number || ""))} ${escapeHtml(displayText(patch.status || ""))}</p>
           <h3>${escapeHtml(displayText(patch.name || "Unnamed Patch"))}</h3>
@@ -16244,7 +16378,61 @@ function renderPatches() {
       </article>
     `;
   }).join("") || `<p class="muted">No patches match the current search.</p>`;
+  $$("[data-patch-open]").forEach((card) => {
+    const open = (event) => {
+      if (event.target.closest("[data-profile-character]")) return;
+      navigate(`patch/${card.dataset.patchOpen}`);
+    };
+    card.addEventListener("click", open);
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        open(event);
+      }
+    });
+  });
   bindProfileCharacterLinks("review");
+}
+
+function renderPatchPage() {
+  const patch = patchById(state.selectedPatch) || (db.gamePatches || [])[0];
+  if (!patch) {
+    $("#patchPage").innerHTML = `<article class="profile-card"><h3>No patches added</h3><p class="muted">Create patches in Manage.</p></article>`;
+    return;
+  }
+  const released = releasedCharactersForPatch(patch);
+  $("#patchPage").innerHTML = `
+    <header class="construct-hero patch-hero">
+      <div class="construct-summary">
+        <p class="kicker">Patch ${escapeHtml(displayText(patch.number || ""))} ${escapeHtml(displayText(patch.status || ""))}</p>
+        <h2>${escapeHtml(displayText(patch.name || "Unnamed Patch"))}</h2>
+        <p class="muted rich-text">${richText(patch.notes || "No patch notes have been added yet.")}</p>
+        <div class="profile-meta">
+          ${patch.date ? `<span class="pill">${escapeHtml(displayText(patch.date))}</span>` : ""}
+          <span class="pill">${released.length} released constructs</span>
+        </div>
+      </div>
+      <div class="construct-quick-build">
+        <div class="build-item"><strong>Release number</strong><span>${escapeHtml(displayText(patch.number || "Not set"))}</span></div>
+        <div class="build-item"><strong>Status</strong><span>${escapeHtml(displayText(patch.status || "Draft"))}</span></div>
+        <button class="ghost-button" data-route-button="manage" type="button"><span>✎</span>Edit patch data</button>
+      </div>
+    </header>
+    <section class="profile-tab-panel">
+      <div class="profile-grid">
+        ${released.map((character) => {
+          const element = elementById(majorityElement(character));
+          return `
+            <button class="character-card" data-profile-character="${character.id}" style="--accent:${element.color}" type="button">
+              ${renderCharacterBoxContent(character)}
+            </button>
+          `;
+        }).join("") || `<article class="profile-card"><h3>No released constructs assigned</h3><p class="muted">Add them from Manage > Global systems > Patches.</p></article>`}
+      </div>
+    </section>
+  `;
+  bindProfileCharacterLinks("review");
+  $$("[data-route-button]").forEach((button) => button.addEventListener("click", () => navigate(button.dataset.routeButton)));
 }
 
 function releasedCharactersForPatch(patch) {
@@ -16309,6 +16497,10 @@ function applyGlobalSettings() {
 
 function keywordIcon(keyword) {
   const key = String(keyword || "").toLowerCase();
+  const element = (db.elements || []).find((item) => String(item.id || "").toLowerCase() === key || String(item.label || "").toLowerCase() === key);
+  if (element?.image || element?.icon) {
+    return { keyword: element.id, label: element.label, icon: element.image || element.icon, color: element.color };
+  }
   return (db.settings?.keywordIcons || []).find((item) => String(item.keyword || "").toLowerCase() === key || String(item.label || "").toLowerCase() === key);
 }
 
@@ -16320,6 +16512,32 @@ function keywordIconMarkup(keyword) {
     return `<span class="keyword-icon image-keyword" style="--keyword:${escapeAttribute(color)}"><img src="${escapeAttribute(item.icon)}" alt="" /></span>`;
   }
   return `<span class="keyword-icon" style="--keyword:${escapeAttribute(color)}">${escapeHtml(item.icon.slice(0, 3))}</span>`;
+}
+
+function rankColor(rank) {
+  return rankConfig(rank)?.color || "";
+}
+
+function rankConfig(rank) {
+  const normalized = String(rank || "").trim().toUpperCase();
+  const exact = (db.settings?.rankColors || []).find((item) => String(item.rank || "").trim().toUpperCase() === normalized);
+  const base = (db.settings?.rankColors || []).find((item) => normalized.startsWith(String(item.rank || "").trim().toUpperCase()));
+  return exact || base || null;
+}
+
+function rankStyle(rank) {
+  const color = rankColor(rank);
+  return color ? `--rank-color:${escapeAttribute(color)}` : "";
+}
+
+function rankIconMarkup(rank) {
+  const config = rankConfig(rank);
+  const color = config?.color || rankColor(rank) || "var(--gold)";
+  const icon = config?.icon || rank || "?";
+  if (isImagePath(icon)) {
+    return `<span class="rank-icon image-rank-icon" style="--rank-color:${escapeAttribute(color)}"><img src="${escapeAttribute(icon)}" alt="${escapeAttribute(rank || "Rank")}" /></span>`;
+  }
+  return `<span class="rank-icon" style="--rank-color:${escapeAttribute(color)}">${escapeHtml(String(icon).slice(0, 3))}</span>`;
 }
 
 function isImagePath(value) {
@@ -16423,15 +16641,14 @@ function renderConstructPage() {
   $("#constructPage").style.setProperty("--accent", element.color);
   $("#constructPage").innerHTML = `
     <header class="construct-hero">
-      <div class="construct-media">${portraitMarkup(character)}</div>
+      <div class="construct-media">${constructBodyMedia(character)}</div>
       <div class="construct-summary">
-        <p class="kicker">${elementSummary(character)} ${character.role}</p>
+        <p class="kicker">${elementLabel(character)}</p>
         <h2>${character.name}</h2>
         <p class="muted rich-text">${richText(character.bio || character.notes || "No bio has been added yet.")}</p>
         <div class="profile-meta">
-          <span class="rank-badge">${character.rank || "A"}</span>
-          <span class="pill">${keywordIconMarkup(character.class)}${character.class}</span>
-          <span class="pill">${keywordIconMarkup(majorityElement(character))}${elementSummary(character)}</span>
+          <span class="rank-badge" style="${rankStyle(character.rank)}">${character.rank || "A"}</span>
+          <span class="pill">${keywordIconMarkup(majorityElement(character))}${elementLabel(character)}</span>
           <span class="pill">${keywordIconMarkup(character.role)}${character.role}</span>
           ${character.faction ? `<span class="pill">${character.faction}</span>` : ""}
           ${character.releasePatch ? `<span class="pill">${escapeHtml(releasePatchName(character.releasePatch))}</span>` : ""}
@@ -16439,13 +16656,11 @@ function renderConstructPage() {
         <div class="element-mix">${renderElementMix(character)}</div>
       </div>
       <div class="construct-quick-build">
-        <div class="build-item"><strong>Frame</strong><span>${character.frame || "Not set"}</span></div>
-        <div class="build-item"><strong>Weapon</strong><span>${character.weapon || "Not set"}</span><small class="muted">${character.weaponType || "Weapon type not set"}</small></div>
-        <div class="build-item"><strong>CUB</strong><span>${character.cub?.name || "Not set"}</span><small class="muted">${character.cub?.notes || ""}</small></div>
-        <div class="build-item"><strong>Memory Set</strong><span>${character.memory || "Not set"}</span></div>
+        ${renderFrameDataPanel(character)}
         <button class="ghost-button" data-profile-edit="${character.id}" type="button"><span>✎</span>Edit source record</button>
       </div>
     </header>
+    ${renderConstructOverview(character)}
     <nav class="profile-tabs" aria-label="${character.name} guide tabs">
       ${constructTabs.map((tab) => `<button class="profile-tab ${state.constructTab === tab ? "active" : ""}" data-profile-tab="${tab}" type="button">${tabLabel(tab)}</button>`).join("")}
     </nav>
@@ -16458,9 +16673,8 @@ function renderConstructPage() {
     navigate(`construct/${character.id}/${state.constructTab}`);
   }));
   $$("[data-profile-edit]").forEach((button) => button.addEventListener("click", () => {
-    state.managerCharacter = button.dataset.profileEdit;
     navigate("manage");
-    loadCharacterIntoForm(state.managerCharacter);
+    loadCharacterIntoForm(button.dataset.profileEdit);
   }));
   $$("[data-profile-team-rotation]").forEach((button) => button.addEventListener("click", () => {
     const team = db.teams.find((item) => item.id === button.dataset.profileTeamRotation);
@@ -16478,6 +16692,82 @@ function renderConstructPage() {
   $$("[data-profile-character]").forEach((button) => button.addEventListener("click", () => {
     openConstruct(button.dataset.profileCharacter, state.constructTab);
   }));
+}
+
+function renderFrameDataPanel(character) {
+  return `
+    <div class="frame-data-panel">
+      <div class="frame-data-item bare-metric"><strong>Rank</strong><span title="${escapeAttribute(character.rank || "A")}">${rankIconMarkup(character.rank)}</span></div>
+      <div class="frame-data-item bare-metric class-metric"><strong>Class</strong><span title="${escapeAttribute(character.role || "Not set")}">${keywordIconMarkup(character.role)}${escapeHtml(character.role || "Not set")}</span></div>
+      <div class="frame-data-item"><strong>Weapon</strong><span>${escapeHtml(character.weaponType || "Not set")}</span></div>
+      <div class="frame-data-item"><strong>Signature</strong><span>${escapeHtml(buildWeaponLabel(character.weapon) || "Not set")}</span></div>
+      <div class="frame-data-item"><strong>Faction</strong><span>${escapeHtml(character.faction || "Not set")}</span></div>
+      <div class="frame-data-item"><strong>Gift</strong><span>${escapeHtml(character.gift || "Not set")}</span></div>
+    </div>
+  `;
+}
+
+function renderConstructOverview(character) {
+  const facts = character.facts && character.facts.length ? character.facts : defaultFacts(character);
+  const review = character.review || defaultReview(character);
+  const ratings = review.ratings || {};
+  const specialties = sharedTraitsForCharacter(character, "specialties");
+  const effects = sharedTraitsForCharacter(character, "effects");
+  return `
+    <section class="construct-overview-grid">
+      <article class="profile-card">
+        <p class="kicker">Bio</p>
+        <h3>${escapeHtml(character.frame || character.name)}</h3>
+        <p class="muted rich-text">${richText(character.bio || character.notes || "Add a short information bio in the Manage section.")}</p>
+        ${renderTraitSummary("Specialties", specialties)}
+        ${renderTraitSummary("Effects", effects)}
+      </article>
+      <article class="profile-card">
+        <p class="kicker">Identity</p>
+        <h3>${escapeHtml(character.rank || "A")} ${escapeHtml(character.role || "")}</h3>
+        <div class="fact-grid compact">
+          <span><strong>Faction</strong>${escapeHtml(character.faction || "Not set")}</span>
+          <span><strong>Gift</strong>${escapeHtml(character.gift || "Not set")}</span>
+          <span><strong>Element</strong>${escapeHtml(elementLabel(character))}</span>
+          <span><strong>CUB</strong>${escapeHtml(character.cub?.name || "Not set")}</span>
+          ${facts.map((fact) => `<span><strong>${escapeHtml(fact.label)}</strong>${escapeHtml(fact.value)}</span>`).join("")}
+        </div>
+      </article>
+      <article class="profile-card">
+        <p class="kicker">Tiers</p>
+        <h3>${escapeHtml(review.summaryTitle || "Guide Verdict")}</h3>
+        <div class="rating-grid">
+          <span><strong>General</strong>${escapeHtml(ratings.general || "TBD")}</span>
+          <span><strong>War Zone</strong>${escapeHtml(ratings.warzone || "TBD")}</span>
+          <span><strong>Pain Cage</strong>${escapeHtml(ratings.paincage || "TBD")}</span>
+          <span><strong>Difficulty</strong>${escapeHtml(review.difficulty || "TBD")}</span>
+        </div>
+      </article>
+    </section>
+  `;
+}
+
+function renderTraitSummary(label, items) {
+  if (!items.length) return "";
+  const showIcons = label === "Effects";
+  return `
+    <div class="bio-trait-block">
+      <strong>${escapeHtml(label)}</strong>
+      <div class="plain-trait-list">
+        ${items.map((item) => `
+          <span class="${showIcons ? "effect-trait-line" : ""}">${showIcons ? effectIconMarkup(item) : ""}<span><strong>${escapeHtml(item.name)}</strong>${item.description ? ` - <span class="rich-text">${richText(item.description)}</span>` : ""}</span></span>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function effectIconMarkup(item) {
+  if (!item.icon) return "";
+  if (isImagePath(item.icon)) {
+    return `<span class="effect-trait-icon image-effect-icon"><img src="${escapeAttribute(item.icon)}" alt="${escapeAttribute(item.name || "Effect")} icon" loading="lazy" /></span>`;
+  }
+  return `<span class="effect-trait-icon">${escapeHtml(String(item.icon).slice(0, 3))}</span>`;
 }
 
 function renderConstructTab(character, teams, globalRotations) {
@@ -16504,34 +16794,7 @@ function tabLabel(tab) {
 
 function renderProfileKit(character) {
   const abilities = character.abilities && character.abilities.length ? character.abilities : defaultAbilities(character);
-  const specialties = character.specialties && character.specialties.length ? character.specialties : defaultSpecialties(character);
-  const effects = character.effects && character.effects.length ? character.effects : defaultEffects(character);
   return `
-    <div class="profile-grid two">
-      <article class="profile-card">
-        <p class="kicker">Specialties</p>
-        <h3>Combat Traits</h3>
-        <div class="tag-list">
-          ${specialties.map((specialty) => `<span class="info-tag"><strong>${escapeHtml(specialty.name)}</strong>${specialty.description ? ` - <span class="rich-text">${richText(specialty.description)}</span>` : ""}</span>`).join("")}
-        </div>
-      </article>
-      <article class="profile-card">
-        <p class="kicker">Effect</p>
-        <h3>${character.effect ? "Signature Mechanic" : "No effect recorded"}</h3>
-        <p class="muted rich-text">${richText(character.effect || "Add mechanics such as Darkflow, Plasma Beam, stance systems, resource names, or special class effects in Manage.")}</p>
-      </article>
-    </div>
-    ${effects.length ? `
-      <div class="profile-grid">
-        ${effects.map((effect) => `
-          <article class="profile-card">
-            <p class="kicker">Effect</p>
-            <h3>${escapeHtml(effect.name || "Effect")}</h3>
-            <p class="muted rich-text">${richText(effect.description || "No effect description has been added.")}</p>
-          </article>
-        `).join("")}
-      </div>
-    ` : ""}
     <div class="profile-grid">
       ${abilities.map((ability) => `
         <article class="profile-card ability-card">
@@ -16548,37 +16811,13 @@ function renderProfileKit(character) {
 }
 
 function renderProfileReview(character) {
-  const facts = character.facts && character.facts.length ? character.facts : defaultFacts(character);
   const review = character.review || defaultReview(character);
-  const ratings = review.ratings || {};
   return `
     <div class="profile-grid two">
-      <article class="profile-card">
-        <p class="kicker">Bio</p>
-        <h3>${character.frame || character.name}</h3>
-        <p class="muted rich-text">${richText(character.bio || character.notes || "Add a short information bio in the Manage section.")}</p>
-      </article>
       <article class="profile-card">
         <p class="kicker">Review</p>
         <h3>${escapeHtml(review.summaryTitle || "Guide Verdict")}</h3>
         <p class="muted rich-text">${richText(review.summary || character.notes || "Add strengths, limitations, and current meta context in Manage.")}</p>
-        <div class="rating-grid">
-          <span><strong>General</strong>${escapeHtml(ratings.general || "TBD")}</span>
-          <span><strong>War Zone</strong>${escapeHtml(ratings.warzone || "TBD")}</span>
-          <span><strong>Pain Cage</strong>${escapeHtml(ratings.paincage || "TBD")}</span>
-          <span><strong>Difficulty</strong>${escapeHtml(review.difficulty || "TBD")}</span>
-        </div>
-      </article>
-      <article class="profile-card">
-        <p class="kicker">Identity</p>
-        <h3>${character.rank || "A"} ${character.class}</h3>
-        <div class="fact-grid">
-          <span><strong>Faction</strong>${character.faction || "Not set"}</span>
-          <span><strong>Gift</strong>${character.gift || "Not set"}</span>
-          <span><strong>Elements</strong>${elementSummary(character)}</span>
-          <span><strong>CUB</strong>${character.cub?.name || "Not set"}</span>
-          ${facts.map((fact) => `<span><strong>${fact.label}</strong>${fact.value}</span>`).join("")}
-        </div>
       </article>
       <article class="profile-card">
         <p class="kicker">Pros / Cons</p>
@@ -16649,10 +16888,10 @@ function renderProfileTeams(teams, character) {
             <h3>${team.name}</h3>
             <p class="muted rich-text">${richText(team.gameplan)}</p>
             <div class="team-members">
-              ${team.members.map((id) => {
+              ${team.members.map((id, index) => {
                 const member = characterById(id);
                 if (!member) return "";
-                return `<button class="team-member action-chip" data-profile-character="${member.id}" type="button"><span class="role-token">${member.sigil}</span><span>${member.name}<br><small>${member.role}</small></span></button>`;
+                return renderTeamMemberButton(member, "profile-character", member.id, index);
               }).join("")}
             </div>
             <button class="primary-button" data-profile-team-rotation="${team.id}" type="button"><span>⟲</span>Open rotation</button>
@@ -16791,13 +17030,17 @@ function loadDatabase() {
     if (!stored) return;
     const parsed = JSON.parse(stored);
     if (!parsed || !Array.isArray(parsed.characters)) return;
+    if (Array.isArray(parsed.elements)) db.elements = parsed.elements;
     db.characters = parsed.characters;
     if (parsed.tiers) db.tiers = parsed.tiers;
     if (Array.isArray(parsed.teams)) db.teams = parsed.teams;
     if (Array.isArray(parsed.rotations)) db.rotations = parsed.rotations;
     if (Array.isArray(parsed.memories)) db.memories = parsed.memories;
+    if (Array.isArray(parsed.items)) db.items = parsed.items;
     if (Array.isArray(parsed.weapons)) db.weapons = parsed.weapons;
     if (Array.isArray(parsed.cubs)) db.cubs = parsed.cubs;
+    if (Array.isArray(parsed.specialties)) db.specialties = parsed.specialties;
+    if (Array.isArray(parsed.effects)) db.effects = parsed.effects;
     if (Array.isArray(parsed.guides)) db.guides = parsed.guides;
     if (Array.isArray(parsed.gameModes)) db.gameModes = parsed.gameModes;
     if (Array.isArray(parsed.gamePatches)) db.gamePatches = parsed.gamePatches;
@@ -16811,13 +17054,17 @@ function loadDatabase() {
 
 function persistDatabase() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify({
+    elements: db.elements,
     characters: db.characters,
     memories: db.memories,
+    items: db.items,
     tiers: db.tiers,
     teams: db.teams,
     rotations: db.rotations,
     weapons: db.weapons,
     cubs: db.cubs,
+    specialties: db.specialties,
+    effects: db.effects,
     guides: db.guides,
     gameModes: db.gameModes,
     gamePatches: db.gamePatches,
@@ -16828,7 +17075,15 @@ function persistDatabase() {
 }
 
 function normalizeCollections() {
-  ["weapons", "cubs", "guides", "gameModes", "gamePatches", "enemies", "roadmap"].forEach((key) => {
+  db.elements = Array.isArray(db.elements) ? db.elements : JSON.parse(JSON.stringify(seedDatabase.elements || []));
+  db.elements.forEach((element) => {
+    element.id = element.id || slugify(element.label || "new-element");
+    element.label = element.label || "New Element";
+    element.color = element.color || "#cfd4da";
+    element.icon = element.icon || (element.label || "?").slice(0, 1).toUpperCase();
+    element.image = element.image || "";
+  });
+  ["items", "weapons", "cubs", "guides", "gameModes", "gamePatches", "enemies", "roadmap", "specialties", "effects"].forEach((key) => {
     db[key] = Array.isArray(db[key]) ? db[key] : [];
   });
   db.settings = db.settings && typeof db.settings === "object" ? db.settings : {};
@@ -16841,7 +17096,21 @@ function normalizeCollections() {
   Object.entries(defaultDropdowns()).forEach(([key, values]) => {
     db.settings.dropdowns[key] = uniqueOptions([...(db.settings.dropdowns[key] || []), ...values]);
   });
+  db.settings.rankColors = Array.isArray(db.settings.rankColors) ? db.settings.rankColors : [];
   mergeDefaultKeywordIcons();
+  mergeDefaultRankColors();
+  db.items.forEach((item) => {
+    item.id = item.id || slugify(item.name || "new-item");
+    item.name = item.name || "New Item";
+    item.icon = item.icon || "";
+    item.rarity = item.rarity || "";
+    item.stars = item.stars || Number.parseInt(item.rarity, 10) || "";
+    item.tab = item.tab || "Misc.";
+    item.subtab = item.subtab || "";
+    item.description = item.description || "";
+    item.flavorText = item.flavorText || "";
+    item.sourceUrl = item.sourceUrl || "";
+  });
   db.weapons.forEach((weapon) => {
     weapon.id = weapon.id || slugify(weapon.name || "new-weapon");
     weapon.name = weapon.name || "New Weapon";
@@ -16864,6 +17133,8 @@ function normalizeCollections() {
     cub.effect = cub.effect || "";
     cub.sourceUrl = cub.sourceUrl || "";
   });
+  db.specialties.forEach((specialty) => normalizeSharedTrait(specialty, "New Specialty", false));
+  db.effects.forEach((effect) => normalizeSharedTrait(effect, "New Effect", true));
   db.guides.forEach((guide) => {
     guide.id = guide.id || slugify(guide.title || "new-guide");
     guide.title = guide.title || "New Guide";
@@ -16912,12 +17183,23 @@ function normalizeCollections() {
 function defaultDropdowns() {
   return seedDatabase?.settings?.dropdowns || {
     roles: ["Attacker", "Tank", "Support", "Amplifier", "Vanguard", "Annihilator", "Observer", "Breaker"],
-    classes: ["DPS", "Tank", "Support", "Amplifier", "Vanguard", "Annihilator", "Observer", "Breaker"],
     ranks: ["S+", "S", "A", "B"],
     memoryFamilies: ["Omniframe", "Uniframe", "Event", "Collab", "Story"],
     weaponRarities: ["6★", "5★", "4★"],
     cubRarities: ["S", "A", "B"]
   };
+}
+
+function normalizeSharedTrait(item, fallbackName, supportsIcon = false) {
+  item.name = item.name || fallbackName;
+  item.id = item.id || slugify(item.name || fallbackName);
+  item.description = item.description || "";
+  if (supportsIcon) {
+    item.icon = item.icon || "";
+  } else {
+    delete item.icon;
+  }
+  delete item.color;
 }
 
 function mergeDefaultKeywordIcons() {
@@ -16927,13 +17209,28 @@ function mergeDefaultKeywordIcons() {
   });
 }
 
+function mergeDefaultRankColors() {
+  const defaults = seedDatabase?.settings?.rankColors || [
+    { rank: "S", color: "#e5ba4a", icon: "S" },
+    { rank: "A", color: "#a889f0", icon: "A" },
+    { rank: "B", color: "#5b9df6", icon: "B" }
+  ];
+  db.settings.rankColors.forEach((item) => {
+    item.icon = item.icon || item.rank || "?";
+  });
+  const existing = new Set((db.settings.rankColors || []).map((item) => String(item.rank || "").toUpperCase()));
+  defaults.forEach((item) => {
+    if (!existing.has(String(item.rank || "").toUpperCase())) db.settings.rankColors.push(JSON.parse(JSON.stringify(item)));
+  });
+}
+
 function normalizeCharacters() {
   db.characters.forEach((character) => {
     character.id = character.id || slugify(character.name || "new-character");
     character.name = character.name || "Unnamed Construct";
     character.sigil = character.sigil || initials(character.name);
     character.role = character.role || "Attacker";
-    character.class = character.class || "DPS";
+    delete character["class"];
     character.element = character.element || "physical";
     character.rank = character.rank || "A";
     character.weapon = character.weapon || "";
@@ -16942,6 +17239,9 @@ function normalizeCharacters() {
     character.priority = character.priority || "";
     character.notes = character.notes || "";
     character.image = character.image || "";
+    character.bodyImage = character.bodyImage || "";
+    character.chibiImage = character.chibiImage || "";
+    character.awakenImage = character.awakenImage || "";
     character.bio = character.bio || character.notes || "";
     character.frame = character.frame || character.name.split(":")[1]?.trim() || character.name;
     character.faction = character.faction || "";
@@ -16951,8 +17251,10 @@ function normalizeCharacters() {
     character.effect = character.effect || "";
     character.cub = character.cub && typeof character.cub === "object" ? character.cub : { name: "", notes: "" };
     character.elements = Array.isArray(character.elements) && character.elements.length ? character.elements : [{ name: character.element || "physical", percent: "100" }];
-    character.specialties = Array.isArray(character.specialties) ? character.specialties : defaultSpecialties(character);
-    character.effects = Array.isArray(character.effects) ? character.effects : defaultEffects(character);
+    character.specialtyIds = normalizeTraitSelections(character.specialtyIds, character.specialties, "specialties");
+    character.effectIds = normalizeTraitSelections(character.effectIds, character.effects, "effects");
+    character.specialties = [];
+    character.effects = [];
     character.facts = Array.isArray(character.facts) ? character.facts : defaultFacts(character);
     character.abilities = Array.isArray(character.abilities) ? character.abilities : defaultAbilities(character);
     character.review = character.review && typeof character.review === "object" ? character.review : defaultReview(character);
@@ -17012,12 +17314,48 @@ function defaultCalculations(character) {
 
 function defaultSpecialties(character) {
   return [
-    { name: character.class || "Role", description: character.priority || "Describe the construct's primary combat specialty." }
+    { name: character.role || "Class", description: character.priority || "Describe the construct's primary combat specialty." }
   ];
 }
 
 function defaultEffects(character) {
   return character.effect ? [{ name: "Signature Mechanic", description: character.effect }] : [];
+}
+
+function normalizeTraitSelections(existingIds, legacyEntries, collectionName, fallbackEntries = []) {
+  const ids = Array.isArray(existingIds) ? existingIds.filter(Boolean) : [];
+  if (ids.length) return uniqueOptions(ids);
+  const entries = Array.isArray(legacyEntries) && legacyEntries.length ? legacyEntries : fallbackEntries;
+  return uniqueOptions(entries.map((entry) => ensureSharedTrait(collectionName, entry)).filter(Boolean));
+}
+
+function ensureSharedTrait(collectionName, entry) {
+  const collection = db[collectionName] || (db[collectionName] = []);
+  const name = String(entry?.name || "").trim();
+  const description = String(entry?.description || "").trim();
+  if (!name && !description) return "";
+  const fallbackName = collectionName === "effects" ? "New Effect" : "New Specialty";
+  const normalizedName = name || fallbackName;
+  const normalizedDescription = description || "";
+  const match = collection.find((item) =>
+    String(item.name || "").trim().toLowerCase() === normalizedName.toLowerCase() &&
+    String(item.description || "").trim().toLowerCase() === normalizedDescription.toLowerCase()
+  );
+  if (match) return match.id;
+  const baseId = slugify(normalizedName);
+  const item = {
+    id: uniqueSystemId(collectionName, baseId || slugify(fallbackName)),
+    name: normalizedName,
+    description: normalizedDescription
+  };
+  collection.push(item);
+  return item.id;
+}
+
+function sharedTraitsForCharacter(character, collectionName) {
+  const idField = collectionName === "effects" ? "effectIds" : "specialtyIds";
+  const selected = new Set(character[idField] || []);
+  return (db[collectionName] || []).filter((item) => selected.has(item.id));
 }
 
 function defaultFacts(character) {
@@ -17050,6 +17388,31 @@ function portraitMarkup(character) {
     return `<span class="portrait image-portrait"><img src="${escapeHtml(character.image)}" alt="${escapeHtml(character.name)} portrait" onerror="this.parentElement.classList.add('image-failed')" /><span>${character.sigil}</span></span>`;
   }
   return `<span class="portrait">${character.sigil}</span>`;
+}
+
+function constructBodyMedia(character) {
+  const bodyImage = character.bodyImage || character.image || "";
+  const fallback = escapeHtml(character.sigil || initials(character.name));
+  const thumbnails = [
+    ["Main Icon", character.image],
+    ["Chibi", character.chibiImage],
+    ["Awaken", character.awakenImage]
+  ];
+  return `
+    <div class="construct-image-gallery">
+      <div class="body-image-frame">
+        ${bodyImage ? `<img src="${escapeHtml(bodyImage)}" alt="${escapeHtml(character.name)} body image" loading="lazy" />` : `<span>${fallback}</span>`}
+      </div>
+      <div class="character-image-strip">
+        ${thumbnails.map(([label, image]) => `
+          <figure>
+            ${image ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(character.name)} ${label}" loading="lazy" />` : `<span class="memory-empty-slot">No image</span>`}
+            <figcaption>${escapeHtml(label)}</figcaption>
+          </figure>
+        `).join("")}
+      </div>
+    </div>
+  `;
 }
 
 function renderAbilityBlock(character) {
@@ -17088,13 +17451,21 @@ function renderManager() {
     .map((element) => `<option value="${element.id}">${element.label}</option>`)
     .join("");
   setSelectOptions($("#managerRoleSelect"), dropdownOptions("roles"), state.draft?.role || "");
-  setSelectOptions($("#characterForm [name=\"class\"]"), dropdownOptions("classes"), state.draft?.class || "DPS");
   $("#releasePatchSelect").innerHTML = patchSelectOptions();
+  switchManageArea(state.manageArea);
   switchManageTab(state.manageTab);
   renderManagerList();
   loadCharacterIntoForm(state.managerCharacter);
   renderMemoryManager();
+  renderItemEditor();
   renderSystemEditors();
+}
+
+function switchManageArea(area = "characters") {
+  if (state.manageArea === "characters" && area !== "characters") syncCurrentCharacterFormToDraft();
+  state.manageArea = area;
+  $$("[data-manage-area-tab]").forEach((button) => button.classList.toggle("active", button.dataset.manageAreaTab === state.manageArea));
+  $$("[data-manage-area]").forEach((panel) => panel.classList.toggle("active", panel.dataset.manageArea === state.manageArea));
 }
 
 function enhanceMemoryCategorySelects() {
@@ -17158,30 +17529,37 @@ function switchManageTab(tab) {
 
 function renderManagerList() {
   const search = $("#managerSearch").value.trim().toLowerCase();
-  const characters = db.characters.filter((character) => {
-    const text = `${character.name} ${character.role} ${character.class} ${character.element}`.toLowerCase();
+  const draftMap = new Map(Object.entries(state.characterDrafts || {}));
+  const characters = [
+    ...db.characters.map((character) => draftMap.get(character.id) || character),
+    ...[...draftMap.entries()].filter(([id]) => !characterById(id)).map(([, draft]) => draft)
+  ].filter((character) => {
+    const text = `${character.name} ${character.role} ${character.element}`.toLowerCase();
     return !search || text.includes(search);
   });
   $("#managerCharacterList").innerHTML = characters.map((character) => {
     const element = elementById(character.element);
+    const draftKey = Object.keys(state.characterDrafts || {}).find((key) => state.characterDrafts[key] === character || state.characterDrafts[key]?.id === character.id) || character.id;
+    const unsaved = Boolean(state.characterDrafts[draftKey]);
     return `
-      <button class="manager-list-item ${character.id === state.managerCharacter ? "active" : ""}" data-manager-character="${character.id}" style="--accent:${element.color}" type="button">
+      <button class="manager-list-item ${draftKey === state.managerCharacter ? "active" : ""}" data-manager-character="${escapeAttribute(draftKey)}" style="--accent:${element.color}" type="button">
         ${portraitMarkup(character)}
-        <span><strong>${character.name}</strong><small>${element.label} ${character.role}</small></span>
+        <span><strong>${character.name}</strong><small>${element.label} ${character.role}${unsaved ? " - Unsaved" : ""}</small></span>
       </button>
     `;
   }).join("") || `<p class="muted">No matching constructs.</p>`;
   $$("[data-manager-character]").forEach((button) => button.addEventListener("click", () => {
-    state.managerCharacter = button.dataset.managerCharacter;
-    loadCharacterIntoForm(state.managerCharacter);
+    loadCharacterIntoForm(button.dataset.managerCharacter);
     renderManagerList();
   }));
 }
 
 function loadCharacterIntoForm(id) {
-  const character = characterById(id) || db.characters[0] || blankCharacter();
-  state.managerCharacter = character.id;
-  state.draft = JSON.parse(JSON.stringify(character));
+  syncCurrentCharacterFormToDraft();
+  const cachedDraft = state.characterDrafts[id];
+  const character = cachedDraft || characterById(id) || db.characters[0] || blankCharacter();
+  state.managerCharacter = cachedDraft ? id : character.id;
+  state.draft = cachedDraft || JSON.parse(JSON.stringify(character));
   fillBaseFields(state.draft);
   renderStackEditors();
 }
@@ -17212,6 +17590,103 @@ function renderManagerMemoryList() {
   }));
 }
 
+function renderItemEditor() {
+  if (!$("#itemEditor")) return;
+  $("#itemEditor").innerHTML = (db.items || []).map((item, index) => `
+    <details class="stack-row collapsible-row item-editor-row">
+      <summary>
+        <span>${escapeHtml(displayText(item.name || "Item"))}</span>
+        <small>${escapeHtml(displayText(`${item.rarity || item.stars || ""} ${item.tab || ""}${item.subtab ? ` / ${item.subtab}` : ""}`))}</small>
+      </summary>
+      <div class="collapse-content">
+        <label>Name<input data-item-index="${index}" data-item-field="name" value="${escapeAttribute(item.name || "")}" /></label>
+        <label>ID<input data-item-index="${index}" data-item-field="id" value="${escapeAttribute(item.id || "")}" /></label>
+        <label>Icon URL
+          <input data-item-index="${index}" data-item-field="icon" value="${escapeAttribute(item.icon || "")}" placeholder="https://... or imported local file" />
+          <input class="image-import-control" data-item-file="${index}" data-item-field="icon" type="file" accept="image/*" />
+        </label>
+        <label>Stars<input data-item-index="${index}" data-item-field="stars" type="number" min="0" max="6" step="1" value="${escapeAttribute(item.stars || "")}" /></label>
+        <label>Rarity<input data-item-index="${index}" data-item-field="rarity" value="${escapeAttribute(item.rarity || "")}" placeholder="5★" /></label>
+        <label>Tab<input data-item-index="${index}" data-item-field="tab" value="${escapeAttribute(item.tab || "")}" /></label>
+        <label>Subtab<input data-item-index="${index}" data-item-field="subtab" value="${escapeAttribute(item.subtab || "")}" /></label>
+        <label>Description<textarea data-item-index="${index}" data-item-field="description" rows="4">${escapeHtml(item.description || "")}</textarea></label>
+        <label>Flavor text<textarea data-item-index="${index}" data-item-field="flavorText" rows="4">${escapeHtml(item.flavorText || "")}</textarea></label>
+        <label>Source URL<input data-item-index="${index}" data-item-field="sourceUrl" value="${escapeAttribute(item.sourceUrl || "")}" /></label>
+        <button class="icon-button danger" data-remove-item="${index}" type="button" title="Remove item" aria-label="Remove item">x</button>
+      </div>
+    </details>
+  `).join("") || `<p class="muted">No items added yet.</p>`;
+  bindItemInputs();
+}
+
+function bindItemInputs() {
+  $$("[data-item-field]").forEach((input) => {
+    const update = () => {
+      const item = db.items?.[Number(input.dataset.itemIndex)];
+      if (!item) return;
+      item[input.dataset.itemField] = input.value;
+      if (input.dataset.itemField === "stars" && input.value && !item.rarity) item.rarity = `${input.value}★`;
+    };
+    input.addEventListener("input", update);
+    input.addEventListener("change", update);
+  });
+  $$("[data-remove-item]").forEach((button) => button.addEventListener("click", () => {
+    const item = db.items?.[Number(button.dataset.removeItem)];
+    if (item && !confirm(`Remove item "${item.name || "Unnamed Item"}"?`)) return;
+    db.items.splice(Number(button.dataset.removeItem), 1);
+    renderItemEditor();
+    renderItems();
+  }));
+  $$("[data-item-file]").forEach((input) => input.addEventListener("change", handleItemImageUpload));
+  setupImageDropZones();
+}
+
+function handleItemImageUpload(event) {
+  const input = event.target;
+  const file = input.files?.[0];
+  if (!file) return;
+  readImageFile(file, (imageUrl) => {
+    const item = db.items?.[Number(input.dataset.itemFile)];
+    if (!item) return;
+    item[input.dataset.itemField] = imageUrl;
+    const pairedInput = $(`[data-item-index="${input.dataset.itemFile}"][data-item-field="${input.dataset.itemField}"]`);
+    if (pairedInput) pairedInput.value = imageUrl;
+  });
+}
+
+function addItem() {
+  db.items = db.items || [];
+  db.items.unshift({
+    id: uniqueSystemId("items", "new-item"),
+    name: "New Item",
+    icon: "",
+    rarity: "",
+    stars: "",
+    tab: "Misc.",
+    subtab: "",
+    description: "",
+    flavorText: "",
+    sourceUrl: ""
+  });
+  renderItemEditor();
+  renderItems();
+}
+
+async function saveItems() {
+  if (uploadsPending()) return;
+  normalizeCollections();
+  try {
+    await materializeEmbeddedImages({ items: db.items }, "items");
+  } catch (error) {
+    alert(`Images could not be saved to the backend: ${error.message}`);
+    return;
+  }
+  persistDatabase();
+  renderItemEditor();
+  renderItems();
+  renderStats();
+}
+
 function switchSystemTab(tab) {
   state.systemTab = tab || "weapons";
   $$("[data-system-tab]").forEach((button) => button.classList.toggle("active", button.dataset.systemTab === state.systemTab));
@@ -17228,6 +17703,9 @@ function renderSystemEditors() {
   renderPatchEditor();
   renderEnemyEditor();
   renderRoadmapEditor();
+  renderElementEditor();
+  renderSharedTraitEditor("specialties", "#sharedSpecialtyEditor", "Specialty");
+  renderSharedTraitEditor("effects", "#sharedEffectEditor", "Effect");
   renderSettingsEditor();
 }
 
@@ -17249,55 +17727,61 @@ function renderDropdownOptionEditor() {
 
 function renderWeaponEditor() {
   $("#weaponEditor").innerHTML = (db.weapons || []).map((weapon, index) => `
-    <article class="stack-row">
-      <label>Name<input data-system-array="weapons" data-system-index="${index}" data-system-field="name" value="${escapeAttribute(weapon.name || "")}" /></label>
-      <label>ID<input data-system-array="weapons" data-system-index="${index}" data-system-field="id" value="${escapeAttribute(weapon.id || "")}" /></label>
-      <label>Rarity
-        <select data-system-array="weapons" data-system-index="${index}" data-system-field="rarity">
-          ${dropdownOptions("weaponRarities", weapon.rarity).map((value) => `<option value="${escapeAttribute(value)}" ${weapon.rarity === value ? "selected" : ""}>${escapeHtml(displayText(value))}</option>`).join("")}
-        </select>
-      </label>
-      <label>Type<input data-system-array="weapons" data-system-index="${index}" data-system-field="type" value="${escapeAttribute(weapon.type || "")}" /></label>
-      <label>Owner
-        <select data-system-array="weapons" data-system-index="${index}" data-system-field="owner">
-          <option value="">Unassigned</option>
-          ${db.characters.map((character) => `<option value="${escapeAttribute(character.id)}" ${weapon.owner === character.id ? "selected" : ""}>${escapeHtml(character.name)}</option>`).join("")}
-        </select>
-      </label>
-      <label>ATK<input data-system-array="weapons" data-system-index="${index}" data-system-field="atk" value="${escapeAttribute(weapon.atk || "")}" /></label>
-      <label>Crit<input data-system-array="weapons" data-system-index="${index}" data-system-field="crit" value="${escapeAttribute(weapon.crit || "")}" /></label>
-      <label>Image URL
-        <input data-system-array="weapons" data-system-index="${index}" data-system-field="image" value="${escapeAttribute(weapon.image || "")}" placeholder="https://... or imported local file" />
-        <input class="image-import-control" data-system-file="weapons" data-system-index="${index}" data-system-field="image" type="file" accept="image/*" />
-      </label>
-      <label>Effect<textarea data-system-array="weapons" data-system-index="${index}" data-system-field="effect" rows="3">${escapeHtml(weapon.effect || "")}</textarea></label>
-      <label>Source URL<input data-system-array="weapons" data-system-index="${index}" data-system-field="sourceUrl" value="${escapeAttribute(weapon.sourceUrl || "")}" /></label>
-      <button class="icon-button danger" data-remove-system="weapons" data-system-index="${index}" type="button" title="Remove weapon" aria-label="Remove weapon">x</button>
-    </article>
+    <details class="stack-row collapsible-row">
+      <summary><span>${escapeHtml(displayText(weapon.name || "Weapon"))}</span><small>${escapeHtml(displayText(weapon.rarity || weapon.type || ""))}</small></summary>
+      <div class="collapse-content">
+        <label>Name<input data-system-array="weapons" data-system-index="${index}" data-system-field="name" value="${escapeAttribute(weapon.name || "")}" /></label>
+        <label>ID<input data-system-array="weapons" data-system-index="${index}" data-system-field="id" value="${escapeAttribute(weapon.id || "")}" /></label>
+        <label>Rarity
+          <select data-system-array="weapons" data-system-index="${index}" data-system-field="rarity">
+            ${dropdownOptions("weaponRarities", weapon.rarity).map((value) => `<option value="${escapeAttribute(value)}" ${weapon.rarity === value ? "selected" : ""}>${escapeHtml(displayText(value))}</option>`).join("")}
+          </select>
+        </label>
+        <label>Type<input data-system-array="weapons" data-system-index="${index}" data-system-field="type" value="${escapeAttribute(weapon.type || "")}" /></label>
+        <label>Owner
+          <select data-system-array="weapons" data-system-index="${index}" data-system-field="owner">
+            <option value="">Unassigned</option>
+            ${db.characters.map((character) => `<option value="${escapeAttribute(character.id)}" ${weapon.owner === character.id ? "selected" : ""}>${escapeHtml(character.name)}</option>`).join("")}
+          </select>
+        </label>
+        <label>ATK<input data-system-array="weapons" data-system-index="${index}" data-system-field="atk" value="${escapeAttribute(weapon.atk || "")}" /></label>
+        <label>Crit<input data-system-array="weapons" data-system-index="${index}" data-system-field="crit" value="${escapeAttribute(weapon.crit || "")}" /></label>
+        <label>Image URL
+          <input data-system-array="weapons" data-system-index="${index}" data-system-field="image" value="${escapeAttribute(weapon.image || "")}" placeholder="https://... or imported local file" />
+          <input class="image-import-control" data-system-file="weapons" data-system-index="${index}" data-system-field="image" type="file" accept="image/*" />
+        </label>
+        <label>Effect<textarea data-system-array="weapons" data-system-index="${index}" data-system-field="effect" rows="3">${escapeHtml(weapon.effect || "")}</textarea></label>
+        <label>Source URL<input data-system-array="weapons" data-system-index="${index}" data-system-field="sourceUrl" value="${escapeAttribute(weapon.sourceUrl || "")}" /></label>
+        <button class="icon-button danger" data-remove-system="weapons" data-system-index="${index}" type="button" title="Remove weapon" aria-label="Remove weapon">x</button>
+      </div>
+    </details>
   `).join("") || `<p class="muted">No weapons added yet.</p>`;
   bindSystemInputs();
 }
 
 function renderCubEditor() {
   $("#cubEditor").innerHTML = (db.cubs || []).map((cub, index) => `
-    <article class="stack-row">
-      <label>Name<input data-system-array="cubs" data-system-index="${index}" data-system-field="name" value="${escapeAttribute(cub.name || "")}" /></label>
-      <label>ID<input data-system-array="cubs" data-system-index="${index}" data-system-field="id" value="${escapeAttribute(cub.id || "")}" /></label>
-      <label>Rarity
-        <select data-system-array="cubs" data-system-index="${index}" data-system-field="rarity">
-          ${dropdownOptions("cubRarities", cub.rarity).map((value) => `<option value="${escapeAttribute(value)}" ${cub.rarity === value ? "selected" : ""}>${escapeHtml(displayText(value))}</option>`).join("")}
-        </select>
-      </label>
-      <label>Role<input data-system-array="cubs" data-system-index="${index}" data-system-field="role" value="${escapeAttribute(cub.role || "")}" /></label>
-      <label>Element<input data-system-array="cubs" data-system-index="${index}" data-system-field="element" value="${escapeAttribute(cub.element || "")}" /></label>
-      <label>Image URL
-        <input data-system-array="cubs" data-system-index="${index}" data-system-field="image" value="${escapeAttribute(cub.image || "")}" placeholder="https://... or imported local file" />
-        <input class="image-import-control" data-system-file="cubs" data-system-index="${index}" data-system-field="image" type="file" accept="image/*" />
-      </label>
-      <label>Effect<textarea data-system-array="cubs" data-system-index="${index}" data-system-field="effect" rows="3">${escapeHtml(cub.effect || "")}</textarea></label>
-      <label>Source URL<input data-system-array="cubs" data-system-index="${index}" data-system-field="sourceUrl" value="${escapeAttribute(cub.sourceUrl || "")}" /></label>
-      <button class="icon-button danger" data-remove-system="cubs" data-system-index="${index}" type="button" title="Remove CUB" aria-label="Remove CUB">x</button>
-    </article>
+    <details class="stack-row collapsible-row">
+      <summary><span>${escapeHtml(displayText(cub.name || "CUB"))}</span><small>${escapeHtml(displayText(cub.rarity || cub.role || ""))}</small></summary>
+      <div class="collapse-content">
+        <label>Name<input data-system-array="cubs" data-system-index="${index}" data-system-field="name" value="${escapeAttribute(cub.name || "")}" /></label>
+        <label>ID<input data-system-array="cubs" data-system-index="${index}" data-system-field="id" value="${escapeAttribute(cub.id || "")}" /></label>
+        <label>Rarity
+          <select data-system-array="cubs" data-system-index="${index}" data-system-field="rarity">
+            ${dropdownOptions("cubRarities", cub.rarity).map((value) => `<option value="${escapeAttribute(value)}" ${cub.rarity === value ? "selected" : ""}>${escapeHtml(displayText(value))}</option>`).join("")}
+          </select>
+        </label>
+        <label>Role<input data-system-array="cubs" data-system-index="${index}" data-system-field="role" value="${escapeAttribute(cub.role || "")}" /></label>
+        <label>Element<input data-system-array="cubs" data-system-index="${index}" data-system-field="element" value="${escapeAttribute(cub.element || "")}" /></label>
+        <label>Image URL
+          <input data-system-array="cubs" data-system-index="${index}" data-system-field="image" value="${escapeAttribute(cub.image || "")}" placeholder="https://... or imported local file" />
+          <input class="image-import-control" data-system-file="cubs" data-system-index="${index}" data-system-field="image" type="file" accept="image/*" />
+        </label>
+        <label>Effect<textarea data-system-array="cubs" data-system-index="${index}" data-system-field="effect" rows="3">${escapeHtml(cub.effect || "")}</textarea></label>
+        <label>Source URL<input data-system-array="cubs" data-system-index="${index}" data-system-field="sourceUrl" value="${escapeAttribute(cub.sourceUrl || "")}" /></label>
+        <button class="icon-button danger" data-remove-system="cubs" data-system-index="${index}" type="button" title="Remove CUB" aria-label="Remove CUB">x</button>
+      </div>
+    </details>
   `).join("") || `<p class="muted">No CUBs added yet.</p>`;
   bindSystemInputs();
 }
@@ -17316,20 +17800,23 @@ function renderModeEditor() {
 
 function renderPatchEditor() {
   $("#patchEditor").innerHTML = (db.gamePatches || []).map((patch, index) => `
-    <article class="stack-row">
-      <label>Name<input data-system-array="gamePatches" data-system-index="${index}" data-system-field="name" value="${escapeAttribute(patch.name || "")}" /></label>
-      <label>ID<input data-system-array="gamePatches" data-system-index="${index}" data-system-field="id" value="${escapeAttribute(patch.id || "")}" /></label>
-      <label>Patch number<input data-system-array="gamePatches" data-system-index="${index}" data-system-field="number" value="${escapeAttribute(patch.number || "")}" /></label>
-      <label>Date<input data-system-array="gamePatches" data-system-index="${index}" data-system-field="date" value="${escapeAttribute(patch.date || "")}" /></label>
-      <label>Status<input data-system-array="gamePatches" data-system-index="${index}" data-system-field="status" value="${escapeAttribute(patch.status || "")}" /></label>
-      <label>Released characters
-        <select multiple size="8" data-system-array="gamePatches" data-system-index="${index}" data-system-field="characters">
-          ${characterMultiOptions(patch.characters || [])}
-        </select>
-      </label>
-      <label>Notes<textarea data-system-array="gamePatches" data-system-index="${index}" data-system-field="notes" rows="4">${escapeHtml(patch.notes || "")}</textarea></label>
-      <button class="icon-button danger" data-remove-system="gamePatches" data-system-index="${index}" type="button" title="Remove patch" aria-label="Remove patch">x</button>
-    </article>
+    <details class="stack-row collapsible-row">
+      <summary><span>${escapeHtml(displayText(patch.name || "Patch"))}</span><small>${escapeHtml(displayText(patch.number || patch.status || ""))}</small></summary>
+      <div class="collapse-content">
+        <label>Name<input data-system-array="gamePatches" data-system-index="${index}" data-system-field="name" value="${escapeAttribute(patch.name || "")}" /></label>
+        <label>ID<input data-system-array="gamePatches" data-system-index="${index}" data-system-field="id" value="${escapeAttribute(patch.id || "")}" /></label>
+        <label>Patch number<input data-system-array="gamePatches" data-system-index="${index}" data-system-field="number" value="${escapeAttribute(patch.number || "")}" /></label>
+        <label>Date<input data-system-array="gamePatches" data-system-index="${index}" data-system-field="date" value="${escapeAttribute(patch.date || "")}" /></label>
+        <label>Status<input data-system-array="gamePatches" data-system-index="${index}" data-system-field="status" value="${escapeAttribute(patch.status || "")}" /></label>
+        <label>Released characters
+          <select multiple size="8" data-system-array="gamePatches" data-system-index="${index}" data-system-field="characters">
+            ${characterMultiOptions(patch.characters || [])}
+          </select>
+        </label>
+        <label>Notes<textarea data-system-array="gamePatches" data-system-index="${index}" data-system-field="notes" rows="4">${escapeHtml(patch.notes || "")}</textarea></label>
+        <button class="icon-button danger" data-remove-system="gamePatches" data-system-index="${index}" type="button" title="Remove patch" aria-label="Remove patch">x</button>
+      </div>
+    </details>
   `).join("") || `<p class="muted">No patches added yet.</p>`;
   bindSystemInputs();
 }
@@ -17341,21 +17828,53 @@ function characterMultiOptions(selectedIds = []) {
   `).join("");
 }
 
+function traitMultiOptions(collectionName, selectedIds = []) {
+  const selected = new Set(selectedIds || []);
+  return (db[collectionName] || []).map((item) => `
+    <option value="${escapeAttribute(item.id)}" ${selected.has(item.id) ? "selected" : ""}>${escapeHtml(item.name)}${item.description ? ` - ${escapeHtml(item.description.slice(0, 70))}` : ""}</option>
+  `).join("");
+}
+
+function updateSharedTraitReferences(collectionName, oldId, newId) {
+  const field = collectionName === "effects" ? "effectIds" : collectionName === "specialties" ? "specialtyIds" : "";
+  if (!field) return;
+  db.characters.forEach((character) => {
+    character[field] = (character[field] || []).map((id) => id === oldId ? newId : id);
+  });
+  Object.values(state.characterDrafts || {}).forEach((draft) => {
+    draft[field] = (draft[field] || []).map((id) => id === oldId ? newId : id);
+  });
+}
+
+function removeSharedTraitReferences(collectionName, removedId) {
+  const field = collectionName === "effects" ? "effectIds" : collectionName === "specialties" ? "specialtyIds" : "";
+  if (!field) return;
+  db.characters.forEach((character) => {
+    character[field] = (character[field] || []).filter((id) => id !== removedId);
+  });
+  Object.values(state.characterDrafts || {}).forEach((draft) => {
+    draft[field] = (draft[field] || []).filter((id) => id !== removedId);
+  });
+}
+
 function renderEnemyEditor() {
   $("#enemyEditor").innerHTML = (db.enemies || []).map((enemy, index) => `
-    <article class="stack-row">
-      <label>Name<input data-system-array="enemies" data-system-index="${index}" data-system-field="name" value="${escapeAttribute(enemy.name || "")}" /></label>
-      <label>ID<input data-system-array="enemies" data-system-index="${index}" data-system-field="id" value="${escapeAttribute(enemy.id || "")}" /></label>
-      <label>Type<input data-system-array="enemies" data-system-index="${index}" data-system-field="type" value="${escapeAttribute(enemy.type || "")}" /></label>
-      <label>Element<input data-system-array="enemies" data-system-index="${index}" data-system-field="element" value="${escapeAttribute(enemy.element || "")}" /></label>
-      <label>Image URL
-        <input data-system-array="enemies" data-system-index="${index}" data-system-field="image" value="${escapeAttribute(enemy.image || "")}" placeholder="https://... or imported local file" />
-        <input class="image-import-control" data-system-file="enemies" data-system-index="${index}" data-system-field="image" type="file" accept="image/*" />
-      </label>
-      <label>Summary<textarea data-system-array="enemies" data-system-index="${index}" data-system-field="summary" rows="3">${escapeHtml(enemy.summary || "")}</textarea></label>
-      <label>Source URL<input data-system-array="enemies" data-system-index="${index}" data-system-field="sourceUrl" value="${escapeAttribute(enemy.sourceUrl || "")}" /></label>
-      <button class="icon-button danger" data-remove-system="enemies" data-system-index="${index}" type="button" title="Remove enemy" aria-label="Remove enemy">x</button>
-    </article>
+    <details class="stack-row collapsible-row">
+      <summary><span>${escapeHtml(displayText(enemy.name || "Enemy"))}</span><small>${escapeHtml(displayText(enemy.type || enemy.element || ""))}</small></summary>
+      <div class="collapse-content">
+        <label>Name<input data-system-array="enemies" data-system-index="${index}" data-system-field="name" value="${escapeAttribute(enemy.name || "")}" /></label>
+        <label>ID<input data-system-array="enemies" data-system-index="${index}" data-system-field="id" value="${escapeAttribute(enemy.id || "")}" /></label>
+        <label>Type<input data-system-array="enemies" data-system-index="${index}" data-system-field="type" value="${escapeAttribute(enemy.type || "")}" /></label>
+        <label>Element<input data-system-array="enemies" data-system-index="${index}" data-system-field="element" value="${escapeAttribute(enemy.element || "")}" /></label>
+        <label>Image URL
+          <input data-system-array="enemies" data-system-index="${index}" data-system-field="image" value="${escapeAttribute(enemy.image || "")}" placeholder="https://... or imported local file" />
+          <input class="image-import-control" data-system-file="enemies" data-system-index="${index}" data-system-field="image" type="file" accept="image/*" />
+        </label>
+        <label>Summary<textarea data-system-array="enemies" data-system-index="${index}" data-system-field="summary" rows="3">${escapeHtml(enemy.summary || "")}</textarea></label>
+        <label>Source URL<input data-system-array="enemies" data-system-index="${index}" data-system-field="sourceUrl" value="${escapeAttribute(enemy.sourceUrl || "")}" /></label>
+        <button class="icon-button danger" data-remove-system="enemies" data-system-index="${index}" type="button" title="Remove enemy" aria-label="Remove enemy">x</button>
+      </div>
+    </details>
   `).join("") || `<p class="muted">No enemies added yet.</p>`;
   bindSystemInputs();
 }
@@ -17364,6 +17883,48 @@ function renderRoadmapEditor() {
   renderTextSystemEditor("#roadmapEditor", "roadmap", [
     ["title", "Title"], ["id", "ID"], ["type", "Type"], ["status", "Status"], ["date", "Date"], ["sourceUrl", "Source URL"]
   ], "notes", "Notes");
+}
+
+function renderElementEditor() {
+  $("#elementEditor").innerHTML = (db.elements || []).map((element, index) => `
+    <details class="stack-row collapsible-row">
+      <summary><span>${escapeHtml(displayText(element.label || element.id || "Element"))}</span><small>${escapeHtml(displayText(element.id || ""))}</small></summary>
+      <div class="collapse-content">
+        <label>Label<input data-system-array="elements" data-system-index="${index}" data-system-field="label" value="${escapeAttribute(element.label || "")}" /></label>
+        <label>ID<input data-system-array="elements" data-system-index="${index}" data-system-field="id" value="${escapeAttribute(element.id || "")}" /></label>
+        <label>Color<input data-system-array="elements" data-system-index="${index}" data-system-field="color" value="${escapeAttribute(element.color || "")}" placeholder="#e75656" /></label>
+        <label>Text icon<input data-system-array="elements" data-system-index="${index}" data-system-field="icon" value="${escapeAttribute(element.icon || "")}" placeholder="F" /></label>
+        <label>Image icon URL
+          <input data-system-array="elements" data-system-index="${index}" data-system-field="image" value="${escapeAttribute(element.image || "")}" placeholder="https://... or imported local file" />
+          <input class="image-import-control" data-system-file="elements" data-system-index="${index}" data-system-field="image" type="file" accept="image/*" />
+        </label>
+        <button class="icon-button danger" data-remove-system="elements" data-system-index="${index}" type="button" title="Remove element" aria-label="Remove element">x</button>
+      </div>
+    </details>
+  `).join("") || `<p class="muted">No elements configured.</p>`;
+  bindSystemInputs();
+}
+
+function renderSharedTraitEditor(collectionName, selector, label) {
+  const supportsIcon = collectionName === "effects";
+  $(selector).innerHTML = (db[collectionName] || []).map((item, index) => `
+    <details class="stack-row collapsible-row">
+      <summary><span>${escapeHtml(displayText(item.name || label))}</span><small>${escapeHtml(displayText(item.description || ""))}</small></summary>
+      <div class="collapse-content">
+        <label>Name<input data-system-array="${collectionName}" data-system-index="${index}" data-system-field="name" value="${escapeAttribute(item.name || "")}" /></label>
+        <label>ID<input data-system-array="${collectionName}" data-system-index="${index}" data-system-field="id" value="${escapeAttribute(item.id || "")}" /></label>
+        ${supportsIcon ? `
+          <label>Icon
+            <input data-system-array="${collectionName}" data-system-index="${index}" data-system-field="icon" value="${escapeAttribute(item.icon || "")}" placeholder="Text, /uploads/icon.png, or image URL" />
+            <input class="image-import-control" data-system-file="${collectionName}" data-system-index="${index}" data-system-field="icon" type="file" accept="image/*" />
+          </label>
+        ` : ""}
+        <label>Description<textarea data-system-array="${collectionName}" data-system-index="${index}" data-system-field="description" rows="3">${escapeHtml(item.description || "")}</textarea></label>
+        <button class="icon-button danger" data-remove-system="${collectionName}" data-system-index="${index}" type="button" title="Remove ${label.toLowerCase()}" aria-label="Remove ${label.toLowerCase()}">x</button>
+      </div>
+    </details>
+  `).join("") || `<p class="muted">No ${label.toLowerCase()} entries added yet.</p>`;
+  bindSystemInputs();
 }
 
 function renderSettingsEditor() {
@@ -17380,17 +17941,31 @@ function renderSettingsEditor() {
       <button class="icon-button danger" data-remove-keyword-icon="${index}" type="button" title="Remove keyword icon" aria-label="Remove keyword icon">x</button>
     </article>
   `).join("") || `<p class="muted">No keyword icons added yet.</p>`;
+  $("#rankColorEditor").innerHTML = (db.settings?.rankColors || []).map((item, index) => `
+    <article class="stack-row compact-row">
+      <label>Rank<input data-rank-color-index="${index}" data-rank-color-field="rank" value="${escapeAttribute(item.rank || "")}" placeholder="S, A, B..." /></label>
+      <label>Color<input data-rank-color-index="${index}" data-rank-color-field="color" value="${escapeAttribute(item.color || "")}" placeholder="#e5ba4a" /></label>
+      <label>Icon
+        <input data-rank-color-index="${index}" data-rank-color-field="icon" value="${escapeAttribute(item.icon || "")}" placeholder="Text, /uploads/rank.png, or image URL" />
+        <input class="image-import-control" data-rank-icon-file data-rank-color-index="${index}" data-rank-color-field="icon" type="file" accept="image/*" />
+      </label>
+      <button class="icon-button danger" data-remove-rank-color="${index}" type="button" title="Remove rank color" aria-label="Remove rank color">x</button>
+    </article>
+  `).join("") || `<p class="muted">No rank colors added yet.</p>`;
   renderDropdownOptionEditor();
   bindSettingsInputs();
 }
 
 function renderTextSystemEditor(selector, arrayName, fields, textareaField, textareaLabel) {
   $(selector).innerHTML = (db[arrayName] || []).map((item, index) => `
-    <article class="stack-row">
-      ${fields.map(([field, label]) => `<label>${label}<input data-system-array="${arrayName}" data-system-index="${index}" data-system-field="${field}" value="${escapeAttribute(item[field] || "")}" /></label>`).join("")}
-      <label>${textareaLabel}<textarea data-system-array="${arrayName}" data-system-index="${index}" data-system-field="${textareaField}" rows="4">${escapeHtml(item[textareaField] || "")}</textarea></label>
-      <button class="icon-button danger" data-remove-system="${arrayName}" data-system-index="${index}" type="button" title="Remove item" aria-label="Remove item">x</button>
-    </article>
+    <details class="stack-row collapsible-row">
+      <summary><span>${escapeHtml(displayText(item.name || item.title || item.id || "Item"))}</span><small>${escapeHtml(displayText(item.status || item.category || item.type || ""))}</small></summary>
+      <div class="collapse-content">
+        ${fields.map(([field, label]) => `<label>${label}<input data-system-array="${arrayName}" data-system-index="${index}" data-system-field="${field}" value="${escapeAttribute(item[field] || "")}" /></label>`).join("")}
+        <label>${textareaLabel}<textarea data-system-array="${arrayName}" data-system-index="${index}" data-system-field="${textareaField}" rows="4">${escapeHtml(item[textareaField] || "")}</textarea></label>
+        <button class="icon-button danger" data-remove-system="${arrayName}" data-system-index="${index}" type="button" title="Remove item" aria-label="Remove item">x</button>
+      </div>
+    </details>
   `).join("") || `<p class="muted">No entries added yet.</p>`;
   bindSystemInputs();
 }
@@ -17400,17 +17975,23 @@ function bindSystemInputs() {
     const update = () => {
       const item = db[input.dataset.systemArray]?.[Number(input.dataset.systemIndex)];
       if (!item) return;
+      const oldId = item.id;
       if (input.dataset.systemField === "characters") {
         item.characters = Array.from(input.selectedOptions).map((option) => option.value);
       } else {
         item[input.dataset.systemField] = input.value;
       }
+      if (input.dataset.systemField === "id" && oldId && oldId !== input.value) updateSharedTraitReferences(input.dataset.systemArray, oldId, input.value);
+      if (input.dataset.systemArray === "weapons") refreshSignatureWeaponSelect();
     };
     input.addEventListener("input", update);
     input.addEventListener("change", update);
   });
   $$("[data-remove-system]").forEach((button) => button.addEventListener("click", () => {
-    db[button.dataset.removeSystem].splice(Number(button.dataset.systemIndex), 1);
+    const collectionName = button.dataset.removeSystem;
+    const removed = db[collectionName][Number(button.dataset.systemIndex)];
+    db[collectionName].splice(Number(button.dataset.systemIndex), 1);
+    if (removed?.id) removeSharedTraitReferences(collectionName, removed.id);
     renderSystemEditors();
   }));
   $$("[data-system-file]").forEach((input) => input.addEventListener("change", handleSystemImageUpload));
@@ -17440,8 +18021,38 @@ function bindSettingsInputs() {
     renderSettingsEditor();
     applyGlobalSettings();
   }));
+  $$("[data-rank-color-field]").forEach((input) => {
+    const update = () => {
+      const item = db.settings.rankColors[Number(input.dataset.rankColorIndex)];
+      if (!item) return;
+      item[input.dataset.rankColorField] = input.value;
+      refreshRankBadges();
+    };
+    input.addEventListener("input", update);
+    input.addEventListener("change", update);
+  });
+  $$("[data-remove-rank-color]").forEach((button) => button.addEventListener("click", () => {
+    db.settings.rankColors.splice(Number(button.dataset.removeRankColor), 1);
+    renderSettingsEditor();
+    refreshRankBadges();
+  }));
+  $$("[data-rank-icon-file]").forEach((input) => input.addEventListener("change", handleRankIconUpload));
   $$("[data-keyword-icon-file]").forEach((input) => input.addEventListener("change", handleKeywordIconUpload));
   setupImageDropZones();
+}
+
+function handleRankIconUpload(event) {
+  const input = event.target;
+  const file = input.files?.[0];
+  if (!file) return;
+  readImageFile(file, (imageUrl) => {
+    const item = db.settings.rankColors[Number(input.dataset.rankColorIndex)];
+    if (!item) return;
+    item[input.dataset.rankColorField] = imageUrl;
+    const pairedInput = $(`[data-rank-color-index="${input.dataset.rankColorIndex}"][data-rank-color-field="${input.dataset.rankColorField}"]:not([type="file"])`);
+    if (pairedInput) pairedInput.value = imageUrl;
+    refreshRankBadges();
+  });
 }
 
 function handleKeywordIconUpload(event) {
@@ -17479,11 +18090,18 @@ function addSystemItem(type) {
     gameModes: { id: "new-mode", name: "New Mode", category: "", status: "Draft", summary: "", sourceUrl: "" },
     gamePatches: { id: "new-patch", name: "New Patch", number: "", date: "", status: "Draft", notes: "", characters: [] },
     enemies: { id: "new-enemy", name: "New Enemy", type: "", element: "", image: "", summary: "", sourceUrl: "" },
+    elements: { id: "new-element", label: "New Element", color: "#cfd4da", icon: "E", image: "" },
+    specialties: { id: "new-specialty", name: "New Specialty", description: "" },
+    effects: { id: "new-effect", name: "New Effect", description: "", icon: "" },
     roadmap: { id: "new-roadmap-item", title: "New Roadmap Item", type: "", status: "Draft", date: "TBD", notes: "", sourceUrl: "" }
   };
   db[type] = db[type] || [];
   db[type].push({ ...defaults[type], id: uniqueSystemId(type, defaults[type].id) });
   renderSystemEditors();
+}
+
+function addElementSetting() {
+  addSystemItem("elements");
 }
 
 function uniqueSystemId(type, base) {
@@ -17497,10 +18115,25 @@ function uniqueSystemId(type, base) {
   return id;
 }
 
-function saveSystems() {
+async function saveSystems() {
   if (uploadsPending()) return;
+  syncCurrentCharacterFormToDraft();
   db.settings.brandIcon = $("#brandIconSetting")?.value || db.settings.brandIcon || "GR";
   normalizeCollections();
+  try {
+    await materializeEmbeddedImages({
+      weapons: db.weapons,
+      cubs: db.cubs,
+      enemies: db.enemies,
+      elements: db.elements,
+      specialties: db.specialties,
+      effects: db.effects,
+      settings: db.settings
+    }, "systems");
+  } catch (error) {
+    alert(`Images could not be saved to the backend: ${error.message}`);
+    return;
+  }
   persistDatabase();
   refreshAll();
 }
@@ -17509,6 +18142,19 @@ function addKeywordIcon() {
   db.settings.keywordIcons = db.settings.keywordIcons || [];
   db.settings.keywordIcons.push({ keyword: "new-keyword", label: "New Keyword", icon: "?", color: "#3fc6d5" });
   renderSettingsEditor();
+}
+
+function addRankColor() {
+  db.settings.rankColors = db.settings.rankColors || [];
+  db.settings.rankColors.push({ rank: "New", color: "#e5ba4a", icon: "N" });
+  renderSettingsEditor();
+}
+
+function refreshRankBadges() {
+  renderCharacters();
+  renderPatches();
+  if (state.route === "construct") renderConstructPage();
+  if (state.route === "patch") renderPatchPage();
 }
 
 function switchSettingsTab(tab = "icons") {
@@ -17552,8 +18198,7 @@ function dropdownOptions(group, extra = "") {
 
 function dropdownLabel(group) {
   return {
-    roles: "Character Roles",
-    classes: "Character Classes",
+    roles: "Character Classes",
     ranks: "Character Ranks",
     memoryFamilies: "Memory Families",
     weaponRarities: "Weapon Rarities",
@@ -17618,7 +18263,7 @@ function addMemoryEffect() {
   renderMemoryEffectEditor();
 }
 
-function saveMemoryFromForm() {
+async function saveMemoryFromForm() {
   if (uploadsPending()) return;
   const form = $("#memoryForm");
   const formData = new FormData(form);
@@ -17651,6 +18296,12 @@ function saveMemoryFromForm() {
   const conflict = (db.memories || []).some((item, index) => item.id === id && index !== existing);
   if (conflict) {
     alert("That memory ID is already in use.");
+    return;
+  }
+  try {
+    await materializeEmbeddedImages(memory, `memory-${id}`);
+  } catch (error) {
+    alert(`Images could not be saved to the backend: ${error.message}`);
     return;
   }
   if (existing >= 0) {
@@ -17723,7 +18374,7 @@ function handleStackImageUpload(event) {
 }
 
 function setupImageDropZones(root = document) {
-  root.querySelectorAll("[data-form-image], [data-memory-file], [data-stack-file], [data-system-file], [data-keyword-icon-file]").forEach((input) => {
+  root.querySelectorAll("[data-form-image], [data-memory-file], [data-stack-file], [data-item-file], [data-system-file], [data-keyword-icon-file], [data-rank-icon-file]").forEach((input) => {
     if (input.dataset.dropEnhanced === "true") return;
     input.dataset.dropEnhanced = "true";
     input.classList.add("drop-file-input");
@@ -17791,6 +18442,16 @@ function processDroppedImage(input, file) {
       return;
     }
 
+    if (input.dataset.itemFile !== undefined) {
+      const item = db.items?.[Number(input.dataset.itemFile)];
+      if (!item) return;
+      item[input.dataset.itemField] = imageUrl;
+      const pairedInput = $(`[data-item-index="${input.dataset.itemFile}"][data-item-field="${input.dataset.itemField}"]`);
+      if (pairedInput) pairedInput.value = imageUrl;
+      renderItems();
+      return;
+    }
+
     if (input.dataset.systemFile) {
       const item = db[input.dataset.systemFile]?.[Number(input.dataset.systemIndex)];
       if (!item) return;
@@ -17807,6 +18468,16 @@ function processDroppedImage(input, file) {
       const pairedInput = $(`[data-keyword-icon-index="${input.dataset.keywordIconIndex}"][data-keyword-icon-field="${input.dataset.keywordIconField}"]:not([type="file"])`);
       if (pairedInput) pairedInput.value = imageUrl;
       applyGlobalSettings();
+      return;
+    }
+
+    if (input.dataset.rankIconFile !== undefined) {
+      const item = db.settings.rankColors[Number(input.dataset.rankColorIndex)];
+      if (!item) return;
+      item[input.dataset.rankColorField] = imageUrl;
+      const pairedInput = $(`[data-rank-color-index="${input.dataset.rankColorIndex}"][data-rank-color-field="${input.dataset.rankColorField}"]:not([type="file"])`);
+      if (pairedInput) pairedInput.value = imageUrl;
+      refreshRankBadges();
     }
   });
 }
@@ -17822,8 +18493,8 @@ function readImageFile(file, callback) {
     uploadImageFile(file, reader.result)
       .then(callback)
       .catch((error) => {
-        console.warn("Image upload server unavailable, using embedded image data.", error);
-        callback(reader.result);
+        console.error("Image upload failed.", error);
+        alert(`Image upload failed: ${error.message}. Start the local server and try again so images can be saved to the backend uploads folder.`);
       })
       .finally(endImageUpload);
   };
@@ -17846,7 +18517,7 @@ function endImageUpload() {
 
 function setUploadBusyState() {
   const busy = state.pendingUploads > 0;
-  ["#saveCharacter", "#saveMemory", "#saveSystems"].forEach((selector) => {
+  ["#saveCharacter", "#saveMemory", "#saveItems", "#saveSystems"].forEach((selector) => {
     const button = $(selector);
     if (!button) return;
     if (!button.dataset.readyHtml) button.dataset.readyHtml = button.innerHTML;
@@ -17862,7 +18533,9 @@ function uploadsPending() {
 }
 
 async function uploadImageFile(file, dataUrl) {
-  if (!location.protocol.startsWith("http")) return dataUrl;
+  if (!location.protocol.startsWith("http")) {
+    throw new Error("The site must be opened from the local server, not directly as a file.");
+  }
 
   const response = await fetch("/api/uploads", {
     method: "POST",
@@ -17880,7 +18553,48 @@ async function uploadImageFile(file, dataUrl) {
   }
 
   const result = await response.json();
-  return result.url || dataUrl;
+  if (!result.url || result.url.startsWith("data:image/")) {
+    throw new Error("Upload server did not return a stored file URL.");
+  }
+  return result.url;
+}
+
+async function materializeEmbeddedImages(target, namePrefix = "image") {
+  if (!target || typeof target !== "object") return target;
+  const seen = new WeakSet();
+  const walk = async (value, pathParts = []) => {
+    if (!value || typeof value !== "object") return;
+    if (seen.has(value)) return;
+    seen.add(value);
+    if (Array.isArray(value)) {
+      for (let index = 0; index < value.length; index += 1) {
+        if (isEmbeddedImageData(value[index])) {
+          value[index] = await storeEmbeddedImage(value[index], `${namePrefix}-${[...pathParts, index].join("-") || "image"}`);
+        } else {
+          await walk(value[index], [...pathParts, index]);
+        }
+      }
+      return;
+    }
+    for (const [key, child] of Object.entries(value)) {
+      if (isEmbeddedImageData(child)) {
+        value[key] = await storeEmbeddedImage(child, `${namePrefix}-${[...pathParts, key].join("-") || "image"}`);
+      } else {
+        await walk(child, [...pathParts, key]);
+      }
+    }
+  };
+  await walk(target);
+  return target;
+}
+
+function isEmbeddedImageData(value) {
+  return typeof value === "string" && value.startsWith("data:image/");
+}
+
+async function storeEmbeddedImage(dataUrl, name) {
+  const mimeType = dataUrl.match(/^data:(image\/[a-zA-Z0-9.+-]+);base64,/)?.[1] || "image/png";
+  return uploadImageFile({ name, type: mimeType }, dataUrl);
 }
 
 function blankMemory() {
@@ -17907,23 +18621,25 @@ function fillBaseFields(character) {
   form.elements.name.value = character.name || "";
   form.elements.id.value = character.id || "";
   form.elements.image.value = character.image || "";
+  form.elements.bodyImage.value = character.bodyImage || "";
+  form.elements.chibiImage.value = character.chibiImage || "";
+  form.elements.awakenImage.value = character.awakenImage || "";
   form.elements.sigil.value = character.sigil || "";
   form.elements.role.value = character.role || "";
   form.elements.frame.value = character.frame || "";
   form.elements.faction.value = character.faction || "";
-  form.elements.class.value = character.class || "DPS";
   form.elements.element.value = character.element || "physical";
   form.elements.rank.value = character.rank || "";
   form.elements.gift.value = character.gift || "";
   form.elements.releasePatch.value = character.releasePatch || "";
   form.elements.releasePatchNumber.value = character.releasePatchNumber || "";
-  form.elements.weapon.value = character.weapon || "";
+  refreshSignatureWeaponSelect(character);
+  form.elements.weapon.value = signatureWeaponValue(character.weapon);
   form.elements.weaponType.value = character.weaponType || "";
   form.elements.cubName.value = character.cub?.name || "";
   form.elements.cubNotes.value = character.cub?.notes || "";
   form.elements.memory.value = character.memory || "";
   form.elements.bio.value = character.bio || "";
-  form.elements.effect.value = character.effect || "";
   form.elements.notes.value = character.notes || "";
   const review = character.review || defaultReview(character);
   form.elements.reviewSummaryTitle.value = review.summaryTitle || "";
@@ -17940,13 +18656,36 @@ function fillBaseFields(character) {
 
 function refreshCharacterDropdowns(character = state.draft || {}) {
   setSelectOptions($("#managerRoleSelect"), dropdownOptions("roles", character.role), character.role || dropdownOptions("roles")[0] || "");
-  setSelectOptions($("#characterForm [name=\"class\"]"), dropdownOptions("classes", character.class), character.class || "DPS");
+  if ($("#characterSpecialtySelect")) $("#characterSpecialtySelect").innerHTML = traitMultiOptions("specialties", character.specialtyIds || []);
+  if ($("#characterEffectSelect")) $("#characterEffectSelect").innerHTML = traitMultiOptions("effects", character.effectIds || []);
+}
+
+function refreshSignatureWeaponSelect(character = state.draft || {}) {
+  const select = $("#signatureWeaponSelect");
+  if (!select) return;
+  select.innerHTML = entitySelectOptions(db.weapons || [], character.weapon || "", "No signature weapon selected");
+  select.value = signatureWeaponValue(character.weapon);
+}
+
+function signatureWeaponValue(value = "") {
+  if (!value) return "";
+  const weapon = weaponById(value) || (db.weapons || []).find((item) => item.name === value);
+  return weapon?.id || value;
+}
+
+function handleSignatureWeaponChange(event) {
+  const form = $("#characterForm");
+  const value = event.target.value;
+  const weapon = weaponById(value) || (db.weapons || []).find((item) => item.name === value);
+  if (state.draft) {
+    state.draft.weapon = value;
+    if (weapon?.type) state.draft.weaponType = weapon.type;
+  }
+  if (weapon?.type) form.elements.weaponType.value = weapon.type;
 }
 
 function renderStackEditors() {
   renderElementMixEditor();
-  renderSpecialtyEditor();
-  renderEffectEntryEditor();
   renderAbilityEditor();
   renderBuildEditor();
   renderCalculationEditor();
@@ -17967,28 +18706,6 @@ function renderElementMixEditor() {
       <button class="icon-button danger" data-remove-array="elements" data-remove-index="${index}" type="button" title="Remove element" aria-label="Remove element">x</button>
     </article>
   `).join("");
-  bindStackInputs();
-}
-
-function renderSpecialtyEditor() {
-  $("#specialtyEditor").innerHTML = state.draft.specialties.map((specialty, index) => `
-    <article class="stack-row">
-      <label>Specialty<input data-array="specialties" data-index="${index}" data-field="name" value="${escapeAttribute(specialty.name)}" /></label>
-      <label>Description<textarea data-array="specialties" data-index="${index}" data-field="description" rows="2">${escapeHtml(specialty.description)}</textarea></label>
-      <button class="icon-button danger" data-remove-array="specialties" data-remove-index="${index}" type="button" title="Remove specialty" aria-label="Remove specialty">x</button>
-    </article>
-  `).join("");
-  bindStackInputs();
-}
-
-function renderEffectEntryEditor() {
-  $("#effectEntryEditor").innerHTML = (state.draft.effects || []).map((effect, index) => `
-    <article class="stack-row">
-      <label>Effect name<input data-array="effects" data-index="${index}" data-field="name" value="${escapeAttribute(effect.name || "")}" /></label>
-      <label>Description<textarea data-array="effects" data-index="${index}" data-field="description" rows="3">${escapeHtml(effect.description || "")}</textarea></label>
-      <button class="icon-button danger" data-remove-array="effects" data-remove-index="${index}" type="button" title="Remove effect" aria-label="Remove effect">x</button>
-    </article>
-  `).join("") || `<p class="muted">No effect entries added yet.</p>`;
   bindStackInputs();
 }
 
@@ -18160,23 +18877,36 @@ function addStackItem(type) {
   renderStackEditors();
 }
 
-function saveCharacterFromForm() {
-  if (uploadsPending()) return;
+function syncCurrentCharacterFormToDraft() {
   const form = $("#characterForm");
+  if (!form || !state.draft || !form.elements.name) return;
   const formData = new FormData(form);
-  const originalId = state.managerCharacter;
+  const synced = characterFromDraftAndForm(state.draft, formData);
+  Object.assign(state.draft, synced);
+  if (state.managerCharacter) {
+    const saved = characterById(state.managerCharacter);
+    if (!saved || JSON.stringify(saved) !== JSON.stringify(state.draft)) {
+      state.characterDrafts[state.managerCharacter] = state.draft;
+    } else {
+      delete state.characterDrafts[state.managerCharacter];
+    }
+  }
+}
+
+function characterFromDraftAndForm(draft, formData) {
   const id = slugify(formData.get("id") || formData.get("name"));
-  if (!id) return;
-  const character = {
-    ...state.draft,
+  return {
+    ...draft,
     id,
     name: formData.get("name").trim(),
     image: formData.get("image").trim(),
+    bodyImage: formData.get("bodyImage").trim(),
+    chibiImage: formData.get("chibiImage").trim(),
+    awakenImage: formData.get("awakenImage").trim(),
     sigil: (formData.get("sigil").trim() || initials(formData.get("name"))).slice(0, 4).toUpperCase(),
     role: formData.get("role").trim(),
     frame: formData.get("frame").trim(),
     faction: formData.get("faction").trim(),
-    class: formData.get("class"),
     element: formData.get("element"),
     rank: formData.get("rank").trim(),
     gift: formData.get("gift").trim(),
@@ -18190,8 +18920,10 @@ function saveCharacterFromForm() {
     },
     memory: formData.get("memory").trim(),
     bio: formData.get("bio").trim(),
-    effect: formData.get("effect").trim(),
-    priority: state.draft.priority || "",
+    effect: draft.effect || "",
+    specialtyIds: formData.getAll("specialtyIds"),
+    effectIds: formData.getAll("effectIds"),
+    priority: draft.priority || "",
     notes: formData.get("notes").trim(),
     review: {
       summaryTitle: formData.get("reviewSummaryTitle").trim(),
@@ -18207,35 +18939,71 @@ function saveCharacterFromForm() {
       lastUpdated: formData.get("reviewLastUpdated").trim(),
       changeLog: formData.get("reviewChangeLog").trim()
     },
-    elements: state.draft.elements.filter((entry) => entry.name || entry.percent),
-    specialties: state.draft.specialties.filter((specialty) => specialty.name || specialty.description),
-    effects: (state.draft.effects || []).filter((effect) => effect.name || effect.description),
-    abilities: state.draft.abilities.filter((ability) => ability.name || ability.description || ability.icon),
-    builds: state.draft.builds.filter((build) => build.name || build.weapon || build.cub || build.memories || buildMemorySlots(build).some(Boolean) || build.notes || build.weaponResonance || build.memoryResonance),
-    calculations: (state.draft.calculations || []).filter((calc) => calc.name || calc.category || calc.formula || calc.notes),
-    coatings: (state.draft.coatings || []).filter((coating) => coating.name || coating.image || coating.rarity || coating.description),
-    facts: state.draft.facts.filter((fact) => fact.label || fact.value),
-    commonRotations: state.draft.commonRotations.filter((rotation) => rotation.name || rotation.steps || rotation.notes)
+    elements: draft.elements.filter((entry) => entry.name || entry.percent),
+    specialties: [],
+    effects: [],
+    abilities: draft.abilities.filter((ability) => ability.name || ability.description || ability.icon),
+    builds: draft.builds.filter((build) => build.name || build.weapon || build.cub || build.memories || buildMemorySlots(build).some(Boolean) || build.notes || build.weaponResonance || build.memoryResonance),
+    calculations: (draft.calculations || []).filter((calc) => calc.name || calc.category || calc.formula || calc.notes),
+    coatings: (draft.coatings || []).filter((coating) => coating.name || coating.image || coating.rarity || coating.description),
+    facts: draft.facts.filter((fact) => fact.label || fact.value),
+    commonRotations: draft.commonRotations.filter((rotation) => rotation.name || rotation.steps || rotation.notes)
   };
-  const existing = db.characters.findIndex((item) => item.id === originalId);
-  const idConflict = db.characters.some((item, index) => item.id === id && index !== existing);
-  if (idConflict) {
-    alert("That unique ID is already in use.");
-    return;
+}
+
+async function saveCharacterFromForm() {
+  if (uploadsPending()) return;
+  syncCurrentCharacterFormToDraft();
+  const drafts = Object.entries(state.characterDrafts);
+  if (!drafts.length) return;
+  const plannedIds = new Map();
+  for (const [originalId, draft] of drafts) {
+    if (!draft.id) {
+      alert(`Character "${draft.name || originalId}" needs a valid unique ID before saving.`);
+      return;
+    }
+    const owner = plannedIds.get(draft.id);
+    if (owner && owner !== originalId) {
+      alert(`Two edited characters are trying to use the same unique ID: ${draft.id}`);
+      return;
+    }
+    plannedIds.set(draft.id, originalId);
   }
-  if (existing >= 0) {
-    db.characters[existing] = character;
-    updateReferences(originalId, id);
-  } else {
-    db.characters.push(character);
-    addCharacterToTier(id);
+  for (const [originalId, draft] of drafts) {
+    const id = draft.id;
+    const character = {
+      ...state.draft,
+      ...draft
+    };
+    try {
+      await materializeEmbeddedImages(character, `character-${id}`);
+    } catch (error) {
+      alert(`Images could not be saved to the backend: ${error.message}`);
+      return;
+    }
+    const existing = db.characters.findIndex((item) => item.id === originalId);
+    const idConflict = db.characters.some((item, index) => item.id === id && index !== existing && !state.characterDrafts[item.id]);
+    if (idConflict) {
+      alert(`That unique ID is already in use: ${id}`);
+      return;
+    }
+    if (existing >= 0) {
+      db.characters[existing] = character;
+      updateReferences(originalId, id);
+    } else {
+      db.characters.push(character);
+      addCharacterToTier(id);
+    }
   }
-  state.managerCharacter = id;
-  state.selectedCharacter = id;
+  const activeId = state.draft.id;
+  state.characterDrafts = {};
+  state.managerCharacter = activeId;
+  state.selectedCharacter = activeId;
   normalizeCharacters();
   persistDatabase();
   refreshAll();
-  loadCharacterIntoForm(id);
+  state.draft = null;
+  loadCharacterIntoForm(activeId);
 }
 
 function updateReferences(oldId, newId) {
@@ -18264,20 +19032,24 @@ function addCharacterToTier(id) {
 }
 
 function startNewCharacter() {
+  syncCurrentCharacterFormToDraft();
   state.draft = blankCharacter();
   state.managerCharacter = state.draft.id;
+  state.characterDrafts[state.managerCharacter] = state.draft;
   fillBaseFields(state.draft);
   renderStackEditors();
   renderManagerList();
 }
 
 function duplicateCharacter() {
+  syncCurrentCharacterFormToDraft();
   const source = characterById(state.managerCharacter) || db.characters[0];
   state.draft = JSON.parse(JSON.stringify(source));
   state.draft.name = `${source.name} Copy`;
   state.draft.id = slugify(state.draft.name);
   state.draft.sigil = initials(state.draft.name);
   state.managerCharacter = state.draft.id;
+  state.characterDrafts[state.managerCharacter] = state.draft;
   fillBaseFields(state.draft);
   renderStackEditors();
   renderManagerList();
@@ -18288,11 +19060,13 @@ function blankCharacter() {
     id: "new-construct",
     name: "New Construct",
     image: "",
+    bodyImage: "",
+    chibiImage: "",
+    awakenImage: "",
     sigil: "NC",
     role: "Attacker",
     frame: "",
     faction: "",
-    class: "DPS",
     element: "physical",
     rank: "A",
     gift: "",
@@ -18308,7 +19082,9 @@ function blankCharacter() {
     notes: "",
     review: { summaryTitle: "Guide Verdict", summary: "", ratings: { general: "", warzone: "", paincage: "" }, difficulty: "", pros: [], cons: [], lastUpdated: "", changeLog: "" },
     elements: [{ name: "physical", percent: "100" }],
-    specialties: [{ name: "New specialty", description: "" }],
+    specialtyIds: [],
+    effectIds: [],
+    specialties: [],
     effects: [],
     abilities: [{ name: "Core Passive", description: "", icon: "" }],
     builds: [{ name: "Recommended", category: "", weapon: "", cub: "", alternateCubs: "", memories: "", memorySlots: ["", "", "", "", "", ""], priority: "", weaponResonance: "", memoryResonance: "", notes: "" }],
@@ -18319,47 +19095,76 @@ function blankCharacter() {
   };
 }
 
-function exportDatabase() {
-  $("#exportBox").value = JSON.stringify({
-    characters: db.characters,
+async function exportDatabase() {
+  syncCurrentCharacterFormToDraft();
+  const snapshot = databaseSnapshotWithDrafts();
+  try {
+    await materializeEmbeddedImages(snapshot, "export");
+  } catch (error) {
+    alert(`Images could not be saved to the backend before export: ${error.message}`);
+    return;
+  }
+  $("#exportBox").value = JSON.stringify(snapshot, null, 2);
+  navigate("rotations");
+  $("#exportBox").select();
+}
+
+function databaseSnapshotWithDrafts() {
+  const characters = db.characters.map((character) => {
+    const draft = state.characterDrafts[character.id];
+    return draft ? JSON.parse(JSON.stringify(draft)) : character;
+  });
+  Object.entries(state.characterDrafts || {}).forEach(([id, draft]) => {
+    if (!db.characters.some((character) => character.id === id)) characters.push(JSON.parse(JSON.stringify(draft)));
+  });
+  return {
+    elements: db.elements,
+    characters,
     memories: db.memories,
+    items: db.items,
     tiers: db.tiers,
     teams: db.teams,
     rotations: db.rotations,
     weapons: db.weapons,
     cubs: db.cubs,
+    specialties: db.specialties,
+    effects: db.effects,
     guides: db.guides,
     gameModes: db.gameModes,
     gamePatches: db.gamePatches,
     enemies: db.enemies,
     roadmap: db.roadmap,
     settings: db.settings
-  }, null, 2);
-  navigate("rotations");
-  $("#exportBox").select();
+  };
 }
 
 function importDatabase(event) {
   const file = event.target.files[0];
   if (!file) return;
   const reader = new FileReader();
-  reader.onload = () => {
+  reader.onload = async () => {
     try {
       const parsed = JSON.parse(reader.result);
       if (!Array.isArray(parsed.characters)) throw new Error("Missing characters array.");
+      await materializeEmbeddedImages(parsed, "import");
+      if (Array.isArray(parsed.elements)) db.elements = parsed.elements;
       db.characters = parsed.characters;
       if (parsed.tiers) db.tiers = parsed.tiers;
       if (Array.isArray(parsed.teams)) db.teams = parsed.teams;
       if (Array.isArray(parsed.rotations)) db.rotations = parsed.rotations;
       if (Array.isArray(parsed.memories)) db.memories = parsed.memories;
+      if (Array.isArray(parsed.items)) db.items = parsed.items;
       if (Array.isArray(parsed.weapons)) db.weapons = parsed.weapons;
       if (Array.isArray(parsed.cubs)) db.cubs = parsed.cubs;
+      if (Array.isArray(parsed.specialties)) db.specialties = parsed.specialties;
+      if (Array.isArray(parsed.effects)) db.effects = parsed.effects;
       if (Array.isArray(parsed.guides)) db.guides = parsed.guides;
       if (Array.isArray(parsed.gameModes)) db.gameModes = parsed.gameModes;
       if (Array.isArray(parsed.gamePatches)) db.gamePatches = parsed.gamePatches;
       if (Array.isArray(parsed.enemies)) db.enemies = parsed.enemies;
       if (Array.isArray(parsed.roadmap)) db.roadmap = parsed.roadmap;
       if (parsed.settings) db.settings = parsed.settings;
+      state.characterDrafts = {};
       normalizeCollections();
       normalizeCharacters();
       state.managerCharacter = db.characters[0]?.id || "new-construct";
@@ -18378,13 +19183,18 @@ function importDatabase(event) {
 function resetDatabase() {
   if (!confirm("Reset all locally saved edits and return to the seed guide set?")) return;
   localStorage.removeItem(STORAGE_KEY);
+  state.characterDrafts = {};
+  db.elements = JSON.parse(JSON.stringify(seedDatabase.elements || []));
   db.characters = JSON.parse(JSON.stringify(seedDatabase.characters));
   db.memories = JSON.parse(JSON.stringify(seedDatabase.memories || []));
+  db.items = JSON.parse(JSON.stringify(seedDatabase.items || []));
   db.tiers = JSON.parse(JSON.stringify(seedDatabase.tiers));
   db.teams = JSON.parse(JSON.stringify(seedDatabase.teams));
   db.rotations = JSON.parse(JSON.stringify(seedDatabase.rotations));
   db.weapons = JSON.parse(JSON.stringify(seedDatabase.weapons || []));
   db.cubs = JSON.parse(JSON.stringify(seedDatabase.cubs || []));
+  db.specialties = JSON.parse(JSON.stringify(seedDatabase.specialties || []));
+  db.effects = JSON.parse(JSON.stringify(seedDatabase.effects || []));
   db.guides = JSON.parse(JSON.stringify(seedDatabase.guides || []));
   db.gameModes = JSON.parse(JSON.stringify(seedDatabase.gameModes || []));
   db.gamePatches = JSON.parse(JSON.stringify(seedDatabase.gamePatches || []));
@@ -18401,11 +19211,13 @@ function resetDatabase() {
 
 function refreshAll() {
   if ($("#releasePatchSelect")) $("#releasePatchSelect").innerHTML = patchSelectOptions();
+  renderFilters();
   renderStats();
   renderCharacters();
   renderTiers();
   renderTeams();
   renderMemories();
+  renderItems();
   renderWeapons();
   renderCubs();
   renderGuides();
@@ -18415,12 +19227,23 @@ function refreshAll() {
   renderRotation();
   renderManagerList();
   renderManagerMemoryList();
+  renderItemEditor();
   renderSystemEditors();
+  if (state.draft) refreshCharacterDropdowns(state.draft);
   applyGlobalSettings();
   if (state.route === "construct") renderConstructPage();
+  if (state.route === "patch") renderPatchPage();
 }
 
 function elementSummary(character) {
+  return elementLabel(character);
+}
+
+function elementLabel(character) {
+  return elementById(majorityElement(character)).label;
+}
+
+function elementMixSummary(character) {
   const entries = character.elements && character.elements.length ? character.elements : [{ name: character.element, percent: "100" }];
   return entries.map((entry) => {
     const element = elementById(entry.name);

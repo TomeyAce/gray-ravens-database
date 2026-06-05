@@ -22,6 +22,7 @@
           <a href="#tiers" data-route="tiers" class="nav-link"><span class="ico">▲</span>Tier Lists</a>
           <a href="#teams" data-route="teams" class="nav-link"><span class="ico">◎</span>Teams</a>
           <a href="#memories" data-route="memories" class="nav-link"><span class="ico">▣</span>Memories</a>
+          <a href="#items" data-route="items" class="nav-link"><span class="ico">I</span>Items</a>
           <a href="#weapons" data-route="weapons" class="nav-link"><span class="ico">W</span>Weapons</a>
           <a href="#cubs" data-route="cubs" class="nav-link"><span class="ico">C</span>CUBs</a>
           <a href="#guides" data-route="guides" class="nav-link"><span class="ico">G</span>Guides</a>
@@ -130,6 +131,23 @@
           </div>
         </section>
 
+        <section class="content-band view" data-view="items">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Item archive</p>
+              <h2>Items</h2>
+            </div>
+            <div class="memory-controls">
+              <input id="itemSearch" type="search" placeholder="Search items..." />
+            </div>
+          </div>
+          <div class="item-tab-browser">
+            <div class="item-tab-strip" id="itemTabFilter" role="tablist" aria-label="Item categories"></div>
+            <div class="item-tab-strip item-subtab-strip" id="itemSubtabFilter" role="tablist" aria-label="Item subcategories"></div>
+          </div>
+          <div class="archive-grid item-grid" id="itemGrid"></div>
+        </section>
+
         <section class="content-band view" data-view="weapons">
           <div class="section-head">
             <div>
@@ -184,6 +202,10 @@
           <div class="archive-grid" id="patchGrid"></div>
         </section>
 
+        <section class="content-band view" data-view="patch">
+          <div class="construct-page" id="patchPage" aria-live="polite"></div>
+        </section>
+
         <section class="content-band view" data-view="rotations">
           <div class="section-head">
             <div>
@@ -228,6 +250,13 @@
               <button class="primary-button" id="saveCharacter" type="button"><span>✓</span>Save site wide</button>
             </div>
           </div>
+          <div class="manager-tabs manage-area-tabs" role="tablist" aria-label="Manage work areas">
+            <button class="manager-tab active" data-manage-area-tab="characters" type="button">Constructs</button>
+            <button class="manager-tab" data-manage-area-tab="memories" type="button">Memories</button>
+            <button class="manager-tab" data-manage-area-tab="items" type="button">Items</button>
+            <button class="manager-tab" data-manage-area-tab="global" type="button">Global Systems</button>
+          </div>
+          <section class="manage-area active" data-manage-area="characters">
           <div class="manager-layout">
             <aside class="manager-list">
               <div class="search-wrap compact">
@@ -258,23 +287,26 @@
                   <div class="form-grid">
                     <label>Display name<input name="name" required /></label>
                     <label>Unique ID<input name="id" required /></label>
-                    <label>Portrait image URL
+                    <label>Main icon image URL
                       <input name="image" placeholder="https://... or imported local file" />
                       <input class="image-import-control" data-form-image="image" type="file" accept="image/*" />
                     </label>
+                    <label>Body image URL
+                      <input name="bodyImage" placeholder="https://... or imported local file" />
+                      <input class="image-import-control" data-form-image="bodyImage" type="file" accept="image/*" />
+                    </label>
+                    <label>Chibi image URL
+                      <input name="chibiImage" placeholder="https://... or imported local file" />
+                      <input class="image-import-control" data-form-image="chibiImage" type="file" accept="image/*" />
+                    </label>
+                    <label>Awaken image URL
+                      <input name="awakenImage" placeholder="https://... or imported local file" />
+                      <input class="image-import-control" data-form-image="awakenImage" type="file" accept="image/*" />
+                    </label>
                     <label>Sigil<input name="sigil" maxlength="4" required /></label>
-                    <label>Role<select name="role" id="managerRoleSelect" required></select></label>
+                    <label>Class<select name="role" id="managerRoleSelect" required></select></label>
                     <label>Frame<input name="frame" placeholder="Crimson Weave, Pyroath..." /></label>
                     <label>Faction<input name="faction" /></label>
-                    <label>Class
-                      <select name="class">
-                        <option>DPS</option>
-                        <option>Tank</option>
-                        <option>Support</option>
-                        <option>Amplifier</option>
-                        <option>Vanguard</option>
-                      </select>
-                    </label>
                     <label>Element
                       <select name="element" id="managerElementSelect"></select>
                     </label>
@@ -284,18 +316,15 @@
                     <label>Release patch number<input name="releasePatchNumber" type="number" step="0.01" placeholder="Internal ordering only" /></label>
                   </div>
                   <label>Short bio / introduction<textarea name="bio" rows="3"></textarea></label>
-                  <label>Effect / mechanic summary<textarea name="effect" rows="3" placeholder="Darkflow, Plasma Beam, etc."></textarea></label>
-                  <label>Guide summary<textarea name="notes" rows="4"></textarea></label>
-                  <div class="editor-block">
-                    <div class="subhead">
-                      <div>
-                        <p class="kicker">Mechanics</p>
-                        <h3>Effects</h3>
-                      </div>
-                      <button class="ghost-button" id="addEffectEntry" type="button"><span>+</span>Add effect</button>
-                    </div>
-                    <div id="effectEntryEditor" class="stack-editor"></div>
+                  <div class="form-grid">
+                    <label>Specialties
+                      <select name="specialtyIds" id="characterSpecialtySelect" multiple size="7"></select>
+                    </label>
+                    <label>Effects
+                      <select name="effectIds" id="characterEffectSelect" multiple size="7"></select>
+                    </label>
                   </div>
+                  <label>Guide summary<textarea name="notes" rows="4"></textarea></label>
                   <div class="editor-block">
                     <div class="subhead">
                       <div>
@@ -305,16 +334,6 @@
                       <button class="ghost-button" id="addElementMix" type="button"><span>+</span>Add element</button>
                     </div>
                     <div id="elementMixEditor" class="stack-editor"></div>
-                  </div>
-                  <div class="editor-block">
-                    <div class="subhead">
-                      <div>
-                        <p class="kicker">Role traits</p>
-                        <h3>Specialties</h3>
-                      </div>
-                      <button class="ghost-button" id="addSpecialty" type="button"><span>+</span>Add specialty</button>
-                    </div>
-                    <div id="specialtyEditor" class="stack-editor"></div>
                   </div>
                   <div class="editor-block">
                     <div class="subhead">
@@ -365,7 +384,7 @@
                 </section>
                 <section class="manager-panel" data-manager-panel="build">
                   <div class="form-grid">
-                    <label>Signature weapon<input name="weapon" /></label>
+                    <label>Signature weapon<select name="weapon" id="signatureWeaponSelect"></select></label>
                     <label>Weapon type<input name="weaponType" placeholder="Daisho, Katana..." /></label>
                     <label>CUB / companion<input name="cubName" placeholder="Recommended CUB name" /></label>
                     <label>CUB notes<input name="cubNotes" placeholder="Why this CUB is used" /></label>
@@ -407,7 +426,10 @@
                   </div>
                 </section>
               </form>
-              <section class="manager-form memory-manager" id="memoryManager">
+            </div>
+          </div>
+          </section>
+              <section class="manager-form memory-manager manage-area" data-manage-area="memories" id="memoryManager">
                 <div class="subhead">
                   <div>
                     <p class="kicker">Archive management</p>
@@ -453,7 +475,20 @@
                   </form>
                 </div>
               </section>
-              <section class="manager-form systems-manager" id="systemsManager">
+              <section class="manager-form items-manager manage-area" data-manage-area="items" id="itemsManager">
+                <div class="subhead">
+                  <div>
+                    <p class="kicker">Archive management</p>
+                    <h3>Items</h3>
+                  </div>
+                  <div class="manager-actions">
+                    <button class="ghost-button" id="addItem" type="button"><span>+</span>Add item</button>
+                    <button class="primary-button" id="saveItems" type="button"><span>OK</span>Save items</button>
+                  </div>
+                </div>
+                <div id="itemEditor" class="stack-editor"></div>
+              </section>
+              <section class="manager-form systems-manager manage-area" data-manage-area="global" id="systemsManager">
                 <div class="subhead">
                   <div>
                     <p class="kicker">Global systems</p>
@@ -469,6 +504,9 @@
                   <button class="manager-tab" data-system-tab="patches" type="button">Patches</button>
                   <button class="manager-tab" data-system-tab="enemies" type="button">Enemies</button>
                   <button class="manager-tab" data-system-tab="roadmap" type="button">Roadmap</button>
+                  <button class="manager-tab" data-system-tab="elements" type="button">Elements</button>
+                  <button class="manager-tab" data-system-tab="specialties" type="button">Specialties</button>
+                  <button class="manager-tab" data-system-tab="effects" type="button">Effects</button>
                   <button class="manager-tab" data-system-tab="settings" type="button">Settings</button>
                 </div>
                 <section class="system-panel active" data-system-panel="weapons">
@@ -499,6 +537,18 @@
                   <div class="subhead"><h3>Roadmap</h3><button class="ghost-button" id="addRoadmap" type="button"><span>+</span>Add roadmap item</button></div>
                   <div id="roadmapEditor" class="stack-editor"></div>
                 </section>
+                <section class="system-panel" data-system-panel="elements">
+                  <div class="subhead"><h3>Elements</h3><button class="ghost-button" id="addElementSetting" type="button"><span>+</span>Add element</button></div>
+                  <div id="elementEditor" class="stack-editor"></div>
+                </section>
+                <section class="system-panel" data-system-panel="specialties">
+                  <div class="subhead"><h3>Specialties</h3><button class="ghost-button" id="addSharedSpecialty" type="button"><span>+</span>Add specialty</button></div>
+                  <div id="sharedSpecialtyEditor" class="stack-editor"></div>
+                </section>
+                <section class="system-panel" data-system-panel="effects">
+                  <div class="subhead"><h3>Effects</h3><button class="ghost-button" id="addSharedEffect" type="button"><span>+</span>Add effect</button></div>
+                  <div id="sharedEffectEditor" class="stack-editor"></div>
+                </section>
                 <section class="system-panel" data-system-panel="settings">
                   <div class="subhead"><h3>Global Settings</h3></div>
                   <div class="manager-tabs compact-tabs" role="tablist" aria-label="Settings editor sections">
@@ -511,6 +561,8 @@
                       <label>Top-left icon text or image URL<input id="brandIconSetting" placeholder="GR, image URL, or /uploads/icon.png" /></label>
                     </div>
                     <div id="keywordIconEditor" class="stack-editor"></div>
+                    <div class="subhead"><h3>Rank Colors</h3><button class="ghost-button" id="addRankColor" type="button"><span>+</span>Add rank color</button></div>
+                    <div id="rankColorEditor" class="stack-editor"></div>
                   </section>
                   <section class="settings-panel" data-settings-panel="dropdowns">
                     <div class="subhead"><h3>Dropdown Options</h3><button class="ghost-button" id="addDropdownOption" type="button"><span>+</span>Add option</button></div>
@@ -518,11 +570,10 @@
                   </section>
                 </section>
               </section>
-            </div>
-          </div>
         </section>
       </main>
     </div>
+    <script src="grayravens-items-data.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
