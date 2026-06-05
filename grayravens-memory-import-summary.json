@@ -1,0 +1,748 @@
+{
+  "importedAt": "2026-06-04T17:14:27.976Z",
+  "source": [
+    "https://grayravens.com/wiki/Memories/Omniframe_Memories",
+    "https://grayravens.com/wiki/Memories/Uniframe_Memories",
+    "https://grayravens.com/wiki/Memories/Event_Memories"
+  ],
+  "license": "CC BY-SA 4.0",
+  "count": 92,
+  "memories": [
+    {
+      "id": "aline",
+      "name": "Aline",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Aline"
+    },
+    {
+      "id": "alphonse",
+      "name": "Alphonse",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Alphonse"
+    },
+    {
+      "id": "barcelo",
+      "name": "Barcelo",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Barcelo"
+    },
+    {
+      "id": "bathlon",
+      "name": "Bathlon",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Bathlon"
+    },
+    {
+      "id": "boone",
+      "name": "Boone",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Boone"
+    },
+    {
+      "id": "bulgakov",
+      "name": "Bulgakov",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Bulgakov"
+    },
+    {
+      "id": "bunsen",
+      "name": "Bunsen",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Bunsen"
+    },
+    {
+      "id": "burana",
+      "name": "Burana",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Burana"
+    },
+    {
+      "id": "catherine",
+      "name": "Catherine",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Catherine"
+    },
+    {
+      "id": "chang-wuzi",
+      "name": "Chang Wuzi",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/ChangWuzi"
+    },
+    {
+      "id": "charlotte",
+      "name": "Charlotte",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Charlotte"
+    },
+    {
+      "id": "chen-jiyuan",
+      "name": "Chen Jiyuan",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Chen_Jiyuan"
+    },
+    {
+      "id": "cleopatra",
+      "name": "Cleopatra",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Cleopatra"
+    },
+    {
+      "id": "clusius",
+      "name": "Clusius",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Clusius"
+    },
+    {
+      "id": "condelina",
+      "name": "Condelina",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Condelina"
+    },
+    {
+      "id": "cottie",
+      "name": "Cottie",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Cottie"
+    },
+    {
+      "id": "da-vinci",
+      "name": "Da Vinci",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Da_Vinci"
+    },
+    {
+      "id": "darwin",
+      "name": "Darwin",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Darwin"
+    },
+    {
+      "id": "derketo",
+      "name": "Derketo",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Derketo"
+    },
+    {
+      "id": "diesel",
+      "name": "Diesel",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Diesel"
+    },
+    {
+      "id": "einsteina",
+      "name": "Einsteina",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Einsteina"
+    },
+    {
+      "id": "elizabeth",
+      "name": "Elizabeth",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Elizabeth"
+    },
+    {
+      "id": "feynman",
+      "name": "Feynman",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Feynman"
+    },
+    {
+      "id": "flamel",
+      "name": "Flamel",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Flamel"
+    },
+    {
+      "id": "fran",
+      "name": "Fran",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Fran"
+    },
+    {
+      "id": "frederick",
+      "name": "Frederick",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Frederick"
+    },
+    {
+      "id": "guinevere",
+      "name": "Guinevere",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Guinevere"
+    },
+    {
+      "id": "hanna",
+      "name": "Hanna",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Hanna"
+    },
+    {
+      "id": "heisen",
+      "name": "Heisen",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Heisen"
+    },
+    {
+      "id": "heraclitus",
+      "name": "Heraclitus",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Heraclitus"
+    },
+    {
+      "id": "herschell",
+      "name": "Herschell",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Herschell"
+    },
+    {
+      "id": "hervor",
+      "name": "Hervor",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Hervor"
+    },
+    {
+      "id": "isabel",
+      "name": "Isabel",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Uniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Isabel"
+    },
+    {
+      "id": "jack",
+      "name": "Jack",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Uniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Jack"
+    },
+    {
+      "id": "jeanne",
+      "name": "Jeanne",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Jeanne"
+    },
+    {
+      "id": "ji-bo-an",
+      "name": "Ji Bo'an",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Ji_Bo'an"
+    },
+    {
+      "id": "keats",
+      "name": "Keats",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Keats"
+    },
+    {
+      "id": "klenova",
+      "name": "Klenova",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Klenova"
+    },
+    {
+      "id": "koya",
+      "name": "Koya",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Uniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Koya"
+    },
+    {
+      "id": "leeuwenhoek",
+      "name": "Leeuwenhoek",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Leeuwenhoek"
+    },
+    {
+      "id": "liliana",
+      "name": "Liliana",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Uniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Liliana"
+    },
+    {
+      "id": "liston",
+      "name": "Liston",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Liston"
+    },
+    {
+      "id": "lucrezia",
+      "name": "Lucrezia",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Uniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Lucrezia"
+    },
+    {
+      "id": "marcco",
+      "name": "Marcco",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Uniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Marcco"
+    },
+    {
+      "id": "natasha",
+      "name": "Natasha",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Natasha"
+    },
+    {
+      "id": "nimue",
+      "name": "Nimue",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Nimue"
+    },
+    {
+      "id": "patton",
+      "name": "Patton",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Patton"
+    },
+    {
+      "id": "pavlichenko",
+      "name": "Pavlichenko",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Pavlichenko"
+    },
+    {
+      "id": "philip-ii",
+      "name": "Philip II",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Philip_II"
+    },
+    {
+      "id": "poincare",
+      "name": "Poincare",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Poincare"
+    },
+    {
+      "id": "seraphine",
+      "name": "Seraphine",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Seraphine"
+    },
+    {
+      "id": "shakespeare",
+      "name": "Shakespeare",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Shakespeare"
+    },
+    {
+      "id": "shelley",
+      "name": "Shelley",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Uniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Shelley"
+    },
+    {
+      "id": "signa",
+      "name": "Signa",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Signa"
+    },
+    {
+      "id": "sothoth",
+      "name": "Sothoth",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Sothoth"
+    },
+    {
+      "id": "tifa",
+      "name": "Tifa",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Tifa"
+    },
+    {
+      "id": "turing",
+      "name": "Turing",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Turing"
+    },
+    {
+      "id": "unimate",
+      "name": "Unimate",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Unimate"
+    },
+    {
+      "id": "wilde",
+      "name": "Wilde",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Wilde"
+    },
+    {
+      "id": "wu-an",
+      "name": "Wu'an",
+      "rarity": "6★",
+      "tab": "6★ Memories",
+      "family": "Uniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Wu'an"
+    },
+    {
+      "id": "aife",
+      "name": "Aife",
+      "rarity": "5★",
+      "tab": "5★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Aife"
+    },
+    {
+      "id": "bianca-tipsy-night",
+      "name": "Bianca: Tipsy Night",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Bianca%3A_Tipsy_Night"
+    },
+    {
+      "id": "boudica",
+      "name": "Boudica",
+      "rarity": "5★",
+      "tab": "5★ Memories",
+      "family": "Uniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Boudica"
+    },
+    {
+      "id": "carrielynn",
+      "name": "Carrielynn",
+      "rarity": "5★",
+      "tab": "5★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Carrielynn"
+    },
+    {
+      "id": "cerberus-rave-party",
+      "name": "Cerberus - Rave Party",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Cerberus_-_Rave_Party"
+    },
+    {
+      "id": "ceremony-liv",
+      "name": "Ceremony - Liv",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Ceremony_-_Liv"
+    },
+    {
+      "id": "chrome-banquet",
+      "name": "Chrome: Banquet",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Chrome%3A_Banquet"
+    },
+    {
+      "id": "gloria",
+      "name": "Gloria",
+      "rarity": "5★",
+      "tab": "5★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Gloria"
+    },
+    {
+      "id": "ike",
+      "name": "Ike",
+      "rarity": "5★",
+      "tab": "5★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Ike"
+    },
+    {
+      "id": "kfc-alpha",
+      "name": "KFC - Alpha",
+      "rarity": "5★",
+      "tab": "Unreleased Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/KFC_-_Alpha"
+    },
+    {
+      "id": "kfc-lucia",
+      "name": "KFC - Lucia",
+      "rarity": "5★",
+      "tab": "Unreleased Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/KFC_-_Lucia"
+    },
+    {
+      "id": "kuriko-eternal",
+      "name": "Kuriko Eternal",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Kuriko_Eternal"
+    },
+    {
+      "id": "lantern-festival-reunion",
+      "name": "Lantern Festival: Reunion",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Lantern_Festival%3A_Reunion"
+    },
+    {
+      "id": "lee-celebration-under-the-moon",
+      "name": "Lee - Celebration under the Moon",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Lee_-_Celebration_under_the_Moon"
+    },
+    {
+      "id": "liv-reindeer",
+      "name": "Liv: Reindeer",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Liv%3A_Reindeer"
+    },
+    {
+      "id": "liv-united",
+      "name": "Liv: United",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Liv%3A_United"
+    },
+    {
+      "id": "lucia-summer-daze",
+      "name": "Lucia - Summer Daze",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Lucia_-_Summer_Daze"
+    },
+    {
+      "id": "luna-fullmoon-laurel",
+      "name": "Luna: Fullmoon Laurel",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Luna%3A_Fullmoon_Laurel"
+    },
+    {
+      "id": "mozart",
+      "name": "Mozart",
+      "rarity": "5★",
+      "tab": "5★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Mozart"
+    },
+    {
+      "id": "new-year-fireworks",
+      "name": "New Year Fireworks",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/New_Year_Fireworks"
+    },
+    {
+      "id": "richelieu",
+      "name": "Richelieu",
+      "rarity": "5★",
+      "tab": "5★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Richelieu"
+    },
+    {
+      "id": "samantha",
+      "name": "Samantha",
+      "rarity": "5★",
+      "tab": "5★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Samantha"
+    },
+    {
+      "id": "vera-scarlet-summers",
+      "name": "Vera - Scarlet Summers",
+      "rarity": "5★",
+      "tab": "Released Memories",
+      "family": "Event",
+      "sourceUrl": "https://grayravens.com/wiki/Vera_-_Scarlet_Summers"
+    },
+    {
+      "id": "voltaire",
+      "name": "Voltaire",
+      "rarity": "5★",
+      "tab": "5★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Voltaire"
+    },
+    {
+      "id": "alice",
+      "name": "Alice",
+      "rarity": "4★",
+      "tab": "4★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Alice"
+    },
+    {
+      "id": "archimedes",
+      "name": "Archimedes",
+      "rarity": "4★",
+      "tab": "4★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Archimedes"
+    },
+    {
+      "id": "cunningham",
+      "name": "Cunningham",
+      "rarity": "4★",
+      "tab": "4★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Cunningham"
+    },
+    {
+      "id": "edison",
+      "name": "Edison",
+      "rarity": "4★",
+      "tab": "4★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Edison"
+    },
+    {
+      "id": "nimitz",
+      "name": "Nimitz",
+      "rarity": "4★",
+      "tab": "4★ Memories",
+      "family": "Uniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Nimitz"
+    },
+    {
+      "id": "pavrey",
+      "name": "Pavrey",
+      "rarity": "3★",
+      "tab": "3★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Pavrey"
+    },
+    {
+      "id": "pinoff",
+      "name": "Pinoff",
+      "rarity": "3★",
+      "tab": "3★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Pinoff"
+    },
+    {
+      "id": "merli",
+      "name": "Merli",
+      "rarity": "2★",
+      "tab": "2★ Memories",
+      "family": "Omniframe",
+      "sourceUrl": "https://grayravens.com/wiki/Merli"
+    }
+  ]
+}

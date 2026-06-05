@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gray Ravens Database</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary">
+        <a class="brand" href="#overview" data-route="overview" aria-label="Gray Ravens Database home">
+          <span class="brand-mark">GR</span>
+          <span>
+            <strong>Gray Ravens</strong>
+            <small>Database</small>
+          </span>
+        </a>
+        <nav class="nav-list">
+          <a href="#overview" data-route="overview" class="nav-link active"><span class="ico">◇</span>Overview</a>
+          <a href="#characters" data-route="characters" class="nav-link"><span class="ico">◆</span>Constructs</a>
+          <a href="#tiers" data-route="tiers" class="nav-link"><span class="ico">▲</span>Tier Lists</a>
+          <a href="#teams" data-route="teams" class="nav-link"><span class="ico">◎</span>Teams</a>
+          <a href="#memories" data-route="memories" class="nav-link"><span class="ico">▣</span>Memories</a>
+          <a href="#weapons" data-route="weapons" class="nav-link"><span class="ico">W</span>Weapons</a>
+          <a href="#cubs" data-route="cubs" class="nav-link"><span class="ico">C</span>CUBs</a>
+          <a href="#guides" data-route="guides" class="nav-link"><span class="ico">G</span>Guides</a>
+          <a href="#roadmap" data-route="roadmap" class="nav-link"><span class="ico">R</span>Roadmap</a>
+          <a href="#rotations" data-route="rotations" class="nav-link"><span class="ico">⟲</span>Rotations</a>
+          <a href="#manage" data-route="manage" class="nav-link"><span class="ico">✎</span>Manage</a>
+        </nav>
+        <div class="side-panel">
+          <p class="kicker">Patch Workspace</p>
+          <strong>Seed guide set</strong>
+          <span id="databaseSummary">6 constructs, 4 teams, 3 rotation scripts</span>
+        </div>
+        <div class="side-panel attribution-panel">
+          <p class="kicker">Data source</p>
+          <strong>Gray Ravens</strong>
+          <span>Character and memory facts adapted from Gray Ravens under CC BY-SA 4.0.</span>
+        </div>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div class="search-wrap">
+            <span aria-hidden="true">⌕</span>
+            <input id="globalSearch" type="search" placeholder="Search constructs, teams, memories, weapons, guides..." />
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" id="themeToggle" type="button" title="Toggle contrast" aria-label="Toggle contrast">◐</button>
+            <button class="primary-button" id="quickRotation" type="button"><span>⟲</span>Open rotation lab</button>
+          </div>
+        </header>
+
+        <section class="hero-band" id="overview">
+          <div class="hero-copy">
+            <p class="kicker">Punishing: Gray Raven guide hub</p>
+            <h1>Gray Ravens Database</h1>
+            <p>
+              A compact guide desk for constructs, builds, teams, and visual combat routing.
+              The rotation lab turns a character guide into an icon-driven sequence you can read at a glance.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-button" data-route-button="rotations" type="button"><span>▶</span>Try rotation lab</button>
+              <button class="ghost-button" data-route-button="characters" type="button"><span>◆</span>Browse constructs</button>
+              <button class="ghost-button" data-route-button="manage" type="button"><span>✎</span>Add a construct</button>
+            </div>
+          </div>
+          <div class="signal-board" aria-label="Featured database signals">
+            <div class="signal-grid" id="signalGrid"></div>
+          </div>
+        </section>
+
+        <section class="dashboard-band">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Today in the archive</p>
+              <h2>Fast Guide Access</h2>
+            </div>
+            <div class="segmented" role="tablist" aria-label="Content focus">
+              <button class="segment active" data-focus="all" type="button">All</button>
+              <button class="segment" data-focus="dps" type="button">DPS</button>
+              <button class="segment" data-focus="support" type="button">Support</button>
+              <button class="segment" data-focus="tank" type="button">Tank</button>
+            </div>
+          </div>
+          <div class="stat-grid" id="statGrid"></div>
+        </section>
+
+        <section class="content-band view active" data-view="characters">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Construct dossier</p>
+              <h2>Character Guides</h2>
+            </div>
+            <div class="filter-row" id="elementFilters"></div>
+          </div>
+          <div class="card-grid full-grid" id="characterGrid"></div>
+        </section>
+
+        <section class="content-band view" data-view="construct">
+          <div class="construct-page" id="constructPage" aria-live="polite"></div>
+        </section>
+
+        <section class="content-band view" data-view="tiers">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Mode-aware ranking</p>
+              <h2>Tier Lists</h2>
+            </div>
+            <div class="segmented" id="tierMode">
+              <button class="segment active" data-mode="warzone" type="button">War Zone</button>
+              <button class="segment" data-mode="paincage" type="button">Pain Cage</button>
+              <button class="segment" data-mode="general" type="button">General</button>
+            </div>
+          </div>
+          <div class="tier-board" id="tierBoard"></div>
+        </section>
+
+        <section class="content-band view" data-view="teams">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Composition planner</p>
+              <h2>Team Compositions</h2>
+            </div>
+            <button class="ghost-button" id="copyTeam" type="button"><span>⧉</span>Copy selected team</button>
+          </div>
+          <div class="team-grid" id="teamGrid"></div>
+        </section>
+
+        <section class="content-band view" data-view="memories">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Memory archive</p>
+              <h2>Memories</h2>
+            </div>
+            <div class="memory-controls">
+              <select id="memoryFamilyFilter" aria-label="Memory family filter"></select>
+              <select id="memoryRarityFilter" aria-label="Memory rarity filter"></select>
+            </div>
+          </div>
+          <div class="memory-layout">
+            <div class="memory-grid" id="memoryGrid"></div>
+            <article class="memory-detail" id="memoryDetail" aria-live="polite"></article>
+          </div>
+        </section>
+
+        <section class="content-band view" data-view="weapons">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Equipment archive</p>
+              <h2>Weapons</h2>
+            </div>
+          </div>
+          <div class="archive-grid" id="weaponGrid"></div>
+        </section>
+
+        <section class="content-band view" data-view="cubs">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Companion equipment</p>
+              <h2>CUBs</h2>
+            </div>
+          </div>
+          <div class="archive-grid" id="cubGrid"></div>
+        </section>
+
+        <section class="content-band view" data-view="guides">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Reference desk</p>
+              <h2>Guides, Modes, and Enemies</h2>
+            </div>
+          </div>
+          <div class="guide-layout">
+            <div class="archive-grid" id="guideGrid"></div>
+            <div class="archive-grid" id="modeGrid"></div>
+            <div class="archive-grid" id="enemyGrid"></div>
+          </div>
+        </section>
+
+        <section class="content-band view" data-view="roadmap">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Upcoming work</p>
+              <h2>Roadmap</h2>
+            </div>
+          </div>
+          <div class="roadmap-grid" id="roadmapGrid"></div>
+        </section>
+
+        <section class="content-band view" data-view="rotations">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Visual combat route</p>
+              <h2>Rotation Lab</h2>
+            </div>
+            <div class="rotation-toolbar">
+              <select id="rotationSelect" aria-label="Select rotation"></select>
+              <button class="icon-button" id="playRotation" type="button" title="Play rotation" aria-label="Play rotation">▶</button>
+              <button class="icon-button" id="resetRotation" type="button" title="Reset rotation" aria-label="Reset rotation">↺</button>
+            </div>
+          </div>
+          <div class="rotation-lab">
+            <article class="rotation-stage">
+              <div class="active-team" id="rotationTeam"></div>
+              <div class="timeline" id="rotationTimeline"></div>
+              <div class="rotation-notes" id="rotationNotes"></div>
+            </article>
+            <aside class="builder-panel">
+              <h3>Guide Builder</h3>
+              <p>Draft a custom sequence with the icon palette, then export it as a shareable guide string.</p>
+              <div class="palette" id="actionPalette"></div>
+              <div class="custom-sequence" id="customSequence"></div>
+              <div class="builder-actions">
+                <button class="ghost-button" id="clearCustom" type="button"><span>×</span>Clear</button>
+                <button class="primary-button" id="exportCustom" type="button"><span>⇪</span>Export</button>
+              </div>
+              <textarea id="exportBox" readonly aria-label="Exported rotation"></textarea>
+            </aside>
+          </div>
+        </section>
+
+        <section class="content-band view" data-view="manage">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Guide management</p>
+              <h2>Character Source Editor</h2>
+            </div>
+            <div class="manager-actions">
+              <button class="ghost-button" id="newCharacter" type="button"><span>+</span>New</button>
+              <button class="ghost-button" id="duplicateCharacter" type="button"><span>⧉</span>Duplicate</button>
+              <button class="primary-button" id="saveCharacter" type="button"><span>✓</span>Save site wide</button>
+            </div>
+          </div>
+          <div class="manager-layout">
+            <aside class="manager-list">
+              <div class="search-wrap compact">
+                <span aria-hidden="true">⌕</span>
+                <input id="managerSearch" type="search" placeholder="Find a construct to edit..." />
+              </div>
+              <div id="managerCharacterList" class="manager-character-list"></div>
+              <div class="import-export">
+                <button class="ghost-button" id="exportDatabase" type="button"><span>⇪</span>Export database</button>
+                <label class="file-import">
+                  <span>Import JSON</span>
+                  <input id="importDatabase" type="file" accept="application/json" />
+                </label>
+                <button class="ghost-button danger" id="resetDatabase" type="button"><span>↺</span>Reset local edits</button>
+              </div>
+            </aside>
+            <div class="manager-main">
+              <div class="manager-tabs" role="tablist" aria-label="Character editor sections">
+                <button class="manager-tab active" data-manage-tab="bio" type="button">Bio</button>
+                <button class="manager-tab" data-manage-tab="review" type="button">Review</button>
+                <button class="manager-tab" data-manage-tab="abilities" type="button">Abilities</button>
+                <button class="manager-tab" data-manage-tab="build" type="button">Build</button>
+                <button class="manager-tab" data-manage-tab="calculations" type="button">Calculations</button>
+                <button class="manager-tab" data-manage-tab="coatings" type="button">Coatings</button>
+              </div>
+              <form id="characterForm" class="manager-form">
+                <section class="manager-panel active" data-manager-panel="bio">
+                  <div class="form-grid">
+                    <label>Display name<input name="name" required /></label>
+                    <label>Unique ID<input name="id" required /></label>
+                    <label>Portrait image URL
+                      <input name="image" placeholder="https://... or imported local file" />
+                      <input class="image-import-control" data-form-image="image" type="file" accept="image/*" />
+                    </label>
+                    <label>Sigil<input name="sigil" maxlength="4" required /></label>
+                    <label>Role<input name="role" required /></label>
+                    <label>Frame<input name="frame" placeholder="Crimson Weave, Pyroath..." /></label>
+                    <label>Faction<input name="faction" /></label>
+                    <label>Class
+                      <select name="class">
+                        <option>DPS</option>
+                        <option>Tank</option>
+                        <option>Support</option>
+                        <option>Amplifier</option>
+                        <option>Vanguard</option>
+                      </select>
+                    </label>
+                    <label>Element
+                      <select name="element" id="managerElementSelect"></select>
+                    </label>
+                    <label>Rank<input name="rank" placeholder="S+, S, A..." /></label>
+                    <label>Preferred gift<input name="gift" /></label>
+                  </div>
+                  <label>Short bio / introduction<textarea name="bio" rows="3"></textarea></label>
+                  <label>Effect / mechanic summary<textarea name="effect" rows="3" placeholder="Darkflow, Plasma Beam, etc."></textarea></label>
+                  <label>Guide summary<textarea name="notes" rows="4"></textarea></label>
+                  <div class="editor-block">
+                    <div class="subhead">
+                      <div>
+                        <p class="kicker">Identity</p>
+                        <h3>Element Mix</h3>
+                      </div>
+                      <button class="ghost-button" id="addElementMix" type="button"><span>+</span>Add element</button>
+                    </div>
+                    <div id="elementMixEditor" class="stack-editor"></div>
+                  </div>
+                  <div class="editor-block">
+                    <div class="subhead">
+                      <div>
+                        <p class="kicker">Role traits</p>
+                        <h3>Specialties</h3>
+                      </div>
+                      <button class="ghost-button" id="addSpecialty" type="button"><span>+</span>Add specialty</button>
+                    </div>
+                    <div id="specialtyEditor" class="stack-editor"></div>
+                  </div>
+                  <div class="editor-block">
+                    <div class="subhead">
+                      <div>
+                        <p class="kicker">Wiki-style details</p>
+                        <h3>Additional Facts</h3>
+                      </div>
+                      <button class="ghost-button" id="addFact" type="button"><span>+</span>Add fact</button>
+                    </div>
+                    <div id="factEditor" class="stack-editor"></div>
+                  </div>
+                </section>
+                <section class="manager-panel" data-manager-panel="review">
+                  <div class="form-grid">
+                    <label>Review title<input name="reviewSummaryTitle" placeholder="Guide Verdict" /></label>
+                    <label>Difficulty<input name="reviewDifficulty" placeholder="Easy, Medium, Hard..." /></label>
+                    <label>General rating<input name="reviewGeneral" placeholder="S, A, TBD..." /></label>
+                    <label>War Zone rating<input name="reviewWarzone" placeholder="S, A, TBD..." /></label>
+                    <label>Pain Cage rating<input name="reviewPaincage" placeholder="S, A, TBD..." /></label>
+                    <label>Last updated<input name="reviewLastUpdated" placeholder="Patch/date notes" /></label>
+                  </div>
+                  <label>Review summary<textarea name="reviewSummary" rows="5"></textarea></label>
+                  <label>Pros, one per line<textarea name="reviewPros" rows="5"></textarea></label>
+                  <label>Cons, one per line<textarea name="reviewCons" rows="5"></textarea></label>
+                  <label>Change log<textarea name="reviewChangeLog" rows="4"></textarea></label>
+                </section>
+                <section class="manager-panel" data-manager-panel="abilities">
+                  <div class="editor-block">
+                    <div class="subhead">
+                      <div>
+                        <p class="kicker">Kit notes</p>
+                        <h3>Abilities</h3>
+                      </div>
+                      <button class="ghost-button" id="addAbility" type="button"><span>+</span>Add ability</button>
+                    </div>
+                    <div id="abilityEditor" class="stack-editor"></div>
+                  </div>
+                  <div class="editor-block">
+                    <div class="subhead">
+                      <div>
+                        <p class="kicker">Combat routing</p>
+                        <h3>Common Rotations</h3>
+                      </div>
+                      <button class="ghost-button" id="addManagedRotation" type="button"><span>+</span>Add rotation</button>
+                    </div>
+                    <div id="managedRotationEditor" class="stack-editor"></div>
+                  </div>
+                </section>
+                <section class="manager-panel" data-manager-panel="build">
+                  <div class="form-grid">
+                    <label>Signature weapon<input name="weapon" /></label>
+                    <label>Weapon type<input name="weaponType" placeholder="Daisho, Katana..." /></label>
+                    <label>CUB / companion<input name="cubName" placeholder="Recommended CUB name" /></label>
+                    <label>CUB notes<input name="cubNotes" placeholder="Why this CUB is used" /></label>
+                    <label>Default memory label<input name="memory" /></label>
+                  </div>
+                  <div class="editor-block">
+                    <div class="subhead">
+                      <div>
+                        <p class="kicker">Recommended setup</p>
+                        <h3>Build Variants</h3>
+                      </div>
+                      <button class="ghost-button" id="addBuild" type="button"><span>+</span>Add build</button>
+                    </div>
+                    <div id="buildEditor" class="stack-editor"></div>
+                  </div>
+                </section>
+                <section class="manager-panel" data-manager-panel="calculations">
+                  <div class="editor-block">
+                    <div class="subhead">
+                      <div>
+                        <p class="kicker">Damage math</p>
+                        <h3>Calculations</h3>
+                      </div>
+                      <button class="ghost-button" id="addCalculation" type="button"><span>+</span>Add calculation</button>
+                    </div>
+                    <div id="calculationEditor" class="stack-editor"></div>
+                  </div>
+                </section>
+                <section class="manager-panel" data-manager-panel="coatings">
+                  <div class="editor-block">
+                    <div class="subhead">
+                      <div>
+                        <p class="kicker">Skins</p>
+                        <h3>Coatings</h3>
+                      </div>
+                      <button class="ghost-button" id="addCoating" type="button"><span>+</span>Add coating</button>
+                    </div>
+                    <div id="coatingEditor" class="stack-editor"></div>
+                  </div>
+                </section>
+              </form>
+              <section class="manager-form memory-manager" id="memoryManager">
+                <div class="subhead">
+                  <div>
+                    <p class="kicker">Archive management</p>
+                    <h3>Memories</h3>
+                  </div>
+                  <div class="manager-actions">
+                    <button class="ghost-button" id="newMemory" type="button"><span>+</span>New memory</button>
+                    <button class="primary-button" id="saveMemory" type="button"><span>✓</span>Save memory</button>
+                  </div>
+                </div>
+                <div class="memory-manager-layout">
+                  <aside class="manager-character-list memory-list" id="managerMemoryList"></aside>
+                  <form id="memoryForm" class="memory-form">
+                    <div class="form-grid">
+                      <label>Name<input name="memoryName" required /></label>
+                      <label>Unique ID<input name="memoryId" required /></label>
+                      <label>Family<input name="memoryFamily" placeholder="Omniframe, Uniframe, Event" /></label>
+                      <label>Rarity<input name="memoryRarity" placeholder="6★, 5★..." /></label>
+                      <label>Source tab<input name="memoryTab" placeholder="6★ Memories" /></label>
+                      <label>Source URL<input name="memorySourceUrl" /></label>
+                    </div>
+                    <div class="form-grid">
+                      <label>HP<input name="memoryHp" /></label>
+                      <label>ATK<input name="memoryAtk" /></label>
+                      <label>DEF<input name="memoryDef" /></label>
+                      <label>CRIT<input name="memoryCrit" /></label>
+                    </div>
+                    <div class="memory-upload-grid">
+                      <label>Icon slot 1/4<input name="memoryIcon1" /><input data-memory-file="slotIcons" data-file-index="0" type="file" accept="image/*" /></label>
+                      <label>Icon slot 2/5<input name="memoryIcon2" /><input data-memory-file="slotIcons" data-file-index="1" type="file" accept="image/*" /></label>
+                      <label>Icon slot 3/6<input name="memoryIcon3" /><input data-memory-file="slotIcons" data-file-index="2" type="file" accept="image/*" /></label>
+                      <label>Splash slot 1/4<input name="memoryPortrait1" /><input data-memory-file="portraits" data-file-index="0" type="file" accept="image/*" /></label>
+                      <label>Splash slot 2/5<input name="memoryPortrait2" /><input data-memory-file="portraits" data-file-index="1" type="file" accept="image/*" /></label>
+                      <label>Splash slot 3/6<input name="memoryPortrait3" /><input data-memory-file="portraits" data-file-index="2" type="file" accept="image/*" /></label>
+                    </div>
+                    <div class="editor-block">
+                      <div class="subhead">
+                        <h3>Set Effects</h3>
+                        <button class="ghost-button" id="addMemoryEffect" type="button"><span>+</span>Add effect</button>
+                      </div>
+                      <div id="memoryEffectEditor" class="stack-editor"></div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+              <section class="manager-form systems-manager" id="systemsManager">
+                <div class="subhead">
+                  <div>
+                    <p class="kicker">Global systems</p>
+                    <h3>Weapons, CUBs, Guides, Roadmap</h3>
+                  </div>
+                  <button class="primary-button" id="saveSystems" type="button"><span>✓</span>Save systems</button>
+                </div>
+                <div class="manager-tabs" role="tablist" aria-label="Global system editor sections">
+                  <button class="manager-tab active" data-system-tab="weapons" type="button">Weapons</button>
+                  <button class="manager-tab" data-system-tab="cubs" type="button">CUBs</button>
+                  <button class="manager-tab" data-system-tab="guides" type="button">Guides</button>
+                  <button class="manager-tab" data-system-tab="modes" type="button">Modes</button>
+                  <button class="manager-tab" data-system-tab="enemies" type="button">Enemies</button>
+                  <button class="manager-tab" data-system-tab="roadmap" type="button">Roadmap</button>
+                </div>
+                <section class="system-panel active" data-system-panel="weapons">
+                  <div class="subhead"><h3>Weapons</h3><button class="ghost-button" id="addWeapon" type="button"><span>+</span>Add weapon</button></div>
+                  <div id="weaponEditor" class="stack-editor"></div>
+                </section>
+                <section class="system-panel" data-system-panel="cubs">
+                  <div class="subhead"><h3>CUBs</h3><button class="ghost-button" id="addCub" type="button"><span>+</span>Add CUB</button></div>
+                  <div id="cubEditor" class="stack-editor"></div>
+                </section>
+                <section class="system-panel" data-system-panel="guides">
+                  <div class="subhead"><h3>Guides</h3><button class="ghost-button" id="addGuide" type="button"><span>+</span>Add guide</button></div>
+                  <div id="guideEditor" class="stack-editor"></div>
+                </section>
+                <section class="system-panel" data-system-panel="modes">
+                  <div class="subhead"><h3>Game Modes</h3><button class="ghost-button" id="addMode" type="button"><span>+</span>Add mode</button></div>
+                  <div id="modeEditor" class="stack-editor"></div>
+                </section>
+                <section class="system-panel" data-system-panel="enemies">
+                  <div class="subhead"><h3>Enemies</h3><button class="ghost-button" id="addEnemy" type="button"><span>+</span>Add enemy</button></div>
+                  <div id="enemyEditor" class="stack-editor"></div>
+                </section>
+                <section class="system-panel" data-system-panel="roadmap">
+                  <div class="subhead"><h3>Roadmap</h3><button class="ghost-button" id="addRoadmap" type="button"><span>+</span>Add roadmap item</button></div>
+                  <div id="roadmapEditor" class="stack-editor"></div>
+                </section>
+              </section>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

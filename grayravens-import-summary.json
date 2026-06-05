@@ -1,0 +1,408 @@
+{
+  "importedAt": "2026-06-04T16:59:08.928Z",
+  "source": "https://grayravens.com/wiki/Category:Character",
+  "license": "CC BY-SA 4.0",
+  "count": 80,
+  "characters": [
+    {
+      "id": "2b",
+      "name": "2B: 2B",
+      "sourceUrl": "https://grayravens.com/wiki/2B"
+    },
+    {
+      "id": "9s",
+      "name": "9S: 9S",
+      "sourceUrl": "https://grayravens.com/wiki/9S"
+    },
+    {
+      "id": "a2",
+      "name": "A2: A2",
+      "sourceUrl": "https://grayravens.com/wiki/A2"
+    },
+    {
+      "id": "alisa-echo",
+      "name": "Alisa: Echo",
+      "sourceUrl": "https://grayravens.com/wiki/Alisa%3A_Echo"
+    },
+    {
+      "id": "ayla-brilliance",
+      "name": "Ayla: Brilliance",
+      "sourceUrl": "https://grayravens.com/wiki/Ayla%3A_Brilliance"
+    },
+    {
+      "id": "ayla-kaleido",
+      "name": "Ayla: Kaleido",
+      "sourceUrl": "https://grayravens.com/wiki/Ayla%3A_Kaleido"
+    },
+    {
+      "id": "bambinata-vitrum",
+      "name": "Bambinata: Vitrum",
+      "sourceUrl": "https://grayravens.com/wiki/Bambinata%3A_Vitrum"
+    },
+    {
+      "id": "bianca-crepuscule",
+      "name": "Bianca: Crepuscule",
+      "sourceUrl": "https://grayravens.com/wiki/Bianca%3A_Crepuscule"
+    },
+    {
+      "id": "bianca-stigmata",
+      "name": "Bianca: Stigmata",
+      "sourceUrl": "https://grayravens.com/wiki/Bianca%3A_Stigmata"
+    },
+    {
+      "id": "bianca-veritas",
+      "name": "Bianca: Veritas",
+      "sourceUrl": "https://grayravens.com/wiki/Bianca%3A_Veritas"
+    },
+    {
+      "id": "bianca-zero",
+      "name": "Bianca: Zero",
+      "sourceUrl": "https://grayravens.com/wiki/Bianca%3A_Zero"
+    },
+    {
+      "id": "black-rock-shooter",
+      "name": "BLACK★ROCK SHOOTER: BLACK★ROCK SHOOTER",
+      "sourceUrl": "https://grayravens.com/wiki/BLACK%E2%98%85ROCK_SHOOTER"
+    },
+    {
+      "id": "bridget-ardeo",
+      "name": "Bridget: Ardeo",
+      "sourceUrl": "https://grayravens.com/wiki/Bridget%3A_Ardeo"
+    },
+    {
+      "id": "camu-crocotta",
+      "name": "Camu: Crocotta",
+      "sourceUrl": "https://grayravens.com/wiki/Camu%3A_Crocotta"
+    },
+    {
+      "id": "changyu-qilin",
+      "name": "Changyu: Qilin",
+      "sourceUrl": "https://grayravens.com/wiki/Changyu%3A_Qilin"
+    },
+    {
+      "id": "chrome-arclight",
+      "name": "Chrome: Arclight",
+      "sourceUrl": "https://grayravens.com/wiki/Chrome%3A_Arclight"
+    },
+    {
+      "id": "chrome-glory",
+      "name": "Chrome: Glory",
+      "sourceUrl": "https://grayravens.com/wiki/Chrome%3A_Glory"
+    },
+    {
+      "id": "dante",
+      "name": "Dante: Dante",
+      "sourceUrl": "https://grayravens.com/wiki/Dante"
+    },
+    {
+      "id": "discord-secator",
+      "name": "Discord: Secator",
+      "sourceUrl": "https://grayravens.com/wiki/Discord%3A_Secator"
+    },
+    {
+      "id": "haicma-starveil",
+      "name": "Haicma: Starveil",
+      "sourceUrl": "https://grayravens.com/wiki/Haicma%3A_Starveil"
+    },
+    {
+      "id": "hanying-solacetune",
+      "name": "Hanying: Solacetune",
+      "sourceUrl": "https://grayravens.com/wiki/Hanying%3A_Solacetune"
+    },
+    {
+      "id": "hanying-zitherwoe",
+      "name": "Hanying: Zitherwoe",
+      "sourceUrl": "https://grayravens.com/wiki/Hanying%3A_Zitherwoe"
+    },
+    {
+      "id": "ishmael-parhelion",
+      "name": "Ishmael: Parhelion",
+      "sourceUrl": "https://grayravens.com/wiki/Ishmael%3A_Parhelion"
+    },
+    {
+      "id": "jetavie-daybreak",
+      "name": "Jetavie: Daybreak",
+      "sourceUrl": "https://grayravens.com/wiki/Jetavie%3A_Daybreak"
+    },
+    {
+      "id": "kamui-aeternion",
+      "name": "Kamui: Aeternion",
+      "sourceUrl": "https://grayravens.com/wiki/Kamui%3A_Aeternion"
+    },
+    {
+      "id": "kamui-bastion",
+      "name": "Kamui: Bastion",
+      "sourceUrl": "https://grayravens.com/wiki/Kamui%3A_Bastion"
+    },
+    {
+      "id": "kamui-tenebrion",
+      "name": "Kamui: Tenebrion",
+      "sourceUrl": "https://grayravens.com/wiki/Kamui%3A_Tenebrion"
+    },
+    {
+      "id": "karenina-blast",
+      "name": "Karenina: Blast",
+      "sourceUrl": "https://grayravens.com/wiki/Karenina%3A_Blast"
+    },
+    {
+      "id": "karenina-ember",
+      "name": "Karenina: Ember",
+      "sourceUrl": "https://grayravens.com/wiki/Karenina%3A_Ember"
+    },
+    {
+      "id": "karenina-scire",
+      "name": "Karenina: Scire",
+      "sourceUrl": "https://grayravens.com/wiki/Karenina%3A_Scire"
+    },
+    {
+      "id": "lamia-lost-lullaby",
+      "name": "Lamia: Lost Lullaby",
+      "sourceUrl": "https://grayravens.com/wiki/Lamia%3A_Lost_Lullaby"
+    },
+    {
+      "id": "lee-entropy",
+      "name": "Lee: Entropy",
+      "sourceUrl": "https://grayravens.com/wiki/Lee%3A_Entropy"
+    },
+    {
+      "id": "lee-hyperreal",
+      "name": "Lee: Hyperreal",
+      "sourceUrl": "https://grayravens.com/wiki/Lee%3A_Hyperreal"
+    },
+    {
+      "id": "lee-palefire",
+      "name": "Lee: Palefire",
+      "sourceUrl": "https://grayravens.com/wiki/Lee%3A_Palefire"
+    },
+    {
+      "id": "lilith-daemonissa",
+      "name": "Lilith: Daemonissa",
+      "sourceUrl": "https://grayravens.com/wiki/Lilith%3A_Daemonissa"
+    },
+    {
+      "id": "liv-eclipse",
+      "name": "Liv: Eclipse",
+      "sourceUrl": "https://grayravens.com/wiki/Liv%3A_Eclipse"
+    },
+    {
+      "id": "liv-empyrea",
+      "name": "Liv: Empyrea",
+      "sourceUrl": "https://grayravens.com/wiki/Liv%3A_Empyrea"
+    },
+    {
+      "id": "liv-limpidity",
+      "name": "Liv: Limpidity",
+      "sourceUrl": "https://grayravens.com/wiki/Liv%3A_Limpidity"
+    },
+    {
+      "id": "liv-luminance",
+      "name": "Liv: Luminance",
+      "sourceUrl": "https://grayravens.com/wiki/Liv%3A_Luminance"
+    },
+    {
+      "id": "liv-lux",
+      "name": "Liv: Lux",
+      "sourceUrl": "https://grayravens.com/wiki/Liv%3A_Lux"
+    },
+    {
+      "id": "lucia-crimson-abyss",
+      "name": "Lucia: Crimson Abyss",
+      "sourceUrl": "https://grayravens.com/wiki/Lucia%3A_Crimson_Abyss"
+    },
+    {
+      "id": "lucia-crimson-weave",
+      "name": "Lucia: Crimson Weave",
+      "sourceUrl": "https://grayravens.com/wiki/Lucia%3A_Crimson_Weave"
+    },
+    {
+      "id": "lucia-dawn",
+      "name": "Lucia: Dawn",
+      "sourceUrl": "https://grayravens.com/wiki/Lucia%3A_Dawn"
+    },
+    {
+      "id": "lucia-lotus",
+      "name": "Lucia: Lotus",
+      "sourceUrl": "https://grayravens.com/wiki/Lucia%3A_Lotus"
+    },
+    {
+      "id": "lucia-plume",
+      "name": "Lucia: Plume",
+      "sourceUrl": "https://grayravens.com/wiki/Lucia%3A_Plume"
+    },
+    {
+      "id": "lucia-pyroath",
+      "name": "Lucia: Pyroath",
+      "sourceUrl": "https://grayravens.com/wiki/Lucia%3A_Pyroath"
+    },
+    {
+      "id": "luna-laurel",
+      "name": "Luna: Laurel",
+      "sourceUrl": "https://grayravens.com/wiki/Luna%3A_Laurel"
+    },
+    {
+      "id": "luna-oblivion",
+      "name": "Luna: Oblivion",
+      "sourceUrl": "https://grayravens.com/wiki/Luna%3A_Oblivion"
+    },
+    {
+      "id": "nanami-pulse",
+      "name": "Nanami: Pulse",
+      "sourceUrl": "https://grayravens.com/wiki/Nanami%3A_Pulse"
+    },
+    {
+      "id": "nanami-starfarer",
+      "name": "Nanami: Starfarer",
+      "sourceUrl": "https://grayravens.com/wiki/Nanami%3A_Starfarer"
+    },
+    {
+      "id": "nanami-startrail",
+      "name": "Nanami: Startrail",
+      "sourceUrl": "https://grayravens.com/wiki/Nanami%3A_Startrail"
+    },
+    {
+      "id": "nanami-storm",
+      "name": "Nanami: Storm",
+      "sourceUrl": "https://grayravens.com/wiki/Nanami%3A_Storm"
+    },
+    {
+      "id": "nirvatia-dirge",
+      "name": "Nirvatia: Dirge",
+      "sourceUrl": "https://grayravens.com/wiki/Nirvatia%3A_Dirge"
+    },
+    {
+      "id": "no-21-feral",
+      "name": "No. 21: Feral",
+      "sourceUrl": "https://grayravens.com/wiki/No._21%3A_Feral"
+    },
+    {
+      "id": "no-21-xxi",
+      "name": "No. 21: XXI",
+      "sourceUrl": "https://grayravens.com/wiki/No.21%3A_XXI"
+    },
+    {
+      "id": "noan-arca",
+      "name": "Noan: Arca",
+      "sourceUrl": "https://grayravens.com/wiki/Noan%3A_Arca"
+    },
+    {
+      "id": "noctis-indomitus",
+      "name": "Noctis: Indomitus",
+      "sourceUrl": "https://grayravens.com/wiki/Noctis%3A_Indomitus"
+    },
+    {
+      "id": "pulao-dragontoll",
+      "name": "Pulao: Dragontoll",
+      "sourceUrl": "https://grayravens.com/wiki/Pulao%3A_Dragontoll"
+    },
+    {
+      "id": "qu-pavo",
+      "name": "Qu: Pavo",
+      "sourceUrl": "https://grayravens.com/wiki/Qu%3A_Pavo"
+    },
+    {
+      "id": "qu-shukra",
+      "name": "Qu: Shukra",
+      "sourceUrl": "https://grayravens.com/wiki/Qu%3A_Shukra"
+    },
+    {
+      "id": "roland-flambeau",
+      "name": "Roland: Flambeau",
+      "sourceUrl": "https://grayravens.com/wiki/Roland%3A_Flambeau"
+    },
+    {
+      "id": "rosetta-arete",
+      "name": "Rosetta: Arete",
+      "sourceUrl": "https://grayravens.com/wiki/Rosetta%3A_Arete"
+    },
+    {
+      "id": "rosetta-rigor",
+      "name": "Rosetta: Rigor",
+      "sourceUrl": "https://grayravens.com/wiki/Rosetta%3A_Rigor"
+    },
+    {
+      "id": "selena-capriccio",
+      "name": "Selena: Capriccio",
+      "sourceUrl": "https://grayravens.com/wiki/Selena%3A_Capriccio"
+    },
+    {
+      "id": "selena-pianissimo",
+      "name": "Selena: Pianissimo",
+      "sourceUrl": "https://grayravens.com/wiki/Selena%3A_Pianissimo"
+    },
+    {
+      "id": "selena-tempest",
+      "name": "Selena: Tempest",
+      "sourceUrl": "https://grayravens.com/wiki/Selena%3A_Tempest"
+    },
+    {
+      "id": "sophia-silverfang",
+      "name": "Sophia: Silverfang",
+      "sourceUrl": "https://grayravens.com/wiki/Sophia%3A_Silverfang"
+    },
+    {
+      "id": "teddy-decryptor",
+      "name": "Teddy: Decryptor",
+      "sourceUrl": "https://grayravens.com/wiki/Teddy%3A_Decryptor"
+    },
+    {
+      "id": "teddy-spectre",
+      "name": "Teddy: Spectre",
+      "sourceUrl": "https://grayravens.com/wiki/Teddy%3A_Spectre"
+    },
+    {
+      "id": "vera-garnet",
+      "name": "Vera: Garnet",
+      "sourceUrl": "https://grayravens.com/wiki/Vera%3A_Garnet"
+    },
+    {
+      "id": "vera-geiravor",
+      "name": "Vera: Geiravor",
+      "sourceUrl": "https://grayravens.com/wiki/Vera%3A_Geiravor"
+    },
+    {
+      "id": "vera-rozen",
+      "name": "Vera: Rozen",
+      "sourceUrl": "https://grayravens.com/wiki/Vera%3A_Rozen"
+    },
+    {
+      "id": "vergil",
+      "name": "Vergil: Vergil",
+      "sourceUrl": "https://grayravens.com/wiki/Vergil"
+    },
+    {
+      "id": "veronica-aegis",
+      "name": "Veronica: Aegis",
+      "sourceUrl": "https://grayravens.com/wiki/Veronica%3A_Aegis"
+    },
+    {
+      "id": "wanshi-hypnos",
+      "name": "Wanshi: Hypnos",
+      "sourceUrl": "https://grayravens.com/wiki/Wanshi%3A_Hypnos"
+    },
+    {
+      "id": "wanshi-lucid-dreamer",
+      "name": "Wanshi: Lucid Dreamer",
+      "sourceUrl": "https://grayravens.com/wiki/Wanshi%3A_Lucid_Dreamer"
+    },
+    {
+      "id": "watanabe-astral",
+      "name": "Watanabe: Astral",
+      "sourceUrl": "https://grayravens.com/wiki/Watanabe%3A_Astral"
+    },
+    {
+      "id": "watanabe-epitaph",
+      "name": "Watanabe: Epitaph",
+      "sourceUrl": "https://grayravens.com/wiki/Watanabe%3A_Epitaph"
+    },
+    {
+      "id": "watanabe-nightblade",
+      "name": "Watanabe: Nightblade",
+      "sourceUrl": "https://grayravens.com/wiki/Watanabe%3A_Nightblade"
+    },
+    {
+      "id": "yata-fulgor",
+      "name": "Yata: Fulgor",
+      "sourceUrl": "https://grayravens.com/wiki/Yata%3A_Fulgor"
+    }
+  ]
+}
