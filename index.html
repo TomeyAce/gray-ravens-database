@@ -310,7 +310,7 @@
                     <label>Element
                       <select name="element" id="managerElementSelect"></select>
                     </label>
-                    <label>Rank<input name="rank" placeholder="S+, S, A..." /></label>
+                    <label>Rank<input name="rank" placeholder="S, A, B..." /></label>
                     <label>Preferred gift<input name="gift" /></label>
                     <label>Release patch<select name="releasePatch" id="releasePatchSelect"></select></label>
                     <label>Release patch number<input name="releasePatchNumber" type="number" step="0.01" placeholder="Internal ordering only" /></label>
@@ -338,12 +338,31 @@
                   <div class="editor-block">
                     <div class="subhead">
                       <div>
-                        <p class="kicker">Wiki-style details</p>
-                        <h3>Additional Facts</h3>
+                        <p class="kicker">Combat stat line</p>
+                        <h3>Stats</h3>
                       </div>
-                      <button class="ghost-button" id="addFact" type="button"><span>+</span>Add fact</button>
                     </div>
-                    <div id="factEditor" class="stack-editor"></div>
+                    <div class="form-grid stat-field-grid">
+                      <label>ATK<input name="statAtk" /></label>
+                      <label>HP<input name="statHp" /></label>
+                      <label>DEF<input name="statDef" /></label>
+                      <label>CRIT<input name="statCrit" /></label>
+                    </div>
+                  </div>
+                  <div class="editor-block">
+                    <div class="subhead">
+                      <div>
+                        <p class="kicker">Wiki-style details</p>
+                        <h3>Profile Data</h3>
+                      </div>
+                    </div>
+                    <div class="form-grid profile-field-grid">
+                      <label>Mental age<input name="mentalAge" /></label>
+                      <label>Activation date<input name="activationDate" /></label>
+                      <label>Height<input name="height" /></label>
+                      <label>Weight<input name="weight" /></label>
+                      <label>Vital fluid type<input name="vitalFluidType" /></label>
+                    </div>
                   </div>
                 </section>
                 <section class="manager-panel" data-manager-panel="review">
@@ -367,7 +386,6 @@
                         <p class="kicker">Kit notes</p>
                         <h3>Abilities</h3>
                       </div>
-                      <button class="ghost-button" id="addAbility" type="button"><span>+</span>Add ability</button>
                     </div>
                     <div id="abilityEditor" class="stack-editor"></div>
                   </div>
@@ -386,7 +404,7 @@
                   <div class="form-grid">
                     <label>Signature weapon<select name="weapon" id="signatureWeaponSelect"></select></label>
                     <label>Weapon type<input name="weaponType" placeholder="Daisho, Katana..." /></label>
-                    <label>CUB / companion<input name="cubName" placeholder="Recommended CUB name" /></label>
+                    <label>CUB / companion<select name="cubName" id="signatureCubSelect"></select></label>
                     <label>CUB notes<input name="cubNotes" placeholder="Why this CUB is used" /></label>
                     <label>Default memory label<input name="memory" /></label>
                   </div>
@@ -485,6 +503,10 @@
                     <button class="ghost-button" id="addItem" type="button"><span>+</span>Add item</button>
                     <button class="primary-button" id="saveItems" type="button"><span>OK</span>Save items</button>
                   </div>
+                </div>
+                <div class="item-tab-browser manager-item-tabs">
+                  <div class="item-tab-strip" id="itemManagerTabFilter" role="tablist" aria-label="Managed item categories"></div>
+                  <div class="item-tab-strip item-subtab-strip" id="itemManagerSubtabFilter" role="tablist" aria-label="Managed item subcategories"></div>
                 </div>
                 <div id="itemEditor" class="stack-editor"></div>
               </section>

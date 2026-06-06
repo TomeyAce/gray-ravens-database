@@ -2498,7 +2498,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "frog-accessory",
     "name": "Frog Accessory",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-FrogAccessory.png",
+    "icon": "/uploads/grayravens/items/frog-accessory.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2510,7 +2510,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "biosphere",
     "name": "Biosphere",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-Biosphere.png",
+    "icon": "/uploads/grayravens/items/biosphere.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2522,7 +2522,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "precision-toolkit",
     "name": "Precision Toolkit",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-PrecisionToolkit.png",
+    "icon": "/uploads/grayravens/items/precision-toolkit.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2534,7 +2534,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "jack-in-the-box",
     "name": "Jack-in-the-box",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-Jackinthebox.png",
+    "icon": "/uploads/grayravens/items/jack-in-the-box.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2546,7 +2546,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "prototype-engine",
     "name": "Prototype Engine",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-PrototypeEngine.png",
+    "icon": "/uploads/grayravens/items/prototype-engine.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2558,7 +2558,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "portable-game-console",
     "name": "Portable Game Console",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-PortableGameConsole.png",
+    "icon": "/uploads/grayravens/items/portable-game-console.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2570,7 +2570,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "mre-rations",
     "name": "MRE Rations",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-MRERations.png",
+    "icon": "/uploads/grayravens/items/mre-rations.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2582,7 +2582,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "lily-brooch",
     "name": "Lily Brooch",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-LilyBrooch.png",
+    "icon": "/uploads/grayravens/items/lily-brooch.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2594,7 +2594,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "painting-kit",
     "name": "Painting Kit",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-PaintingKit.png",
+    "icon": "/uploads/grayravens/items/painting-kit.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2606,7 +2606,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "high-power-batteries",
     "name": "High-Power Batteries",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-HighPowerBatteries.png",
+    "icon": "/uploads/grayravens/items/high-power-batteries.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2618,7 +2618,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "r3-cleaning-robot",
     "name": "R3 Cleaning Robot",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-R3CleaningRobot.png",
+    "icon": "/uploads/grayravens/items/r3-cleaning-robot.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2630,7 +2630,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "military-grade-bionic-dog",
     "name": "Military-Grade Bionic Dog",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-MilitaryGradeBionicDog.png",
+    "icon": "/uploads/grayravens/items/military-grade-bionic-dog.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2642,7 +2642,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "media-player",
     "name": "Media Player",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-MediaPlayer.png",
+    "icon": "/uploads/grayravens/items/media-player.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2654,7 +2654,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "weather-glass",
     "name": "Weather Glass",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-WeatherGlass.png",
+    "icon": "/uploads/grayravens/items/weather-glass.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2666,7 +2666,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "copper-coin",
     "name": "Copper Coin",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-CopperCoin.png",
+    "icon": "/uploads/grayravens/items/copper-coin.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2678,7 +2678,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "antique-book",
     "name": "Antique Book",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-AntiqueBook.png",
+    "icon": "/uploads/grayravens/items/antique-book.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2690,7 +2690,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "night-light",
     "name": "Night Light",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-NightLight.png",
+    "icon": "/uploads/grayravens/items/night-light.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2702,7 +2702,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "lunar-tear",
     "name": "Lunar Tear",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-LunarTear.png",
+    "icon": "/uploads/grayravens/items/lunar-tear.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2714,7 +2714,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "hugging-pillow",
     "name": "Hugging Pillow",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-HuggingPillow.png",
+    "icon": "/uploads/grayravens/items/hugging-pillow.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2726,7 +2726,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "iris",
     "name": "Iris",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-Iris.png",
+    "icon": "/uploads/grayravens/items/iris.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2738,7 +2738,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "audiovisual-terminal",
     "name": "Audiovisual Terminal",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-AudiovisualTerminal.png",
+    "icon": "/uploads/grayravens/items/audiovisual-terminal.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2750,7 +2750,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "marionette",
     "name": "Marionette",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-Marionette.png",
+    "icon": "/uploads/grayravens/items/marionette.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2774,7 +2774,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "deluxe-picture-book",
     "name": "Deluxe Picture Book",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-DeluxePictureBook.png",
+    "icon": "/uploads/grayravens/items/deluxe-picture-book.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2798,7 +2798,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "music-box",
     "name": "Music Box",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-MusicBox.png",
+    "icon": "/uploads/grayravens/items/music-box.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2810,7 +2810,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "cloud-comb",
     "name": "Cloud Comb",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-CloudComb.png",
+    "icon": "/uploads/grayravens/items/cloud-comb.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2822,7 +2822,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "ironclad-boxing-gloves",
     "name": "Ironclad Boxing Gloves",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-IroncladBoxingGloves.png",
+    "icon": "/uploads/grayravens/items/ironclad-boxing-gloves.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2834,7 +2834,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "gavel",
     "name": "Gavel",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-Gavel.png",
+    "icon": "/uploads/grayravens/items/gavel.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2870,7 +2870,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "teddy",
     "name": "\"Teddy\"",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-Teddy.png",
+    "icon": "/uploads/grayravens/items/teddy.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2894,7 +2894,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "hydrangea-bouquet",
     "name": "Hydrangea Bouquet",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-HydrangeaBouquet.png",
+    "icon": "/uploads/grayravens/items/hydrangea-bouquet.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2906,7 +2906,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "copperwood-dice",
     "name": "Copperwood Dice",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-CopperwoodDice.png",
+    "icon": "/uploads/grayravens/items/copperwood-dice.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2918,7 +2918,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "cardistry-poker",
     "name": "Cardistry Poker",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-CardistryPoker.png",
+    "icon": "/uploads/grayravens/items/cardistry-poker.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2930,7 +2930,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "white-box",
     "name": "White Box",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-WhiteBox.png",
+    "icon": "/uploads/grayravens/items/white-box.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2942,7 +2942,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "pizza-combo",
     "name": "Pizza Combo",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-PizzaCombo.png",
+    "icon": "/uploads/grayravens/items/pizza-combo.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2954,7 +2954,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "poetry-collection",
     "name": "Poetry Collection",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-PoetryCollection.png",
+    "icon": "/uploads/grayravens/items/poetry-collection.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2966,7 +2966,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "scissors",
     "name": "Scissors",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-Scissors.png",
+    "icon": "/uploads/grayravens/items/scissors.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2978,7 +2978,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "weapon-charm",
     "name": "Weapon Charm",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-WeaponCharm.png",
+    "icon": "/uploads/grayravens/items/weapon-charm.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -2990,7 +2990,7 @@ window.GRAY_RAVENS_ITEMS = [
   {
     "id": "morigan-game-console",
     "name": "\"Morigan\" Game Console",
-    "icon": "https://grayravens.com/wiki/Special:Redirect/file/Item-MoriganGameConsole.png",
+    "icon": "/uploads/grayravens/items/morigan-game-console.png",
     "rarity": "5★",
     "stars": 5,
     "tab": "Gifts",
@@ -7725,6 +7725,78 @@ window.GRAY_RAVENS_ITEMS = [
     "subtab": "April Fool's Limited",
     "description": "Sell in [Items > item] to get Cogs.",
     "flavorText": "A currency issued by the Nanami government. You can buy a lot of fun things with it! Don't sell it!",
+    "sourceUrl": "https://grayravens.com/wiki/Items"
+  },
+  {
+    "id": "coffee-mug",
+    "name": "Coffee Mug",
+    "icon": "/uploads/grayravens/items/coffee-mug.png",
+    "rarity": "",
+    "stars": "",
+    "tab": "Gifts",
+    "subtab": "",
+    "description": "Preferred gift imported from Gray Ravens character data.",
+    "flavorText": "",
+    "sourceUrl": "https://grayravens.com/wiki/Items"
+  },
+  {
+    "id": "star-ornament",
+    "name": "Star Ornament",
+    "icon": "/uploads/grayravens/items/star-ornament.png",
+    "rarity": "",
+    "stars": "",
+    "tab": "Gifts",
+    "subtab": "",
+    "description": "Preferred gift imported from Gray Ravens character data.",
+    "flavorText": "",
+    "sourceUrl": "https://grayravens.com/wiki/Items"
+  },
+  {
+    "id": "teddy-bear",
+    "name": "Teddy Bear",
+    "icon": "/uploads/grayravens/items/teddy-bear.png",
+    "rarity": "",
+    "stars": "",
+    "tab": "Gifts",
+    "subtab": "",
+    "description": "Preferred gift imported from Gray Ravens character data.",
+    "flavorText": "",
+    "sourceUrl": "https://grayravens.com/wiki/Items"
+  },
+  {
+    "id": "tactical-goggles",
+    "name": "Tactical Goggles",
+    "icon": "/uploads/grayravens/items/tactical-goggles.png",
+    "rarity": "",
+    "stars": "",
+    "tab": "Gifts",
+    "subtab": "",
+    "description": "Preferred gift imported from Gray Ravens character data.",
+    "flavorText": "",
+    "sourceUrl": "https://grayravens.com/wiki/Items"
+  },
+  {
+    "id": "panda-coin-purse",
+    "name": "Panda Coin Purse",
+    "icon": "/uploads/grayravens/items/panda-coin-purse.png",
+    "rarity": "",
+    "stars": "",
+    "tab": "Gifts",
+    "subtab": "",
+    "description": "Preferred gift imported from Gray Ravens character data.",
+    "flavorText": "",
+    "sourceUrl": "https://grayravens.com/wiki/Items"
+  },
+  {
+    "id": "pen-and-notebook",
+    "name": "Pen and Notebook",
+    "icon": "/uploads/grayravens/items/pen-and-notebook.png",
+    "rarity": "",
+    "stars": "",
+    "tab": "Gifts",
+    "subtab": "",
+    "description": "Preferred gift imported from Gray Ravens character data.",
+    "flavorText": "",
     "sourceUrl": "https://grayravens.com/wiki/Items"
   }
 ];
