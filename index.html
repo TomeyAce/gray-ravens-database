@@ -19,7 +19,6 @@
         <nav class="nav-list">
           <a href="#overview" data-route="overview" class="nav-link active"><span class="ico">◇</span>Overview</a>
           <a href="#characters" data-route="characters" class="nav-link"><span class="ico">◆</span>Constructs</a>
-          <a href="#tiers" data-route="tiers" class="nav-link"><span class="ico">▲</span>Tier Lists</a>
           <a href="#teams" data-route="teams" class="nav-link"><span class="ico">◎</span>Teams</a>
           <a href="#memories" data-route="memories" class="nav-link"><span class="ico">▣</span>Memories</a>
           <a href="#items" data-route="items" class="nav-link"><span class="ico">I</span>Items</a>
@@ -88,21 +87,6 @@
           <div class="construct-page" id="constructPage" aria-live="polite"></div>
         </section>
 
-        <section class="content-band view" data-view="tiers">
-          <div class="section-head">
-            <div>
-              <p class="kicker">Mode-aware ranking</p>
-              <h2>Tier Lists</h2>
-            </div>
-            <div class="segmented" id="tierMode">
-              <button class="segment active" data-mode="warzone" type="button">War Zone</button>
-              <button class="segment" data-mode="paincage" type="button">Pain Cage</button>
-              <button class="segment" data-mode="general" type="button">General</button>
-            </div>
-          </div>
-          <div class="tier-board" id="tierBoard"></div>
-        </section>
-
         <section class="content-band view" data-view="teams">
           <div class="section-head">
             <div>
@@ -166,6 +150,10 @@
             </div>
           </div>
           <div class="archive-grid" id="cubGrid"></div>
+        </section>
+
+        <section class="content-band view" data-view="cub">
+          <div class="construct-page" id="cubPage" aria-live="polite"></div>
         </section>
 
         <section class="content-band view" data-view="guides">
@@ -279,7 +267,6 @@
                 <button class="manager-tab" data-manage-tab="review" type="button">Review</button>
                 <button class="manager-tab" data-manage-tab="abilities" type="button">Abilities</button>
                 <button class="manager-tab" data-manage-tab="build" type="button">Build</button>
-                <button class="manager-tab" data-manage-tab="calculations" type="button">Calculations</button>
                 <button class="manager-tab" data-manage-tab="coatings" type="button">Coatings</button>
               </div>
               <form id="characterForm" class="manager-form">
@@ -417,18 +404,6 @@
                       <button class="ghost-button" id="addBuild" type="button"><span>+</span>Add build</button>
                     </div>
                     <div id="buildEditor" class="stack-editor"></div>
-                  </div>
-                </section>
-                <section class="manager-panel" data-manager-panel="calculations">
-                  <div class="editor-block">
-                    <div class="subhead">
-                      <div>
-                        <p class="kicker">Damage math</p>
-                        <h3>Calculations</h3>
-                      </div>
-                      <button class="ghost-button" id="addCalculation" type="button"><span>+</span>Add calculation</button>
-                    </div>
-                    <div id="calculationEditor" class="stack-editor"></div>
                   </div>
                 </section>
                 <section class="manager-panel" data-manager-panel="coatings">

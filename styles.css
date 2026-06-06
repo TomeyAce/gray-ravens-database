@@ -128,6 +128,10 @@ button:disabled {
   font-weight: 900;
 }
 
+.rich-text {
+  white-space: pre-line;
+}
+
 .rich-text .entity-link {
   color: #3168b9;
   text-decoration: underline;
@@ -424,7 +428,6 @@ h3 {
 .stat-card,
 .character-card,
 .detail-panel,
-.tier-row,
 .team-card,
 .rotation-stage,
 .builder-panel,
@@ -719,53 +722,6 @@ h3 {
   background: var(--panel-2);
 }
 
-.tier-board {
-  display: grid;
-  gap: 12px;
-}
-
-.tier-row {
-  display: grid;
-  grid-template-columns: 86px minmax(0, 1fr);
-  gap: 14px;
-  padding: 14px;
-}
-
-.tier-label {
-  display: grid;
-  place-items: center;
-  min-height: 76px;
-  color: #0b0c0f;
-  background: var(--accent);
-  font-size: 2rem;
-  font-weight: 900;
-}
-
-.tier-entries,
-.team-grid {
-  display: grid;
-  gap: 12px;
-}
-
-.tier-entries {
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-}
-
-.tier-entry {
-  display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  text-align: left;
-  background: var(--panel-2);
-}
-
-.tier-entry .portrait {
-  width: 58px;
-  height: 62px;
-  font-size: 1rem;
-}
 
 .team-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1488,6 +1444,29 @@ select {
   font-weight: 900;
 }
 
+.action-chip .chip-character-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  overflow: hidden;
+  background: #0d0f12;
+  border: 1px solid var(--line);
+  font-size: 0.72rem;
+}
+
+.chip-character-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chip-character-icon.image-failed img,
+.chip-character-icon:not(.image-failed) > span {
+  display: none;
+}
+
 textarea {
   display: block;
   width: 100%;
@@ -2048,9 +2027,84 @@ textarea {
   cursor: pointer;
 }
 
-.patch-card-button:focus-visible {
+.cub-card-button {
+  cursor: pointer;
+}
+
+.patch-card-button:focus-visible,
+.cub-card-button:focus-visible {
   outline: 2px solid var(--cyan);
   outline-offset: 2px;
+}
+
+.cub-hero {
+  grid-template-columns: 170px minmax(0, 1fr) minmax(280px, 0.42fr);
+}
+
+.cub-media {
+  display: grid;
+  place-items: center;
+}
+
+.cub-media .system-image {
+  width: min(150px, 100%);
+  background: #0d0f12;
+}
+
+.cub-skill-card {
+  grid-template-columns: 72px minmax(0, 1fr);
+  align-items: start;
+}
+
+.cub-skill-card .ability-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.cub-skill-entry-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cub-skill-entry {
+  display: grid;
+  gap: 5px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.cub-skill-entry:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.cub-skill-editor {
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+}
+
+.inline-editor-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.inline-editor-head > div {
+  display: grid;
+  gap: 3px;
+}
+
+.cub-skill-editor-row {
+  background: #0d0f12;
+}
+
+.wide-field {
+  grid-column: 1 / -1;
 }
 
 .archive-heading {
@@ -2283,7 +2337,6 @@ textarea {
   .team-grid,
   .archive-grid,
   .roadmap-grid,
-  .tier-entries,
   .nav-list,
   .form-grid,
   .build-memory-select-grid,
@@ -2302,8 +2355,7 @@ textarea {
   }
 
   .character-card,
-  .step,
-  .tier-row {
+  .step {
     grid-template-columns: 1fr;
   }
 

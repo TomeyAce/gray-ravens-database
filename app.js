@@ -159,7 +159,6 @@ const db = {
                   "notes": "Build source template: Build:Lotus"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -316,7 +315,6 @@ const db = {
                   "notes": "Build source template: Build:Eclipse"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -473,7 +471,6 @@ const db = {
                   "notes": "Build source template: Build:Storm"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -632,26 +629,6 @@ const db = {
                   "weaponResonance": "Lightning DMG Bonus increases by [red]5%[/red] for [red]4s[/red] when dealing Lightning DMG. Can be stacked up to [red]4[/red] times. Signature Move increases own Extra DMG Bonus by [red]10%[/red] for [red]10s[/red]. Both duration will reset every time it is triggered.",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Dawn"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Vortex Flurry",
-                  "category": "Orb",
-                  "formula": "Upon a 3-Ping, Extra DMG Bonus of <strong>Lotus - Flurry</strong> increases by 10%.\n<u><strong>Level 9</strong></u>: <strong>Lotus - Flurry</strong> pulls in surrounding enemies upon a 3-ping.\n<u><strong>Level 18</strong></u>: While casting <strong>Lotus - Flurry</strong> with a 3-Ping while the Signature is active, pressing and holding the Basic Attack button triggers Iaido - Deadly Slash, dealing 360% Lightning DMG.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Thunder Kill Realm",
-                  "category": "Core",
-                  "formula": "Extra DMG Bonus of lightning bolt attacks triggered by <strong>Lotus - Lightning Dance</strong> increases by 10%.\n<u><strong>Level 9</strong></u>: The chance of triggering lightning bolt attacks by <strong>Lotus - Lightning Dance</strong> increases to 50%/75%/100%.\n<u><strong>Level 18</strong></u>: <strong>Lotus - Lightning Dance</strong> triggers heavenly bolt attacks instead, increasing Lightning DMG Bonus by 10%.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Glow Lotus Blade",
-                  "category": "Signature",
-                  "formula": "When casting <strong>Signature - Lotus Blade</strong>, Lucia: Dawn's Extra DMG Bonus increases by 10% for 10s. Its duration will reset every time it is triggered.\n<u><strong>Level 9</strong></u>: Automatically recovers Signature Energy for 10s after casting the Signature.\n<u><strong>Level 18</strong></u>: Energy of Lotus Blade will not be reduced when Lucia: Dawn is on standby.",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -814,7 +791,6 @@ const db = {
                   "notes": "Build source template: Build:Lux"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -975,26 +951,6 @@ const db = {
                   "notes": "Build source template: Build:Palefire"
               }
           ],
-          "calculations": [
-              {
-                  "name": "Bipolar Expansion",
-                  "category": "Orb",
-                  "formula": "Explosion DMG from <strong>Infernal Shot</strong> blasting round increases by [red]10%[/red]. The burning area created by <strong>Infernal Shot</strong> will inflict Burn on enemies for 3s. Enemies inflicted with Burn are considered to be in the burning area.\n<u><strong>Level 9</strong></u>: When <strong>Magnetic Shot</strong> hits a target with Burn, extend the Burn status for 3s.\n<u><strong>Level 18</strong></u>: When Lee: Palefire attacks an enemy inflicted with Burn, the base DMG of <strong>Infernal Shot</strong>'s additional Extra DMG increases by 100%.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Center Axis Relock",
-                  "category": "Core",
-                  "formula": "After casting <strong>Controlling Bullet</strong>, Lee’s movement speed increases, and he enters Blasting Mode for 5s, performing Continuous Fire with his Dual Guns at the target. DMG dealt by each shot is based on the number of Red Orbs pinged when  casting <strong>Controlling Bullet</strong>. In this mode, Lee: Palefire deals Fire DMG instead of Physical DMG, and Fire DMG increases by 10%. Pinging orbs will grant extra effects:\n\n<strong>Red Orbs</strong>: Extends Blasting Mode by 0.5 / 1 / 1.5s based on the number of orbs pinged. Each shot deals DMG equal to the DMG dealt by the corresponding number of orbs pinged by <strong>Precise Shots</strong>.\n & <strong>Yellow and Blue Orbs</strong>: Lee: Palefire dodges to the side when pinged, and Blasting Mode extends by 0.3s.\n<u><strong>Level 9</strong></u>: In [red]Blasting Mode[/red], each successful shot during Continuous Fire will grant 1 Energy. Energy gained from pinging orbs is doubled.\n<u><strong>Level 18</strong></u>: In Blasting Mode, dodging will consume twice the amount of Dodge and trigger Evasive Shot: Lee: Palefire leaps into the air and quickly fires 11 times, gaining 21 Energy and dealing 45% Fire DMG with each shot. Gains Invincible during Evasive Shot.\n Successfully dodging with Evasive Shot will recover the extra Dodge consumed.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Flaming Cyclone",
-                  "category": "Signature",
-                  "formula": "Deals Fire DMG with <strong>360° Shooting</strong> instead. While casting <strong>360° Shooting</strong>, Fire DMG dealt by Lee: Palefire increases by [red]10%[/red].\n<u><strong>Level 9</strong></u>: Casting <strong>360° Shooting</strong> will pull in surrounding enemies continuously.\n<u><strong>Level 18</strong></u>: Hitting an enemy with <strong>360° Shooting</strong> will inflict Burn for 3s, dealing Fire DMG based on the level of <strong>Infernal Shot</strong> every 0.5s. In [red]Blasting Mode[/red], the Base DMG of <strong>360° Shooting</strong> increases by 40%.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              }
-          ],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -1151,7 +1107,6 @@ const db = {
                   "notes": "Build source template: Build:Nightblade"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -1308,7 +1263,6 @@ const db = {
                   "notes": "Build source template: Build:Zero"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -1471,7 +1425,6 @@ const db = {
                   "notes": "Build source template: Build:Blast"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -1626,26 +1579,6 @@ const db = {
                   "weaponResonance": "Laser Shot's Extra DMG Bonus increases by 50%. Gains 15% ATK after a 3-Ping for 5s. Duration resets every time it is triggered. \n A rare case where a character's signature weapon (in this case, Dragon Wind) is inferior. \n Off-Rate Weapons on its Banner: Ramiel, Berserk Fusion",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Luminance"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Spiritual Prayer Dance",
-                  "category": "QTE",
-                  "formula": "<strong>Heroic Dance</strong> heals 20% more HP and grants [red]Ultralimit Torque[/red] to the targets healed, increasing their Physical DMG Bonus by [red]10%[/red] for [red]8s[/red].  Its duration will reset every time it is triggered.\n<u><strong>Level 9</strong></u>: <strong>Heroic Dance</strong> triggers an additional Light Penalty of Core Passive's level.\n<u><strong>Level 18</strong></u>: <strong>Heroic Dance</strong> grants [red]12[/red] Energy after triggering Light Penalty. Passive - <strong>Field Reinforcement</strong> New Effect : The effect of [red]Ultralimit Torque[/red] increases to [red]20%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Sacred Chain",
-                  "category": "Core",
-                  "formula": "<strong>Goddess Connection System</strong> will trigger an additional Light Penalty upon a 3-Ping. After Light Penalty has been triggered [red]4[/red] times, the next Light Penalty will become [red]Divine Penalty[/red], dealing [red]400%[/red] DMG. Passive - <strong>Pioneer of Glory</strong> also increases Divine Penalty's DMG as it does to Light Penalty.</br></u>\n<u><strong>Level 9</strong></u>: <strong>Goddess Connection System</strong> has a [red]50%[/red] chance to trigger Light Penalty and the targets healed will be granted Ultralimit Torque.\n<u><strong>Level 18</strong></u>: Liv: Luminance increases the CRIT DMG of the targets healed by [red]20%[/red]. Triggering Light Penalty or Divine Penalty increases the next deployed character's CRIT Rate by [red]5%[/red] and [red]25%[/red] respectively for 10s until it reaches its maximum at [red]75%[/red]. Passive - <strong>Pioneer of Glory</strong> New Effect: Liv: Luminance gains [red]100[/red] Energy upon entering the battlefield for the first time.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Divine Rage Field",
-                  "category": "Signature",
-                  "formula": "When <strong>Arcadia Gate</strong> is active, pinging orbs will trigger [red]Light Penalty[/red] 1/2/3 times based on the number of orbs pinged and it deals 30% more Physical DMG.\n<u><strong>Level 9</strong></u>:When <strong>Arcadia Gate</strong> is activated, nearby enemies will be pulled continuously and [red]Divine Penalty's[/red] Base DMG increases by [red]10%[/red].\n<u><strong>Level 18</strong></u>: Liv: Luminance gains [red]40[/red] Energy every time she enters the battlefield. When her Signature Move is active, she can be switched to other characters and exit her Signature Move state. Passive - <strong>Consciousness Encouragement</strong> New Effect: It lasts 15s and also applies to standby characters. [red]Divine Penalty[/red] deals [red]25%[/red] more DMG.",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -1804,7 +1737,6 @@ const db = {
                   "notes": "Build source template: Build:Entropy"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -1965,7 +1897,6 @@ const db = {
                   "notes": "Build source template: Build:Ember"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -2124,26 +2055,6 @@ const db = {
                   "weaponResonance": "Attacks have a [red]10%[/red] chance to reduce the target's Fire Resistance by [red]5%[/red] for [red]5s[/red]. [red]8s[/red] cooldown against the same target. A Signature Move increases Fire DMG by [red]20%[/red] and doubles the chance of reducing the target's Resistance.",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Pulse"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Searing Heart",
-                  "category": "QTE",
-                  "formula": "Base DMG of <strong>Dancing Ring</strong> increases by [red]10%[/red]. \n\n<u><strong>Level 9</strong></u>: Performing <strong>Molten Roundslash</strong> pulls in nearby enemies.\n\n<u><strong>Level 18</strong></u>: Performing <strong>Molten Roundslash</strong> recovers [red]20[/red] Energy.\n <strong>Overload Outburst</strong> added effect: After using <strong>Molten Roundslash</strong>, <strong>Overload Outburst</strong> can be used by the character currently on-field for [red]8s[/red] (DMG from this skill is taken from Nanami: Pulse's DMG).",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Protoflame",
-                  "category": "Core",
-                  "formula": "Base DMG of <strong>Sawblade Storm</strong> increases by [red]15%[/red].\n\n<u><strong>Level 9</strong></u>: Using <strong>Sawblade Storm</strong> pulls in nearby enemies, and grants movement effect to Nanami: Pulse.\n\n<u><strong>Level 18</strong></u>: Upon casting <strong>Signature - Pulse</strong>, Nanami: Pulse enters the Overclock state, during which Basic Attacks do not recover Signal Orbs and Nanami: Pulse can gain up to 3 points of [red]Pulse Energy[/red] based on the number of times she performs her Signature Move. Hold Basic Attack to expend all [red]Pulse Energy[/red] to activate [red]Fiery Vortex[/red], dealing [red]500%/1000%/1500%[/red] Fire DMG based on the number of [red]Pulse Energy[/red] consumed. Gains Super Armor when performing [red]Fiery Vortex[/red].\n\n<strong>Thermal Growth</strong> added effect: Fiery Vortex deals [red]10%[/red] more DMG, and Nanami: Pulse recovers [red]20[/red] Energy upon entry or swapping-in.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "DIVINE BLAZE",
-                  "category": "Signature",
-                  "formula": "Base DMG of <strong>Signature - Pulse</strong> increases by [red]10%[/red] and pulls in nearby enemies. \n\n<u><strong>Level 9</strong></u>: Upon entry or swapping-in, every basic attack combo will recover an additional [red]9[/red] Energy for 5s.\n\n<u><strong>Level 18</strong></u>: When Signature Move has more than 1 charge, repeatedly tapping Signature Move will activate [red]Phoenix Bolt[/red], dealing an additional [red]1150%/3550%[/red] Fire DMG based on the number of extra Signature charges consumed.\n\n<strong>Pulse Synchronization</strong> added effect: Base DMG Increase of <strong>Signature - Pulse</strong> increases to [red]15%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -2306,7 +2217,6 @@ const db = {
                   "notes": "Build source template: Build:Tenebrion"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -2461,26 +2371,6 @@ const db = {
                   "weaponResonance": "Each Ping increases Physical DMG by [red]2%[/red] for [red]5s[/red], stacking up to a max of [red]10[/red] times and repeated trigger refreshes duration. One [red]Sword Orb[/red] can be additionally obtained when entering [red]Sword State[/red]. [red]10s[/red] cooldown.",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Crimson_Abyss"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Crimson Flow",
-                  "category": "SS Passive",
-                  "formula": "Gains 1 stack of [red]Sword Heart[/red] when performing a 3-Ping, max 2 stacks. When there is at least 1 stack of [red]Sword Heart[/red], press and hold Basic Attack to consume 1 stack of [red]Sword Heart[/red] to cast [red]Reverse Flash[/red], dealing [red]300%[/red] Physical DMG in total. Casting it outside [red]Blade Will State[/red] will give 1 random Signal Orb and re-arrange all the existing Signal Orbs in 3-Ping order.\n<u><strong>Level 9</strong></u>: The Enhanced Form of Blue Orb Pings lasts [red]10[/red]s instead.\n\n<u><strong>Level 18</strong></u>: Base DMG of [red]Reverse Flash[/red] increases by [red]100%[/red].\nNew Effect of [Passive - Crimson Scabbard]: Physical DMG increases for [red]8[/red]s instead. Yellow Orb 3-Pings will also trigger [Passive - Crimson Scabbard]. ([Passive - Crimson Scabbard] triggered by Red Orbs and Yellow Orbs do not stack.)",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Will of Anatta",
-                  "category": "SSS Passive",
-                  "formula": "While in [red]Blade Will State[/red], press and hold Basic Attack to consume 1 stack of [red]Sword Heart[/red] to cast [red]Reverse Flash[/red], during which a red glow will appear briefly. Release Basic Attack when the red glow appears to consume the remaining stacks of Sword Heart and cast [red]Sheathing Slash[/red] to deal [red]600%[/red] Physical DMG. Becomes invincible when casting [red]Sheathing Slash[/red].\n<u><strong>Level 9</strong></u>: Activates all available QTEs and recovers [red]15[/red] Signature Energy when entering [red]Blade Will State[/red].\n\n<u><strong>Level 18</strong></u>: Base DMG of [red]Sheathing Slash[/red] increases by [red]100%[/red].\nBase DMG of Sheathing Slash increases by 100%. New Effect of [Passive - Crimson Will]: Exiting [red]Blade Will State[/red] will give 2 additional Blue Orbs instead of 2 random ones. Gains [red]35[/red] Signature Energy when first deployed",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Abyssal Slash: Shredstorm",
-                  "category": "Signature",
-                  "formula": "While in [red]Blade Will State[/red], press and hold Basic Attack after tapping Signature Move to consume 2 stacks of [red]Sword Heart[/red] and continuously consume [red]Blade Will Orbs[/red] (at least 1 [red]Blade Will Orb[/red]). When sheathing during the Signature Move, casts [red]Wave Blast[/red], dealing [red]350%[/red] Physical DMG. Each extra [red]Blade Will Orb[/red] pinged will increase the Base DMG of [red]Wave Blast[/red] by [red]50%[/red].\n<u><strong>Level 9</strong></u>: Each extra [red]Blade Will Orb[/red] consumed increases the Base DMG of [red]Wave Blast[/red] by [red]100%[/red] instead.\n\n<u><strong>Level 18</strong></u>: [red]Blade Will Orbs[/red] are consumed faster when pressing and holding Basic Attack after tapping Signature Move in [red]Blade Will State[/red]. New Effect of [Passive - Abyssal Echo]: Physical DMG increases by [red]30%[/red] instead while under the Blue Orb's effect.",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -2639,7 +2529,6 @@ const db = {
                   "notes": "Build source template: Build:Bastion"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -2800,26 +2689,6 @@ const db = {
                   "notes": "Build source template: Build:Astral"
               }
           ],
-          "calculations": [
-              {
-                  "name": "Meteor Reverberation",
-                  "category": "Orb",
-                  "formula": "Base DMG of <strong>Meteor Strike</strong> increases by 20%.\n\n<u><strong>Level 9</strong></u>: Pulls in nearby enemies during a Blue 3-ping.\n\n<u><strong>Level 18</strong></u>: After a Blue 3-ping, the Extra DMG Bonus of Shadow Blade increases by 20% for 4s. Using <strong>Meteor Strike</strong> in the Enhanced Shadow Form extends its duration by 1s.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Satellite Blade",
-                  "category": "Core",
-                  "formula": "When <strong>Trailblade</strong> hits the target in Enhanced Shadow Form, it will leave two Shadow Blades on the target and restore 100 Dodge Gauge. Each Shadow Blade deals 120% Dark DMG (up to 6 Shadow Blades can stack on each target).\n\n<u><strong>Level 9</strong></u>: When <strong>Cosmic Wave</strong> is triggered, its Base DMG increases by 50% for each additional Red Orb pinged. Base DMG of <strong>Trailblade</strong> increases by 20% during Enhanced Shadow Form.\n\n<u><strong>Level 18</strong></u>: After dodging or pinging a Red Orb in Enhanced Shadow Form, press and hold Basic Attack to unleash Dark Blade that deals 150% Dark DMG for each Shadow Blade on the target. When the 6th hit of Dark Blade is triggered, its damage increases to 300% and the duration of Enhanced Shadow Form extends by 2s.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Collapsed Origin",
-                  "category": "Signature",
-                  "formula": "Dark DMG increases by 10% during <strong>Supernova Burst</strong>.\n\n<u><strong>Level 9</strong></u>: Freezes the duration of Enhanced Shadow Form while casting <strong>Supernova Burst</strong>. Signature Move's base DMG  increases by 15%.\n\n<u><strong>Level 18</strong></u>: When <strong>Supernova Burst</strong> is unleashed in Enhanced Shadow Form, each time it deals DMG, an additional hit that deals 150% Dark DMG will be added.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              }
-          ],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -2976,7 +2845,6 @@ const db = {
                   "notes": "Build source template: Build:Brilliance"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -3135,26 +3003,6 @@ const db = {
                   "weaponResonance": "Lightning DMG is increased by [red]15%[/red]. When dealing Lightning DMG caused by skills to the same target [red]5[/red] times, calls down a lightning strike that deals [red]150%[/red] Lightning DMG. [red]2s[/red] cooldown.",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Veritas"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Thundering Clash",
-                  "category": "Yellow Orb",
-                  "formula": "Base DMG of [Lightning Flash] increases by [red]30%[/red].\n\n<u><strong>Level 9</strong></u> - Pulls in nearby enemies when casting [Lightning Flash].\n<u>Level 18</u> - After a Red Orb 3-Ping, pinging Yellow Orbs will also activate [red]Sniping Form[/red]. New Effect of [Passive - Thunderbolt Streak] added: Yellow Orb can be immediately pinged after a Red Orb 3-Ping. Veritas will dodge incoming attacks during this action.\nNew Effect of [Passive - Gravitational Trap] added: The effect of [red][Executioner][/red] increases to [red]25%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Swift Archer",
-                  "category": "Core",
-                  "formula": "Base DMG of the Lightning Arrows fired in [red]Sniping Form[/red] increases by [red]20%[/red]. Base DMG of the Lightning Arrows fired in the Electro Charge Form increases by [red]20%[/red].\n\n<u><strong>Level 9</strong></u> - After firing 3 Lightning Arrows in [red]Sniping Form[/red], holding Basic Attack can charge and launch [red]1/2/3[/red] Terminating Arrows based on the charging duration and exit [red]Sniping Form[/red] early. Each Terminating Arrow deals [red]725%[/red] Lightning DMG. While charging, Bianca: Veritas gains Super Armor.\nNew Effect of [Passive - Thunderous Illusion] added: Blue Orb can be immediately pinged after a Red Orb 3-Ping. Veritas will dodge incoming attacks during this action.\nNew Effect of [Passive - Magnetic Chain] added: The first enemy (except Boss enemies) hit by Bianca: Veritas' [red]Lightning Arrow[/red] will be marked and [red]immobilized[/red] until Veritas leaves [red]Sniping Form[/red] or when the enemy dies. If the marked enemy is hit by Lightning Arrow again, the [red]immobilization[/red] effect will spread to nearby enemies that are [red]not immobilized[/red] (except Boss enemies). This effect lasts [red]2.5[/red]s, and the duration will reset when the enemy is immobilized again. \n<u><strong>Level 18</strong></u> - After firing 6 Lightning Arrows or 3 Terminating Arrows to exit [red]Sniping Form[/red], launches [Reverberating Flash] to strike the locked target's location 6 times, dealing [red]600%[/red] AOE DMG in total. Bianca: Veritas becomes immune to DMG and Hit effects while casting [Reverberating Flash].\nNew Effect of [Passive - Tapetum Viola] added: The effect of [red][Fulminology][/red] increases to [red]20%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Lightning Bloom",
-                  "category": "Signature Move",
-                  "formula": "Base DMG of [Signature - Ire of Lightning] increases by [red]15%[/red].\n\n<u><strong>Level 9</strong></u> - Firing a Lightning Arrow in [red]Sniping Form[/red] grants 4 extra Signature Energy. Each Lightning Arrow grants one extra Red Orb, up to 3 Red Orbs for each entrance.\n<u><strong>Level 18</strong></u> - Performing Casting [Signature - Ire of Lightning] will move up to 3 Red Orbs to the front of the orb bar. New Effect of [Passive - Reversed Arc] added: Gains an extra 76 Signature Energy upon entering battle for the first time, and 18 Signature Energy when entering battle again.\nNew Effect of [Passive - Thunderstruck] added: The effect of [red][Greased Lightning][/red] increases to [red]30%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -3317,7 +3165,6 @@ const db = {
                   "notes": "Build source template: Build:Silverfang"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -3478,7 +3325,6 @@ const db = {
                   "notes": "Build source template: Build:Arclight"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -3639,7 +3485,6 @@ const db = {
                   "notes": "Build source template: Build:Plume"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -3798,26 +3643,6 @@ const db = {
                   "weaponResonance": "Dark DMG increases by [red]15%[/red]. Attacks have a [red]15%[/red] chance to unleash a [red]shadow wave[/red], dealing [red]75%[/red] Dark DMG. [red]0.5s[/red] cooldown.",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Rozen"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Scorching Peril",
-                  "category": "Orb",
-                  "formula": "Base DMG and Healing of [Infernal Scorchmark] increase by [red]20%[/red].\n\n<u><b>Level 9</b></u>: After Vera is switched out, she performs [red]Core Attack[/red] once to a random target within [red]Night Field/Dark Field[/red] every [red]1.5s[/red].\n\n<u><b>Level 18</b></u>: Whenever Vera's [red]Core Attack/Dark Night Slash[/red] hits an enemy marked by [Infernal Scorchmark] while [red]Night Field/Dark Field[/red] is present, the mark will be removed, dealing Explosion DMG and performing Healing both equal to the full amount of the [Infernal Scorchmark] effect. [Infernal Scorchmark] spreads to another random enemy within range afterward.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Void of Darkness",
-                  "category": "Core",
-                  "formula": "Upon casting the Signature Move with maximum Overclocking Points, Vera enters the [red]Darkness Form[/red], dealing [red]480%[/red] Dark DMG to the surrounding area and creating a [red]Night Field[/red] afterward, which deals [red]120%[/red] Dark DMG per second for 6s. She cannot gain Signature Energy and Overclocking Points while in [red]Darkness Form[/red]. Unleashing all [red]Core Attacks/Dark Night Slashes[/red] in  will activate [red][Signature - Dark Night's End][/red], dealing [red]800%[/red] Dark DMG and ending the Darkness Form.\n\n<u><b>Level 9</b></u>: Vera gains [red]80[/red] Energy and a random Signal Orb when she enters the battle. Upon casting [red][Signature - Dark Night's End][/red], all remaining Darkness Orbs are converted to Blue Orbs (max 3).\n\n<u><b>Level 18</b></u>: Creates a [red]Dark Field[/red] immediately after casting [red][Signature - Dark Night's End][/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Illusive Disruption",
-                  "category": "Signature",
-                  "formula": "Vera can perform [red]Core Attacks[/red] anytime while she is in [red]Darkness Form[/red], and all Orbs are converted to Darkness Orbs. Pings Darkness Orbs to perform Dark Night Slash, dealing [red]600%[/red] Dark DMG.\nDark Night Slashes come with additional Dodge Calculation. Triggering the Matrix will grant 2 Darkness Orbs, and exiting [red]Core Attacks[/red] will turn Darkness Orbs back to normal Signal Orbs.\n\n<u><b>Level 9</b></u>: Consecutive [red]Dark Night Slashes[/red] deal increasing DMG, the Base DMG increasing by [red]0% / 25% / 50% / 75%[/red] respectively.\n\n<u><b>Level 18</b></u>: In [red]Darkness Form[/red], pinging a Signal Orb/Darkness Orb will increase the Base DMG of [Signature - Dark Night's End] by [red]50%[/red] (max [red]200%[/red]).",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -3980,7 +3805,6 @@ const db = {
                   "notes": "Build source template: Build:Crocotta"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -4135,26 +3959,6 @@ const db = {
                   "weaponResonance": "Damaging a target will reduce their Physical DEF by [red]20%[/red] for [red]8s[/red]. The duration is refreshed each time this effect is triggered. Dealing damage with [red]small/medium/wide-area electromagnetic beam[/red] also applies a damage over time effect for [red]8s[/red], dealing Physical DMG equal to [red]25% / 50% / 100%[/red] of ATK every second.",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Rigor"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Shining Wings",
-                  "category": "QTE",
-                  "formula": "[Hunter of Sin]'s Base DMG increases by [red]10%[/red].\n\n<u><strong>Level 9</strong></u>: [Wings of Destiny] also pulls in nearby enemies.\n\n<u><strong>Level 18</strong></u>: [Wings of Destiny] also recovers [red]15[/red] Signature Energy.\n New effect of [Lance of Redemption] added : After hitting a targer with [Hunter of Sin], Rosetta: Rigor gains [red]10%[/red] Extra DMG bonus against this target for [red]8s[/red]. (This effect does not stack with the Extra DMG bonus triggered by [Frozen Wind] from [Lance of Redemption]).",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Raging Surge",
-                  "category": "Core",
-                  "formula": "[red]Wide-area Electromagnetic Cannon[/red]'s Base DMG increases by [red]10%[/red].\n\n<u><strong>Level 9</strong></u>: [red]Wide-area Electromagnetic Cannon[/red] also pulls in nearby enemies. After casting [Absolving Spear], the next [red]low/mid-power electromagnetic cannon[/red]'s Base DMG increases by [red]100%[/red].\n\n<u><strong>Level 18</strong></u>:[red]Low/Mid-power/Wide-area Electromagnetic Cannon[/red] generates an extra [red]3[/red] Signature Energy. After casting [red]Wide-area Electromagnetic Cannon[/red], Rosetta: Rigor becomes [red]Overloaded[/red] for [red]4s[/red], during which all 3-Pings and Signature Move will receive the maximum Energy Point bonus.\n New effect of [Lance of Eternity] added: [red]Lance of Perception[/red] inflicts [red]Penetrating Pivot[/red] that reduces the target’s Physical Resistance by [red]5%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Eradication of Sins",
-                  "category": "Signature",
-                  "formula": "[Absolving Spear] has its Base DMG increased by [red]10%[/red] and also activates all available QTEs when cast.\n\n<u><strong>Level 9</strong></u>: Rosetta: Rigor recovers [red]10[/red] Energy every time she enters battle.\n\n<u><strong>Level 18</strong></u>: When [Absolving Spear] is cast, press and hold Basic Attack to start charging. Rosetta: Rigor is invincible while charging and will fire a [red]Low/Mid-power/Wide-area Electromagnetic Cannon[/red] based on the charging time and whether she is in [red]Full Burst Form[/red].\n New effect[Hyper-Burst] added: The [red]Penetrating Pivot[/red] effect from [red]Lance of Perception[/red] increases to [red]10%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -4317,7 +4121,6 @@ const db = {
                   "notes": "Build source template: Build:Qilin"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -4474,7 +4277,6 @@ const db = {
                   "notes": "Build source template: Build:Pavo"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -4637,7 +4439,6 @@ const db = {
                   "notes": "Build source template: Build:Laurel"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -4794,7 +4595,6 @@ const db = {
                   "notes": "Build source template: Build:2B"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -4952,7 +4752,6 @@ const db = {
                   "notes": "Build source template: Build:9S"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -5110,7 +4909,6 @@ const db = {
                   "notes": "Build source template: Build:A2"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -5272,7 +5070,6 @@ const db = {
                   "notes": "Build source template: Build:Hypnos"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -5434,7 +5231,6 @@ const db = {
                   "notes": "Build source template: Build:Tempest"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -5596,7 +5392,6 @@ const db = {
                   "notes": "Build source template: Build:Glory"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -5758,7 +5553,6 @@ const db = {
                   "notes": "Build source template: Build:XXI"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -5918,26 +5712,6 @@ const db = {
                   "weaponResonance": "Lightning DMG increases by [red]15%[/red]. [red]Victorious War Flag[/red] and Signature Move [red]Shining Piercer[/red] can create another stack of [red]Electric Charge[/red]. When [red]Victorious War Flag[/red] is on the field, deploying Vera: Garnet will consume all of [red]Electric Charge[/red] to cast [red]Lightning Fall[/red]. Create another stack of [red]Electric Charge[/red] afterward.",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Garnet"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Thunderous Lunge",
-                  "category": "Orb",
-                  "formula": "Pinging before the Red/Yellow 3-Ping Skill ends attaches a [red]Lightning Bolt[/red] to the last Red/Yellow Orb hit. Pinging during a Blue 3-Ping casts [Spear Lunge] immediately with an extra [red]Lightning Bolt[/red]. The [red]Lightning Bolt[/red] deals [red]300% / 600% / 900%[/red] Lightning DMG based on the number of orbs pinged.\n\n<u><b>Level 9</b></u>: Gains 1 stack of [red]Lightning Capacity[/red] upon a 3-Ping during a 3-Ping Skill, stacking up to [red]2[/red] times. When [Spear Lunge] is triggered, all [red]Lightning Capacity[/red] stacks are consumed, granting the same number of stacks of [Electric Charge].\n\n<u><b>Level 18</b></u>: Each stack of [red]Lightning Capacity[/red] consumed will restore [red]2[/red] random Signal Orbs of the same color.\nNew effect of [Passive - Eternal Battlefield] added: Each stack of [red]Lightning Capacity[/red] consumed will restore [red]16[/red] Signature Energy.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Thundering Crash",
-                  "category": "Core",
-                  "formula": "Base DMG of [Lightning Fall] with max stacks increases by [red]30%[/red].\n\n<u><b>Level 9</b></u>: Vera: Garnet gains [red]20[/red] Signature Energy when casting [Lightning Fall] for the first time after she is switched in. Casting [Lightning Fall] with max stacks will rearrange the Signal Orbs into 3-Pings.\n\n<u><b>Level 18</b></u>: Extra DMG Bonus of [Lightning Fall] with max stacks increases by [red]30%[/red].\nNew effect of [Passive - Unyielding Breacher] added: The [red]Turbulence Interference[/red] effect inflicted by Vera: Garnet reduces the target's Lightning Resistance by a further [red]10%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Blazing Spear",
-                  "category": "Signature",
-                  "formula": "Vera: Garnet can ping an extra set of 3-Ping Orbs when casting [Signature - Shining Piercer] to end the skill early and cast [red]Blazing Spear[/red], piercing the target, dealing [red]2500%[/red] Lightning DMG, and gaining 1 stack of [Electric Charge]. Afterward, she calls down lightning to deal [red]600%[/red] Lightning DMG.\nNew effect of [Passive - Eternal Battlefield] added: Vera can cast [Lightning Fall] immediately after [red]Blazing Spear[/red].\n\n<u><b>Level 9</b></u>: Replenishes Signature Energy to [red]20[/red] when casting a QTE if it's below [red]20[/red]. Casting [Signature - Shining Piercer] will activate all available QTEs.\n\n<u><b>Level 18</b></u>: Pinging an extra set of 3-Ping Orbs when casting [red]Blazing Spear[/red] increases its Extra DMG Bonus by [red]50%[/red].\nNew effect of [Passive - Goddess of War] added: When casting [red]Blazing Spear[/red], each stack of [Electric Charge] increases its Base DMG by [red]30%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -6101,7 +5875,6 @@ const db = {
                   "notes": "Build source template: Build:Theatrical_Flame"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -6261,26 +6034,6 @@ const db = {
                   "weaponResonance": "Liv: Empyrea gains [red]10%[/red] more ATK. Every time she enters the battlefield, she gains [red]50%[/red] Prayer. Fire DMG Bonus of [red]Purity Oath[/red] against enemies affected by [red]White Oracle[/red] increases by [red]20%[/red] (up to [red]100%[/red]).",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Empyrea"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Splendorous Rite",
-                  "category": "Orb",
-                  "formula": "Signal Orbs deal [red]30%[/red] more Base DMG. Liv can immediately perform another ping during any ping but can't cast this continuously.\n\n<u><b>Level 9</b></u>: The first Prayer Liv makes after entering the battlefield will rearrange the Signal Orbs into 3-Pings.\n\n<u><b>Level 18</b></u>: When switched in, casts [Chaos Oath] and gains [red]12[/red] Signature Energy and [red]12[/red] Prayer.\nNew effect of [Passive - Hierophany] added: After Liv casts [Chaos Oath] or [Purity Oath] through orb pings, full Prayer will automatically trigger [Divine Prayer].",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Devout Promise",
-                  "category": "Core",
-                  "formula": "Extra DMG Bonus of [Chaos Oath] and [Purity Oath] increases by [red]20%[/red]. Liv can cast [Signature - Sea of Sangharama] immediately after [Chaos Oath] or [Purity Oath].\n\n<u><b>Level 9</b></u>: Pulls in nearby enemy units after casting [Purity Oath].\n\n<u><b>Level 18</b></u>: Liv gains [red]1[/red] set of random 3-Ping Orbs through the first Prayer she makes after entering the battlefield. Gains [red]24[/red] Signature Energy after casting full stacks of any [Oath].\nNew effect of [Passive - Martyrdom] added: After pinging the 3rd set of orbs during [Empyreal Prayer], if there are still orbs of the set's color, pings up to [red]3[/red] orbs of that color and grants a [red]5% / 10% / 15%[/red] Extra DMG Bonus to [Empyreal Oath] based on the number of orbs pinged.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Blessing and Retribution",
-                  "category": "Signature",
-                  "formula": "[Empyreal Oath] will generate Rain of Incineration, healing allies for [red]20%[/red] of Liv's ATK and dealing [red]60%[/red] Fire DMG to enemies within a large area every [red]0.5[/red]s for [red]5[/red]s.\n\n<u><b>Level 9</b></u>: The 6 orbs granted by [Signature - Sea of Sangharama] are guaranteed to be 2 sets of 3-Ping Orbs and put at the front of the line.\n\n<u><b>Level 18</b></u>: Liv casts [Empyreal Oath] faster and activates all available QTEs during so.\nNew effect of [Passive - Revelation] added: [Prayer Ripple] during [Empyreal Prayer] deals [red]100%[/red] more Base DMG.",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -6444,7 +6197,6 @@ const db = {
                   "notes": "Build source template: Build:Capriccio"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -6602,7 +6354,6 @@ const db = {
                   "notes": "Build source template: Build:Dragontoll"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -6760,7 +6511,6 @@ const db = {
                   "notes": "Build source template: Build:Starfarer"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -6926,7 +6676,6 @@ const db = {
                   "notes": "Build source template: Build:Starveil"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -7084,26 +6833,6 @@ const db = {
                   "weaponResonance": "The [red]Chain Fusion[/red] effect applied by Karenina: Scire increases by [red]10%[/red]. Each time Karenina casts [red]Radiant Whirlwind[/red], she recovers [red]1[/red] Energy. The Extra DMG Bonus of [red]Leap Attack[/red] increases by [red]20%[/red].",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Radiant_Daybreak"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Faint Light",
-                  "category": "Orb",
-                  "formula": "The Base DMG of pinging Signal Orbs increases by [red]50%[/red].\nAfter casting [Comet Propulsion], Scire enters a combo preparation state. During this state, pinging Signal Orbs is considered a Comet Combo, granting Super Armor.\nComet Combo 1: Deals [red]200% / 400% / 600%[/red] Dark DMG, rearranges Signal Orbs into 3-Pings, and triggers Matrix if it is not on cooldown (upon successful trigger, randomly gains [red]1[/red] Signal Orb).\nComet Combo 2: Deals [red]240% / 480% / 720%[/red] Dark DMG.\nComet Finish: Deals [red]300% / 600% / 900%[/red] Dark DMG.\n\n<u><b>Level 9</b></u>: When pinging Signal Orbs during a Comet Combo, Scire will grant the team [red]120 / 240 / 360[/red] Electric Charge; Comet Finish grants an additional [red]24 / 48 / 72[/red] Electric Charge.\n[Core Passive - Space Walk] New Effect: [Plasma Beam]:\n- Effect Charge: Maximum Electric Charge is [red]1000[/red] points.\n- Effect Activation: The Plasma Beam Effect character enters the Electric Storm Flash state, dealing [red]800%[/red] Plasma Beam DMG to nearby units every [red]2[/red]s (does not trigger Tank Class skills), lasting [red]12[/red]s.\nNew effect of [QTE - Dawn Fall] added: Deals [red]100%[/red] Plasma Beam DMG.\n\n<u><b>Level 18</b></u>: When pinging Red Signal Orbs, Scire will gain gain an anti-gravity shield equal to [red]3% / 6% / 10%[/red] of her maximum HP.\n New effect of [Passive - Faint Light Lv. 2] added: When the anti-gravity shield exists, Scire gains a [red]15%[/red] ATK increase.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Mass-Energy Conversion",
-                  "category": "Core",
-                  "formula": "Each set of 3-Ping Signal Orbs consumed while charging [Leap Attack] increases the Extra DMG Bonus of this Leap Attack by [red]8%[/red].\n\n<u><b>Level 9</b></u>: While charging [Leap Attack], it will pull in nearby targets and trigger Matrix if it is available.\n\n<u><b>Level 18</b></u>: Each set of 3-Ping Signal Orbs consumed while charging [Leap Attack] increases the Extra DMG Bonus of the next [Signature - Starshatter Horizon] by [red]10%[/red].\n New effect of [Passive - Banishing Sunglow Lv. 2] added: The [red]Chain Fusion[/red] effect applied by Scire reduces the target's Dark Resistance by a further [red]10%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Vision Edge",
-                  "category": "Signature",
-                  "formula": "While in Anti-gravity Status or during Comet Combos, press and hold Basic Attack to cast [Shattering Strike], dealing [red]480%[/red] Dark DMG and restoring [red]88[/red] Signature Energy. During this time, Karenina: Scire gains Super Armor and [red]30%[/red] DMG Reduction.\n- While in Anti-gravity Status, casting [Shattering Strike] additionally restores [red]12[/red] Signature Energy and [red]999[/red] Kinetic Energy. Each set of 3-Ping Signal Orbs consumed while charging [Leap Attack] increases the Base DMG of [Shattering Strike] by [red]50%[/red].\n- During [Shattering Strike] and the subsequent [Signature - Starshatter Horizon], Scire is considered to be in Anti-gravity Status.\n\n<u><b>Level 9</b></u>: When the team's Electric Charge reaches its maximum, [Shattering Strike] will activate Electric Storm Flash state, deploying a Dissociation Electric Field for 14s.\nWhile in Electric Storm Flash state, casting [Signature - Starshatter Horizon] will additionally cast [Signature - Starstream Electric Shock], dealing [red]900%[/red] Plasma Beam DMG.\n- Dissociation Electric Field deals [red]75%[/red] Plasma Beam DMG once to targets caught within, and inflicts then with a [red]Turbulence Interference[/red] effect every [red]2[/red]s, reducing their Lightning Resistance by [red]15%[/red] for [red]2[/red]s.\n\n<u><b>Level 18</b></u>: During the charge-up phase of [Shattering Strike], an additional set of 3-Ping Signal Orbs can be pinged to increase the Extra DMG Bonus of the subsequent release by [red]200%[/red], activating all available QTEs, and granting the team [red]240[/red] Electric Charge.\nNew effect of [Passive - Unquenchable Willpower Lv. 3] added: The Extra DMG Bonus of [Shattering Strike] increases by [red]50%[/red]; the additional 3-Ping consumed during the charge-up phase will cause the next [Signature - Starstream Electric Shock] to deal double damage.",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -7267,7 +6996,6 @@ const db = {
                   "notes": "Build source template: Build:Arca"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -7425,26 +7153,6 @@ const db = {
                   "weaponResonance": "CRIT DMG increases by [red]30%[/red]. Upon entering the [red]Sword Form[/red], immediately gains [red]20[/red] stacks of [red]Stigmata Will[/red] and activate the [red]Resolution[/red] status.",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Stigmata"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Spinning Flare",
-                  "category": "Basic Attack",
-                  "formula": "After Basic Attack phase 5 in the Sword Form, tap Basic Attack to follow up with a 5-phase [Dispersed Radiance]. Stigmata is Invincible when [Dispersed Radiance] is active. [Dispersed Radiance] will turn all [red]Stigmata Will[/red] into [red]Glow Mark[/red] up to 150 stacks. The [red]Glow Mark[/red] will be removed once Stigmata exits the Sword Form.\n- [Dispersed Radiance] deals [red]800%[/red] Physical DMG in total with each phase restoring extra 3 Energy.\n- During Afterglow Enhancement, [Dispersed Radiance] will trigger [red]Ultima Slash[/red] on hit.\n- Each stack of [red]Glow Mark[/red] will increase the Base DMG of the [red]Ultima Slash(es)[/red] Stigmata triggered during [Dispersed Radiance] by 1.2%.\n- When having Resolution, dodge and then tap Basic Attack to directly launch Basic Attack phase 5.\n- After casting [Dispersed Radiance], Stigmata's attacks will not be able to trigger the Afterglow Shadow effect.\n- [Effect: Ultima Slash]: Some skills can accumulate [red]Sharp Reserve[/red]. The [red]Sharp Reserve[/red] can be inherited by the next Ultima Slash character and is capped at [red]999[/red]. When there is [red]100 Sharp Reserve[/red], the next skill that could [red]trigger the Ultima Slash[/red] will trigger [red]Ultima Slash[/red] once at the cost of [red]100 Sharp Reserve[/red], dealing [red]400%[/red] Ultima Slash DMG. Each triggering of this will grant 1 [red]Truewill[/red], up to [red]90[/red].\n\n<u><b>Lv.9</b></u>: When the Sword Form is activated with more than 50% Afterglow Points, gains a [red]10%[/red] CRIT DMG Bonus during Afterglow Enhancement.\n\n<u><b>Lv.18</b></u>: Drag the joystick when [Sword Dance] is being cast to leave behind a phantom to launch an attack, dealing Physical DMG equal to [red]80%[/red] of Stigmata's ATK. \nNew effect added to [Passive - Severed Light Lv.2]: Gains [red]10[/red] Signature Energy every time when [Dispersed Radiance] triggers an Ultima Slash.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Cold Illumination",
-                  "category": "Signature",
-                  "formula": "Upon launching the first [Illuminated Abyss] after [Dispersed Radiance], Stigmata will follow up with [Shattered Darkness] at the cost of maximum 10 Truewill and deal [red]450% / 500% / 550% / 600% / 650% / 700% / 750% / 800% / 850% / 900%[/red] Ultima Slash DMG based on the Truewill spent. Stigmata spends all stacks of [red]Glow Mark[/red] to cast [Shattered Darkness]. Each stack of [red]Glow Mark[/red] will increase the Base DMG of [Shattered Darkness] by [red]3.5%[/red].\n\n<u><b>Lv.9</b></u>: Gains [red]18[/red] stacks of [red]Glow Mark[/red] when [Dispersed Radiance] triggers an Ultima Slash.\n\n<u><b>Lv.18</b></u>: Activates all available QTEs when Luminous Realm is triggered.\nNew effect added to [Passive - Mass Decree Lv.3]: Each stack of [red]Stigmata Will[/red] will increase [Blade Abyss - Illuminated Abyss]'s Base DMG by [red]7.5%[/red] instead. Each stack of [red]Glow Mark[/red] will increase the Base DMG of the Ultima Slash(es) triggered during [Dispersed Radiance] by [red]2.0%[/red] and that of the [Shattered Darkness] by [red]4.5%[/red] instead.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Shower of Dawnlight",
-                  "category": "Orb",
-                  "formula": "Base DMG of Signal Orbs increases by 20%. When casting Ping Skills, gains [red]17 / 34 / 50 Sharp Reserve[/red]  based on the number of orbs pinged.\n\n<u><b>Lv.9</b></u>: Glowing Lanternlight deals [red]15%[/red] more Extra DMG and grants [red]100 Sharp Reserve[/red] on hit.\n\n<u><b>Lv.18</b></u>:Casting [Glowing Lanternlight] or performing a 3-Ping during the Luminous Realm will make the next [Bright Candle] deal [red]25%[/red] more Extra DMG. This effect can stack up to 3 times.\nNew effect added to [Passive - Carved Darkness Lv.2]: [Signature - Bright Candle]'s DMG Record Multiplier will be [red]110%[/red] instead. [Shattered Darkness]'s Extra DMG Bonus increases by [red]30%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -7608,7 +7316,6 @@ const db = {
                   "notes": "Build source template: Build:Vitrum"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -7768,7 +7475,6 @@ const db = {
                   "notes": "Build source template: Build:Hyperreal"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -7926,7 +7632,6 @@ const db = {
                   "notes": "Build source template: Build:Kaleido"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -8087,26 +7792,6 @@ const db = {
                   "notes": "Build source template: Build:Crimson_Weave"
               }
           ],
-          "calculations": [
-              {
-                  "name": "Flashstorm",
-                  "category": "Basic Attack",
-                  "formula": "During Leaping Thrust, [blue]Red and Yellow Orbs are converted into Shadow Strike Orbs. Pinging any Shadow Strike Orb unleashes Shadow Strike.[/blue] \n - Crimson Weave throws the odachi, dealing [red]60%[/red] Darkflow DMG. For each Shadow Strike Orb pinged, releases one stage of Shadow Strike (up to 6 stages), dealing [red]450%[/red] Darkflow DMG and restoring [red]1 Signature Energy[/red] and [red]15[/red] Aphotic Points. Then, unleashes Shadow: Thunderous Bash, dealing [red]940%[/red] Darkflow DMG. \n - Upon fully unleashing 6 stages of Shadow Strike, the next use of [Signature - Weave: Karmic Inferno] will instead deal [red]2600%[/red] Darkflow DMG.\n\n<u><b>Lv. 9</b></u>: Each stack of Darkflow increases Shadow Strike's Base DMG by [red]10%[/red]. \n [Signature - Weave: Karmic Inferno] will clear all Darkflow stacks and deal an extra [red]400%[/red] Darkflow DMG per stack cleared.\n\n<u><b>Lv. 18</b></u>: Each time Thunderous Bash or Shadow: Thunderous Bash consumes 1 Aphotic Point, increases the Base DMG of the next [Signature - Weave: Karmic Inferno] by [red]0.15%[/red] (cannot stack). \n New effect of [Passive - Drifting Vain Lv. 2] added: Each stack of Darkflow increases Shadow Strike's Base DMG by a further [red]5%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Unmanifest Will",
-                  "category": "Core Passive",
-                  "formula": "Increases [Core Passive - Resolute Blow] Base DMG by [red]60%[/red], and can fend off 2 extra attacks while parrying.\n\n<u><b>Lv. 9</b></u>: Within 3s after pinging 3 Red or Yellow Orbs, Blade Aura drop rate increases when casting [Core Passive - Sundered Delusion] and [Core Passive - Resolute Blow] is automatically and quickly cast when Blade Aura reaches its maximum.\n\n<u><b>Lv. 18</b></u>: Gains [red]9[/red] Signature Energy upon entering the battle. \n New effect of [Passive - Facets of Delusions Lv. 2] added: Casting [Signature - Weave: Karmic Inferno] increases Base DMG of [QTE - Flashes of Steel] by [red]1000%[/red] throughout the battle. [Signature - Weave: Karmic Inferno] deals [red]200%[/red] extra Darkflow DMG per stack cleared.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Thunderforge",
-                  "category": "Orbs",
-                  "formula": "[Core Passive - Path of Anatta] New Effect: [Darkflow]: \n For every [red]200[/red] Darkflow Reserve, gain 1 Darkflow stack, up to a maximum of 15. The character gains a Darkflow Aura based on the current number of stacks, dealing a small amount of Darkflow DMG over time to enemies and reducing their HP recovery. When the number of stacks reaches a threshold, the aura upgrades, increasing its range and dealing a large amount of Darkflow DMG to enemies within the area. \n - At [red]1 / 3 / 6 / 10 / 15[/red] stacks: Deals [red]100% / 200% / 400% / 800% / 1600%[/red] Darkflow DMG, then deals [red]20% / 40% / 60% / 80% / 100%[/red] Darkflow DMG per second, reducing enemy HP recovery by [red]10% / 20% / 30% / 50% / 100%[/red]; \n Pinging a Blue Orb grants [red]50 / 100 / 200[/red] Darkflow Reserve. Casting [Core Passive - Resolute Blow] while wielding a kodachi grants [red]50 / 100 / 200[/red] Darkflow Reserve. Continuously casting the Swordwave of [Basic Attack - Blading Radiance] grants [red]60[/red] Darkflow Reserve every 0.5s, and an extra [red]100[/red] Darkflow Reserve while the Swordwave is enhanced.\n\n<u><b>Lv. 9</b></u>: Base DMG from pinging Signal Orbs increases by [red]50%[/red]. \n When pinging for the first time upon entering Matrix, only 1 Signal Orb will be consumed.\n\n<u><b>Lv. 18</b></u>: While wielding a kodachi, all Signal Orbs are converted into Blue Orbs. \n New effect added to [Passive - Glimpse Into All Lv. 3]: While wielding an odachi, gain an extra [red]15%[/red] Extra DMG Bonus.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              }
-          ],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -8264,7 +7949,6 @@ const db = {
                   "notes": "Build source template: Build:Zitherwoe"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -8421,7 +8105,6 @@ const db = {
                   "notes": "Build source template: Build:Feral"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -8579,7 +8262,6 @@ const db = {
                   "notes": "Build source template: Build:Indomitus"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -8736,26 +8418,6 @@ const db = {
                   "weaponResonance": "ATK increases by 10%. Base DMG of [red]Signature - Celestial Edge[/red] increases by [red]15%[/red]. Each time [red]Splendor Points[/red] are full, one random Signal Orb and one [red]Cipher Orb[/red] of the same color will be generated. [red]Ultralimit Torque[/red] now increases Physical DMG by 20%.",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Echo"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Limitless Arrows",
-                  "category": "Effect",
-                  "formula": "New Effect: Glaciation added to Core Passive: Echoing Twins.\n\nSome of the skills can fill the [red]Glaciation Gauge[/red]. When the gauge is full, consume it to cast [red]Arctic Ice[/red], dealing Glaciation DMG and gaining [red]Arctic Ice Layers[/red]. Casting certain skills will consume all [red]Arctic Ice Layers[/red] to form [red]Ice Spikes[/red], dealing Glaciation DMG to nearby enemies. While [red]Ice Spike[/red] persist, dealing Glaciation DMG will trigger [red]Ice Accumulation[/red], which deals additional Glaciation DMG and gains [red]Congelation[/red]. When [red]Ice Spikes[/red] expire, they will trigger [red]Ice Burst[/red] to deal Glaciation DMG based on the current [red]Congelation[/red]. The [red]Glaciation Gauge, Arctice Ice Layers, Ice Spikes[/red], and [red]Congelation[/red] can transfer to the next character with Effect: Glaciation. \n - At [red]100 Glaciation[/red], casts [red]Arctice Ice[/red] to deal [red]100%[/red] Glaciation DMG and generate [red]1 Arctic Ice Layer[/red]. Max [red]10 Layers[/red]. \n - When having more than [red]0 Arctic Ice Layers[/red], certain skills can consume all [red]Arctic Ice Layers[/red] to form [red]Ice Spikes[/red], dealing [red]180%[/red] Glaciation DMG. When forming [red]Ice Spikes[/red], every [red]1 Arctic Ice Layer[/red] consumed will extend their duration by [red]1s[/red]. \n - While [red]Ice Spikes[/red] persist, dealing Glaciation DMG will trigger [red]Ice Accumulation[/red], which deals [red]100%[/red] Glaciation DMG in a large area and gains [red]100 Congelation[/red]. This can only trigger [red]once[/red] every [red]0.25s[/red]. \n - When [red]Ice Spikes[/red] expire, it will trigger [red]Ice Burst[/red] to deal [red]100%[/red] Glaciation DMG in a large area. For every [red]100 Congelation[/red] owned, the Base DMG of [red]Ice Burst[/red] increases by [red]9%[/red], up to [red]10000 Congelation[/red].\n\nWhile Judgment Zone is not active, Echo can hold Dodge to fire an arrow of ice, dealing [red]800%[/red] Glaciation DMG. Afterwards, activates Frigid Zone that lasts for [red]8s[/red]. After Splendor Points reach the maximum value in Frigid Zone, Echo can hold Basic Attack to consume all Splendor Points and perform Rimy Co-Strike (during this, Echo is invincible but cannot cast Signature: Celestial Edge to cancel this skill), dealing [red]2400%[/red] Glaciation DMG, granting [red]50 Signature Energy[/red] to herself, and activating all available QTEs. \n Rimy Co-Strike consumes all Cipher Orbs and Signal Orbs (the maximum amount of Signal Orbs that can be consumed equals the amount of Cipher Orbs consumed). If Echo has Soul Shatter Mark, Rimy Co-Strike will also consume Soul Shatter Mark. Afterwards, enhances Effect: Glaciation based on the resources consumed. \n - Each Cipher Orb increases Base DMG of Arctic Ice and Ice Spikes by [red]4%[/red], and each Signal Orb increases Base DMG of Ice Accumulation by [red]25%[/red] for [red]24s[/red]. Triggering this effect again refreshes its duration. Soul Shatter Mark enhances the potency of Congelation; every 100 Congelation increases Base DMG of the next Ice Burst cast by [red]200%[/red] (not stackable).\n\n<u><b>Lv. 9</b></u>: While Ice Spikes persist, casting Echo’s Signature: Celestial Edge resets Ice Spikes’ duration to [red]10s[/red], and QTE: Advent of Justice increases the duration of Ice Spikes by [red]4s[/red] while dealing [red]600%[/red] Glaciation DMG instead; Cipher attacks performed by Cecily additionally deal [red]200%[/red] Glaciation DMG and accumulate [red]100[/red] Congelation for the party. \n - The duration of Ice Spikes cannot exceed [red]10s[/red].\n\n<u><b>Lv. 18</b></u>: Base DMG of Rimy Co-Strike, Imprisoning Co-Strike, and Soulbreaking Co-Strike increases by [red]50%[/red]. [Passive: Decisive Omen Level 2] new effects: The final effect of the [red]Ultralimit Torque[/red] buff granted by Core Passive: Blessing of Fortitude increases by [red]5%[/red]. While Frosty Emblem is active, Core Passive: Blessing of Fortitude instead grants the [red]Cocytus Nova[/red] buff that increases Glaciation DMG by [red]5%[/red]. While Ice Spikes persist, Cecily’s Cipher attacks instead accumulate [red]100[/red] Congelation for the party.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Arcane Rime",
-                  "category": "Core Passive",
-                  "formula": "Casting Core Passive: Swift Archery inside Frigid Zone instead deals [red]160%[/red] Glaciation DMG and grants [red]20 Signature Energy[/red] and [red]30[/red] Splendor Points to Echo. After pinging 4 Cipher Orbs for Cecily, additionally triggers a hailstorm that deals [red]240%[/red] Glaciation DMG. \n - Echo can cast Core Passive: Swift Archery up to 6 times every time she activates Frigid Zone.\n\n<u><b>Lv. 9</b></u>: Base DMG of Core Passive: Swift Archery and the hailstorm increases by [red]100%[/red].\n\n<u><b>Lv. 18</b></u>: Base DMG of Sinbreaker’s Arrow increases by [red]100%[/red]; casting Sinbreaker’s Arrow grants [red]16 Signature Energy[/red] and [red]60[/red] Splendor Points to Echo. \n [Passive: Mark of Libra Level 2] new effects: The final effect of the [red]Ultralimit Torque[/red] buff granted by Core Passive: Blessing of Fortitude increases by [red]5%[/red]. While Frosty Emblem is active, Core Passive: Blessing of Fortitude instead grants the [red]Cocytus Nova[/red] buff that increases Glaciation DMG by [red]5%[/red]. While Frigid Zone is active, Echo gains [red]30%[/red] Extra DMG Bonus.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Apocalyptic Judgement",
-                  "category": "Signature",
-                  "formula": "Casting Signature: Celestial Edge inside Frigid Zone instead deals [red]3200%[/red] Glaciation DMG and activates Frosty Emblem that lasts for [red]15s[/red]. The duration of Frosty Emblem resets when this effect is triggered again or Echo exits the battlefield. While Ice Spikes persist, Frosty Emblem is considered to be active.\n\nWhile Frosty Emblem is active, Class Skill: Amplifier instead increases Ice DMG, and Core Passive: Blessing of Fortitude instead grants an equal amount of the [red]Frost Crystal[/red] buff that increases Ice DMG.\n\n<u><b>Lv. 9</b></u>: Consuming Soul Shatter Mark increases the Base DMG of the next Signature: Celestial Edge cast by [red]50%[/red] (not stackable). Upon casting Signature: Celestial Edge, Echo pings 2 Cipher Orbs for Cecily and places Snowmelt that heals allies inside for [red]20%[/red] of Echo’s ATK every second for [red]12s[/red].\n\n<u><b>Lv. 18</b></u>: While in Frigid Zone, Echo deals [red]100%[/red] Glaciation DMG to enemies around her every second. While in Judgement Zone, Echo deals [red]100%[/red] Physical DMG to enemies around her every second. \n [Passive: Dreamer’s Shore Level 3] new effects: While Frigid Zone or Judgment Zone is active, Echo gains [red]30%[/red] Extra DMG Bonus.",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -8917,7 +8579,6 @@ const db = {
                   "notes": "Build source template: Build: Lost Lullaby"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -9077,7 +8738,6 @@ const db = {
                   "notes": "Build source template: Build:BLACK★ROCK SHOOTER"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -9241,26 +8901,6 @@ const db = {
                   "notes": "Build source template: Build:Epitaph"
               }
           ],
-          "calculations": [
-              {
-                  "name": "Darkflame Invasion",
-                  "category": "Effect",
-                  "formula": "[Core Passive - Veteran's Reflex] New Effect: [Darkflow]: \n For every [red]200[/red] Darkflow Reserve, gain 1 Darkflow stack, up to a maximum of 15. The character gains a Darkflow Aura based on the current number of stacks, dealing a small amount of Darkflow DMG over time to enemies and reducing their HP recovery. When the number of stacks reaches a threshold, the aura upgrades, increasing its range and dealing a large amount of Darkflow DMG to enemies within the area. \n - At [red]1 / 3 / 6 / 10 / 15[/red] stacks: Deals [red]100% / 200% / 400% / 800% / 1600%[/red] Darkflow DMG, then deals [red]20% / 40% / 60% / 80% / 100%[/red] Darkflow DMG per second, reducing enemy HP recovery by [red]10% / 20% / 30% / 50% / 100%[/red]; \n Press and hold Signature to cast [Signature - Core Awakening], enter the [Corvus Covenant] status, and gain [Dark Morph]. [Dark Morph] is removed upon re-entering the battlefield. \n Deals [red]480%[/red] Darkflow DMG to nearby enemies upon entering the [Corvus Covenant] status. While [Corvus Covenant] is active, Thermal Erosion deals [red]960%[/red] Darkflow DMG instead.\n\n<u><b>Lv. 9</b></u>: While [Corvus Covenant] is active, each use of [Thermal Erosion] grants an additional [red]200[/red] Darkflow Reserve.\n\n<u><b>Lv. 18</b></u>: Extra DMG Bonus of [Thermal Erosion] increases by [red]10%[/red]. \n New Effect of [Passive - Onslaught Lv. 2]: Gains one extra Blaze Orb upon casting Flaming Bombardment for the first time after entering the Assault Mode.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Incinerating Firestorm",
-                  "category": "Orbs",
-                  "formula": "Base DMG of 3-Ping increases by [red]30%[/red].\n\n<u><b>Lv. 9</b></u>: When there is [Dark Transformation], Watanabe: Epitaph will inflict [red]Infernal Finality[/red] that reduces the target's Darkflow Resistance by [red]40%[/red] instead of [red]Scorching Invasion[/red] that reduces the target's Fire Resistance.\n\n<u><b>Lv. 18</b></u>: [QTE - Pincer Intimidation] will trigger [Firepower Bulwark] that drops a bigger fire ring. \n New Effect of [Passive - Siege Break Lv. 1]: [red]Infernal Finality's[/red] effect increases by [red]10%[/red]. \n New Effect of [Passive - Siege Break Lv. 2]: [red]Infernal Finality's[/red] effect increases by [red]10%[/red]. Gains [red]2[/red] extra stacks of Thermal Superconductivity when parries for the first time after entering the battlefield.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Purgatorial Breakthrough",
-                  "category": "Signature",
-                  "formula": "During [Raven's Contract], [Signature - Explosive Purge] deals [red]1440%[/red] Darkflow DMG instead.\n\n<u><b>Lv. 9</b></u>: Exiting the Assault Mode will convert each [Blaze Orb] to a random set of Signal Orbs.\n\n<u><b>Lv. 18</b></u>: Immediately gains [red]12[/red] Signature Energy upon entering the battlefield. \n New Effect of [Passive - Leader's Wings Lv. 3]: Extra DMG Bonus of [Signature - Explosive Purge] increases by [red]10%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              }
-          ],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -9418,7 +9058,6 @@ const db = {
                   "notes": "Build source template: Build:Shukra"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -9582,7 +9221,6 @@ const db = {
                   "notes": "Build source template: Build:Decryptor"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -9740,26 +9378,6 @@ const db = {
                   "weaponResonance": "ATK increases by 10%. After a 3-Ping or casting Shattering Moon with maximum Crescent Points, the next ping is regarded as a 3-Ping. Gains Crescent Points 50% faster.",
                   "memoryResonance": "",
                   "notes": "Build source template: Build:Oblivion"
-              }
-          ],
-          "calculations": [
-              {
-                  "name": "Ascendant Overlook",
-                  "category": "Orbs",
-                  "formula": "Press and hold Dodge to enter [Reaping Moon], creating a giant black hole during the charging period that automatically consumes up to 2 sets of 3-Ping Signal Orbs. For each set consumed, gains [red]10[/red] Crescent Points and deals [red]700%[/red] Nihil DMG to nearby enemies. Consumed 3-Ping Signal Orbs cannot grant Eclipse Points. Gains Super Armor and [red]50%[/red] DMG Reduction during this period. Cannot recover Dodge Gauge. When attacked, triggers Matrix if it is not on cooldown. Release Dodge to cast [Shattering Moon], smashing the black hole down and dealing an additional [red]1400%[/red] Nihil DMG to enemies.\n\n<u><b>Lv. 9</b></u>: After entering [Reaping Moon] by pressing and holding Dodge, Signal Orbs are rearranged into 3-Pings. When attacked during this period, gains [red]1[/red] Signal Orb.\n\n<u><b>Lv. 18</b></u>: Crescent Points gained from 3-Ping Signal Orbs consumed during [Reaping Moon] increases to [red]27[/red] points, and grants [red]15[/red] Eclipse Points. \n New Effect of [Passive - Nebular Composition Lv. 2] added: After casting [Lunar Downfall] and exiting the battlefield in both [Main Sequence] and [Finality] respectively, enters [Overlook] state, launching an attack against nearby enemies every [red]2[/red]s, dealing [red]4000%[/red] Nihil DMG. Exits [Overlook] state after [red]4[/red] attacks.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "String Moonfall",
-                  "category": "Signature",
-                  "formula": "During Main Sequence, [Lunar Downfall] Base DMG increases by [red]70%[/red]. During Finality, [Lunar Downfall] Base DMG increases by [red]50%[/red].\n\n<u><b>Lv. 9</b></u>: Recovers [red]53[/red] Signature Energy after casting [Final Retribution]. Gains [red]1[/red] Signal Orb after casting [Lunar Downfall].\n\n<u><b>Lv. 18</b></u>: Gains [red]7[/red] Signal Orbs upon casting [Lunar Downfall] after joining the battlefield and entering [Finality] for the first time. \n New Effect of [Passive - Forged Universe Lv. 1] added: After casting [Lunar Downfall], [QTE - Befalling Demise] Base DMG increases by [red]1000%[/red] throughout the battle.",
-                  "notes": "Imported from Gray Ravens Character Leap."
-              },
-              {
-                  "name": "Nihil Break",
-                  "category": "Core",
-                  "formula": "[Incipient Retribution] Base DMG increases by [red]50%[/red]. [Final Retribution] Base DMG increases by [red]40%[/red].\n\n<u><b>Lv. 9</b></u>: Upon casting [Final Retribution], Base DMG increases by [red]12.5% / 25% / 50% / 100%[/red] when [red]0 / 120 / 300 / 600[/red] Eclipse Points are consumed.\n\n<u><b>Lv. 18</b></u>: During Main Sequence, casting 3-Ping Signal Orbs can additionally eliminate 1 set of 3-Ping Signal Orbs, dealing [red]800%[/red] Extra Nihil DMG to enemies. \n New Effect of [Passive - Forged Universe Lv. 2] added: During [Overlook], Luna: Oblivion's Extra DMG increases by [red]100%[/red].",
-                  "notes": "Imported from Gray Ravens Character Leap."
               }
           ],
           "coatings": [],
@@ -9921,7 +9539,6 @@ const db = {
                   "notes": "Build source template: Build:Ardeo"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -10081,7 +9698,6 @@ const db = {
                   "notes": "Build source template: Build:Solacetune"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -10241,7 +9857,6 @@ const db = {
                   "notes": "Build source template: Build:Lucid Dreamer"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -10401,7 +10016,6 @@ const db = {
                   "notes": "Build source template: Build:Pyroath"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -10561,7 +10175,6 @@ const db = {
                   "notes": "Build source template: Build:Fulgor"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -10721,7 +10334,6 @@ const db = {
                   "notes": "Build source template: Build:Startrail"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -10881,7 +10493,6 @@ const db = {
                   "notes": "Build source template: Build:Parhelion"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -11041,7 +10652,6 @@ const db = {
                   "notes": "Build source template: Build:Daemonissa"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -11201,7 +10811,6 @@ const db = {
                   "notes": "Build source template: Build:Pianissimo"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -11361,7 +10970,6 @@ const db = {
                   "notes": "Build source template: Build:Daybreak"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -11521,7 +11129,6 @@ const db = {
                   "notes": "Build source template: Build:Geiravor"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -11681,7 +11288,6 @@ const db = {
                   "notes": "Build source template: Build:Dante"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -11841,7 +11447,6 @@ const db = {
                   "notes": "Build source template: Build:Vergil"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -12001,7 +11606,6 @@ const db = {
                   "notes": "Build source template: Build:Crepuscule"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -12161,7 +11765,6 @@ const db = {
                   "notes": "Build source template: Build:Secator"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -12321,7 +11924,6 @@ const db = {
                   "notes": "Build source template: Build:Aegis"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -12481,7 +12083,6 @@ const db = {
                   "notes": "Build source template: Build:Limpidity"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -12641,7 +12242,6 @@ const db = {
                   "notes": "Build source template: Build:Spectre"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -12801,7 +12401,6 @@ const db = {
                   "notes": "Build source template: Build:Arete"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -12961,7 +12560,6 @@ const db = {
                   "notes": "Build source template: Build:Dirge"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -13121,7 +12719,6 @@ const db = {
                   "notes": "Build source template: Build:Aeternion"
               }
           ],
-          "calculations": [],
           "coatings": [],
           "facts": [],
           "commonRotations": [
@@ -13134,20 +12731,6 @@ const db = {
           "sourceUrl": "https://grayravens.com/wiki/Kamui%3A_Aeternion"
       }
   ],
-  tiers: {
-    warzone: {
-      S: ["lucia-crimson-weave", "bianca-stigmata", "lee-hyperreal", "vera-garnet"],
-      A: ["liv-luminance", "noan-arca"]
-    },
-    paincage: {
-      S: ["bianca-stigmata", "lucia-crimson-weave", "lee-hyperreal"],
-      A: ["vera-garnet", "liv-luminance", "noan-arca"]
-    },
-    general: {
-      S: ["lucia-crimson-weave", "bianca-stigmata", "lee-hyperreal", "vera-garnet", "liv-luminance"],
-      A: ["noan-arca"]
-    }
-  },
   teams: [
     {
       id: "thunder-vanguard",
@@ -18753,369 +18336,2602 @@ const db = {
       }
   ],
   cubs: [
-      {
-          "id": "nitor",
-          "name": "Nitor",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/nitor.png",
-          "effect": "Nitor rushes to the target and claws at it, triggering an explosion that deals damage.",
-          "sourceUrl": "https://grayravens.com/wiki/Nitor",
-          "owner": "karenina-ember"
-      },
-      {
-          "id": "toniris",
-          "name": "Toniris",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/toniris.png",
-          "effect": "Toniris will rush forward, dealing damage, gathering all enemies in its path and applying Explosion for 8s. Lightning element attacks will trigger the Explosion, dealing AOE damage.",
-          "sourceUrl": "https://grayravens.com/wiki/Toniris",
-          "owner": "bianca-veritas"
-      },
-      {
-          "id": "frost-oath",
-          "name": "Frost Oath",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/frost-oath.png",
-          "effect": "Frost Oath will stomp from above, dealing damage and applying Rigidness to the target and generating a Snowthorn Forest field, dealing damage for over time.\n\nRigidness: Enemies will be rooted for 2s.",
-          "sourceUrl": "https://grayravens.com/wiki/Frost_Oath",
-          "owner": "rosetta-rigor"
-      },
-      {
-          "id": "boreas",
-          "name": "Boreas",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/boreas.png",
-          "effect": "Boreas will fly toward the enemy to deal DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Boreas",
-          "owner": "chrome-glory"
-      },
-      {
-          "id": "jet-jaeger",
-          "name": "Jet Jaeger",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/jet-jaeger.png",
-          "effect": "Jet Jaeger will rush towards the enemy’s vicinity, pulling in enemies within range and performing a spinning attack to deal DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Jet_Jaeger",
-          "owner": "nanami-starfarer"
-      },
-      {
-          "id": "moonhopper",
-          "name": "Moonhopper",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/moonhopper.png",
-          "effect": "Moonhopper will smash the enemy down, interrupting enemies’ attacks and dealing DMG. Moonhopper then leaves behind an anti-gravity field, which lasts for 4s. The anti-gravity field deals 100% DMG every 0.5s to enemies inside. In addition, enemies are slowed down and unable to cast skills while inside the anti-gravity field.",
-          "sourceUrl": "https://grayravens.com/wiki/Moonhopper",
-          "owner": "karenina-radiant-daybreak"
-      },
-      {
-          "id": "fei-lin",
-          "name": "Fei Lin",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/fei-lin.png",
-          "effect": "Shimmer will rush towards the enemy, dealing DMG to enemies within range, then releasing beams of laser to pull in enemy units. Afterwards, Shimmer fires a laser cannon to deal DMG to enemies in range.",
-          "sourceUrl": "https://grayravens.com/wiki/Fei_Lin",
-          "owner": "bianca-abystigma"
-      },
-      {
-          "id": "punchy",
-          "name": "Punchy",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/punchy.png",
-          "effect": "Punchy will appear from a portal, performing a quick downwards punch to deal DMG to all enemies on the screen.",
-          "sourceUrl": "https://grayravens.com/wiki/Punchy",
-          "owner": "lee-hyperreal"
-      },
-      {
-          "id": "rainbow",
-          "name": "Rainbow",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/rainbow.png",
-          "effect": "Rainbow will float towards the enemy, pulling in and dealing DMG to enemies within range. Afterwards, Rainbow triggers a dazzling energy explosion to deal DMG to enemies within range.",
-          "sourceUrl": "https://grayravens.com/wiki/Rainbow",
-          "owner": "ayla-kaleido"
-      },
-      {
-          "id": "motorbolt",
-          "name": "Motorbolt",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/motorbolt.png",
-          "effect": "Motorbolt will accelerate towards the enemy, dealing DMG. In addition, Motorbolt leaves behind a field of electric current that continuously pulls in surrounding enemies, and deals DMG 3 times.",
-          "sourceUrl": "https://grayravens.com/wiki/Motorbolt",
-          "owner": "lucia-crimson-weave"
-      },
-      {
-          "id": "hades-fangs",
-          "name": "Hades Fangs",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/hades-fangs.png",
-          "effect": "Hades Fangs will dash forward and leap up, penetrating and knocking enemies in its path into the air while dealing DMG 3 times.",
-          "sourceUrl": "https://grayravens.com/wiki/Hades_Fangs",
-          "owner": "no-21-feral-scent"
-      },
-      {
-          "id": "dawn-chorus",
-          "name": "Dawn Chorus",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/dawn-chorus.png",
-          "effect": "Dawn Chorus will fire lasers to attack the target, dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Dawn_Chorus",
-          "owner": "alisa-echo"
-      },
-      {
-          "id": "cetus",
-          "name": "Cetus",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/cetus.png",
-          "effect": "Cetus will leap up, dive to the target location and generate a vortex, dealing DMG and applying Rigidity.\n\nRigidity: Immobilizes the enemy for 2s.",
-          "sourceUrl": "https://grayravens.com/wiki/Cetus",
-          "owner": "lamia-lost-lullaby"
-      },
-      {
-          "id": "shadow-wing",
-          "name": "Shadow Wing",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/shadow-wing.png",
-          "effect": "Shadow Wing will release sound waves, pulling in enemies and dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Shadow_Wing",
-          "owner": "watanabe-epitaph"
-      },
-      {
-          "id": "huiyu",
-          "name": "Huiyu",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/huiyu.png",
-          "effect": "Huiyu will quickly dive to the target and hover around them, dealing DMG and pulling in nearby enemies.",
-          "sourceUrl": "https://grayravens.com/wiki/Huiyu",
-          "owner": "qu-shukra"
-      },
-      {
-          "id": "guardrake",
-          "name": "Guardrake",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/guardrake.png",
-          "effect": "Guardrake will unleash Dragon Breath from above the target, dealing DMG and slowing the enemy unit for 3s. During this, the target hit will take DMG every second.",
-          "sourceUrl": "https://grayravens.com/wiki/Guardrake",
-          "owner": "luna-oblivion"
-      },
-      {
-          "id": "dreamwing",
-          "name": "Dreamwing",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/dreamwing.png",
-          "effect": "Dreamwing will attack with an energy wave, applying Rigidity to nearby enemies and dealing damage.\n Rigidity: Enemies will be rooted for 2s.",
-          "sourceUrl": "https://grayravens.com/wiki/Dreamwing",
-          "owner": "hanying-solacetune"
-      },
-      {
-          "id": "snowveil",
-          "name": "Snowveil",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/snowveil.png",
-          "effect": "Snowveil will flick its tail to fire crystal shards, inflicting enemies in the area with Rigidness and dealing DMG.\n Rigidness: Enemies will be rooted for 2s.",
-          "sourceUrl": "https://grayravens.com/wiki/Snowveil",
-          "owner": "wanshi-lucid-dreamer"
-      },
-      {
-          "id": "yi-kong",
-          "name": "Yi Kong",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/yi-kong.png",
-          "effect": "Corvus will circle around the target, dive, and pull in nearby enemies, dealing damage.",
-          "sourceUrl": "https://grayravens.com/wiki/Yi_Kong",
-          "owner": "lucia-pyroath"
-      },
-      {
-          "id": "bramble-angler",
-          "name": "Bramble Angler",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/bramble-angler.png",
-          "effect": "Bramble Angler charges at the target, gathering nearby enemies and dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Bramble_Angler",
-          "owner": "nanami-startrail"
-      },
-      {
-          "id": "diamaton",
-          "name": "Diamaton",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/diamaton.png",
-          "effect": "Diamaton will pull in nearby enemies and smash from above, dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Diamaton",
-          "owner": "ishmael-parhelion"
-      },
-      {
-          "id": "billie",
-          "name": "Billie",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/billie.png",
-          "effect": "Billie will summon a roulette, pulling in nearby enemies and dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Billie",
-          "owner": "lilith-daemonissa"
-      },
-      {
-          "id": "snow-waltz",
-          "name": "Snow Waltz",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/snow-waltz.png",
-          "effect": "Snow Waltz will fire blades in all directions then retrieve them, pulling in nearby enemies and dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Snow_Waltz",
-          "owner": "selena-pianissimo"
-      },
-      {
-          "id": "wrathfang",
-          "name": "Wrathfang",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/wrathfang.png",
-          "effect": "Wrathfang will attack the target with a blade of light in the mouth, pulling in nearby enemies and dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Wrathfang",
-          "owner": "vera-geiravor"
-      },
-      {
-          "id": "cavaliere",
-          "name": "Cavaliere",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/cavaliere.png",
-          "effect": "Cavaliere will pull in nearby enemies, dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Cavaliere",
-          "owner": "dante"
-      },
-      {
-          "id": "phantom-blade",
-          "name": "Phantom Blade",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/phantom-blade.png",
-          "effect": "Mirage Blades will rush the target after casting, dealing DMG and slowing down enemies.",
-          "sourceUrl": "https://grayravens.com/wiki/Phantom_Blade",
-          "owner": "vergil"
-      },
-      {
-          "id": "noctiluca",
-          "name": "Noctiluca",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/noctiluca.png",
-          "effect": "Noctiluca will collide with the target, attacking enemies in the collision trajectory and dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Noctiluca",
-          "owner": "bianca-crepuscule"
-      },
-      {
-          "id": "scaled-rampart",
-          "name": "Scaled Rampart",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/scaled-rampart.png",
-          "effect": "Scaled Rampart will split into two pieces and perform consecutive slashes, dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Scaled_Rampart",
-          "owner": "veronica-aegis"
-      },
-      {
-          "id": "levvi",
-          "name": "Levvi",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/levvi.png",
-          "effect": "Levvi will dive toward the target location and explode on impact, dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Levvi",
-          "owner": "liv-limpidity"
-      },
-      {
-          "id": "beep-boop",
-          "name": "Beep-Boop",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/beep-boop.png",
-          "effect": "Beep-Boop will dash a short distance toward the target and unleash continuous claw strikes, pushing and repelling the target while dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Beep-Boop",
-          "owner": "teddy-spectre"
-      },
-      {
-          "id": "buzzling",
-          "name": "Buzzling",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/buzzling.png",
-          "effect": "Buzzling will leap above the target and unleash electrical currents, dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Buzzling",
-          "owner": "rosetta-arete"
-      },
-      {
-          "id": "morigan",
-          "name": "Morigan",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/morigan.png",
-          "effect": "Morigan will unleash feathers to attack, dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Morigan",
-          "owner": "nirvatia-dirge"
-      },
-      {
-          "id": "ignis",
-          "name": "Ignis",
-          "rarity": "S",
-          "role": "",
-          "element": "",
-          "image": "/uploads/grayravens/cubs/ignis.png",
-          "effect": "Ignis  will conjure a fireball and pull in enemies, dealing DMG.",
-          "sourceUrl": "https://grayravens.com/wiki/Ignis",
-          "owner": "kamui-aeternion"
-      }
+        {
+              "id": "allos",
+              "name": "Allos",
+              "rarity": "S",
+              "rank": "S",
+              "role": "Damage, Control",
+              "type": "Damage, Control",
+              "element": "Ice",
+              "image": "https://grayravens.com/wiki/Special:Redirect/file/CUB-Allos-Icon.png",
+              "effect": "",
+              "sourceUrl": "https://grayravens.com/wiki/Allos",
+              "owner": "",
+              "signatureCharacterId": "",
+              "signatureName": "Lucia: Inversecrown",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "beep-boop",
+              "name": "Beep-Boop",
+              "rarity": "S",
+              "role": "Damage, Crowd Control",
+              "element": "Ice",
+              "image": "/uploads/grayravens/cubs/beep-boop.png",
+              "effect": "Beep-Boop will dash a short distance toward the target and unleash continuous claw strikes, pushing and repelling the target while dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Beep-Boop",
+              "owner": "teddy-spectre",
+              "rank": "S",
+              "type": "Damage, Crowd Control",
+              "signatureCharacterId": "teddy-spectre",
+              "signatureName": "Teddy: Spectre",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "billie",
+              "name": "Billie",
+              "rarity": "S",
+              "role": "Pull, Damage",
+              "element": "Dark",
+              "image": "/uploads/grayravens/cubs/billie.png",
+              "effect": "Billie will summon a roulette, pulling in nearby enemies and dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Billie",
+              "owner": "lilith-daemonissa",
+              "rank": "S",
+              "type": "Pull, Damage",
+              "signatureCharacterId": "lilith-daemonissa",
+              "signatureName": "Lilith: Daemonissa",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "boreas",
+              "name": "Boreas",
+              "rarity": "S",
+              "role": "Charge",
+              "element": "Ice",
+              "image": "/uploads/grayravens/cubs/boreas.png",
+              "effect": "Azure Blast - The CUB button will be activated after 6 random pings. After casting, Boreas will fly toward the enemy to deal [blue]1500%[/blue] DMG.\n\nAzure Blast – Ice - The CUB button will be activated after 6 random pings. After casting, Boreas will fly toward the enemy to deal [blue]750%[/blue] Ice DMG and apply a Weakness Mark on the target that increases the Extra DMG Bonus by [blue]3%[/blue] for 8s upon taking Ice DMG. Triggering this effect again will renew its duration.",
+              "sourceUrl": "https://grayravens.com/wiki/Boreas",
+              "owner": "chrome-glory",
+              "rank": "S",
+              "type": "Charge",
+              "signatureCharacterId": "chrome-glory",
+              "signatureName": "Chrome: Glory",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Azure Blast",
+                          "icon": "https://static.wikitide.net/pgrwiki/2/21/Skill-Boreas-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Azure Blast",
+                                      "description": "The CUB button will be activated after 6 random pings. After casting, Boreas will fly toward the enemy to deal [blue]1500%[/blue] DMG."
+                                },
+                                {
+                                      "name": "Azure Blast – Ice",
+                                      "description": "The CUB button will be activated after 6 random pings. After casting, Boreas will fly toward the enemy to deal [blue]750%[/blue] Ice DMG and apply a Weakness Mark on the target that increases the Extra DMG Bonus by [blue]3%[/blue] for 8s upon taking Ice DMG. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Frigid Wings",
+                          "icon": "https://static.wikitide.net/pgrwiki/2/21/Skill-Boreas-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Frigid Wings",
+                                      "description": "The CUB button will be activated after 6 random pings. After casting, Boreas will fly toward the enemy along with the carrier to deal [blue]1500%[/blue] DMG."
+                                },
+                                {
+                                      "name": "Frigid Wings – Ice",
+                                      "description": "The CUB button will be activated after 6 random pings. After casting, Boreas will fly toward the enemy along with the carrier to deal [blue]750%[/blue] Ice DMG and apply a Weakness Mark on the target that increases the Extra DMG Bonus by [blue]3%[/blue] for 8s upon taking Ice DMG. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Glorious Hawk",
+                          "icon": "https://static.wikitide.net/pgrwiki/0/0f/Skill-Boreas-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Glorious Hawk",
+                                      "description": "Upon activating Frost Spirit, Chrome: Glory immediately receives Boreas's support, gaining [blue]30%[/blue] more Basic Attack DMG. Boreas will also continuously create frost hawks that fly toward the enemy, dealing Ice DMG equal to [blue]500%[/blue] of Chrome: Glory's ATK over 8s. When Condensed Frost is triggered, Boreas will also cast Azure Blast; this effect can be triggered once every 2.5s."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Frosty Howl",
+                          "icon": "https://static.wikitide.net/pgrwiki/2/2b/Skill-Boreas-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Frosty Howl",
+                                      "description": "Boreas's Active Skill DMG increases by [blue]70%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Arctic Knowledge",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/3a/Skill-Boreas-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Arctic Knowledge",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Frost Emblem",
+                          "icon": "https://static.wikitide.net/pgrwiki/8/84/Skill-Boreas-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Frost Emblem",
+                                      "description": "Increases the carrier's Ice DMG increases by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Hypercharge Cooling",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/33/Skill-Boreas-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Hypercharge Cooling",
+                                      "description": "After each time Boreas casts an active skill, the carrier's ATK increases by [blue]5%[/blue] for 8s. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "A mechanical eagle flaps its broad wings and flies past the battlefield, gathering all the image intel and data of the enemies before they notice"
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "\"Boreas\" is the experimental designation of the new Combat Unit Boosters. At the suggestion of an Administrative Officer who participated in the project evaluation, the name has been used as the frame name of this CUB."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Boreas, an eagle-shaped Combat Unit Booster developed by the Science Council with bionic technology based on Cosmos Industries' military scout aircraft with the aircraft's core technology recycled. After multiple combats and adjustments, it has become highly compatible with Chrome: Glory. It is now ready to be used on the battlefield as the first CUB fully compatible with specialized frames."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Boreas features a scout module that can fast analyze and mark the weak points of enemies. With its external optical camouflage unit that can make it perfectly blend in with the surroundings, it is capable of scouting and firing correction over a long period of time and provides intel to support the operations of the scouts. Boreas stays hidden up high most of the time and will only come down when Chrome signals it to do so. It will flap its wings to land quietly on his shoulder and touch his fingertip with its beak."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "Boreas always observes and records everything on the battlefield calmly just like a sharp arrow that is ready to be shot at any minute. With its support, your attacks will be swift and accurate like a piercing cold wind. But Boreas in its storage form is easygoing, despite his fierce look. \"It won't get mad even if you pet its head repetitively. However, this could cause low-temperature damage to the coating on your hand,\" says the tester in charge of maintenance.\n\"But why don't you stop petting it?\"\n\nSeeing this, Boreas folds its wings as it has already become used to similar situations."
+                    }
+              ]
+        },
+        {
+              "id": "bramble-angler",
+              "name": "Bramble Angler",
+              "rarity": "S",
+              "role": "Pull, Damage",
+              "element": "Lightning",
+              "image": "/uploads/grayravens/cubs/bramble-angler.png",
+              "effect": "Bramble Angler charges at the target, gathering nearby enemies and dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Bramble_Angler",
+              "owner": "nanami-startrail",
+              "rank": "S",
+              "type": "Pull, Damage",
+              "signatureCharacterId": "nanami-startrail",
+              "signatureName": "Nanami: Startrail",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "buzzling",
+              "name": "Buzzling",
+              "rarity": "S",
+              "role": "Damage, Crowd Control",
+              "element": "Dark",
+              "image": "/uploads/grayravens/cubs/buzzling.png",
+              "effect": "Buzzling will leap above the target and unleash electrical currents, dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Buzzling",
+              "owner": "rosetta-arete",
+              "rank": "S",
+              "type": "Damage, Crowd Control",
+              "signatureCharacterId": "rosetta-arete",
+              "signatureName": "Rosetta: Arete",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "cavaliere",
+              "name": "Cavaliere",
+              "rarity": "S",
+              "role": "Damage, Pull",
+              "element": "Fire",
+              "image": "/uploads/grayravens/cubs/cavaliere.png",
+              "effect": "Cavaliere will pull in nearby enemies, dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Cavaliere",
+              "owner": "dante",
+              "rank": "S",
+              "type": "Damage, Pull",
+              "signatureCharacterId": "dante",
+              "signatureName": "Dante",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "cetus",
+              "name": "Cetus",
+              "rarity": "S",
+              "role": "Damage, Crowd Control",
+              "element": "Dark",
+              "image": "/uploads/grayravens/cubs/cetus.png",
+              "effect": "Terrifying Vortex - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. after casting, Cetus will leap up, dive to the target location and generate a vortex, dealing 1600% DMG and applying <strong>Rigidity</strong>.\n<strong>Rigidity</strong>: Immobilizes the enemy for 2s.",
+              "sourceUrl": "https://grayravens.com/wiki/Cetus",
+              "owner": "lamia-lost-lullaby",
+              "rank": "S",
+              "type": "Damage, Crowd Control",
+              "signatureCharacterId": "lamia-lost-lullaby",
+              "signatureName": "Lamia: Lost Lullaby",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Terrifying Vortex",
+                          "icon": "https://static.wikitide.net/pgrwiki/9/92/Skill-Cetus-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Terrifying Vortex",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. after casting, Cetus will leap up, dive to the target location and generate a vortex, dealing 1600% DMG and applying <strong>Rigidity</strong>.\n<strong>Rigidity</strong>: Immobilizes the enemy for 2s."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Raging Waves",
+                          "icon": "https://static.wikitide.net/pgrwiki/9/92/Skill-Cetus-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Raging Waves",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Cetus will swim toward the enemy, swing its tail, and backflip, generating waves behind the target, dealing 1750% DMG and pushing the enemy to the character."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Dolphin Tactic: Patrol",
+                          "icon": "https://static.wikitide.net/pgrwiki/a/ac/Skill-Cetus-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Dolphin Tactic: Patrol",
+                                      "description": "Cetus’ Active Skill deals [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Dolphin Tactic: Escort",
+                          "icon": "https://static.wikitide.net/pgrwiki/d/d7/Skill-Cetus-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Dolphin Tactic: Escort",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Dolphin Tactic: Raid",
+                          "icon": "https://static.wikitide.net/pgrwiki/c/cf/Skill-Cetus-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Dolphin Tactic: Raid",
+                                      "description": "Each time Cetus casts an Active Skill, the carrier’s Extra DMG Bonus increases by [blue]5%[/blue] for 8s. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Submerged Rock",
+                          "icon": "https://static.wikitide.net/pgrwiki/c/ce/Skill-Cetus-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Submerged Rock",
+                                      "description": "Increases the carrier’s Dark DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Old Illusions",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/1d/Skill-Cetus-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Old Illusions",
+                                      "description": "When Lamia: Lost Lullaby casts [blue]Signature - Sunken finale[/blue] with Cetus equipped, base DMG will increase by [blue]80%[/blue]. Casting [blue]Blue Orb Skill - Ocean Break[/blue] and [blue]Basic Attack - Abyssal Currents[/blue] will summon Cetus to launch a joint attack dealing [blue]2500%[/blue] Dark DMG."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Enjoys floating Belly-up on the sea surface to bask in the sun. Sometimes, the ocean current would take Cetus across an incredibly long distance after it has been sun bathing for too long, and it takes a lot of effort for it to swim back."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "Cetus greatly enjoyed pointing ships in the direction of the coast, but such opportunities are now very rare, which often gives it depression. It resorted to sunbathing to handle this problem until it recently discovered some human vessels could possibly still exist in high latitude regions."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Originally a bionic machine customized by a marine animal research center in the Golden Age for in-depth study of dolphin behaviors. Cetus was accidently left forgotten in the sea due to changes in the center’s staffing and project funding."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Cetus was not equipped with many weapons, as it was originally intended for scientific research purposes. In contrast, it had outstanding emotion simulating programs, which, in some aspects, were too good-some researchers at that time often had the false impression that cetus really developed emotions."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "As time went by, Cetus’ peers had all vanished, leaving behind only Cetus with an aging and damaged body. It was calmly awaiting its ending when its sensors detected Lamia. Cetus’ memory shell and emotion simulating programs were unable to understand the modifications it underwent, but the result is evident: it can now roam the ocean in a completely new form. Right now, it only wants to stay with Lamia though."
+                    }
+              ]
+        },
+        {
+              "id": "corvus",
+              "name": "Corvus",
+              "rarity": "S",
+              "rank": "S",
+              "role": "Crowd Control, Damage",
+              "type": "Crowd Control, Damage",
+              "element": "Fire",
+              "image": "https://grayravens.com/wiki/Special:Redirect/file/CUB-Corvus-Icon.png",
+              "effect": "",
+              "sourceUrl": "https://grayravens.com/wiki/Corvus",
+              "owner": "lucia-pyroath",
+              "signatureCharacterId": "lucia-pyroath",
+              "signatureName": "Lucia: Pyroath",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "dawn-chorus",
+              "name": "Dawn Chorus",
+              "rarity": "S",
+              "role": "Damage, Super Armor",
+              "element": "Physical",
+              "image": "/uploads/grayravens/cubs/dawn-chorus.png",
+              "effect": "Night Laser - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Dawn Chorus will fire a laser at the Enemy, dealing 1500% Physical DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Zhou_Yi",
+              "owner": "alisa-echo",
+              "rank": "S",
+              "type": "Damage, Super Armor",
+              "signatureCharacterId": "alisa-echo",
+              "signatureName": "Alisa: Echo",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Night Laser",
+                          "icon": "https://static.wikitide.net/pgrwiki/5/57/Skill-DawnChorus-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Night Laser",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Dawn Chorus will fire a laser at the Enemy, dealing 1500% Physical DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Flash Assault",
+                          "icon": "https://static.wikitide.net/pgrwiki/5/57/Skill-DawnChorus-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Flash Assault",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Dawn Chorus will charge toward the enemy from a distance in mid-air, dealing 1250% Physical DMG while granting the equipped character super armor for [blue]3s[/blue], and shield equal to [blue]200%[/blue] of the CUB's ATK for 10s."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Blade Wings",
+                          "icon": "https://static.wikitide.net/pgrwiki/4/44/Skill-DawnChorus-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Blade Wings",
+                                      "description": "Dawn Chorus’s Active Skill deals [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Powerful Escort",
+                          "icon": "https://static.wikitide.net/pgrwiki/b/b4/Skill-DawnChorus-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Powerful Escort",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Fogbow Wings",
+                          "icon": "https://static.wikitide.net/pgrwiki/9/9e/Skill-DawnChorus-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Fogbow Wings",
+                                      "description": "Each time Dawn Chorus casts an Active Skill, the carrier’s Extra DMG Bonus increases by [blue]5%[/blue] for 8s. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Free Soaring",
+                          "icon": "https://static.wikitide.net/pgrwiki/d/d5/Skill-DawnChorus-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Free Soaring",
+                                      "description": "Increases the carrier’s Physical DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Twilight Hour",
+                          "icon": "https://static.wikitide.net/pgrwiki/b/bf/Skill-DawnChorus-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Twilight Hour",
+                                      "description": "When Alisa: Echo casts [blue]Signature-Celestial Edge[/blue] with Dawn Chorus equipped, Crit DMG increases by [blue]75%[/blue]. Casting [blue]Imprisoning Co-Strike[/blue] or [blue]Soulbreacking Co-Strike[/blue], will summon Dawn Chorus to launch a joint attack, dealing [blue]2500%[/blue] Physical DMG."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Really hates getting dirty. Will actively seek out clean water sources to wash itself clean even if there is a tiny mark on its white armor."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "When excited, it will impulsively attempt to screech. However, as Dawn Chorus is not equipped with a voice module, it always appears rather depressed after failing to vocalize. Perhaps we should try to give it a voice module?"
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Originally a backup frame produced as a prototype in the M.I.N.D. fusion experiment, the concept of Dawn Chorus had drawn reference from Babylonia CUBs, in which several Dawn Choruses were supposed to assist the M.I.N.D. fusion test subject for high-precision combat."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "To handle most combat situations, Dawn Chorus is equipped with four legs and wings, enabling it to perform decently both in the air and on land. While some have also raised concerns that its large size might hinder stealth operations, the chief developer believes that when the situation really needs Dawn Chorus, stealth operation is probably no longer an option."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "While Dawn Chorus was created as a weapon of violence, it demonstrated great restraint in exerting its power. This confused the Utopia scientists who developed it, leading them to suspect that the M.I.N.D. fusion technology had flaws. In fact, Dawn Chorus has its own judgment criteria-it will fight to protect the “weak” and only use its full strength against opponents that it regards as “evil.” “It seems to possess noble virtues like a knight,” commented Echo who fought alongside Dawn Chorus."
+                    }
+              ]
+        },
+        {
+              "id": "diamaton",
+              "name": "Diamaton",
+              "rarity": "S",
+              "role": "Pull, Damage",
+              "element": "Nihil",
+              "image": "/uploads/grayravens/cubs/diamaton.png",
+              "effect": "Diamaton will pull in nearby enemies and smash from above, dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Zhu_Ling",
+              "owner": "ishmael-parhelion",
+              "rank": "S",
+              "type": "Pull, Damage",
+              "signatureCharacterId": "ishmael-parhelion",
+              "signatureName": "Ishmael: Parhelion",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "dreamwing",
+              "name": "Dreamwing",
+              "rarity": "S",
+              "role": "Control, Damage",
+              "element": "Physical",
+              "image": "/uploads/grayravens/cubs/dreamwing.png",
+              "effect": "Moon Stroll - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Dreamwing will attack with an energy wave, applying <strong>Rigidity</strong> to nearby enemies, dealing 250% physical DMG 6 times.\n<strong>Rigidity</strong>: Immobilizes the enemy for 2s.",
+              "sourceUrl": "https://grayravens.com/wiki/Dreamwing",
+              "owner": "hanying-solacetune",
+              "rank": "S",
+              "type": "Control, Damage",
+              "signatureCharacterId": "hanying-solacetune",
+              "signatureName": "Hanying: Solacetune",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Moon Stroll",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/14/Skill-Dreamwing-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Moon Stroll",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Dreamwing will attack with an energy wave, applying <strong>Rigidity</strong> to nearby enemies, dealing 250% physical DMG 6 times.\n<strong>Rigidity</strong>: Immobilizes the enemy for 2s."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Solitary Crane",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/14/Skill-Dreamwing-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Solitary Crane",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Dreamwing will fly towards the target then crash into the ground, dealing 450% physical DMG 4 Times."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Spring Excursion",
+                          "icon": "https://static.wikitide.net/pgrwiki/9/95/Skill-Dreamwing-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Spring Excursion",
+                                      "description": "Dreamwing’s Active Skill deals [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Grass Crossing",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/f3/Skill-Dreamwing-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Grass Crossing",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Tipsy Flowers",
+                          "icon": "https://static.wikitide.net/pgrwiki/6/6b/Skill-Dreamwing-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Tipsy Flowers",
+                                      "description": "Each time dreamwing casts an Active Skill, the carrier's Extra DMG Bonus increases by [blue]5%[/blue] for 8s. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "River Immortal",
+                          "icon": "https://static.wikitide.net/pgrwiki/b/bb/Skill-Dreamwing-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "River Immortal",
+                                      "description": "The carrier’s Physical DMG increases by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Moonlight Follows",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/3a/Skill-Dreamwing-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Moonlight Follows",
+                                      "description": "When Hanying: Solacetune deploys [blue]Lunartone Field[/blue] or triggers [blue]Ethereal Symphony[/blue] with Dreamwing equipped, summons Dreamwing to launch a joint attack, dealing [blue]1250%[/blue] Physical DMG two times. The CRIT DMG of [blue]Jade Bloom[/blue] and [blue]Ringing[/blue] increases by [blue]75%[/blue]."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Dreamwing insists on keeping its moves perfect and elegant in battle. It treats flying as a serious form of art and dances based on her own understanding of dancing. Once called a dance enthusiast CUB, it usually flies around its owner while she’s practicing dancing."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "Dreamwing is sometimes childish. It loves to hang out with Pulao and comes back with dirt all over to ask its owner to clean it up"
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Like its owner, Deamwing is gentle and kind most of the time when there’s no battle. It will stay on your shoulder and flap its wings to show you its friendliness. It will deliberately bring some dust to you and shake it off on you if it finds you unfriendly."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Dreamwing once envied bird frames with big wings, thinking that if it had larger wings, it would deal massive Physical DMG with a slight flap of wings. It stopped thinking about it after its owner said the wings it has are cuter."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "Dreamwing is satisfied with the dark edge of its wings for the color matches its owner’s frame and allows it to hide in shadows and launch a surprise strike at the enemy. However, it could also be ignored by others when trying to get close to them and feel sad secretly in the corner."
+                    }
+              ]
+        },
+        {
+              "id": "fei-lin",
+              "name": "Fei Lin",
+              "rarity": "S",
+              "role": "",
+              "element": "",
+              "image": "/uploads/grayravens/cubs/fei-lin.png",
+              "effect": "Shimmer will rush towards the enemy, dealing DMG to enemies within range, then releasing beams of laser to pull in enemy units. Afterwards, Shimmer fires a laser cannon to deal DMG to enemies in range.",
+              "sourceUrl": "https://grayravens.com/wiki/Fei_Lin",
+              "owner": "bianca-abystigma"
+        },
+        {
+              "id": "frost-oath",
+              "name": "Frost Oath",
+              "rarity": "S",
+              "role": "Crowd Control, Protection",
+              "element": "Physical",
+              "image": "/uploads/grayravens/cubs/frost-oath.png",
+              "effect": "Landing Stomp - The CUB button will light up after any 6 basic orbs have been pinged. Frost Oath will stomp from above, dealing [blue]750%[/blue] DMG and applying <strong>Rigidness</strong> to the target and generate a <strong>Snowthorn Forest</strong> field, dealing [blue]125%[/blue] Physical DMG for [blue]4s[/blue]. Adds <strong>Data ATK</strong>. <strong>Rigidness</strong>: Enemies will be snared for 2s.\n\nLanding Stomp – Physical - The CUB button will light up after any 6 basic orbs have been pinged. Frost Oath will stomp from above, dealing [blue]750%[/blue] Physical DMG and applying <strong>Rigidness</strong> to the target and generate a <strong>Snowthorn Forest</strong> field, dealing [blue]125%[/blue] DMG for [blue]4s[/blue]. Adds <strong>Advanced Data ATK</strong>. <strong>Rigidness</strong>: Enemies will be snared for 2s.",
+              "sourceUrl": "https://grayravens.com/wiki/Frost_Oath",
+              "owner": "rosetta-rigor",
+              "rank": "S",
+              "type": "Crowd Control, Protection",
+              "signatureCharacterId": "rosetta-rigor",
+              "signatureName": "Rosetta: Rigor",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Landing Stomp",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/18/Skill-FrostOath-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Landing Stomp",
+                                      "description": "The CUB button will light up after any 6 basic orbs have been pinged. Frost Oath will stomp from above, dealing [blue]750%[/blue] DMG and applying <strong>Rigidness</strong> to the target and generate a <strong>Snowthorn Forest</strong> field, dealing [blue]125%[/blue] Physical DMG for [blue]4s[/blue]. Adds <strong>Data ATK</strong>. <strong>Rigidness</strong>: Enemies will be snared for 2s."
+                                },
+                                {
+                                      "name": "Landing Stomp – Physical",
+                                      "description": "The CUB button will light up after any 6 basic orbs have been pinged. Frost Oath will stomp from above, dealing [blue]750%[/blue] Physical DMG and applying <strong>Rigidness</strong> to the target and generate a <strong>Snowthorn Forest</strong> field, dealing [blue]125%[/blue] DMG for [blue]4s[/blue]. Adds <strong>Advanced Data ATK</strong>. <strong>Rigidness</strong>: Enemies will be snared for 2s."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Empowered Strike",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/18/Skill-FrostOath-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Empowered Strike",
+                                      "description": "The CUB button will light up after any 6 basic orbs have been pinged. Frost Oath will defend the active character, blocking attacks for 0.3s and stomping the enemy, dealing [blue]500%[/blue] DMG and [blue]1000%[/blue] DMG upon a successful block. Applies <strong>Rigidness</strong> to the target and generate a <strong>Snowthorn Forest</strong> field, dealing [blue]125%[/blue] DMG for [blue]8s[/blue]. Adds <strong>Data ATK</strong>. <strong>Rigidness</strong>: Enemies will be snared for 2s."
+                                },
+                                {
+                                      "name": "Empowered Strike – Physical",
+                                      "description": "The CUB button will light up after any 6 basic orbs have been pinged. Frost Oath will defend the active character, blocking attacks for 0.3s and stomping the enemy, dealing [blue]500%[/blue] Physical DMG and [blue]1000%[/blue] Physical DMG upon a successful block. Applies <strong>Rigidness</strong> to the target and generate a <strong>Snowthorn Forest</strong> field, dealing [blue]125%[/blue] Physical DMG for [blue]8s[/blue]. Adds <strong>Advanced Data ATK</strong>. <strong>Rigidness</strong>: Enemies will be snared for 2s."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Forest Guard Volley",
+                          "icon": "https://static.wikitide.net/pgrwiki/8/83/Skill-FrostOath-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Forest Guard Volley",
+                                      "description": "Rosetta: Rigor summons the Forest Guard to perform a clustered attack when she charges the [blue]Small/Medium Electromagnetic Beam[/blue], dealing [blue]100%/100%[/blue] DMG to enemies in front, and slow down the enemies. Unleashing the [blue]Wide-area Electromagnetic Beam[/blue] will summon the Forest Guard to fire a volley on the target's location in a large area, dealing [blue]2000%> DMG.\n[/blue]"
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Order - Aid",
+                          "icon": "https://static.wikitide.net/pgrwiki/6/68/Skill-FrostOath-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Order - Aid",
+                                      "description": "Frost Oath's active skill deals [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Order - Landing Rain",
+                          "icon": "https://static.wikitide.net/pgrwiki/0/08/Skill-FrostOath-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Order - Landing Rain",
+                                      "description": "Increases the carrier's Attack by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Snow Forest Ambush",
+                          "icon": "https://static.wikitide.net/pgrwiki/a/a0/Skill-FrostOath-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Snow Forest Ambush",
+                                      "description": "Physical DMG dealt by characters in the <strong>Snowthorn Forest</strong> field increases by [blue]7.5%[/blue]"
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Passage Aid",
+                          "icon": "https://static.wikitide.net/pgrwiki/5/56/Skill-FrostOath-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Passage Aid",
+                                      "description": "After Frost Oath casts a skill, its carrier gains [blue]110[/blue] ATK for 8s."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Frost Oath was named by Rosetta at Asimov's suggestion."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "The appearance of Frost Oath means that the Forest Guard have claimed this land as their own, forming an area of defense that no enemy can penetrate."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Frost Oath, a new CUB adapted by the Science Council. Its prototype is based on the centaur module, \"Lindwyrm\", that Rosetta left in Babylonia. The humanoid hybrid frame with its severe side effects has been modified, making it suitable as a CUB. The birth of Frost Oath also marks a new direction for CUB research."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Compared with other CUBs, Frost Oath has a stronger sense of individuality. Unlike Rosetta, who is rational and restrained, Frost Oath is more wild and unrestrained. It shows stronger enthusiasm in the open wilderness, such as snowfields or woodlands. Frost Oath has a strong sense of identity and belonging to the group, showing no mercy to enemies that violate its territory. It is bound by duty to guard its companions."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "Based on the individual wishes of Rosetta and Frost Oath, Rosetta can quickly return to the battlefield in her centaur form. Although the effectiveness isn't what it once as, the cognitive load brought by this state has been drastically reduced. Echoing one of the design concepts of CUB, Frost Oath is not a disposable weapon but a long-term companion on the battlefield."
+                    }
+              ]
+        },
+        {
+              "id": "guardrake",
+              "name": "Guardrake",
+              "rarity": "S",
+              "role": "Control, Damage",
+              "element": "Nihil",
+              "image": "/uploads/grayravens/cubs/guardrake.png",
+              "effect": "Abyssal Breath - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. Upon tapping the CUB button, Guardrake will unleash Dragon Breath from above the target, dealing [blue]750%[/blue] DMG and slowing the enemy unit for 3s. During this, the target hit will take [blue]250%[/blue] DMG every second.",
+              "sourceUrl": "https://grayravens.com/wiki/Guardrake",
+              "owner": "luna-oblivion",
+              "rank": "S",
+              "type": "Control, Damage",
+              "signatureCharacterId": "luna-oblivion",
+              "signatureName": "Luna: Oblivion",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Abyssal Breath",
+                          "icon": "https://static.wikitide.net/pgrwiki/0/0f/Skill-Guardrake-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Abyssal Breath",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. Upon tapping the CUB button, Guardrake will unleash Dragon Breath from above the target, dealing [blue]750%[/blue] DMG and slowing the enemy unit for 3s. During this, the target hit will take [blue]250%[/blue] DMG every second."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Furious Annihilation",
+                          "icon": "https://static.wikitide.net/pgrwiki/0/0f/Skill-Guardrake-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Furious Annihilation",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Guardrake will take off and dive toward the target, dealing [blue]1800%[/blue] DMG."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Menacing Form",
+                          "icon": "https://static.wikitide.net/pgrwiki/0/07/Skill-Guardrake-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Menacing Form",
+                                      "description": "Guardrake's Active Skills deal [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Dominating Calamity",
+                          "icon": "https://static.wikitide.net/pgrwiki/c/c3/Skill-Guardrake-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Dominating Calamity",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Crimson Ember",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/38/Skill-Guardrake-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Crimson Ember",
+                                      "description": "Each time Guardrake casts an Active Skill, the carrier's Extra DMG Bonus increases by 5% for 8s. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Dark Nihility",
+                          "icon": "https://static.wikitide.net/pgrwiki/7/78/Skill-Guardrake-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Dark Nihility",
+                                      "description": "Increases the carrier’s Nihil DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Retribution of Eclipse",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/f2/Skill-Guardrake-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Retribution of Eclipse",
+                                      "description": "When Luna: Oblivion casts [blue]Incipient Retribution[/blue] or [blue]Final Retribution[/blue] with Guardrake equipped, she will summon Guardrake to launch a joint attack, dealing [blue]2500%[/blue] Nihil DMG. The overall amplification effect of [blue]Eclipse Points[/blue] increases by [blue]25%[/blue]."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Guardrake cherishes every item given to it by Luna and never allows anyone to touch them without explicit permission."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "Though its appearance may seem fearsome and volatile, Guardrake is actually calm and composed, rarely losing its temper. It is also unexpectedly skillful in dealing with children as it has spent many years in a fairytale amusement park."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Originally the mascot of a fairytale amusement park in the Golden Age. Guardrake was designed as the guardian of this “mystical kingdom.” visitors would gasp in awe whenever it spread its wings and soared over the park."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "After the outbreak, the staff put Guardrake in hibernation and placed it deep underground, hoping to awaken it once the park reopened. However, the park was gradually forgotten over time. Guardrake finally woke up due to a programming error. Although the world looked nothing like the data in its memories, it continued its daily routine-spreading its wings and patrolling the silent, abandoned park."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "After years of solitude, a girl finally set foot in Guardrake’s desolate kingdom. It flew over her and landed before her. Guardrake’s movements were jerky due to damaged components and insufficient energy, but it still maintained the proud poise of a guardian. No one knows what happened exactly, but after their encounter, Guardrake left its little domain and embarked on a new journey at the side of its newfound mistress with a completely new look."
+                    }
+              ]
+        },
+        {
+              "id": "hades-fangs",
+              "name": "Hades Fangs",
+              "rarity": "S",
+              "role": "Control, Damage",
+              "element": "Lightning",
+              "image": "/uploads/grayravens/cubs/hades-fangs.png",
+              "effect": "Fangs Crash - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Hades Fangs will dash forward and leap up, penetrating and knocking enemies in its path into the air while dealing [blue]850%[/blue] DMG 3 times.",
+              "sourceUrl": "https://grayravens.com/wiki/Hades_Fangs",
+              "owner": "no-21-feral-scent",
+              "rank": "S",
+              "type": "Control, Damage",
+              "signatureCharacterId": "no-21-feral-scent",
+              "signatureName": "No.21: Feral",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Fangs Crash",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/f7/Skill-HadesFangs-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Fangs Crash",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Hades Fangs will dash forward and leap up, penetrating and knocking enemies in its path into the air while dealing [blue]850%[/blue] DMG 3 times."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Ion Realm",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/f7/Skill-HadesFangs-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Ion Realm",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Hades Fangs will spin in mid-air and slam the enemy, dealing [blue]500%[/blue] DMG and applying [blue]Rigidity[/blue] to the enemy. Generates a purple lightning zone on hit that lasts for 2.4s and deals [blue]75%[/blue] DMG to the enemies in it once every 0.2s.\n[blue]Rigidity[/blue]: Immobilizes the enemy for 2s."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Dazing Thunder Claws",
+                          "icon": "https://static.wikitide.net/pgrwiki/0/00/Skill-HadesFangs-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Dazing Thunder Claws",
+                                      "description": "Hades Fangs's Active Skill deals [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Wild Order",
+                          "icon": "https://static.wikitide.net/pgrwiki/7/70/Skill-HadesFangs-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Wild Order",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Moon Howl",
+                          "icon": "https://static.wikitide.net/pgrwiki/6/63/Skill-HadesFangs-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Moon Howl",
+                                      "description": "Each time Hades Fangs casts an Active Skill, the carrier’s Extra DMG Bonus increases by [blue]5%[/blue] for 8s. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Electro Mark",
+                          "icon": "https://static.wikitide.net/pgrwiki/9/94/Skill-HadesFangs-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Electro Mark",
+                                      "description": "Increases the carrier's Lightning DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Kerberos",
+                          "icon": "https://static.wikitide.net/pgrwiki/e/e2/Skill-HadesFangs-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Kerberos",
+                                      "description": "When No. 21: Feral casts [blue]Dusk Fluorescence[/blue] and [blue]Sky-ripping Arcflash[/blue] with Hades Fangs equipped, the Base DMG will increase by [blue]30%[/blue]. Casting [blue]Dusk Fluorescence[/blue], will summon Hades Fangs to assist, dealing [blue]2000%[/blue] Lightning DMG. Cooldown: 6s."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Always likes to jump out of a dark corner to scare those it likes. If the attempt is unsuccessful, it would keep trying until it succeeds."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "Hades Fangs is always obsessed with challenging other CUBs in various competitions, for example, racing with Frost Oath or wrestling with Yuan Ye. But its favorite activity is the daily battle with Jet Jaeger. Researchers have to separate them to avoid non-combat-related damages."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Originally serving as a police mechanoid beast within Babylonia, Hades Fangs' dire look and swift mobility were designed to suppress criminals. Kurono researchers gave it further modifications-particularly on its offensive power-to make it a Combat Unit Booster (CUB) that could fight along Constructs."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "According to reports submitted by researchers, the adaptation process for Hades Fangs was rather \"primitive\" compared to other CUBs. It seems to classify people into only three categories: \"master\" (those it cannot defeat), \"servants\" (those it can overpower), and middle-aged researchers who will comply with all its requests once it intimidates them."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "During the initial design phase, there were several proposals to modify Hades Fangs' appearance, which could be roughly categorized as \"adorable pet,\" \"fierce beast,\" as well as \"Cerberus\", which was proposed by the user herself. After the \"Cerberus\" proposal was unanimously voted against, supporters of the remaining two proposals began a lengthy debate until recordings of Hades Fangs' battle from the Hetero Zone were sent back. \"Let's go with this one.\" -Vesalius made the final decision after browsing through the clips."
+                    }
+              ]
+        },
+        {
+              "id": "huiyu",
+              "name": "Huiyu",
+              "rarity": "S",
+              "role": "Damage, Control",
+              "element": "Ice",
+              "image": "/uploads/grayravens/cubs/huiyu.png",
+              "effect": "Emerald Wings - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Huiyu will quickly dive to the target and hover around them, dealing 1500% DMG and pulling in nearby enemies.",
+              "sourceUrl": "https://grayravens.com/wiki/Huiyu",
+              "owner": "qu-shukra",
+              "rank": "S",
+              "type": "Damage, Control",
+              "signatureCharacterId": "qu-shukra",
+              "signatureName": "Qu: Shukra",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Emerald Wings",
+                          "icon": "https://static.wikitide.net/pgrwiki/d/da/Skill-Huiyu-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Emerald Wings",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Huiyu will quickly dive to the target and hover around them, dealing 1500% DMG and pulling in nearby enemies."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Chilling Plumes",
+                          "icon": "https://static.wikitide.net/pgrwiki/d/da/Skill-Huiyu-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Chilling Plumes",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Huiyu will teleport above the target, spreading its wings and summoning ice spikes before the target. Then, Huiyu will flap its wings to launch ice spikes, dealing 600% DMG 3 times."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Wing Storm",
+                          "icon": "https://static.wikitide.net/pgrwiki/2/20/Skill-Huiyu-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Wing Storm",
+                                      "description": "Huiyu’s Active Skill deal [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Neon Plumes",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/1a/Skill-Huiyu-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Neon Plumes",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Frost Beak",
+                          "icon": "https://static.wikitide.net/pgrwiki/b/bb/Skill-Huiyu-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Frost Beak",
+                                      "description": "Each time Huiyu casts an Active Skill, the carrier’s Extra DMG Bonus increases by [blue]5%[/blue] for [blue]8s[/blue]. Triggering this effect will renew its duration."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Freezing Soul",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/3b/Skill-Huiyu-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Freezing Soul",
+                                      "description": "Increases the carrier’s Ice DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Battle Song of Dragon Children",
+                          "icon": "https://static.wikitide.net/pgrwiki/8/82/Skill-Huiyu-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Battle Song of Dragon Children",
+                                      "description": "When Qu: Shukra casts [blue]Will Bearer[/blue] or [blue]Mountain Caller[/blue] with Huiyu equipped, her ATK will increase by [blue]30%[/blue] for [blue]5s[/blue]. When [blue]Enthronement[/blue] begins, she will summon Huiyu is to launch a joint attack, dealing [blue]2500%[/blue] Ice DMG."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "After the modification was completed, Qu gave Huiyu more free time to venture around. The newly added positioning system ensures that it no longer gets lost."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "Huiyu is extremely alert to human-shaped objects with the exception of Qu and a particular Babylonia commandant. After gaining the ability to perform ranged attacks, it would even shoot its “plumes” at any stranger that approaches without permission. Fortunately, it has now learned to tell whether the target is friendly or hostile after a period of adaptation."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "To make Huiyu more versatile and enhance its efficiency, the Kowloong Crew have modified it into a CUB, significantly upgrading it’s combat abilities and intelligence."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Since Huiyu already possesses decent combat capabilities, the modifications focus more on enhancing its durability and providing more diverse attack methods, such as more reliable flying capabilities and ranged attacks."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "The frame itself has special significance, so we decided not to give the structure a major overhaul during the upgrade. However that decision had set us back in various ways. When approached, it would become extremely aggressive, forcing us to put the upgrade on hold. Fortunately, lady Qu came soon after to oversee the modifications so we could complete the work on time. As for the wing upgrades… That’s another story. -A Fuxi Crew member currently on medical leave"
+                    }
+              ]
+        },
+        {
+              "id": "ignis",
+              "name": "Ignis",
+              "rarity": "S",
+              "role": "Damage, Control",
+              "element": "Fire",
+              "image": "/uploads/grayravens/cubs/ignis.png",
+              "effect": "Ignis  will conjure a fireball and pull in enemies, dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Ignis",
+              "owner": "kamui-aeternion",
+              "rank": "S",
+              "type": "Damage, Control",
+              "signatureCharacterId": "kamui-aeternion",
+              "signatureName": "Kamui: Aeternion",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "jet-jaeger",
+              "name": "Jet Jaeger",
+              "rarity": "S",
+              "role": "Slice",
+              "element": "Fire",
+              "image": "/uploads/grayravens/cubs/jet-jaeger.png",
+              "effect": "Earthshattering Driller - The CUB button will be activated after pinging 6 basic Signal Orbs. Upon casting, Jet Jaeger will charge toward the target, pulling in surrounding enemies and performing a spinning slash that deals [blue]1500%[/blue] DMG.\n\nEarthshattering Driller – Fire - The CUB button will be activated after pinging 6 basic Signal Orbs. Upon casting, Jet Jaeger will charge toward the target, pulling in surrounding enemies and performing a spinning slash that deals [blue]1500%[/blue] Fire DMG. If Nanami: Starfarer triggers branch attacks during its spinning slash, it will launch a claw attack to deal [blue]250%[/blue] Fire DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Jet_Jaeger",
+              "owner": "nanami-starfarer",
+              "rank": "S",
+              "type": "Slice",
+              "signatureCharacterId": "nanami-starfarer",
+              "signatureName": "",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Earthshattering Driller",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/1d/Skill-JetJaeger-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Earthshattering Driller",
+                                      "description": "The CUB button will be activated after pinging 6 basic Signal Orbs. Upon casting, Jet Jaeger will charge toward the target, pulling in surrounding enemies and performing a spinning slash that deals [blue]1500%[/blue] DMG."
+                                },
+                                {
+                                      "name": "Earthshattering Driller – Fire",
+                                      "description": "The CUB button will be activated after pinging 6 basic Signal Orbs. Upon casting, Jet Jaeger will charge toward the target, pulling in surrounding enemies and performing a spinning slash that deals [blue]1500%[/blue] Fire DMG. If Nanami: Starfarer triggers branch attacks during its spinning slash, it will launch a claw attack to deal [blue]250%[/blue] Fire DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Flaming Slash",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/1d/Skill-JetJaeger-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Flaming Slash",
+                                      "description": "The CUB button will be activated after pinging 6 basic Signal Orbs. Upon casting, Jet Jaeger will charge toward the target and perform a spinning slash, dealing [blue]1000%[/blue] DMG and inflicting a laceration that deals DMG equal to [blue]100%[/blue] of Jet Jaeger's ATK every second for 8s. (Triggering this effect again will renew its duration.)"
+                                },
+                                {
+                                      "name": "Flaming Slash – Fire",
+                                      "description": "The CUB button will be activated after pinging 6 basic Signal Orbs. Upon casting, Jet Jaeger will charge toward the target and perform a spinning slash, dealing [blue]1000%[/blue] Fire DMG and inflicting a laceration that deals Fire DMG equal to [blue]100%[/blue] of Jet Jaeger's ATK every second for 8s. (Triggering this effect again will renew its duration.) If Nanami: Starfarer triggers branch attacks during its spinning slash it will launch a claw attack to deal [blue]600%[/blue] Fire DMG and trigger the laceration to deal all of its DMG at once."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Firestar's Shadowguard",
+                          "icon": "https://static.wikitide.net/pgrwiki/d/df/Skill-JetJaeger-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Firestar's Shadowguard",
+                                      "description": "Jet Jaeger fires homing lasers alongside Nanami: Starfarer when she enters Slide Mode, dealing [blue]50%[/blue] Fire DMG. Fire DMG Bonus will increase by [blue]5%[/blue] during [blue]\"Thunderer\" Mode[/blue]. Jet Jaeger will cast <strong>Earthshattering Driller/ Flaming Slash</strong> during [blue]\"Bzzz\" Mode[/blue], dealing [blue]500%[/blue] Fire DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Champion's Battlecry",
+                          "icon": "https://static.wikitide.net/pgrwiki/5/5b/Skill-JetJaeger-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Champion's Battlecry",
+                                      "description": "Jet Jaeger's Active Skills deal [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Molten Fangs",
+                          "icon": "https://static.wikitide.net/pgrwiki/c/cd/Skill-JetJaeger-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Molten Fangs",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Breaching Blaster",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/18/Skill-JetJaeger-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Breaching Blaster",
+                                      "description": "Increases the carrier's Fire DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Blazing Wildfire",
+                          "icon": "https://static.wikitide.net/pgrwiki/2/2e/Skill-JetJaeger-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Blazing Wildfire",
+                                      "description": "Each time Jet Jaeger casts an Active Skill, the carrier's ATK increases by [blue]5%[/blue] for 8s. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Jet Jaeger is a large CUB that has been classified as \"mountable\" in its written assessment, but no one really wants to do so."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "We don't know whether it is due to its original program, but Jet Jaeger loves to stand by in dark, narrow places."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "One theory about the origin of the CUB Jet Jaeger goes like this: Its prototype was a small machine pet of Nanami, who wanted her little cat friend to grow up and become stronger, so Nanami designed and created her \"big cat\"-the tiger CUB Jet Jaeger. Compared to the \"cub\" version, the \"mature\" version is more powerful in battle."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Jet Jaeger seems to be maverick and mysterious just like its designer. Sometimes it will wander in the non-battle area despite its big size. As big machines could cause trouble to the daily operation of certain departments and intimidate employees who are not strong enough mentally, Babylonia has specially carried out an order to limit the occasions where large machines are allowed to enter. However, according to an informed source, Jet Jaeger will be quiet and under control if you can work up your courage and stroke its head and tail. \"Sounds easy, but if you look into its scary eyes... Um…”"
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "The battlefield is Jet Jaeger's playground. Its high-speed impacts and excellent ability to slash make it a regular unit in the front row and a sharp axe that can break the enemy apart. However, there are many cases where Jet Jaeger ran out of the signal detection range in the middle of a battle, though it returned to the base without a scratch.\n\"It won't stop and wait for you! Stay close to it!\"\n\nThis is what a captain will tell their subordinates when they use Jet Jaeger to fight."
+                    }
+              ]
+        },
+        {
+              "id": "levvi",
+              "name": "Levvi",
+              "rarity": "S",
+              "role": "Damage, Control",
+              "element": "Lightning",
+              "image": "/uploads/grayravens/cubs/levvi.png",
+              "effect": "Levvi will dive toward the target location and explode on impact, dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Levvi",
+              "owner": "liv-limpidity",
+              "rank": "S",
+              "type": "Damage, Control",
+              "signatureCharacterId": "liv-limpidity",
+              "signatureName": "Liv: Limpidity",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "lingya",
+              "name": "Lingya",
+              "rarity": "A",
+              "rank": "A",
+              "role": "DMG",
+              "type": "DMG",
+              "element": "Lightning",
+              "image": "https://grayravens.com/wiki/Special:Redirect/file/CUB-Lingya-Icon.png",
+              "effect": "",
+              "sourceUrl": "https://grayravens.com/wiki/Lingya",
+              "owner": "",
+              "signatureCharacterId": "",
+              "signatureName": "",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Lingya was originally a common geological exploration robot in Babylonia with Frame ID A-19. It was later modified by the Engineering Force and put into use on the battlefield. It features an in-built generator that can affect the surrounding electromagnetic field while providing support in battle. It can also be used in geological explorations.\nDon't be surprised if Lingya remains on the battlefield after the battle. It is working on another task."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "It has always been an important subject of study for the Engineering Force to have a grasp of the lodes and geological changes on Earth. Some areas have a special magnetic field where it is hard for Levi-Detectors to work. To explore these areas, the Engineering Force opted to use a design with an in-built generator to eliminate the negative effects of magnetic field.\nTo solve the movement and energy consumption issues of the generator, the Engineering Force added other designs to it. A few iterations later, the frame looks more and more like an animal from the antelope subfamily."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "Maybe it was because of Lingya's magnetic field interference feature, it seemed to show an attachment to the magnetic field on Earth during geological explorations.\nJust like the original geological exploration robot, Lingya was usually sent to carry out geological exploration tasks in mountains that were hard for humans and other robots to reach. When Lingya stands alone on the top of a mountain and feels pulled by the magnetic field, is it also using its wired central unit to analyze the entire look of this planet?"
+                    }
+              ]
+        },
+        {
+              "id": "mirage-blades",
+              "name": "Mirage Blades",
+              "rarity": "S",
+              "rank": "S",
+              "role": "Damage, Control",
+              "type": "Damage, Control",
+              "element": "Physical",
+              "image": "https://grayravens.com/wiki/Special:Redirect/file/CUB-MirageBlades-Icon.png",
+              "effect": "",
+              "sourceUrl": "https://grayravens.com/wiki/Phantom_Blade",
+              "owner": "vergil",
+              "signatureCharacterId": "vergil",
+              "signatureName": "Vergil: Vergil",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "moonhopper",
+              "name": "Moonhopper",
+              "rarity": "S",
+              "role": "Control",
+              "element": "Dark",
+              "image": "/uploads/grayravens/cubs/moonhopper.png",
+              "effect": "Supergravity Eclipse: Dark - The CUB button will be activated after pinging 6 basic Signal Orbs. Upon casting, Moonhopper will teleport into the air and smash to the ground, interrupting enemy skills, dealing [blue]1000%[/blue] Dark DMG, and creating an Anti-gravity Field that deals [blue]100%[/blue] Dark DMG to all enemies inside every 0.5s for 4s. Enemies inside the Anti-gravity field will be slowed down and unable to use their skills.",
+              "sourceUrl": "https://grayravens.com/wiki/Moonhopper",
+              "owner": "karenina-radiant-daybreak",
+              "rank": "S",
+              "type": "Control",
+              "signatureCharacterId": "karenina-radiant-daybreak",
+              "signatureName": "Karenina: Scire",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Supergravity Eclipse: Dark",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/1c/Skill-Moonhopper-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Supergravity Eclipse: Dark",
+                                      "description": "The CUB button will be activated after pinging 6 basic Signal Orbs. Upon casting, Moonhopper will teleport into the air and smash to the ground, interrupting enemy skills, dealing [blue]1000%[/blue] Dark DMG, and creating an Anti-gravity Field that deals [blue]100%[/blue] Dark DMG to all enemies inside every 0.5s for 4s. Enemies inside the Anti-gravity field will be slowed down and unable to use their skills."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Super Moonfall Field: Dark",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/1c/Skill-Moonhopper-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Super Moonfall Field: Dark",
+                                      "description": "The CUB button will be activated after pinging 6 basic Signal Orbs. Upon casting, Moonhopper will teleport into the air and smash to the ground, interrupting enemy skills, dealing [blue]1000%[/blue] Dark DMG, and creating an Anti-gravity Field that deals [blue]500%[/blue] Dark DMG upon its creation. The Anti-gravity Field lasts 2s, in which enemies will be slowed down and unable to use their skills."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "“High Jumping”",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/19/Skill-Moonhopper-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "“High Jumping”",
+                                      "description": "Moonhopper’s Active Skills deal [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "“Foot-stamping”",
+                          "icon": "https://static.wikitide.net/pgrwiki/8/89/Skill-Moonhopper-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "“Foot-stamping”",
+                                      "description": "Increases the carrier’s ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "“Smashing”",
+                          "icon": "https://static.wikitide.net/pgrwiki/e/e9/Skill-Moonhopper-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "“Smashing”",
+                                      "description": "Each time Moonhopper casts an Active Skill, the Extra DMG Bonus of the carrier's Signature Move increases by [blue]5%[/blue]. Can be stacked up to 3 times."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "“Paw-licking”",
+                          "icon": "https://static.wikitide.net/pgrwiki/e/ec/Skill-Moonhopper-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "“Paw-licking”",
+                                      "description": "Increases the carrier’s Dark DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "“Bye-bye Home Run”",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/fd/Skill-Moonhopper-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "“Bye-bye Home Run”",
+                                      "description": "When Karenina: Scire performs her Signature Move while carrying Moonhopper, Moonhopper will be swung to the enemy, increasing the Signature Move's Base DMG Bonus by [blue]100%[/blue]. While Karenina: Scire is charging up by holding the Basic Attack button, Moonhopper will pull in surrounding enemies and unleash [blue]Super Moonfall Field[/blue]."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Moonhopper has a bad temper. If it stomps its feet, stay away!\nFortunately, it doesn't bite…"
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "Supposedly, the position of a rabbit's ears can be used to determine its mood. However, that doesn't apply to Moonhopper. It's never been in a bad mood."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Moonhopper is the \"quietest\" CUB, not because the animal it was inspired by rarely made sounds, but because audio devices are redundant in space combat. Despite its low-key sound profile, when it expands its body and creates a force field, it can easily become everyone's focus on the battlefield."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Moonhopper's long ears are a pair of enhanced long-distance signal interaction devices that further strengthen control and communication stability in space missions. Therefore, they were definitely not designed to be cute or for patting. The reason for its rabbit-like appearance is that in certain myths and folktales, rabbits and the Moon have always been linked together. They are a perfect match in every human's heart."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "Moonhopper was given to Karenina on behalf of the Engineering Force by Teddy to accompany her on her mission to the Moon. She thought Karenina was going to hate it at first, but Karenina took it without making a fuss.\nBut when she saw Karenina with it again, she was surprised to see that Karenina had completely modified its face.\n\n\"I didn't know CUBs could be made to look like their owner. What a scientific miracle.\"\n\n\"It's more befitting for it to help me in battle!\" Karenina's face showed the same expression as it did."
+                    }
+              ]
+        },
+        {
+              "id": "morigan",
+              "name": "Morigan",
+              "rarity": "S",
+              "role": "Damage, Crowd Control",
+              "element": "Nihil",
+              "image": "/uploads/grayravens/cubs/morigan.png",
+              "effect": "Morigan will unleash feathers to attack, dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Morigan",
+              "owner": "nirvatia-dirge",
+              "rank": "S",
+              "type": "Damage, Crowd Control",
+              "signatureCharacterId": "nirvatia-dirge",
+              "signatureName": "Nirvatia: Dirge",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "motorbolt",
+              "name": "Motorbolt",
+              "rarity": "S",
+              "role": "Charge",
+              "element": "Lightning",
+              "image": "/uploads/grayravens/cubs/motorbolt.png",
+              "effect": "Sparking Assault - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Motorbolt will rush to the enemy and bump the target, dealing [blue]450%[/blue] DMG and leaving behind a Pulling Current that keeps pulling enemies within range and deals [blue]350%[/blue] DMG 3 times.",
+              "sourceUrl": "https://grayravens.com/wiki/Motorbolt",
+              "owner": "lucia-crimson-weave",
+              "rank": "S",
+              "type": "Charge",
+              "signatureCharacterId": "lucia-crimson-weave",
+              "signatureName": "Lucia: Crimson Weave",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Sparking Assault",
+                          "icon": "https://static.wikitide.net/pgrwiki/5/5a/Skill-Motorbolt-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Sparking Assault",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Motorbolt will rush to the enemy and bump the target, dealing [blue]450%[/blue] DMG and leaving behind a Pulling Current that keeps pulling enemies within range and deals [blue]350%[/blue] DMG 3 times."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Drifting Gale",
+                          "icon": "https://static.wikitide.net/pgrwiki/5/5a/Skill-Motorbolt-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Drifting Gale",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. Upon casting, Motorbolt will rush to the enemy and drift, knocking enemies within range airborne and dealing [blue]2000%[/blue] DMG.\nWhen Motorbolt is equipped by Lucia: Crimson Weave, it will enter Standby Mode upon casting the Active Skill. Afterward, Lucia: Crimson Weave will ride Motorbolt upon casting [blue]Resolute Blow[/blue] with the kodachi, sprinting to the target before pulling enemies within range and knocking them airborne. Motorbolt deals [blue]500%[/blue] Lightning DMG to the enemies within range during so."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Burst Booster",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/f9/Skill-Motorbolt-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Burst Booster",
+                                      "description": "Motorbolt’s Active Skill deals [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Thrill of Accel",
+                          "icon": "https://static.wikitide.net/pgrwiki/2/21/Skill-Motorbolt-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Thrill of Accel",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Light Streaks",
+                          "icon": "https://static.wikitide.net/pgrwiki/2/2c/Skill-Motorbolt-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Light Streaks",
+                                      "description": "Each time Motorbolt casts an Active Skill, the carrier's ATK increases by [blue]5%[/blue] for 8s. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Wedged Lightning",
+                          "icon": "https://static.wikitide.net/pgrwiki/a/a9/Skill-Motorbolt-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Wedged Lightning",
+                                      "description": "Increases the carrier’s Lightning DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Unquenchable Fortitude",
+                          "icon": "https://static.wikitide.net/pgrwiki/0/0a/Skill-Motorbolt-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Unquenchable Fortitude",
+                                      "description": "When Lucia: Crimson Weave casts [blue]Unquenchable Flare[/blue] with Motorbolt equipped, Base DMG increases by [blue]100%[/blue]. Casting [blue]Weave: Splashing Thunder[/blue] will summon Motorbolt to assist with its basic Active Skill. Cooldown: 8s."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Motorbolt doesn't like to use its speaker system much, but it's got a temperament as fiery as its engine. Don't test its patience, ever."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "After transformation, the jagged parts at the front aren't Motorbolt's \"mouth.\" But unless necessary, never place your hand near those jagged parts unsupervised. Or you'll regret it."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Motorbolt was originally Alpha's motorcycle, yet she couldn't always keep it by her side due to the challenges posed by diverse terrains. To make her rides more convenient, Alpha continually modified Motorbolt. After adding some combat modules, Alpha managed to reduce it to the current portable mechanical form. As for this design... perhaps it was inspired by some offhand suggestions from Luna?"
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Motorbolt's compact form is equipped with a powerful turbocharged engine and stealth radar technology, coupled with enhanced communication channels. These features ensure maximum stealth and safety for its rider on the surface. However, with that powerful engine comes louder noise levels. Despite Alpha equipping it with the best available air filters and mufflers, Motorbolt was taken aback by its own roar during its initial run."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "Motorbolt doesn't seem too pleased with its compact form. Instead, it prefers its original form and often gives Alpha high-speed joyrides during downtimes. The fiery-red bike, carrying its master, blazes across the wastelands like a bolt of crimson lightning. Fortunately, Alpha has no qualms about this little indulgence."
+                    }
+              ]
+        },
+        {
+              "id": "nitor",
+              "name": "Nitor",
+              "rarity": "S",
+              "role": "Damage",
+              "element": "Fire",
+              "image": "/uploads/grayravens/cubs/nitor.png",
+              "effect": "Blazing Blitz - The CUB button will be activated after 6 random pings. After casting, Nitor will rush toward the enemy, attack with continuous swiping and trigger one explosion, dealing [blue]1500%[/blue] DMG.\n\nBlazing Blitz – Fire - Also causes <strong>Data Attack</strong>.",
+              "sourceUrl": "https://grayravens.com/wiki/Nitor",
+              "owner": "karenina-ember",
+              "rank": "S",
+              "type": "Damage",
+              "signatureCharacterId": "karenina-ember",
+              "signatureName": "Karenina: Ember",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Blazing Blitz",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/16/Skill-Nitor-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Blazing Blitz",
+                                      "description": "The CUB button will be activated after 6 random pings. After casting, Nitor will rush toward the enemy, attack with continuous swiping and trigger one explosion, dealing [blue]1500%[/blue] DMG."
+                                },
+                                {
+                                      "name": "Blazing Blitz – Fire",
+                                      "description": "Also causes <strong>Data Attack</strong>."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Flare Spark",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/16/Skill-Nitor-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Flare Spark",
+                                      "description": "The CUB button will be activated after 6 random pings. After casting, the character will retreat, while commanding Nitor to attack nearby enemies with continuous swiping and trigger one explosion, dealing [blue]1500%[/blue] DMG."
+                                },
+                                {
+                                      "name": "Flare Spark – Fire",
+                                      "description": "Also causes <strong>Data Attack</strong>"
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Pyro Resonance",
+                          "icon": "https://static.wikitide.net/pgrwiki/4/43/Skill-Nitor-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Pyro Resonance",
+                                      "description": "When Karenina: Ember is in Thermal Enhanced State, Extra DMG increases by [blue]30%[/blue]. When [blue]Wingman Support's[/blue] flying laser cannons are on the field, <strong>Flare Spark</strong>/<strong>Blazing Blitz</strong> will trigger extra laser shots, dealing [blue]1500%[/blue] Fire DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Blast Booster",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/fc/Skill-Nitor-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Blast Booster",
+                                      "description": "Nitor's Active Skill DMG increases by [blue]70%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Fighting Spirit",
+                          "icon": "https://static.wikitide.net/pgrwiki/d/d7/Skill-Nitor-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Fighting Spirit",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Rising Inferno",
+                          "icon": "https://static.wikitide.net/pgrwiki/2/27/Skill-Nitor-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Rising Inferno",
+                                      "description": "Each time the carrier deals Fire DMG, their Fire DMG increases by [blue]5%[/blue] for 8s, stacking up to 2 times. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Heatwave",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/39/Skill-Nitor-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Heatwave",
+                                      "description": "After Nitor casts a skill, its carrier gains [blue]40[/blue] ATK, up to 3 stacks."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "The flames on Nitor's body change with its mood. They also get hotter as it continues to engage in battle."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "CUB \"Nitor\" has a high level of autonomy and can often come up with unique ideas that deviate from the standard tactics."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No. 001",
+                          "text": "Karenina once was given a black cat with the same name by Dr. Kalon, who she called \"Grandpa\"–he wanted Karenina to take care of it so she learned to not always engage in conflicts. She still refuses to admit it, but this unit is probably made in the form of a black cat because of that."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Due to strong resistance from Karenina, Nitor was initially given to other Task Force members for test, but the test had to terminate after receiving many complaints from most of the members. \"With all due respect, this thing is way too hot!\" \"The enemy was approaching, but it just refused to move!\" \"It bites me! Look at my brand-new hand armor!\" In the end, Karenina had no choice but to become its master."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "Nitor was buried in ruins in a mission by Corrupted attacks. Karenina thinks it was her fault–does she have to watch it die just like the black cat did? She screams out the name of her old cat, only to see Nitor walk out calmly from the melted ruins. \"Thank goodness, you're still alive...\" Karenina wants to give it a hug, but it scratches her in return. \"I knew it! Not cute at all!\" She can only complain."
+                    }
+              ]
+        },
+        {
+              "id": "noctiluca",
+              "name": "Noctiluca",
+              "rarity": "S",
+              "role": "Damage",
+              "element": "Dark",
+              "image": "/uploads/grayravens/cubs/noctiluca.png",
+              "effect": "Noctiluca will collide with the target, attacking enemies in the collision trajectory and dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Noctiluca",
+              "owner": "bianca-crepuscule",
+              "rank": "S",
+              "type": "Damage",
+              "signatureCharacterId": "bianca-crepuscule",
+              "signatureName": "Bianca: Crepuscule",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "noctua",
+              "name": "Noctua",
+              "rarity": "A",
+              "rank": "A",
+              "role": "Super Armor",
+              "type": "Super Armor",
+              "element": "Dark",
+              "image": "https://grayravens.com/wiki/Special:Redirect/file/CUB-Noctua-Icon.png",
+              "effect": "",
+              "sourceUrl": "https://grayravens.com/wiki/Noctua",
+              "owner": "",
+              "signatureCharacterId": "",
+              "signatureName": "",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Noctua is one of the first high-precision Support Units developed by Babylonia to enhance the connection between Constructs. Its looks and behavior patterns reflect the characteristics of owls. It can provide a wide range of support in battle by triggering the radioactive structure mounted on the wings. The multi-directional camera is also helpful for reconnaissance and investigation."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Noctua is extremely sensitive to hot environments due to an issue with its cooling system during the early development stages. In addition to constantly chasing and harassing researchers who possess coolants, Noctua will continuously flap its wings in an attempt to extinguish any open flames it encounters. However, the airflow it creates will more likely fan the flames. This issue has been partially resolved in later adjustments, but Noctua tends to continue such behavior when not connected to a Construct. Be sure to keep Noctua from open flames when it is not attached to any Constructs."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "To keep up with its frequent activities, the Noctua unit comes with highly effective self-repairing components. When transformed, it often spins its head around in order to mend and lubricate its joints. As a result, Noctua often serves as the children's plaything on Babylonia. The WGAA encourages it and expresses interest in developing more CUBs with similar features, while the Science Council refuses to comment."
+                    }
+              ]
+        },
+        {
+              "id": "phantom-blade",
+              "name": "Phantom Blade",
+              "rarity": "S",
+              "role": "",
+              "element": "",
+              "image": "/uploads/grayravens/cubs/phantom-blade.png",
+              "effect": "Mirage Blades will rush the target after casting, dealing DMG and slowing down enemies.",
+              "sourceUrl": "https://grayravens.com/wiki/Phantom_Blade",
+              "owner": "vergil"
+        },
+        {
+              "id": "punchy",
+              "name": "Punchy",
+              "rarity": "S",
+              "role": "Damage",
+              "element": "Fire",
+              "image": "/uploads/grayravens/cubs/punchy.png",
+              "effect": "Downward Punch - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Punchy will open a portal and then quickly throw an Ultralimit Punch downward, dealing [blue]1750%[/blue] DMG to all enemies across the screen.",
+              "sourceUrl": "https://grayravens.com/wiki/Punchy",
+              "owner": "lee-hyperreal",
+              "rank": "S",
+              "type": "Damage",
+              "signatureCharacterId": "lee-hyperreal",
+              "signatureName": "Lee: Hyperreal",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Downward Punch",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/f1/Skill-Punchy-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Downward Punch",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Punchy will open a portal and then quickly throw an Ultralimit Punch downward, dealing [blue]1750%[/blue] DMG to all enemies across the screen."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Upward Punch",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/f1/Skill-Punchy-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Upward Punch",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Punchy will open a portal and then quickly throw an Ultralimit Punch upward, dealing [blue]500%[/blue] DMG 5 times to enemies in a small area."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Mark of Overlapping Void Matrix",
+                          "icon": "https://static.wikitide.net/pgrwiki/c/cd/Skill-Punchy-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Mark of Overlapping Void Matrix",
+                                      "description": "When Lee: Hyperreal is equipped with Punchy, the Base DMG of [blue]Hypermatrix Strike[/blue] and [blue]Collapsing Realm[/blue] increases by [blue]25%[/blue].\nCasting [blue]Realm Travel[/blue] or [blue]Retribution [/blue]will summon Punchy to throw a [blue]Downward Punch[/blue] to assist Lee, dealing damage based on the Skill Level of Punchy's Active Skill [blue]Downward Punch[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Thermal Galvanization",
+                          "icon": "https://static.wikitide.net/pgrwiki/1/1c/Skill-Punchy-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Thermal Galvanization",
+                                      "description": "Punchy’s Active Skill deals [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Guided Conversion",
+                          "icon": "https://static.wikitide.net/pgrwiki/d/dc/Skill-Punchy-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Guided Conversion",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Potential Synchronization",
+                          "icon": "https://static.wikitide.net/pgrwiki/c/c9/Skill-Punchy-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Potential Synchronization",
+                                      "description": "Each time Punchy casts an Active Skill, the carrier’s ATK increases by [blue]120[/blue] for [blue]8[/blue]s."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Flame Blast",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/36/Skill-Punchy-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Flame Blast",
+                                      "description": "Increases the carrier’s Fire DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Punchy's calm, quiet characteristics often give others a misunderstanding that it is not equipped with an autonomous emotion simulation system. It always watches everything around itself in silence."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "The designer has not put an absolute limit on Punchy's transformation mechanism while it is on standby, so don't be shocked when you see a fist next to you. Maybe it only wants to give you a thumbs-up, or a cup of coffee."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Punchy was originally an auxiliary machine used by Lee of Gray Raven to collect the combat data for his new frame. The Science Council later modified it into a Combat Unit Booster that could link to Constructs, and added more nanomachine parts for combat."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "No one would have thought that Punchy was once a smart desktop companion that could be bought in any gift shop during the Golden Age.\n\nIts parts have been replaced numerous times, but there is one part that has never been swapped out. Even though it no longer serves as the core drive, it still fits perfectly in Punchy and has become its \"soul.”"
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "I recently found something: When connected, Punchy's screen will display irregular emotes. The root cause is yet to be identified, but given this has no clear impact on the collection of combat data, no repairs have been planned.\nUpdate: I figured it out! It will synchronize with the emotions of the Constructs that link to it, and show them in these emotes!\n\nUpdate: The emotion synchronization does not seem to apply on Lee. He always has a poker face when Punchy's screen is rapidly changing... I'll just keep the record here. Attachment: Below are the emotes of Punchy during a joint operation between Gray Raven and Strike Hawk: (` д`) [twice] (-‘-)[twice] (?_?) [3 times] (/////) [once], ◟(*⁰▽⁰*)ﾉ [once]\n\n- An abstract from the personal diary of a Science Council technician."
+                    }
+              ]
+        },
+        {
+              "id": "rainbow",
+              "name": "Rainbow",
+              "rarity": "S",
+              "role": "Pull, Damage",
+              "element": "Ice",
+              "image": "/uploads/grayravens/cubs/rainbow.png",
+              "effect": "Refraction Siphon - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. Upon casting, Rainbow will swim to the target, pull enemies within range, and deal [blue]500%[/blue] DMG. Then, Rainbow will unleash a dazzling energy explosion, dealing [blue]1000%[/blue] DMG to enemies within range.",
+              "sourceUrl": "https://grayravens.com/wiki/Rainbow",
+              "owner": "ayla-kaleido",
+              "rank": "S",
+              "type": "Pull, Damage",
+              "signatureCharacterId": "ayla-kaleido",
+              "signatureName": "Ayla:Kaleido",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Refraction Siphon",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/38/Skill-Rainbow-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Refraction Siphon",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. Upon casting, Rainbow will swim to the target, pull enemies within range, and deal [blue]500%[/blue] DMG. Then, Rainbow will unleash a dazzling energy explosion, dealing [blue]1000%[/blue] DMG to enemies within range."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Ripple Dash",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/38/Skill-Rainbow-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Ripple Dash",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Rainbow will swiftly swim forward and deal [blue]325%[/blue] DMG to the enemies ahead 3 times. Then, Rainbow will immediately return and deal [blue]450%[/blue] DMG to the enemies on the path 3 times."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Inner Storm",
+                          "icon": "https://static.wikitide.net/pgrwiki/d/d7/Skill-Rainbow-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Inner Storm",
+                                      "description": "When Ayla: Kaleido casts [blue]Pure Color: Theme Emphasis[/blue] or [blue]Color Mix: Clash of Concepts[/blue] with Rainbow equipped, Base DMG will increase by [blue]30%[/blue], and Rainbow will pull nearby enemies and deal [blue]100%[/blue] Ice DMG 3 times.\nCasting [blue]Vibrant Brushstroke[/blue], will increase her Base DMG by [blue]30%[/blue], and summon Rainbow to assist with its basic Active Skill. Cooldown: 2s."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Colorful Touch",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/f5/Skill-Rainbow-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Colorful Touch",
+                                      "description": "Rainbow’s Active Skill deals [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Chain of Dreams",
+                          "icon": "https://static.wikitide.net/pgrwiki/a/a2/Skill-Rainbow-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Chain of Dreams",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Over the Rainbow",
+                          "icon": "https://static.wikitide.net/pgrwiki/4/4e/Skill-Rainbow-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Over the Rainbow",
+                                      "description": "Each time Rainbow casts an Active Skill, the carrier’s Extra DMG Bonus increases by [blue]4%[/blue]. Can be stacked up to 3 times."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Diamond Star",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/3d/Skill-Rainbow-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Diamond Star",
+                                      "description": "Increases the carrier’s Ice DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "In most cases, Rainbow is delightful and enjoys jokes and pranks, but you should never take this for granted. Once it feels you have gone too far, it will squirt a shower of special pigment that will not come off for a whole month."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "As Rainbow is a CUB inspired by a marine species like Shimmer and Seeshell, it makes the three of them become a close trio of friends among all CUBs. Rainbow would give Shimmer a new coating once in a while and relax lying on Seeshell in leisure time."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No. 001",
+                          "text": "Originally a robotic artistic education assistant at the Center of Basic Public Education, Rainbow is equipped with 127 pigments, 28 types of paintbrushes, and 7 types of paint sprayers. After being modified into a Combat Unit Booster by Leonie, Rainbow is able to sweep the battlefield with splashes of color alongside Kaleido's Beam Gunlance."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Rainbow's bowknot was a gift from the kids at the Center of Basic Public Education when it left there, now its most treasured ornament that it refuses to take off even on the battlefield. However kind and pleasant Rainbow is, if any enemy dares dirty its bowknot, it will end battles like a devastating hurricane."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "Presumably affected by its owner, among all the CUBs Rainbow is the one most into \"making friends.\" To the staff of the Science Council, it is common to see Rainbow building bridges with other CUBs in the maintenance room. And one day, when the staff of the Science Council returned to the maintenance room after a vacation, they immediately realized that they had forgotten to enable hibernate mode on the CUBs before they left. The maintenance room was turned into a \"party room\" with every inch splashed with colors by Rainbow. All the CUBs were so high that they were parading around the room, celebrating. This merrymaking lasted until the Science Council called in the CUBs' owners to calm them down."
+                    }
+              ]
+        },
+        {
+              "id": "scaled-rampart",
+              "name": "Scaled Rampart",
+              "rarity": "S",
+              "role": "Pull, Damage",
+              "element": "Physical",
+              "image": "/uploads/grayravens/cubs/scaled-rampart.png",
+              "effect": "Scaled Rampart will split into two pieces and perform consecutive slashes, dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Scaled_Rampart",
+              "owner": "veronica-aegis",
+              "rank": "S",
+              "type": "Pull, Damage",
+              "signatureCharacterId": "veronica-aegis",
+              "signatureName": "Veronica: Aegis",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "seeshell",
+              "name": "Seeshell",
+              "rarity": "A",
+              "rank": "A",
+              "role": "Area, Freeze",
+              "type": "Area, Freeze",
+              "element": "Ice",
+              "image": "https://grayravens.com/wiki/Special:Redirect/file/CUB-Seeshell-Icon.png",
+              "effect": "",
+              "sourceUrl": "https://grayravens.com/wiki/Seeshell",
+              "owner": "",
+              "signatureCharacterId": "",
+              "signatureName": "",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Seeshell, originally an outdated C7 Probe from Babylonia, frequently used in ocean exploration and climate observation. Its capability is recognized after multiple CUB experiments, and it is now active in the field as a CUB.\nWhen transformed, Seeshell's four cannons can provide substantial support fire. The two fisheye lenses by its sides also offer a comprehensive view of the battlefield. By syncing those data to Constructs and the commandant in real time, Seeshell is valuable for evaluating the battle."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Due to the frequent accidents that occurred during the C7 Probes' exploration missions, an engineer tries to install multiple modules on a prototype to increase its mission success rate. However, the large number of modules and their intricate connections make it impossible to mass produce.\nAs the C7 models are retired, the prototype is going to be decommissioned as well. But, during the CUB program, its outstanding damage output and scouting capability caught tester's attention, who then named it \"Seeshell\"."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "Seeshell's appearance is the best demonstration of its abilities.\nEverything it sees and records during an ocean exploration is gathered inside its \"shell.\"\n\nEvery time it extracts those valuable data, researchers are astonished by the mysteries of the deep sea contained in its pearl.\n\nIt has been recording, watching, and gathering those scattered fragments to create these pearls to help study the ocean. Now, it will observe the battlefield and help its warriors shine."
+                    }
+              ]
+        },
+        {
+              "id": "shadow-wing",
+              "name": "Shadow Wing",
+              "rarity": "S",
+              "role": "Damage, Control",
+              "element": "Fire",
+              "image": "/uploads/grayravens/cubs/shadow-wing.png",
+              "effect": "Wide-Area Sound Waves - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Shadow Wing will release sound waves to deal damage and pull in nearby enemies, dealing [blue]1650%[/blue] DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Shadow_Wing",
+              "owner": "watanabe-epitaph",
+              "rank": "S",
+              "type": "Damage, Control",
+              "signatureCharacterId": "watanabe-epitaph",
+              "signatureName": "Watanabe: Epitaph",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Wide-Area Sound Waves",
+                          "icon": "https://static.wikitide.net/pgrwiki/2/21/Skill-ShadowWing-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Wide-Area Sound Waves",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Shadow Wing will release sound waves to deal damage and pull in nearby enemies, dealing [blue]1650%[/blue] DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Proximity Interference",
+                          "icon": "https://static.wikitide.net/pgrwiki/2/21/Skill-ShadowWing-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Proximity Interference",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Shadow Wing will start to circle, granting the equipped character shield equal to [blue]200%[/blue] of its ATK. At the end of the flight, Shadow Wing will spread its wings and deal [blue]750%[/blue] DMG twice in the area around the target."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Overwatcher",
+                          "icon": "https://static.wikitide.net/pgrwiki/d/d6/Skill-ShadowWing-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Overwatcher",
+                                      "description": "Shadow Wing’s Active Skills deal [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Phantom Guard",
+                          "icon": "https://static.wikitide.net/pgrwiki/9/9c/Skill-ShadowWing-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Phantom Guard",
+                                      "description": "Increases the Carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Output Synchronization",
+                          "icon": "https://static.wikitide.net/pgrwiki/2/26/Skill-ShadowWing-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Output Synchronization",
+                                      "description": "Each time Shadow Wing casts an Active Skill, the carrier’s Extra DMG Bonus increases by [blue]5%[/blue] for [blue]8s[/blue]. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Propelled Incineration",
+                          "icon": "https://static.wikitide.net/pgrwiki/e/e4/Skill-ShadowWing-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Propelled Incineration",
+                                      "description": "Increases the carrier’s Fire DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Blazing Chain",
+                          "icon": "https://static.wikitide.net/pgrwiki/b/bc/Skill-ShadowWing-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Blazing Chain",
+                                      "description": "When Watanabe: Epitaph casts [blue]Flame Eruption[/blue], he will use his grappling hook to link with Shadow Wing and launch a joint attack together in mid-air, during which time Shadow Wing will attack and deal [blue]2500%[/blue] Fire DMG in total. [blue]Thermal Erosion's[/blue] base DMG increases by [blue]75%[/blue]."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Shadow Wing looks inactive by standing on Watanabe's shoulder with its wings folded. But don't be fooled by it. It is actually on the lookout for anyone suspicious getting close to Watanabe."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "Shadow Wing does not always patrol at night. It also patrols during the day. Though looked scary, Shadow Wing is actually a CUB that fears strangers. It always flies in the least noticeable way and mimics the surroundings to hide, making it hard to be noticed."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Created based on an indoor close-quarters combat suppot attacking machine, it was originally designed to be a mass-produced solo wingman. Due to the manufacturing difficulty and poor budget control, it was modified into a specialized CUB."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "It used to be a headache for the researchers and designers to make an indoor weapon to a wide-range CUB. Thankfully, the timely application of new energy system fundamentally solved Shadow Wing's endurance problem. Besides, the AI module update has boosted its auto battle performance."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "Shadow Wing's co-op module has been improved several times based on the best data obtained from multiple practices with Watanabe. Watanabe's hook missed Shadow Wing several times and failed to connect to it. And there were times when the two failed to work with each other due to poor light at night. Now with the adjustments to their night vision equipment and the new material of Shadow Wing's hook attachment, their connection won't break easily even in the worst conditions."
+                    }
+              ]
+        },
+        {
+              "id": "shimmer",
+              "name": "Shimmer",
+              "rarity": "S",
+              "rank": "S",
+              "role": "Pull, Charge",
+              "type": "Pull, Charge",
+              "element": "Physical",
+              "image": "https://grayravens.com/wiki/Special:Redirect/file/CUB-FeiLin-Icon.png",
+              "effect": "Swirl Blast - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Shimmer will dash toward the target for [blue]1000%[/blue] DMG and pull in the enemies with a beam to inflict [blue]500%[/blue] DMG on enemies within range using its laser cannon.",
+              "sourceUrl": "https://grayravens.com/wiki/Shimmer",
+              "owner": "bianca-abystigma",
+              "signatureCharacterId": "bianca-abystigma",
+              "signatureName": "Bianca: Stigmata",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Swirl Blast",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/f7/Skill-FeiLin-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Swirl Blast",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Shimmer will dash toward the target for [blue]1000%[/blue] DMG and pull in the enemies with a beam to inflict [blue]500%[/blue] DMG on enemies within range using its laser cannon."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Gliding Barrage",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/f7/Skill-FeiLin-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Gliding Barrage",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After casting, Shimmer will dash toward the target for [blue]1000%[/blue] DMG and shoot 3 laser beams, each dealing [blue]500%[/blue] DMG to enemies within range."
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Photons Surge",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/3a/Skill-FeiLin-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Photons Surge",
+                                      "description": "Shimmer’s Active Skills deal [blue]70%[/blue] more DMG."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Guardian's Patrol",
+                          "icon": "https://static.wikitide.net/pgrwiki/a/ac/Skill-FeiLin-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Guardian's Patrol",
+                                      "description": "Increases the carrier's ATK by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Luster Splitter",
+                          "icon": "https://static.wikitide.net/pgrwiki/5/59/Skill-FeiLin-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Luster Splitter",
+                                      "description": "After Shimmer casts its Active Skill, its carrier’s ATK increases by [blue]75[/blue]. Can be stacked up to 2 times."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Empowered Cyclone",
+                          "icon": "https://static.wikitide.net/pgrwiki/3/3a/Skill-FeiLin-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Empowered Cyclone",
+                                      "description": "Increases the carrier’s Physical DMG by [blue]10%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Voidrays Convergence",
+                          "icon": "https://static.wikitide.net/pgrwiki/6/6a/Skill-FeiLin-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Voidrays Convergence",
+                                      "description": "When Bianca: Stigmata is carrying Shimmer and Luminous Realm is activated, CRIT DMG increases by [blue]50%[/blue]; Base DMG of Sword Dance in Sword Form increases by [blue]30%[/blue]; Bianca: Stigmata's upward thrust attack will summon Shimmer to cast its basic Active Skill for a combination strike."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "Although it looks a bit intimidating in its extended form, Shimmer is actually very lively and gentle before its owner. Its mood is shown clearly on its display panel."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "The project owner in charge of the development of CUB Shimmer would like to remind every user to keep it busy, otherwise, they might suffer from unwanted loss of property and personal injury, and the developers will not be held responsible if any of the abovementioned situations appends."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "CUB Shimmer was originally designed by Kurono to be a mass-produced carrier that can carry the aero foot pedals made for individual combats. However, the model, after being made bigger, showed poor stability and lift efficiency in the environment with gravity, which made it unsuitable to be pushed into mass production. Only the original small prototype was kept and modified by the Science Council into a specialized CUB with high-speed assault ability and strong firepower which can move freely after firing a shot."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Shimmer's coating is extremely sound-proof and wave-proof, allowing it to fly at a high speed and approach the enemy almost without being noticed. It loves to creep on people and scare them out of a sudden. However, whenever it tries to play the same trick on Bianca, it will always be caught red-handed and touched gently by her, which of course doesn't stop it from doing this for it has already become a secret game between them."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "At first, Bianca thought the CUB would increase the chance of being exposed in the mission, after all, as a member of the Purifying Force, she always needs to sneak into somewhere alone. But during her last meeting with Chiko, the Vice-Captain of the Purifying Force, Chiko wanted her to accept the council's advice. Maybe it was because of Chiko's suggestion. Maybe she had some kind of hunch long ago... Shimmer was eventually produced. It has become Bianca's exclusive CUB companion after she switched to Stigmata."
+                    }
+              ]
+        },
+        {
+              "id": "snow-waltz",
+              "name": "Snow Waltz",
+              "rarity": "S",
+              "role": "Damage, Pull",
+              "element": "Physical",
+              "image": "/uploads/grayravens/cubs/snow-waltz.png",
+              "effect": "Snow Waltz will fire blades in all directions then retrieve them, pulling in nearby enemies and dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Snow_Waltz",
+              "owner": "selena-pianissimo",
+              "rank": "S",
+              "type": "Damage, Pull",
+              "signatureCharacterId": "selena-pianissimo",
+              "signatureName": "Selena: Pianissimo",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "snowveil",
+              "name": "Snowveil",
+              "rarity": "S",
+              "role": "Crowd Control, Damage",
+              "element": "Ice",
+              "image": "/uploads/grayravens/cubs/snowveil.png",
+              "effect": "Snowveil will flick its tail to fire crystal shards, inflicting enemies in the area with Rigidness and dealing DMG.\n Rigidness: Enemies will be rooted for 2s.",
+              "sourceUrl": "https://grayravens.com/wiki/Snowveil",
+              "owner": "wanshi-lucid-dreamer",
+              "rank": "S",
+              "type": "Crowd Control, Damage",
+              "signatureCharacterId": "wanshi-lucid-dreamer",
+              "signatureName": "Wanshi: Lucid Dreamer",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "thorny",
+              "name": "Thorny",
+              "rarity": "A",
+              "rank": "A",
+              "role": "Charge",
+              "type": "Charge",
+              "element": "Physical",
+              "image": "https://grayravens.com/wiki/Special:Redirect/file/CUB-Thorny-Icon.png",
+              "effect": "",
+              "sourceUrl": "https://grayravens.com/wiki/Thorny",
+              "owner": "",
+              "signatureCharacterId": "",
+              "signatureName": "",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Thorny is a mass-produced machine formerly used by the Engineering Force. Some of its traits shown during the digging operation caught the attention of the staff and it was permitted to be modified into a CUB. The spikes added during the development process have granted it the ability to defend itself against the enemies and made it look more like how it looks right now."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Thorny was on a terrain exploration mission with the Engineering Force during the trial period after it was modified into a CUB. However, Thorny starts to exhibit strange behaviors after the mission. For example, it would stand on its hind legs and reveal its belly without thorns to people while holding the staff member by their wrist.\n\"Why is it so clingy? Has it always been like this?\"\n\nA hot-tempered Engineering Force Construct always complains like this to the staff members at the scene while cleaning up mud-covered Thorny."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "As its name suggests, Thorny weighs extremely heavily when fully expanded.\nBut it is also surprisingly easy to \"pick it up\" if you hold Thorny's front paws and push its lower body to its belly. However, if you pay more attention, you can see that Thorny is always stretching the spikes on its back secretly and stabbing them on the ground to raise its body and ease the load for whoever picks it up.\n\"...Does it love to be picked up?\"\n\nThis is the only conclusion the experiment staff could draw when seeing Thorny's shaky front legs."
+                    }
+              ]
+        },
+        {
+              "id": "toniris",
+              "name": "Toniris",
+              "rarity": "S",
+              "role": "Pull, Charge",
+              "element": "Lightning",
+              "image": "/uploads/grayravens/cubs/toniris.png",
+              "effect": "Awakening Flash - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. Tapping it will make Toniris charge forward, dealing [blue]1500%[/blue] DMG and pulling the enemies toward its charging path, while inflicting them with [blue]Explosion[/blue] for 8s. Attacks can detonate the [blue]Explosion[/blue] and cause [blue]600%[/blue] Area DMG. Also causes <strong>Data Attack</strong>\n\nAwakening Flash – Lightning - After pinging a total of 6 basic Signal Orbs, the CUB button will become available. Tapping it will make Toniris charge forward, dealing [blue]1500%[/blue] DMG and pulling the enemies toward its charging path, while inflicting them with [blue]Explosion[/blue] for 8s. Attacks can detonate the [blue]Explosion[/blue] and cause [blue]600%[/blue] Lightning Area DMG. Also causes <strong>Advanced Data Attack</strong>.",
+              "sourceUrl": "https://grayravens.com/wiki/Toniris",
+              "owner": "bianca-veritas",
+              "rank": "S",
+              "type": "Pull, Charge",
+              "signatureCharacterId": "bianca-veritas",
+              "signatureName": "Bianca: Veritas",
+              "activeSkills": [
+                    {
+                          "label": "Active Skill 1",
+                          "name": "Awakening Flash",
+                          "icon": "https://static.wikitide.net/pgrwiki/7/7f/Skill-Toniris-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Awakening Flash",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. Tapping it will make Toniris charge forward, dealing [blue]1500%[/blue] DMG and pulling the enemies toward its charging path, while inflicting them with [blue]Explosion[/blue] for 8s. Attacks can detonate the [blue]Explosion[/blue] and cause [blue]600%[/blue] Area DMG. Also causes <strong>Data Attack</strong>"
+                                },
+                                {
+                                      "name": "Awakening Flash – Lightning",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. Tapping it will make Toniris charge forward, dealing [blue]1500%[/blue] DMG and pulling the enemies toward its charging path, while inflicting them with [blue]Explosion[/blue] for 8s. Attacks can detonate the [blue]Explosion[/blue] and cause [blue]600%[/blue] Lightning Area DMG. Also causes <strong>Advanced Data Attack</strong>."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Active Skill 2",
+                          "name": "Surging Thunderbolt",
+                          "icon": "https://static.wikitide.net/pgrwiki/7/7f/Skill-Toniris-Active.png",
+                          "entries": [
+                                {
+                                      "name": "Surging Thunderbolt",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After tapping it, Toniris and the carrier will charge forward together, dealing [blue]1500%[/blue] DMG and pulling the enemies toward its charging path, while inflicting them with [blue]Explosion[/blue] for 8s. Attacks can detonate the [blue]Explosion[/blue] and cause [blue]600%[/blue] Area DMG. The character is invincible while charging with Toniris. Also causes <strong>Data Attack</strong>"
+                                },
+                                {
+                                      "name": "Surging Thunderbolt – Lightning",
+                                      "description": "After pinging a total of 6 basic Signal Orbs, the CUB button will become available. After tapping it, Toniris and the carrier will charge forward together, dealing [blue]1500%[/blue] DMG and pulling the enemies toward its charging path, while inflicting them with [blue]Explosion[/blue] for 8s. Attacks can detonate the [blue]Explosion[/blue] and cause [blue]600%[/blue] Lightning Area DMG. The character is invincible while charging with Toniris. Also causes <strong>Advanced Data Attack</strong>"
+                                }
+                          ]
+                    }
+              ],
+              "passiveSkills": [
+                    {
+                          "label": "Passive 1",
+                          "name": "Particle Relay",
+                          "icon": "https://static.wikitide.net/pgrwiki/e/ec/Skill-Toniris-Passive-1.png",
+                          "entries": [
+                                {
+                                      "name": "Particle Relay",
+                                      "description": "Toniris's active skill deals [blue]70%[/blue] more damage."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 2",
+                          "name": "Matching Electrode",
+                          "icon": "https://static.wikitide.net/pgrwiki/a/a5/Skill-Toniris-Passive-2.png",
+                          "entries": [
+                                {
+                                      "name": "Matching Electrode",
+                                      "description": "Increases the carrier's Attack by [blue]100[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 3",
+                          "name": "Bi-magnetic Stimulation",
+                          "icon": "https://static.wikitide.net/pgrwiki/7/7b/Skill-Toniris-Passive-3.png",
+                          "entries": [
+                                {
+                                      "name": "Bi-magnetic Stimulation",
+                                      "description": "After Toniris casts a skill, its carrier gains [blue]40[/blue] Attack, up to 3 stacks."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 4",
+                          "name": "Thunder Apocalypse",
+                          "icon": "https://static.wikitide.net/pgrwiki/7/78/Skill-Toniris-Passive-4.png",
+                          "entries": [
+                                {
+                                      "name": "Thunder Apocalypse",
+                                      "description": "The skill damage of Bianca: Veritas' [blue]Critical Moment[/blue] increases by [blue]12.5%[/blue]."
+                                }
+                          ]
+                    },
+                    {
+                          "label": "Passive 5",
+                          "name": "Voltage Overload",
+                          "icon": "https://static.wikitide.net/pgrwiki/f/fd/Skill-Toniris-Passive-5.png",
+                          "entries": [
+                                {
+                                      "name": "Voltage Overload",
+                                      "description": "Each time the carrier deals Lightning DMG, their Lightning DMG increases by [blue]5%[/blue] for 8s, stacking up to [blue]2[/blue] times. Triggering this effect again will renew its duration."
+                                }
+                          ]
+                    }
+              ],
+              "background": [
+                    {
+                          "title": "Background I",
+                          "text": "The name \"Toniris\" represents \"thunder in the rain,\"\n\nwith the imagery of a lone bionic crane flying over the vast plain, followed by thunderclouds.\n\nLegend says it guides the lightning."
+                    },
+                    {
+                          "title": "Background II",
+                          "text": "Toniris also represents the rainbow after the thunderstorm.\nIts sliver wings bring the thunder as well as the rainbow.\n\nAfter a flash storm, the bionic crane stops at the rainbow and caresses its tail feathers, seemingly claiming the rainbow to be its creation."
+                    }
+              ],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Toniris, one of the first batch of high-precision bionic units developed for CUB experiment projects, shows a high degree of compatibility with Bianca: Veritas.\nIts prototype was a bionic bird made in the Golden Age to protect the environment, whose main feature was to detect climate and environmental changes. With the Science Council's modification, Toniris is capable of more detailed detection. The particle devices on its wings can also produce a large amount of electrical power."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Compared with other CUBs, Toniris has stricter standards when identifying allies and only shows closeness toward individuals who have been in contact for a long time. However, Toniris also demonstrates a certain degree of aggression toward these individuals. It often lightly tears their shirt corner or pulls their hair (note: \"light\" in terms of CUB horsepower.)\nAfter multiple incidents, contact between non-essential personnel and Toniris has become restricted, although some are sad about the constraints."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "In the early stages of the experiment, Toniris made loud birdcalls from its throat, which were widely mistaken for thundering in Babylonia.\nInvestigation reveals that it was a design flaw but a unique feature reserved by the WGAA.\n\n\"Isn't it cool that it can scream directly from the throat instead of through a loudspeaker?\"\n\nSaid the anonymous president of WGAA.\n\nHowever, this feature had to remain turned off for the official model due to protests from the field testers."
+                    }
+              ]
+        },
+        {
+              "id": "wrathfang",
+              "name": "Wrathfang",
+              "rarity": "S",
+              "role": "Damage, Pull",
+              "element": "Fire",
+              "image": "/uploads/grayravens/cubs/wrathfang.png",
+              "effect": "Wrathfang will attack the target with a blade of light in the mouth, pulling in nearby enemies and dealing DMG.",
+              "sourceUrl": "https://grayravens.com/wiki/Wrathfang",
+              "owner": "vera-geiravor",
+              "rank": "S",
+              "type": "Damage, Pull",
+              "signatureCharacterId": "vera-geiravor",
+              "signatureName": "Vera: Geiravor",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": []
+        },
+        {
+              "id": "yi-kong",
+              "name": "Yi Kong",
+              "rarity": "S",
+              "role": "",
+              "element": "",
+              "image": "/uploads/grayravens/cubs/yi-kong.png",
+              "effect": "Corvus will circle around the target, dive, and pull in nearby enemies, dealing damage.",
+              "sourceUrl": "https://grayravens.com/wiki/Yi_Kong",
+              "owner": "lucia-pyroath"
+        },
+        {
+              "id": "yuan-ye",
+              "name": "Yuan Ye",
+              "rarity": "A",
+              "rank": "A",
+              "role": "Stun",
+              "type": "Stun",
+              "element": "Fire",
+              "image": "https://grayravens.com/wiki/Special:Redirect/file/CUB-YuanYe-Icon.png",
+              "effect": "",
+              "sourceUrl": "https://grayravens.com/wiki/Yuan_Ye",
+              "owner": "",
+              "signatureCharacterId": "",
+              "signatureName": "",
+              "activeSkills": [],
+              "passiveSkills": [],
+              "background": [],
+              "story": [
+                    {
+                          "title": "No.001",
+                          "text": "Yuan Ye is the prototype of the Combat Unit Booster project. Its modularized appearance mimics traits of cloven-hooved mammals.\nAsimov claimed that the personal taste of its designer, Leonie of the WGAA, was reflected in the final product.\n\nOnce enough combat data is collected, it develops a combat form that uses high-speed ram and combo hits to interrupt the enemy's channeling and assist the Constructs."
+                    },
+                    {
+                          "title": "No.002",
+                          "text": "Yuan Ye reacts to fluttering fabrics. Experiments show that it responds to short-wavelength colors particularly well, a feature likely designed for detecting the Corrupted. Taunting this unit with colored fabrics is thereby forbidden.\n\nMaintenance tips: keep the unit in hibernation when not in combat. External modules are under development. Unauthorized modification is not allowed. That should be all for now."
+                    },
+                    {
+                          "title": "No.003",
+                          "text": "Additional maintenance tips: keep it in hibernation. I repeat, keep it in hibernation. As a prototype, it needs further adjustments. Excessive operations and modifications may break the unit, so stop playing with it.\nSecond warning: I'll say this one last time. No unauthorized modification is allowed! Don't ask!\n\nThird warning: Never mind... Just restore it to the default setup for combat."
+                    }
+              ]
+        }
   ],
   specialties: [
       {
@@ -19570,10 +21386,11 @@ const state = {
   filterMenuOpen: false,
   selectedCharacter: "lucia-crimson-weave",
   constructTab: "kit",
-  tierMode: "warzone",
   selectedTeam: "thunder-vanguard",
   selectedMemory: "condelina",
   selectedPatch: "patch-tbd",
+  selectedCub: "nitor",
+  cubTab: "actives",
   itemTab: "all",
   itemSubtab: "all",
   manageItemTab: "all",
@@ -19602,7 +21419,8 @@ const cubById = (id) => (db.cubs || []).find((cub) => cub.id === id);
 const patchById = (id) => (db.gamePatches || []).find((patch) => patch.id === id);
 const elementById = (id) => db.elements.find((element) => element.id === id) || db.elements[0];
 const slugify = (value) => value.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const constructTabs = ["kit", "review", "build", "teams", "rotations", "calculations", "coatings"];
+const constructTabs = ["kit", "review", "build", "teams", "rotations", "coatings"];
+const cubTabs = ["actives", "passives", "background", "story"];
 
 function init() {
   loadDatabase();
@@ -19612,12 +21430,12 @@ function init() {
   renderStats();
   renderFilters();
   renderCharacters();
-  renderTiers();
   renderTeams();
   renderMemories();
   renderItems();
   renderWeapons();
   renderCubs();
+  renderCubPage();
   renderGuides();
   renderPatches();
   renderRoadmap();
@@ -19658,13 +21476,6 @@ function bindEvents() {
     renderStats();
     renderCharacters();
   }));
-  $("#tierMode").addEventListener("click", (event) => {
-    const button = event.target.closest("button[data-mode]");
-    if (!button) return;
-    state.tierMode = button.dataset.mode;
-    $$("#tierMode .segment").forEach((item) => item.classList.toggle("active", item === button));
-    renderTiers();
-  });
   $("#copyTeam").addEventListener("click", copySelectedTeam);
   $("#rotationSelect").addEventListener("change", (event) => {
     state.rotation = event.target.value;
@@ -19689,7 +21500,6 @@ function bindEvents() {
   $$(".manager-tab").forEach((button) => button.addEventListener("click", () => switchManageTab(button.dataset.manageTab)));
   $("#addAbility")?.addEventListener("click", () => addStackItem("abilities"));
   $("#addBuild").addEventListener("click", () => addStackItem("builds"));
-  $("#addCalculation").addEventListener("click", () => addStackItem("calculations"));
   $("#addCoating").addEventListener("click", () => addStackItem("coatings"));
   $("#addManagedRotation").addEventListener("click", () => addStackItem("commonRotations"));
   $("#addElementMix").addEventListener("click", () => addStackItem("elements"));
@@ -19734,22 +21544,29 @@ function bindEvents() {
 
 function navigate(route) {
   const parts = route.split("/");
-  let normalized = ["characters", "tiers", "teams", "memories", "items", "weapons", "cubs", "guides", "patches", "patch", "roadmap", "rotations", "manage", "overview", "construct"].includes(parts[0]) ? parts[0] : "characters";
+  let normalized = ["characters", "teams", "memories", "items", "weapons", "cubs", "cub", "guides", "patches", "patch", "roadmap", "rotations", "manage", "overview", "construct"].includes(parts[0]) ? parts[0] : "characters";
   if (normalized === "construct") {
     const character = characterById(parts[1]) || characterById(state.selectedCharacter) || db.characters[0];
     state.selectedCharacter = character.id;
     state.constructTab = constructTabs.includes(parts[2]) ? parts[2] : state.constructTab;
+  }
+  if (normalized === "cub") {
+    const cub = cubById(parts[1]) || cubById(state.selectedCub) || (db.cubs || [])[0];
+    state.selectedCub = cub?.id || state.selectedCub;
+    state.cubTab = cubTabs.includes(parts[2]) ? parts[2] : state.cubTab;
   }
   if (normalized === "patch") {
     const patch = patchById(parts[1]) || (db.gamePatches || [])[0];
     state.selectedPatch = patch?.id || "patch-tbd";
   }
   state.route = normalized === "overview" ? "characters" : normalized;
-  const targetHash = normalized === "construct" ? `construct/${state.selectedCharacter}/${state.constructTab}` : normalized === "patch" ? `patch/${state.selectedPatch}` : normalized;
+  const targetHash = normalized === "construct" ? `construct/${state.selectedCharacter}/${state.constructTab}` : normalized === "patch" ? `patch/${state.selectedPatch}` : normalized === "cub" ? `cub/${state.selectedCub}/${state.cubTab}` : normalized;
   if (location.hash.replace("#", "") !== targetHash) location.hash = targetHash;
-  $$(".nav-link").forEach((link) => link.classList.toggle("active", link.dataset.route === normalized));
+  const navRoute = normalized === "cub" ? "cubs" : normalized;
+  $$(".nav-link").forEach((link) => link.classList.toggle("active", link.dataset.route === navRoute));
   $$(".view").forEach((view) => view.classList.toggle("active", view.dataset.view === state.route));
   if (normalized === "construct") renderConstructPage();
+  if (normalized === "cub") renderCubPage();
   if (normalized === "patch") renderPatchPage();
   scrollToView(normalized !== "overview" ? document.querySelector(`[data-view="${state.route}"]`) : $("#overview"));
 }
@@ -19766,7 +21583,6 @@ function renderSignals() {
   const signals = [
     ["featured", "⟲", "Visual rotations", "Icon timelines for swap, QTE, core, and ult windows.", "#3fc6d5"],
     ["", "◆", "Build sheets", "Weapons, memories, priorities.", "#e75656"],
-    ["", "▲", "Mode tiers", "War Zone, Pain Cage, general.", "#e5ba4a"],
     ["", "◎", "Team cores", "Composition gameplans.", "#6ed092"],
     ["", "⌕", "Fast filters", "Search by class or element.", "#a889f0"],
     ["", "⇪", "Guide export", "Share custom rotation strings.", "#5b9df6"]
@@ -19997,36 +21813,6 @@ function openConstruct(id, tab = "kit") {
   state.selectedCharacter = id;
   state.constructTab = tab;
   navigate(`construct/${id}/${tab}`);
-}
-
-function renderTiers() {
-  const board = normalizedTierBoard(db.tiers[state.tierMode]);
-  const colors = { S: "#3fc6d5", A: "#6ed092", B: "#5b9df6" };
-  $("#tierBoard").innerHTML = Object.entries(board).map(([rank, ids]) => `
-    <article class="tier-row" style="--accent:${colors[rank]}">
-      <div class="tier-label">${rank}</div>
-      <div class="tier-entries">
-        ${ids.map((id) => {
-          const character = characterById(id);
-          if (!character) return "";
-          const element = elementById(character.element);
-          return `<button class="tier-entry" data-tier-character="${id}" style="--accent:${element.color}" type="button">${renderCharacterBoxContent(character)}</button>`;
-        }).join("") || `<span class="muted">No entries yet.</span>`}
-      </div>
-    </article>
-  `).join("");
-  $$("[data-tier-character]").forEach((button) => button.addEventListener("click", () => {
-    openConstruct(button.dataset.tierCharacter, "review");
-  }));
-}
-
-function normalizedTierBoard(board = {}) {
-  const merged = {};
-  Object.entries(board).forEach(([rank, ids]) => {
-    const normalized = normalizeRank(rank);
-    merged[normalized] = uniqueOptions([...(merged[normalized] || []), ...(ids || [])]);
-  });
-  return Object.fromEntries(Object.entries(merged).filter(([rank]) => rank !== "S+"));
 }
 
 function renderTeams() {
@@ -20329,20 +22115,193 @@ function renderCubs() {
   if (!$("#cubGrid")) return;
   const search = $("#globalSearch").value.trim().toLowerCase();
   const cubs = (db.cubs || []).filter((cub) => searchableText(cub).includes(search));
-  $("#cubGrid").innerHTML = cubs.map((cub) => `
-    <article class="archive-card">
-      ${systemImageMarkup(cub, "cub")}
-      <div>
-        <p class="kicker">${escapeHtml(displayText(cub.rarity || ""))} ${escapeHtml(displayText(cub.role || "CUB"))}</p>
-        <h3>${escapeHtml(displayText(cub.name))}</h3>
-        <p class="muted rich-text">${richText(cub.effect || "No CUB effect has been added yet.")}</p>
-        <div class="tag-list">
-          ${cub.element ? `<span class="info-tag">${escapeHtml(displayText(cub.element))}</span>` : ""}
+  $("#cubGrid").innerHTML = cubs.map((cub) => {
+    const signature = cubSignatureCharacter(cub);
+    const elementLabel = cubElementLabel(cub);
+    return `
+      <article class="archive-card cub-card-button" data-cub-open="${escapeAttribute(cub.id)}" role="button" tabindex="0">
+        ${systemImageMarkup(cub, "cub")}
+        <div>
+          <p class="kicker">${escapeHtml(displayText(cub.rank || cub.rarity || ""))} ${escapeHtml(displayText(cub.type || cub.role || "CUB"))}</p>
+          <h3>${escapeHtml(displayText(cub.name))}</h3>
+          <p class="muted rich-text">${richText(cub.effect || "No CUB effect has been added yet.")}</p>
+          <div class="tag-list">
+            ${cub.element ? `<span class="info-tag">${keywordIconMarkup(cub.element)}${escapeHtml(displayText(elementLabel))}</span>` : ""}
+            ${signature ? `<button class="action-chip" data-profile-character="${signature.id}" type="button">${characterChipIcon(signature)}${escapeHtml(signature.name)}</button>` : cub.signatureName ? `<span class="info-tag">${escapeHtml(displayText(cub.signatureName))}</span>` : ""}
+            ${cub.sourceUrl ? `<a class="source-inline" href="${escapeAttribute(cub.sourceUrl)}" target="_blank" rel="noreferrer">Source</a>` : ""}
+          </div>
+        </div>
+      </article>
+    `;
+  }).join("") || `<p class="muted">No CUBs match the current search.</p>`;
+  $$("[data-cub-open]").forEach((card) => {
+    const open = (event) => {
+      if (event.target.closest("[data-profile-character], a")) return;
+      openCub(card.dataset.cubOpen);
+    };
+    card.addEventListener("click", open);
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        open(event);
+      }
+    });
+  });
+  bindProfileCharacterLinks("build");
+}
+
+function openCub(id, tab = "actives") {
+  state.selectedCub = id;
+  state.cubTab = tab;
+  navigate(`cub/${id}/${tab}`);
+}
+
+function renderCubPage() {
+  if (!$("#cubPage")) return;
+  const cub = cubById(state.selectedCub) || (db.cubs || [])[0];
+  if (!cub) {
+    $("#cubPage").innerHTML = `<article class="profile-card"><h3>No CUBs added</h3><p class="muted">Create CUBs in Manage.</p></article>`;
+    return;
+  }
+  const signature = cubSignatureCharacter(cub);
+  const accent = cubElementColor(cub);
+  const elementLabel = cubElementLabel(cub);
+  $("#cubPage").style.setProperty("--accent", accent);
+  $("#cubPage").innerHTML = `
+    <header class="construct-hero cub-hero">
+      <div class="construct-media cub-media">${systemImageMarkup(cub, "cub-detail")}</div>
+      <div class="construct-summary">
+        <p class="kicker">${escapeHtml(displayText(cub.type || cub.role || "CUB"))}</p>
+        <h2>${escapeHtml(displayText(cub.name || "Unnamed CUB"))}</h2>
+        <p class="muted rich-text">${richText(cub.effect || "No CUB overview has been added yet.")}</p>
+        <div class="profile-meta">
+          ${cub.rank || cub.rarity ? `<span class="rank-badge">${escapeHtml(displayText(cub.rank || cub.rarity))}</span>` : ""}
+          ${cub.element ? `<span class="pill">${keywordIconMarkup(cub.element)}${escapeHtml(displayText(elementLabel))}</span>` : ""}
+          ${cub.type || cub.role ? `<span class="pill">${escapeHtml(displayText(cub.type || cub.role))}</span>` : ""}
           ${cub.sourceUrl ? `<a class="source-inline" href="${escapeAttribute(cub.sourceUrl)}" target="_blank" rel="noreferrer">Source</a>` : ""}
         </div>
       </div>
-    </article>
-  `).join("") || `<p class="muted">No CUBs match the current search.</p>`;
+      <div class="construct-quick-build">
+        <div class="frame-data-panel">
+          <div class="frame-data-item"><strong>Rank</strong><span>${escapeHtml(displayText(cub.rank || cub.rarity || "Not set"))}</span></div>
+          <div class="frame-data-item"><strong>Type</strong><span>${escapeHtml(displayText(cub.type || cub.role || "Not set"))}</span></div>
+          <div class="frame-data-item"><strong>Element</strong><span>${cub.element ? `${keywordIconMarkup(cub.element)}${escapeHtml(displayText(elementLabel))}` : "Not set"}</span></div>
+          <div class="frame-data-item"><strong>Signature</strong><span>${cubSignatureMarkup(cub)}</span></div>
+        </div>
+        <button class="ghost-button" data-cub-edit="${escapeAttribute(cub.id)}" type="button"><span>*</span>Edit CUB record</button>
+      </div>
+    </header>
+    <nav class="profile-tabs" aria-label="${escapeAttribute(cub.name || "CUB")} detail tabs">
+      ${cubTabs.map((tab) => `<button class="profile-tab ${state.cubTab === tab ? "active" : ""}" data-cub-tab="${tab}" type="button">${cubTabLabel(tab)}</button>`).join("")}
+    </nav>
+    <section class="profile-tab-panel">
+      ${renderCubTab(cub)}
+    </section>
+  `;
+  $$("[data-cub-tab]").forEach((button) => button.addEventListener("click", () => openCub(cub.id, button.dataset.cubTab)));
+  $$("[data-cub-edit]").forEach((button) => button.addEventListener("click", () => {
+    navigate("manage");
+    switchManageArea("global");
+    switchSystemTab("cubs");
+    const row = $(`[data-system-array="cubs"][data-system-index="${(db.cubs || []).findIndex((item) => item.id === button.dataset.cubEdit)}"]`);
+    row?.closest("details")?.setAttribute("open", "open");
+  }));
+  bindProfileCharacterLinks("build");
+}
+
+function renderCubTab(cub) {
+  if (state.cubTab === "passives") return renderCubSkills(cub.passiveSkills, "No passive skills have been added yet.");
+  if (state.cubTab === "background") return renderCubLore(cub.background, "No background has been added yet.");
+  if (state.cubTab === "story") return renderCubLore(cub.story, "No story has been added yet.");
+  return renderCubSkills(cub.activeSkills, "No active skills have been added yet.");
+}
+
+function cubTabLabel(tab) {
+  return {
+    actives: "Active Skills",
+    passives: "Passive Skills",
+    background: "Background",
+    story: "Story"
+  }[tab] || tab;
+}
+
+function renderCubSkills(skills = [], emptyText = "") {
+  if (!skills.length) return `<article class="profile-card"><h3>No entries</h3><p class="muted">${escapeHtml(emptyText)}</p></article>`;
+  return `
+    <div class="profile-grid">
+      ${skills.map((skill) => `
+        <article class="profile-card cub-skill-card">
+          ${cubSkillIconMarkup(skill)}
+          <div>
+            <p class="kicker">${escapeHtml(displayText(skill.label || "Skill"))}</p>
+            <h3>${escapeHtml(displayText(skill.name || "Unnamed skill"))}</h3>
+            <div class="cub-skill-entry-list">
+              ${(skill.entries || []).map((entry) => `
+                <div class="cub-skill-entry">
+                  ${entry.name ? `<strong>${escapeHtml(displayText(entry.name))}</strong>` : ""}
+                  ${entry.description ? `<p class="muted rich-text">${richText(entry.description)}</p>` : ""}
+                </div>
+              `).join("") || `<p class="muted">No skill description has been added yet.</p>`}
+            </div>
+          </div>
+        </article>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderCubLore(items = [], emptyText = "") {
+  if (!items.length) return `<article class="profile-card"><h3>No entries</h3><p class="muted">${escapeHtml(emptyText)}</p></article>`;
+  return `
+    <div class="profile-grid two">
+      ${items.map((item) => `
+        <article class="profile-card">
+          <p class="kicker">Lore</p>
+          <h3>${escapeHtml(displayText(item.title || "Entry"))}</h3>
+          <p class="muted rich-text">${richText(item.text || "")}</p>
+        </article>
+      `).join("")}
+    </div>
+  `;
+}
+
+function cubSkillIconMarkup(skill = {}) {
+  const label = skill.name || skill.label || "Skill";
+  if (!skill.icon) return `<span class="ability-icon">${escapeHtml(label.slice(0, 2).toUpperCase())}</span>`;
+  return `<span class="ability-icon ability-icon-image"><img src="${escapeAttribute(skill.icon)}" alt="${escapeAttribute(label)} icon" loading="lazy" /></span>`;
+}
+
+function cubSignatureCharacter(cub = {}) {
+  return characterById(cub.signatureCharacterId || cub.owner) || db.characters.find((character) => character.name === cub.signatureName || character.name === cub.owner);
+}
+
+function cubSignatureMarkup(cub = {}) {
+  const signature = cubSignatureCharacter(cub);
+  if (signature) return `<button class="action-chip" data-profile-character="${escapeAttribute(signature.id)}" type="button">${characterChipIcon(signature)}${escapeHtml(signature.name)}</button>`;
+  return escapeHtml(displayText(cub.signatureName || cub.owner || "Not set"));
+}
+
+function characterChipIcon(character = {}) {
+  const fallback = escapeHtml(character.sigil || character.name?.slice(0, 1) || "?");
+  if (character.image) {
+    return `<span class="chip-character-icon image-chip-icon"><img src="${escapeAttribute(character.image)}" alt="" loading="lazy" onerror="this.parentElement.classList.add('image-failed')" /><span>${fallback}</span></span>`;
+  }
+  return `<span class="chip-character-icon">${fallback}</span>`;
+}
+
+function cubElementColor(cub = {}) {
+  const element = cubElementRecord(cub.element);
+  return element?.color || "#3fc6d5";
+}
+
+function cubElementLabel(cub = {}) {
+  const element = cubElementRecord(cub.element);
+  return element?.label || cub.element || "";
+}
+
+function cubElementRecord(value = "") {
+  const key = String(value || "").toLowerCase();
+  return (db.elements || []).find((item) => String(item.id || "").toLowerCase() === key || String(item.label || "").toLowerCase() === key);
 }
 
 function renderGuides() {
@@ -20758,7 +22717,7 @@ function renderConstructOverview(character) {
         </div>
       </article>
       <article class="profile-card">
-        <p class="kicker">Tiers</p>
+        <p class="kicker">Ratings</p>
         <h3>${escapeHtml(review.summaryTitle || "Guide Verdict")}</h3>
         <div class="rating-grid">
           <span><strong>General</strong>${escapeHtml(ratings.general || "TBD")}</span>
@@ -20799,7 +22758,6 @@ function renderConstructTab(character, teams, globalRotations) {
   if (state.constructTab === "build") return renderProfileBuild(character);
   if (state.constructTab === "teams") return renderProfileTeams(teams, character);
   if (state.constructTab === "rotations") return renderProfileRotations(character, globalRotations);
-  if (state.constructTab === "calculations") return renderProfileCalculations(character);
   if (state.constructTab === "coatings") return renderProfileCoatings(character);
   return renderProfileKit(character);
 }
@@ -20811,7 +22769,6 @@ function tabLabel(tab) {
     build: "Build",
     teams: "Teams",
     rotations: "Rotations",
-    calculations: "Calculations",
     coatings: "Coatings"
   }[tab];
 }
@@ -20883,22 +22840,6 @@ function renderProfileBuild(character) {
             ${build.memoryResonance ? `<div class="build-item"><strong>Memory Resonance</strong><span class="rich-text">${richText(build.memoryResonance)}</span></div>` : ""}
             ${build.notes ? `<div class="build-item"><strong>Notes</strong><span class="rich-text">${richText(build.notes)}</span></div>` : ""}
           </div>
-        </article>
-      `).join("")}
-    </div>
-  `;
-}
-
-function renderProfileCalculations(character) {
-  const calculations = character.calculations && character.calculations.length ? character.calculations : defaultCalculations(character);
-  return `
-    <div class="profile-grid">
-      ${calculations.map((calc) => `
-        <article class="profile-card">
-          <p class="kicker">${escapeHtml(displayText(calc.category || "Calculation"))}</p>
-          <h3>${escapeHtml(displayText(calc.name || "Damage note"))}</h3>
-          <p class="sequence-line rich-text">${richText(calc.formula || "Formula placeholder")}</p>
-          <p class="muted rich-text">${richText(calc.notes || "Add multipliers, assumptions, rotations tested, and caveats in Manage.")}</p>
         </article>
       `).join("")}
     </div>
@@ -21060,7 +23001,6 @@ function loadDatabase() {
     if (!parsed || !Array.isArray(parsed.characters)) return;
     if (Array.isArray(parsed.elements)) db.elements = parsed.elements;
     db.characters = parsed.characters;
-    if (parsed.tiers) db.tiers = parsed.tiers;
     if (Array.isArray(parsed.teams)) db.teams = parsed.teams;
     if (Array.isArray(parsed.rotations)) db.rotations = parsed.rotations;
     if (Array.isArray(parsed.memories)) db.memories = parsed.memories;
@@ -21086,7 +23026,6 @@ function persistDatabase() {
     characters: db.characters,
     memories: db.memories,
     items: db.items,
-    tiers: db.tiers,
     teams: db.teams,
     rotations: db.rotations,
     weapons: db.weapons,
@@ -21155,10 +23094,19 @@ function normalizeCollections() {
     cub.id = cub.id || slugify(cub.name || "new-cub");
     cub.name = cub.name || "New CUB";
     cub.rarity = cub.rarity || "S";
-    cub.role = cub.role || "";
+    cub.rank = cub.rank || cub.rarity || "S";
+    cub.type = cub.type || cub.role || "";
+    cub.role = cub.role || cub.type || "";
     cub.element = cub.element || "";
     cub.image = cub.image || "";
     cub.effect = cub.effect || "";
+    cub.signatureCharacterId = cub.signatureCharacterId || cub.owner || "";
+    cub.owner = cub.owner || cub.signatureCharacterId || "";
+    cub.signatureName = cub.signatureName || characterById(cub.signatureCharacterId)?.name || "";
+    cub.activeSkills = normalizeCubSkillList(cub.activeSkills);
+    cub.passiveSkills = normalizeCubSkillList(cub.passiveSkills);
+    cub.background = normalizeCubLoreList(cub.background);
+    cub.story = normalizeCubLoreList(cub.story);
     cub.sourceUrl = cub.sourceUrl || "";
   });
   db.specialties.forEach((specialty) => normalizeSharedTrait(specialty, "New Specialty", false));
@@ -21206,6 +23154,25 @@ function normalizeCollections() {
     item.notes = item.notes || "";
     item.sourceUrl = item.sourceUrl || "";
   });
+}
+
+function normalizeCubSkillList(skills = []) {
+  return Array.isArray(skills) ? skills.map((skill, index) => ({
+    label: skill.label || `Skill ${index + 1}`,
+    name: skill.name || "",
+    icon: skill.icon || "",
+    entries: Array.isArray(skill.entries) ? skill.entries.map((entry) => ({
+      name: entry.name || "",
+      description: entry.description || entry.text || ""
+    })) : skill.description ? [{ name: "", description: skill.description }] : []
+  })) : [];
+}
+
+function normalizeCubLoreList(items = []) {
+  return Array.isArray(items) ? items.map((item) => ({
+    title: item.title || item.name || "Entry",
+    text: item.text || item.description || ""
+  })) : [];
 }
 
 function defaultDropdowns() {
@@ -21303,7 +23270,6 @@ function normalizeCharacters() {
     character.abilities.forEach((ability) => {
       ability.icon = ability.icon || "";
     });
-    character.calculations = Array.isArray(character.calculations) ? character.calculations : defaultCalculations(character);
     character.coatings = Array.isArray(character.coatings) ? character.coatings : [];
     character.builds = Array.isArray(character.builds) ? character.builds : [
       { name: "Recommended", weapon: character.weapon, memories: character.memory, memorySlots: ["", "", "", "", "", ""], priority: character.priority }
@@ -21420,17 +23386,6 @@ function defaultReview(character) {
     lastUpdated: "",
     changeLog: ""
   };
-}
-
-function defaultCalculations(character) {
-  return [
-    {
-      name: "Core damage note",
-      category: "Placeholder",
-      formula: `${character.name || "Construct"} multiplier / buff window / assumptions`,
-      notes: "Add tested rotations, investment level, memory/weapon resonance assumptions, and caveats."
-    }
-  ];
 }
 
 function defaultSpecialties(character) {
@@ -21968,30 +23923,108 @@ function renderWeaponEditor() {
 }
 
 function renderCubEditor() {
+  const openCubEditors = new Set($$("#cubEditor > details[open]").map((row) => row.dataset.cubEditorId).filter(Boolean));
   $("#cubEditor").innerHTML = (db.cubs || []).map((cub, index) => `
-    <details class="stack-row collapsible-row">
-      <summary><span>${escapeHtml(displayText(cub.name || "CUB"))}</span><small>${escapeHtml(displayText(cub.rarity || cub.role || ""))}</small></summary>
+    <details class="stack-row collapsible-row" data-cub-editor-id="${escapeAttribute(cub.id || `cub-${index}`)}" ${openCubEditors.has(cub.id || `cub-${index}`) ? "open" : ""}>
+      <summary><span>${escapeHtml(displayText(cub.name || "CUB"))}</span><small>${escapeHtml(displayText(`${cub.rank || cub.rarity || ""} ${cub.type || cub.role || ""}`.trim()))}</small></summary>
       <div class="collapse-content">
         <label>Name<input data-system-array="cubs" data-system-index="${index}" data-system-field="name" value="${escapeAttribute(cub.name || "")}" /></label>
         <label>ID<input data-system-array="cubs" data-system-index="${index}" data-system-field="id" value="${escapeAttribute(cub.id || "")}" /></label>
-        <label>Rarity
+        <label>Rank
           <select data-system-array="cubs" data-system-index="${index}" data-system-field="rarity">
             ${dropdownOptions("cubRarities", cub.rarity).map((value) => `<option value="${escapeAttribute(value)}" ${cub.rarity === value ? "selected" : ""}>${escapeHtml(displayText(value))}</option>`).join("")}
           </select>
         </label>
-        <label>Role<input data-system-array="cubs" data-system-index="${index}" data-system-field="role" value="${escapeAttribute(cub.role || "")}" /></label>
-        <label>Element<input data-system-array="cubs" data-system-index="${index}" data-system-field="element" value="${escapeAttribute(cub.element || "")}" /></label>
+        <label>Type<input data-system-array="cubs" data-system-index="${index}" data-system-field="type" value="${escapeAttribute(cub.type || cub.role || "")}" /></label>
+        <label>Element
+          <select data-system-array="cubs" data-system-index="${index}" data-system-field="element">
+            ${cubElementOptions(cub.element)}
+          </select>
+        </label>
+        <label>Signature character
+          <select data-cub-signature-index="${index}">
+            ${entitySelectOptions(db.characters || [], cub.signatureCharacterId || cub.owner || "", "No signature character selected")}
+          </select>
+        </label>
+        <label>Signature name<input data-system-array="cubs" data-system-index="${index}" data-system-field="signatureName" value="${escapeAttribute(cub.signatureName || "")}" /></label>
         <label>Image URL
           <input data-system-array="cubs" data-system-index="${index}" data-system-field="image" value="${escapeAttribute(cub.image || "")}" placeholder="https://... or imported local file" />
           <input class="image-import-control" data-system-file="cubs" data-system-index="${index}" data-system-field="image" type="file" accept="image/*" />
         </label>
-        <label>Effect<textarea data-system-array="cubs" data-system-index="${index}" data-system-field="effect" rows="3">${escapeHtml(cub.effect || "")}</textarea></label>
+        <label>Overview / Effect<textarea data-system-array="cubs" data-system-index="${index}" data-system-field="effect" rows="4">${escapeHtml(cub.effect || "")}</textarea></label>
         <label>Source URL<input data-system-array="cubs" data-system-index="${index}" data-system-field="sourceUrl" value="${escapeAttribute(cub.sourceUrl || "")}" /></label>
+        ${renderCubSkillEditor(cub, index, "activeSkills", "Active Skills")}
+        ${renderCubSkillEditor(cub, index, "passiveSkills", "Passive Skills")}
+        <label class="wide-field">Background entries<textarea data-cub-lore="${index}" data-cub-lore-field="background" rows="5" placeholder="Title :: Text">${escapeHtml(cubLoreEditorValue(cub.background))}</textarea></label>
+        <label class="wide-field">Story entries<textarea data-cub-lore="${index}" data-cub-lore-field="story" rows="5" placeholder="Title :: Text">${escapeHtml(cubLoreEditorValue(cub.story))}</textarea></label>
         <button class="icon-button danger" data-remove-system="cubs" data-system-index="${index}" type="button" title="Remove CUB" aria-label="Remove CUB">x</button>
       </div>
     </details>
   `).join("") || `<p class="muted">No CUBs added yet.</p>`;
   bindSystemInputs();
+}
+
+function renderCubSkillEditor(cub, cubIndex, field, label) {
+  const skills = Array.isArray(cub[field]) ? cub[field] : [];
+  return `
+    <section class="cub-skill-editor wide-field">
+      <div class="inline-editor-head">
+        <div><strong>${escapeHtml(label)}</strong><small class="muted">${skills.length} entries</small></div>
+        <button class="ghost-button" data-cub-add-skill="${cubIndex}" data-cub-skill-list="${field}" type="button"><span>+</span>Add skill</button>
+      </div>
+      ${skills.map((skill, skillIndex) => `
+        <details class="stack-row compact-row cub-skill-editor-row">
+          <summary><span>${escapeHtml(displayText(skill.name || skill.label || "Skill"))}</span><small>${escapeHtml(displayText(skill.label || ""))}</small></summary>
+          <div class="collapse-content">
+            <label>Label<input data-cub-skill-field="${field}" data-cub-index="${cubIndex}" data-cub-skill-index="${skillIndex}" data-cub-field="label" value="${escapeAttribute(skill.label || "")}" /></label>
+            <label>Name<input data-cub-skill-field="${field}" data-cub-index="${cubIndex}" data-cub-skill-index="${skillIndex}" data-cub-field="name" value="${escapeAttribute(skill.name || "")}" /></label>
+            <label>Icon URL
+              <input data-cub-skill-field="${field}" data-cub-index="${cubIndex}" data-cub-skill-index="${skillIndex}" data-cub-field="icon" value="${escapeAttribute(skill.icon || "")}" placeholder="https://... or imported local file" />
+              <input class="image-import-control" data-cub-skill-file="${field}" data-cub-index="${cubIndex}" data-cub-skill-index="${skillIndex}" data-cub-field="icon" type="file" accept="image/*" />
+            </label>
+            <label class="wide-field">Entries<textarea data-cub-skill-entries="${field}" data-cub-index="${cubIndex}" data-cub-skill-index="${skillIndex}" rows="5" placeholder="Name :: Description">${escapeHtml(cubSkillEntryEditorValue(skill.entries))}</textarea></label>
+            <button class="icon-button danger" data-cub-remove-skill="${cubIndex}" data-cub-skill-list="${field}" data-cub-skill-index="${skillIndex}" type="button" title="Remove skill" aria-label="Remove skill">x</button>
+          </div>
+        </details>
+      `).join("") || `<p class="muted">No ${label.toLowerCase()} added yet.</p>`}
+    </section>
+  `;
+}
+
+function cubElementOptions(currentValue = "") {
+  const current = cubElementRecord(currentValue);
+  const selectedValue = current?.id || currentValue || "";
+  const options = (db.elements || []).filter((element) => element.id !== "all");
+  const hasCurrent = !selectedValue || options.some((element) => element.id === selectedValue || element.label === selectedValue);
+  return [
+    `<option value="">No element selected</option>`,
+    ...options.map((element) => `<option value="${escapeAttribute(element.id)}" ${selectedValue === element.id || selectedValue === element.label ? "selected" : ""}>${escapeHtml(displayText(element.label || element.id))}</option>`),
+    ...(!hasCurrent ? [`<option value="${escapeAttribute(selectedValue)}" selected>${escapeHtml(displayText(selectedValue))}</option>`] : [])
+  ].join("");
+}
+
+function cubSkillEntryEditorValue(entries = []) {
+  return (entries || []).map((entry) => `${displayText(entry.name || "")}${entry.name ? " :: " : ""}${displayText(entry.description || "")}`).join("\n\n");
+}
+
+function parseCubSkillEntries(value = "") {
+  return String(value || "").split(/\n\s*\n+/).map((block) => block.trim()).filter(Boolean).map((block) => {
+    const [name, ...rest] = block.split("::");
+    if (!rest.length) return { name: "", description: name.trim() };
+    return { name: name.trim(), description: rest.join("::").trim() };
+  });
+}
+
+function cubLoreEditorValue(items = []) {
+  return (items || []).map((item) => `${displayText(item.title || "Entry")} :: ${displayText(item.text || "")}`).join("\n");
+}
+
+function parseCubLoreEntries(value = "") {
+  return String(value || "").split(/\n+/).map((line) => line.trim()).filter(Boolean).map((line) => {
+    const [title, ...rest] = line.split("::");
+    if (!rest.length) return { title: "Entry", text: title.trim() };
+    return { title: title.trim() || "Entry", text: rest.join("::").trim() };
+  });
 }
 
 function renderGuideEditor() {
@@ -22189,6 +24222,12 @@ function bindSystemInputs() {
       } else {
         item[input.dataset.systemField] = input.value;
       }
+      if (input.dataset.systemArray === "cubs" && input.dataset.systemField === "rarity") {
+        item.rank = input.value;
+      }
+      if (input.dataset.systemArray === "cubs" && input.dataset.systemField === "type") {
+        item.role = input.value;
+      }
       if (input.dataset.systemField === "id" && oldId && oldId !== input.value) updateSharedTraitReferences(input.dataset.systemArray, oldId, input.value);
       if (input.dataset.systemArray === "weapons") refreshSignatureWeaponSelect();
       if (input.dataset.systemArray === "cubs") refreshSignatureCubSelect();
@@ -22203,7 +24242,71 @@ function bindSystemInputs() {
     if (removed?.id) removeSharedTraitReferences(collectionName, removed.id);
     renderSystemEditors();
   }));
+  $$("[data-cub-signature-index]").forEach((input) => {
+    const update = () => {
+      const cub = db.cubs?.[Number(input.dataset.cubSignatureIndex)];
+      if (!cub) return;
+      const character = characterById(input.value);
+      cub.signatureCharacterId = input.value;
+      cub.owner = input.value;
+      if (character) cub.signatureName = character.name;
+      const paired = $(`[data-system-array="cubs"][data-system-index="${input.dataset.cubSignatureIndex}"][data-system-field="signatureName"]`);
+      if (paired && character) paired.value = character.name;
+    };
+    input.addEventListener("input", update);
+    input.addEventListener("change", update);
+  });
+  $$("[data-cub-lore]").forEach((input) => {
+    const update = () => {
+      const cub = db.cubs?.[Number(input.dataset.cubLore)];
+      if (!cub) return;
+      cub[input.dataset.cubLoreField] = parseCubLoreEntries(input.value);
+    };
+    input.addEventListener("input", update);
+    input.addEventListener("change", update);
+  });
+  $$("[data-cub-skill-field]").forEach((input) => {
+    const update = () => {
+      const cub = db.cubs?.[Number(input.dataset.cubIndex)];
+      const skill = cub?.[input.dataset.cubSkillField]?.[Number(input.dataset.cubSkillIndex)];
+      if (!skill) return;
+      skill[input.dataset.cubField] = input.value;
+    };
+    input.addEventListener("input", update);
+    input.addEventListener("change", update);
+  });
+  $$("[data-cub-skill-entries]").forEach((input) => {
+    const update = () => {
+      const cub = db.cubs?.[Number(input.dataset.cubIndex)];
+      const skill = cub?.[input.dataset.cubSkillEntries]?.[Number(input.dataset.cubSkillIndex)];
+      if (!skill) return;
+      skill.entries = parseCubSkillEntries(input.value);
+    };
+    input.addEventListener("input", update);
+    input.addEventListener("change", update);
+  });
+  $$("[data-cub-add-skill]").forEach((button) => {
+    if (button.dataset.bound === "true") return;
+    button.dataset.bound = "true";
+    button.addEventListener("click", () => {
+    const cub = db.cubs?.[Number(button.dataset.cubAddSkill)];
+    if (!cub) return;
+    cub[button.dataset.cubSkillList] = cub[button.dataset.cubSkillList] || [];
+    cub[button.dataset.cubSkillList].push({ label: "Skill", name: "New Skill", icon: "", entries: [] });
+    renderCubEditor();
+    });
+  });
+  $$("[data-cub-remove-skill]").forEach((button) => {
+    if (button.dataset.bound === "true") return;
+    button.dataset.bound = "true";
+    button.addEventListener("click", () => {
+    const cub = db.cubs?.[Number(button.dataset.cubRemoveSkill)];
+    cub?.[button.dataset.cubSkillList]?.splice(Number(button.dataset.cubSkillIndex), 1);
+    renderCubEditor();
+    });
+  });
   $$("[data-system-file]").forEach((input) => input.addEventListener("change", handleSystemImageUpload));
+  $$("[data-cub-skill-file]").forEach((input) => input.addEventListener("change", handleCubSkillIconUpload));
   setupImageDropZones();
 }
 
@@ -22291,10 +24394,24 @@ function handleSystemImageUpload(event) {
   });
 }
 
+function handleCubSkillIconUpload(event) {
+  const input = event.target;
+  const file = input.files?.[0];
+  if (!file) return;
+  readImageFile(file, (imageUrl) => {
+    const cub = db.cubs?.[Number(input.dataset.cubIndex)];
+    const skill = cub?.[input.dataset.cubSkillFile]?.[Number(input.dataset.cubSkillIndex)];
+    if (!skill) return;
+    skill[input.dataset.cubField] = imageUrl;
+    const pairedInput = $(`[data-cub-skill-field="${input.dataset.cubSkillFile}"][data-cub-index="${input.dataset.cubIndex}"][data-cub-skill-index="${input.dataset.cubSkillIndex}"][data-cub-field="${input.dataset.cubField}"]:not([type="file"])`);
+    if (pairedInput) pairedInput.value = imageUrl;
+  });
+}
+
 function addSystemItem(type) {
   const defaults = {
     weapons: { id: "new-weapon", name: "New Weapon", rarity: "6★", type: "", owner: "", atk: "", crit: "", image: "", effect: "", sourceUrl: "" },
-    cubs: { id: "new-cub", name: "New CUB", rarity: "S", role: "", element: "", image: "", effect: "", sourceUrl: "" },
+    cubs: { id: "new-cub", name: "New CUB", rarity: "S", rank: "S", role: "", type: "", element: "", image: "", effect: "", owner: "", signatureCharacterId: "", signatureName: "", activeSkills: [], passiveSkills: [], background: [], story: [], sourceUrl: "" },
     guides: { id: "new-guide", title: "New Guide", category: "", status: "Draft", summary: "", sourceUrl: "" },
     gameModes: { id: "new-mode", name: "New Mode", category: "", status: "Draft", summary: "", sourceUrl: "" },
     gamePatches: { id: "new-patch", name: "New Patch", number: "", date: "", status: "Draft", notes: "", characters: [] },
@@ -22582,7 +24699,7 @@ function handleStackImageUpload(event) {
 }
 
 function setupImageDropZones(root = document) {
-  root.querySelectorAll("[data-form-image], [data-memory-file], [data-stack-file], [data-item-file], [data-system-file], [data-keyword-icon-file], [data-rank-icon-file]").forEach((input) => {
+  root.querySelectorAll("[data-form-image], [data-memory-file], [data-stack-file], [data-item-file], [data-system-file], [data-cub-skill-file], [data-keyword-icon-file], [data-rank-icon-file]").forEach((input) => {
     if (input.dataset.dropEnhanced === "true") return;
     input.dataset.dropEnhanced = "true";
     input.classList.add("drop-file-input");
@@ -22919,7 +25036,6 @@ function renderStackEditors() {
   renderElementMixEditor();
   renderAbilityEditor();
   renderBuildEditor();
-  renderCalculationEditor();
   renderCoatingEditor();
   renderManagedRotationEditor();
 }
@@ -22994,19 +25110,6 @@ function renderBuildEditor() {
       <button class="icon-button danger" data-remove-array="builds" data-remove-index="${index}" type="button" title="Remove build" aria-label="Remove build">x</button>
     </article>
   `).join("");
-  bindStackInputs();
-}
-
-function renderCalculationEditor() {
-  $("#calculationEditor").innerHTML = (state.draft.calculations || []).map((calc, index) => `
-    <article class="stack-row">
-      <label>Name<input data-array="calculations" data-index="${index}" data-field="name" value="${escapeAttribute(calc.name || "")}" /></label>
-      <label>Category<input data-array="calculations" data-index="${index}" data-field="category" value="${escapeAttribute(calc.category || "")}" /></label>
-      <label>Formula<textarea data-array="calculations" data-index="${index}" data-field="formula" rows="3">${escapeHtml(calc.formula || "")}</textarea></label>
-      <label>Notes<textarea data-array="calculations" data-index="${index}" data-field="notes" rows="3">${escapeHtml(calc.notes || "")}</textarea></label>
-      <button class="icon-button danger" data-remove-array="calculations" data-remove-index="${index}" type="button" title="Remove calculation" aria-label="Remove calculation">x</button>
-    </article>
-  `).join("") || `<p class="muted">No calculations added yet.</p>`;
   bindStackInputs();
 }
 
@@ -23091,7 +25194,6 @@ function addStackItem(type) {
     effects: { name: "New effect", description: "" },
     abilities: { name: "New ability", description: "", icon: "" },
     builds: { name: "New build", category: "", weapon: "", cub: "", alternateCubs: "", memories: "", memorySlots: ["", "", "", "", "", ""], priority: "", weaponResonance: "", memoryResonance: "", notes: "" },
-    calculations: { name: "New calculation", category: "", formula: "", notes: "" },
     coatings: { name: "New coating", image: "", rarity: "", description: "" },
     commonRotations: { name: "New rotation", steps: "Swap in -> 3-ping -> QTE -> Core -> Ultimate", notes: "" }
   };
@@ -23179,7 +25281,6 @@ function characterFromDraftAndForm(draft, formData) {
     effects: [],
     abilities: draft.abilities.filter((ability) => ability.name || ability.description || ability.icon),
     builds: draft.builds.filter((build) => build.name || build.weapon || build.cub || build.memories || buildMemorySlots(build).some(Boolean) || build.notes || build.weaponResonance || build.memoryResonance),
-    calculations: (draft.calculations || []).filter((calc) => calc.name || calc.category || calc.formula || calc.notes),
     coatings: (draft.coatings || []).filter((coating) => coating.name || coating.image || coating.rarity || coating.description),
     facts: structuredFacts({
       stats: {
@@ -23241,7 +25342,6 @@ async function saveCharacterFromForm() {
       updateReferences(originalId, id);
     } else {
       db.characters.push(character);
-      addCharacterToTier(id);
     }
   }
   const activeId = state.draft.id;
@@ -23257,11 +25357,6 @@ async function saveCharacterFromForm() {
 
 function updateReferences(oldId, newId) {
   if (oldId === newId) return;
-  Object.values(db.tiers).forEach((tierSet) => {
-    Object.keys(tierSet).forEach((rank) => {
-      tierSet[rank] = tierSet[rank].map((id) => id === oldId ? newId : id);
-    });
-  });
   db.teams.forEach((team) => {
     team.members = team.members.map((id) => id === oldId ? newId : id);
   });
@@ -23270,13 +25365,6 @@ function updateReferences(oldId, newId) {
   });
   (db.weapons || []).forEach((weapon) => {
     if (weapon.owner === oldId) weapon.owner = newId;
-  });
-}
-
-function addCharacterToTier(id) {
-  Object.values(db.tiers).forEach((tierSet) => {
-    tierSet.A = tierSet.A || [];
-    if (!tierSet.A.includes(id)) tierSet.A.push(id);
   });
 }
 
@@ -23339,7 +25427,6 @@ function blankCharacter() {
     effects: [],
     abilities: defaultAbilities({}),
     builds: [{ name: "Recommended", category: "", weapon: "", cub: "", alternateCubs: "", memories: "", memorySlots: ["", "", "", "", "", ""], priority: "", weaponResonance: "", memoryResonance: "", notes: "" }],
-    calculations: [{ name: "Core damage note", category: "", formula: "", notes: "" }],
     coatings: [],
     facts: [],
     commonRotations: [{ name: "Standard opener", steps: "Swap in -> 3-ping -> QTE -> Core -> Ultimate", notes: "" }]
@@ -23373,7 +25460,6 @@ function databaseSnapshotWithDrafts() {
     characters,
     memories: db.memories,
     items: db.items,
-    tiers: db.tiers,
     teams: db.teams,
     rotations: db.rotations,
     weapons: db.weapons,
@@ -23400,7 +25486,6 @@ function importDatabase(event) {
       await materializeEmbeddedImages(parsed, "import");
       if (Array.isArray(parsed.elements)) db.elements = parsed.elements;
       db.characters = parsed.characters;
-      if (parsed.tiers) db.tiers = parsed.tiers;
       if (Array.isArray(parsed.teams)) db.teams = parsed.teams;
       if (Array.isArray(parsed.rotations)) db.rotations = parsed.rotations;
       if (Array.isArray(parsed.memories)) db.memories = parsed.memories;
@@ -23439,7 +25524,6 @@ function resetDatabase() {
   db.characters = JSON.parse(JSON.stringify(seedDatabase.characters));
   db.memories = JSON.parse(JSON.stringify(seedDatabase.memories || []));
   db.items = JSON.parse(JSON.stringify(seedDatabase.items || []));
-  db.tiers = JSON.parse(JSON.stringify(seedDatabase.tiers));
   db.teams = JSON.parse(JSON.stringify(seedDatabase.teams));
   db.rotations = JSON.parse(JSON.stringify(seedDatabase.rotations));
   db.weapons = JSON.parse(JSON.stringify(seedDatabase.weapons || []));
@@ -23465,12 +25549,12 @@ function refreshAll() {
   renderFilters();
   renderStats();
   renderCharacters();
-  renderTiers();
   renderTeams();
   renderMemories();
   renderItems();
   renderWeapons();
   renderCubs();
+  renderCubPage();
   renderGuides();
   renderPatches();
   renderRoadmap();
@@ -23483,6 +25567,7 @@ function refreshAll() {
   if (state.draft) refreshCharacterDropdowns(state.draft);
   applyGlobalSettings();
   if (state.route === "construct") renderConstructPage();
+  if (state.route === "cub") renderCubPage();
   if (state.route === "patch") renderPatchPage();
 }
 
@@ -23572,15 +25657,17 @@ function richText(value = "") {
 function expandRichTextShortcodes(value = "") {
   let output = String(value || "");
   const colorMap = {
-    red: "#F16549",
+    red: "#FF6549",
     orange: "#F16549",
     blue: "#3168B9",
+    purple: "#986AE0",
     default: "inherit"
   };
-  output = output.replace(/\[(red|orange|blue|default)\]([\s\S]*?)\[\/\1\]/gi, (_, colorKey, content) => {
+  output = output.replace(/\[(red|orange|blue|purple|default)\]([\s\S]*?)\[\/\1\]/gi, (_, colorKey, content) => {
     const color = colorMap[colorKey.toLowerCase()] || "inherit";
     return `<span style="color:${color}">${content}</span>`;
   });
+  output = output.replace(/\[bold\]([\s\S]*?)\[\/bold\]/gi, "<strong>$1</strong>");
   output = output.replace(/\[\[(weapon|memory|character|construct|cub|item):([^\]|]+)(?:\|([^\]]+))?\]\]/gi, (_, type, rawTarget, rawLabel) => {
     const link = richEntityLink(type, rawTarget, rawLabel);
     return link || rawLabel || rawTarget;
@@ -23614,7 +25701,7 @@ function linkedEntity(type, target) {
   }
   if (normalizedType === "cub") {
     const cub = findByIdOrName(db.cubs || []);
-    return cub ? { href: "#cubs", label: cub.name, title: `CUB: ${cub.name}` } : null;
+    return cub ? { href: `#cub/${cub.id}/actives`, label: cub.name, title: `CUB: ${cub.name}` } : null;
   }
   if (normalizedType === "item") {
     const item = findByIdOrName(db.items || []);
@@ -23672,4 +25759,3 @@ function sanitizeRichNode(root) {
 }
 
 init();
-
