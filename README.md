@@ -8,7 +8,7 @@ Inspired by [GRAY RAVENS](https://grayravens.com/wiki/GRAY_RAVENS) and guide-foc
 
 Whether you're looking for a character build, an optimal rotation, a weapon recommendation, a memory setup, or detailed game mechanics, Gray Ravens Database aims to provide everything in one place.
 
-#This project is currently in early development
+# This project is currently in early development
 
 ---
 
