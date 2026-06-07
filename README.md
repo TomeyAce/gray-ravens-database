@@ -194,7 +194,6 @@ This project draws inspiration from:
 - Prydwen
 - Community theorycrafters
 - Guide creators
-- Contributors and testers
 
 ---
 
