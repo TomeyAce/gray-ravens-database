@@ -6,7 +6,6 @@ Gray Ravens Database is a modern database and guide website for **Punishing: Gra
 
 Inspired by [GRAY RAVENS](https://grayravens.com/wiki/GRAY_RAVENS) and guide-focused resources such as [Prydwen](https://www.prydwen.gg/), the goal of this project is to create a comprehensive hub for both new and veteran Commandants.
 
-Whether you're looking for a character build, an optimal rotation, a weapon recommendation, a memory setup, or detailed game mechanics, Gray Ravens Database aims to provide everything in one place.
 
 # This project is currently in early development
 
@@ -106,11 +105,11 @@ Without needing to switch between multiple websites, spreadsheets, videos, and c
 
 ### Database
 
-- [ ] Character database
-- [ ] Weapon database
-- [ ] Memory database
-- [ ] CUB database
-- [ ] Item database
+- [x] Character database
+- [x] Weapon database
+- [x] Memory database
+- [x] CUB database
+- [x] Item database
 - [ ] Enemy database
 - [ ] Boss database
 
